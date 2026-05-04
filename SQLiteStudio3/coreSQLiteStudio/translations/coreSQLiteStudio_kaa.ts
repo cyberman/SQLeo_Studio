@@ -857,7 +857,32 @@ Tables, indexes, triggers and views copied to database %3 will remain.</translat
   <context>
     <name>QObject</name>
     <message>
-      <location filename="../common/utils.cpp" line="952"/>
+      <location filename="../common/utils.cpp" line="79"/>
+      <source>SQLite database or SQL file</source>
+      <translation type="unfinished">SQLite database or SQL file</translation>
+    </message>
+    <message>
+      <location filename="../common/utils.cpp" line="81"/>
+      <source>SQL files</source>
+      <translation type="unfinished">SQL files</translation>
+    </message>
+    <message>
+      <location filename="../common/utils.cpp" line="82"/>
+      <source>CSV files</source>
+      <translation type="unfinished">CSV files</translation>
+    </message>
+    <message>
+      <location filename="../common/utils.cpp" line="83"/>
+      <source>Text files</source>
+      <translation type="unfinished">Text files</translation>
+    </message>
+    <message>
+      <location filename="../common/utils.cpp" line="84"/>
+      <source>All files</source>
+      <translation type="unfinished">All files</translation>
+    </message>
+    <message>
+      <location filename="../common/utils.cpp" line="968"/>
       <source>Could not open file &apos;%1&apos; for reading: %2</source>
       <translation type="unfinished">Could not open file &apos;%1&apos; for reading: %2</translation>
     </message>
