@@ -34,6 +34,7 @@
 #include "common/dbcombobox.h"
 #include "tablemodifier.h"
 #include "datagrid/sqlqueryview.h"
+#include "statusfield.h"
 #include <QMenu>
 #include <QToolButton>
 #include <QLabel>
@@ -44,7 +45,6 @@
 #include <QStyleFactory>
 #if QT_VERSION >= QT_VERSION_CHECK(6, 5, 0)
 #include <QtSystemDetection>
-#include <statusfield.h>
 #else
 #include <qsystemdetection.h>
 #endif
