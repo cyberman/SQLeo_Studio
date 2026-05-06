@@ -1,4 +1,5 @@
 #include "editorwindow.h"
+#include "statusfield.h"
 #include "ui_editorwindow.h"
 #include "uiutils.h"
 #include "datagrid/sqlquerymodel.h"
@@ -517,6 +518,8 @@ void EditorWindow::execQuery(bool explain, QueryExecMode querySelectionMode)
     if (!proceed)
         return;
 
+    STATUSFIELD->blockFadeOutFor(this);
+
     resultsModel->setDb(getCurrentDb());
     resultsModel->setExplainMode(explain);
     resultsModel->setQuery(sql);
@@ -683,12 +686,14 @@ void EditorWindow::executionSuccessful()
 
     lastSuccessfulQuery = resultsModel->getQuery();
 
+    STATUSFIELD->releaseFadeOutFor(this);
     updateState();
 }
 
 void EditorWindow::executionFailed(const QString &errorText)
 {
     notifyError(errorText);
+    STATUSFIELD->releaseFadeOutFor(this);
     updateState();
 }
 

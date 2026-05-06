@@ -30,6 +30,9 @@
 #include "uiutils.h"
 #include "services/pluginmanager.h"
 #include "plugins/dbpluginsqlite3.h"
+#include "dbobjectorganizer.h"
+#include "tablemodifier.h"
+#include "statusfield.h"
 #include <QApplication>
 #include <QClipboard>
 #include <QAction>
@@ -46,8 +49,6 @@
 #include <QFileDialog>
 #include <QElapsedTimer>
 #include <QLabel>
-#include <dbobjectorganizer.h>
-#include <tablemodifier.h>
 #include <QtConcurrent/QtConcurrentRun>
 
 CFG_KEYS_DEFINE(DbTree)
@@ -2196,6 +2197,7 @@ void DbTree::setFileExecProgress(int newValue)
 
 void DbTree::hideFileExecCover()
 {
+    STATUSFIELD->releaseFadeOutFor(this);
     fileExecWidgetCover->hide();
 }
 
@@ -2487,6 +2489,7 @@ void DbTree::execSqlFromFile()
     if (!selectedDb || !selectedDb->isOpen())
         return;
 
+    STATUSFIELD->blockFadeOutFor(this);
     fileExecWidgetCover->show();
     fileExecutor->setExecutionMode(dialog.getExecutionMode());
     fileExecutor->execSqlFromFile(selectedDb, dialog.filePath(), dialog.ignoreErrors(), dialog.codec());

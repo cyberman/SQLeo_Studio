@@ -42,7 +42,11 @@ bool ColumnForeignKeyPanel::validate()
     setValidState(ui->nameEdit, nameOk, tr("Enter a name of the constraint."));
 
     if (columnOk)
-        setValidStateWarning(ui->fkColumnCombo, validateForWarning());
+    {
+        QString warn = validateForWarning();
+        if (!warn.isEmpty())
+            setValidStateWarning(ui->fkColumnCombo, warn);
+    }
 
     return tableOk && columnOk && nameOk;
 }

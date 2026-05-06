@@ -85,6 +85,7 @@
 - CHANGE: #5209 Default Code Snippet list extended and now they are preferred in the Code Assist when SQL Editor is empty.
 - CHANGE: #5642 Bind Param Dialog now starts in simplified layout (unless complex values were remembered), which is much cleaner for simple input.
 - CHANGE: #5092 Functions, Collations, Code Snippets and Extensions windows now show more info on their list (number of databases in which they are registered, etc). Additionally their splitter position is now remembered.
+- CHANGE: #5158 Status panel now dims older messages, when new messages appear, so they stand up. User can also configure to use older behavior (no dimming), or to remove older messages entirely from the panel and keep only the new one.
 - CHANGE: #4688 Added metadata to Windows executables.
 - CHANGE: #2956 Export Dialog respects hotkeys for changing database in the dropdown, using the same hotkey as SQL Editor.
 - CHANGE: #4964 Import Dialog has now inverted order of pages - the imported file first and then the target table, for which the name is concluded from imported file name. Also filter for CSV import is now extended with tsv files.

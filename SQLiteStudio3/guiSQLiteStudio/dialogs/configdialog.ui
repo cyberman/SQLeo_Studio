@@ -267,7 +267,7 @@
           </sizepolicy>
          </property>
          <property name="currentIndex">
-          <number>1</number>
+          <number>4</number>
          </property>
          <widget class="QWidget" name="databaseListPage">
           <layout class="QVBoxLayout" name="verticalLayout_36">
@@ -486,7 +486,7 @@
               <property name="geometry">
                <rect>
                 <x>0</x>
-                <y>-239</y>
+                <y>0</y>
                 <width>679</width>
                 <height>842</height>
                </rect>
@@ -1138,7 +1138,7 @@
               <item>
                <widget class="QCheckBox" name="checkBox">
                 <property name="toolTip">
-                 <string>&lt;p&gt;When user manually closes the Status panel, this option makes sure that if any new message is printed in the Status panel it will be reopened. If it's disabled, then Status panel can only be open manually by the user from the &quot;View&quot; menu.&lt;/p&gt;</string>
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;When user manually closes the Status panel, this option makes sure that if any new message is printed in the Status panel it will be reopened. If it's disabled, then Status panel can only be open manually by the user from the &amp;quot;View&amp;quot; menu.&lt;/p&gt;&lt;p&gt;You can always hide the Status panel with the Esc key.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                 </property>
                 <property name="text">
                  <string>Always open Status panel when new message is printed</string>
@@ -1146,6 +1146,63 @@
                 <property name="cfg" stdset="0">
                  <string notr="true">General.AutoOpenStatusField</string>
                 </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QGroupBox" name="statusFieldFadeGroup">
+                <property name="title">
+                 <string>Older status messages</string>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_38">
+                 <item>
+                  <widget class="ConfigRadioButton" name="statusFieldFadeKeepRadio">
+                   <property name="toolTip">
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Older status messages are kept unchanged.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                   <property name="text">
+                    <string>Keep messages</string>
+                   </property>
+                   <property name="cfg" stdset="0">
+                    <string>General.StatusFieldMsgFadingMode</string>
+                   </property>
+                   <property name="assignedValue" stdset="0">
+                    <number>0</number>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="ConfigRadioButton" name="statusFieldFadeDimmRadio">
+                   <property name="toolTip">
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Older status messages remain visible, but are visually dimmed to make recent messages stand out.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                   <property name="text">
+                    <string>Dim older messages</string>
+                   </property>
+                   <property name="cfg" stdset="0">
+                    <string>General.StatusFieldMsgFadingMode</string>
+                   </property>
+                   <property name="assignedValue" stdset="0">
+                    <number>1</number>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="ConfigRadioButton" name="statusFieldFadeRemoveRadio">
+                   <property name="toolTip">
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Older status messages are automatically removed from the status field.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                   <property name="text">
+                    <string>Remove older messages</string>
+                   </property>
+                   <property name="cfg" stdset="0">
+                    <string>General.StatusFieldMsgFadingMode</string>
+                   </property>
+                   <property name="assignedValue" stdset="0">
+                    <number>2</number>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
                </widget>
               </item>
              </layout>

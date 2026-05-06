@@ -29,6 +29,7 @@
 #include "common/widgetcover.h"
 #include "services/notifymanager.h"
 #include "dbtree/dbtree.h"
+#include "statusfield.h"
 #include <QDebug>
 #include <QMdiSubWindow>
 #include <QActionGroup>
@@ -567,6 +568,8 @@ void ErdWindow::commitExecutionSuccessful(SqlQueryPtr lastQueryResult)
     DBTREE->refreshSchema(db);
     hideWidgetCover();
     notifyInfo(tr("All changes have been successfully applied to the database.", "ERD editor"));
+
+    STATUSFIELD->releaseFadeOutFor(this);
 }
 
 void ErdWindow::commitExecutionSuccessfulNoChanges()
@@ -581,6 +584,8 @@ void ErdWindow::commitExecutionFailure(int errorCode, const QString& errorText)
     qWarning() << "Failed to apply ERD changes to the database. Error code:" << errorCode
                << ", details:" << errorText;
     notifyError(tr("Failed to apply changes to the database. Details: %1", "ERD editor").arg(errorText));
+
+    STATUSFIELD->releaseFadeOutFor(this);
 }
 
 void ErdWindow::updateCommitExecutionStatus(int queryIdx)
@@ -685,6 +690,8 @@ void ErdWindow::commitPendingChanges()
         commitExecutionSuccessfulNoChanges();
         return;
     }
+
+    STATUSFIELD->blockFadeOutFor(this);
 
     ddlExecutor->setDb(db);
     ddlExecutor->setQueries(queries);

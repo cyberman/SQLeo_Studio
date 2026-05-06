@@ -12,6 +12,7 @@
 #include <QLabel>
 #include <QVariantAnimation>
 #include <QDebug>
+#include <QPainter>
 
 const QString StatusField::colorTpl = "QLabel {color: %1}";
 
@@ -33,6 +34,10 @@ StatusField::StatusField(QWidget *parent) :
 
     THEME_TUNER->manageCompactLayout(widget());
 
+    fadeOutTimer.setInterval(fadeOutTimerInterval);
+    fadeOutTimer.setSingleShot(true);
+    fadeOutTimer.start();
+
     readRecentMessages();
 }
 
@@ -49,6 +54,17 @@ void StatusField::suspend()
 void StatusField::resume()
 {
     suspended = false;
+}
+
+void StatusField::blockFadeOutFor(QObject* blocker)
+{
+    fadeOutOldMessages();
+    fadeOutBlockers << blocker;
+}
+
+void StatusField::releaseFadeOutFor(QObject* blocker)
+{
+    fadeOutBlockers.removeOne(blocker);
 }
 
 StatusField::~StatusField()
@@ -94,6 +110,9 @@ void StatusField::error(const QString &text)
 
 void StatusField::addEntry(const QIcon &icon, const QString &text, const QColor& color, EntryRole role)
 {
+    if (fadeOutTimer.remainingTime() <= 0)
+        fadeOutOldMessages();
+
     int row = ui->tableWidget->rowCount();
     ui->tableWidget->setRowCount(row+1);
 
@@ -108,7 +127,7 @@ void StatusField::addEntry(const QIcon &icon, const QString &text, const QColor&
 
     item = new QTableWidgetItem();
     item->setIcon(icon);
-    item->setData(Qt::UserRole, role);
+    item->setData(ENTRY_ROLE, role);
     ui->tableWidget->setItem(row, 0, item);
     itemsCreated << item;
 
@@ -118,14 +137,14 @@ void StatusField::addEntry(const QIcon &icon, const QString &text, const QColor&
     item = new QTableWidgetItem(timeStr);
     item->setForeground(QBrush(color));
     item->setFont(font);
-    item->setData(Qt::UserRole, role);
+    item->setData(ENTRY_ROLE, role);
     ui->tableWidget->setItem(row, 1, item);
     itemsCreated << item;
 
     item = new QTableWidgetItem();
     item->setForeground(QBrush(color));
     item->setFont(font);
-    item->setData(Qt::UserRole, role);
+    item->setData(ENTRY_ROLE, role);
     ui->tableWidget->setItem(row, 2, item);
     itemsCreated << item;
 
@@ -141,8 +160,8 @@ void StatusField::addEntry(const QIcon &icon, const QString &text, const QColor&
         label->setStyleSheet(colorTpl.arg(color.name()));
         connect(label, SIGNAL(linkActivated(QString)), this, SIGNAL(linkActivated(QString)));
         ui->tableWidget->setCellWidget(row, 2, label);
-        ui->tableWidget->item(row, 2)->setData(Qt::UserRole, role);
-        ui->tableWidget->item(row, 2)->setData(Qt::UserRole+1, true);
+        ui->tableWidget->item(row, 2)->setData(ENTRY_ROLE, role);
+        ui->tableWidget->item(row, 2)->setData(HAS_WIDGET_LABEL, true);
     }
     else
     {
@@ -153,37 +172,35 @@ void StatusField::addEntry(const QIcon &icon, const QString &text, const QColor&
         setVisible(true);
 
     ui->tableWidget->scrollToBottom();
+
+    fadeOutTimer.start();
 }
 
 void StatusField::refreshColors()
 {
+
     const QColor stdColor = style()->standardPalette().text().color();
     const QColor errColor = QColor(Qt::red);
+    const QColor stdDeprColor = style()->standardPalette().color(QPalette::Disabled, QPalette::Text);
+    const QColor errDeprColor = QColor(255, 0, 0, 96);
     EntryRole role;
     bool hasLabel;
     QLabel* label = nullptr;
-    for (QTableWidgetItem* item : ui->tableWidget->findItems("", Qt::MatchContains)) {
-        role = (EntryRole)item->data(Qt::UserRole).toInt();
+    for (QTableWidgetItem* item : ui->tableWidget->findItems("", Qt::MatchContains))
+    {
+        role = (EntryRole)item->data(ENTRY_ROLE).toInt();
+        bool deprecated = item->data(DEPRECATED).toBool();
 
-        hasLabel = item->data(Qt::UserRole+1).toBool();
+        hasLabel = item->data(HAS_WIDGET_LABEL).toBool();
         label = hasLabel ? dynamic_cast<QLabel*>(ui->tableWidget->cellWidget(item->row(), item->column())) : nullptr;
 
-        switch (role)
-        {
-            case INFO:
-            case WARN:
-                item->setForeground(stdColor);
-                if (label != nullptr)
-                    label->setStyleSheet(colorTpl.arg(stdColor.name()));
+        QColor colorToSet = deprecated ?
+                    (role == ERROR ? errDeprColor : stdDeprColor) :
+                    (role == ERROR ? errColor : stdColor);
 
-                break;
-            case ERROR:
-                item->setForeground(errColor);
-                if (label != nullptr)
-                    label->setStyleSheet(colorTpl.arg(stdColor.name()));
-
-                break;
-        }
+        item->setForeground(colorToSet);
+        if (label != nullptr)
+            label->setStyleSheet(colorTpl.arg(colorToSet.name()));
     }
 }
 
@@ -226,10 +243,6 @@ void StatusField::customContextMenuRequested(const QPoint &pos)
 
 void StatusField::reset()
 {
-    for (QAbstractAnimation*& anim : itemAnimations)
-        anim->stop();
-
-    itemAnimations.clear();
     ui->tableWidget->clear();
     ui->tableWidget->setRowCount(0);
 }
@@ -254,7 +267,65 @@ void StatusField::changeFontSize(int factor)
     CFG_UI.Fonts.StatusField.set(f);
 }
 
+bool StatusField::isFadeOutBlocked()
+{
+    fadeOutBlockers.removeIf([](const auto& p) {
+        return p.isNull();
+    });
+
+    return !fadeOutBlockers.isEmpty();
+}
+
+void StatusField::dimOldMessages()
+{
+    for (QTableWidgetItem* item : ui->tableWidget->findItems("", Qt::MatchContains))
+    {
+        if (item->data(DEPRECATED).toBool())
+            continue;
+
+        item->setData(DataRole::DEPRECATED, true);
+
+        QIcon icon = item->icon();
+        if (!icon.isNull())
+        {
+            QPixmap src = icon.pixmap(256, 256);
+            QPixmap dst(src.size());
+            dst.fill(Qt::transparent);
+            QPainter p(&dst);
+            p.setOpacity(0.4);
+            p.drawPixmap(0, 0, src);
+            p.end();
+            item->setIcon(QIcon(dst));
+        }
+    }
+
+    refreshColors();
+}
+
+void StatusField::removeOldMessages()
+{
+    reset();
+}
+
 void StatusField::fontSizeChangeRequested(int delta)
 {
     changeFontSize(delta >= 0 ? 1 : -1);
+}
+
+void StatusField::fadeOutOldMessages()
+{
+    if (isFadeOutBlocked())
+        return;
+
+    switch (static_cast<Cfg::StatusFieldFadingMode>(CFG_UI.General.StatusFieldMsgFadingMode.get()))
+    {
+        case Cfg::NO_FADE:
+            break;
+        case Cfg::GRAY_OUT:
+            dimOldMessages();
+            break;
+        case Cfg::ERASE:
+            removeOldMessages();
+            break;
+    }
 }

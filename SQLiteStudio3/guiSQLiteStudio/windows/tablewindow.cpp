@@ -44,6 +44,7 @@
 #include <QStyleFactory>
 #if QT_VERSION >= QT_VERSION_CHECK(6, 5, 0)
 #include <QtSystemDetection>
+#include <statusfield.h>
 #else
 #include <qsystemdetection.h>
 #endif
@@ -350,6 +351,7 @@ void TableWindow::executeStructureChanges()
             return;
     }
 
+    STATUSFIELD->blockFadeOutFor(this);
     modifyingThisTable = true;
     structureExecutor->setDb(db);
     structureExecutor->setQueries(sqls);
@@ -948,6 +950,8 @@ void TableWindow::changesSuccessfullyCommitted()
     ui->dataView->resetSorting();
     if (ui->tabWidget->currentIndex() == getDataTabIdx())
         ui->dataView->refreshData();
+
+    STATUSFIELD->releaseFadeOutFor(this);
 }
 
 void TableWindow::changesFailedToCommit(int errorCode, const QString& errorText)
@@ -957,6 +961,8 @@ void TableWindow::changesFailedToCommit(int errorCode, const QString& errorText)
     modifyingThisTable = false;
     widgetCover->hide();
     notifyError(tr("Could not commit table structure. Error message: %1", "table window").arg(errorText));
+
+    STATUSFIELD->releaseFadeOutFor(this);
 }
 
 void TableWindow::rollbackStructure()

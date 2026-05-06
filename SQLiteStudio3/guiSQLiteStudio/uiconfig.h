@@ -55,6 +55,12 @@ namespace Cfg
         AFTER_CURRENT,
         AT_THE_END
     };
+    enum GUI_API_EXPORT StatusFieldFadingMode
+    {
+        NO_FADE,
+        GRAY_OUT,
+        ERASE
+    };
 }
 
 CFG_UI_CATEGORIES(Ui,
@@ -150,6 +156,7 @@ CFG_UI_CATEGORIES(Ui,
         CFG_ENTRY(bool,                    OpenViewsOnData,             false)
         CFG_ENTRY(bool,                    DataTabAsFirstInViews,       false)
         CFG_ENTRY(bool,                    AutoOpenStatusField,         true)
+        CFG_ENTRY(int,                     StatusFieldMsgFadingMode,    Cfg::StatusFieldFadingMode::GRAY_OUT)
         CFG_ENTRY(Cfg::DataEditorsOrder,   DataEditorsOrder,            Cfg::DataEditorsOrder())
         CFG_ENTRY(Cfg::DataRenderers,      DataRenderers,               Cfg::DataRenderers())
         CFG_ENTRY(QString,                 FileDialogLastPath,          QString())
