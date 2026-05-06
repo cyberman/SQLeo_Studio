@@ -3525,8 +3525,18 @@ Please enter new, unique name, or press &apos;%1&apos; to abort the operation:</
     </message>
     <message>
       <location filename="../dialogs/execfromfiledialog.ui" line="94"/>
-      <source>Any content that is not valid SQL will cause a statement to fail.</source>
-      <translation type="unfinished">Any content that is not valid SQL will cause a statement to fail.</translation>
+      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Any content that is not valid SQL will cause a statement to fail.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Any content that is not valid SQL will cause a statement to fail.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/execfromfiledialog.ui" line="104"/>
+      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Allows dot commands (used by official SQLite CLI application) in the file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Allows dot commands (used by official SQLite CLI application) in the file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/execfromfiledialog.ui" line="114"/>
+      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Allows dot commands (used by official SQLite CLI application) in the file and even executes some of them (i.e. .print and .read). All other dot commands are ignored.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Allows dot commands (used by official SQLite CLI application) in the file and even executes some of them (i.e. .print and .read). All other dot commands are ignored.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/execfromfiledialog.ui" line="97"/>
@@ -3534,19 +3544,9 @@ Please enter new, unique name, or press &apos;%1&apos; to abort the operation:</
       <translation type="unfinished">Strict (only SQL content allowed)</translation>
     </message>
     <message>
-      <location filename="../dialogs/execfromfiledialog.ui" line="104"/>
-      <source>Allows dot commands (used by official SQLite CLI application) in the file.</source>
-      <translation type="unfinished">Allows dot commands (used by official SQLite CLI application) in the file.</translation>
-    </message>
-    <message>
       <location filename="../dialogs/execfromfiledialog.ui" line="107"/>
       <source>Permissive (dot commands ignored)</source>
       <translation type="unfinished">Permissive (dot commands ignored)</translation>
-    </message>
-    <message>
-      <location filename="../dialogs/execfromfiledialog.ui" line="114"/>
-      <source>Allows dot commands (used by official SQLite CLI application) in the file and even executes some of them (i.e. .print and .read). All other dot commands are ignored.</source>
-      <translation type="unfinished">Allows dot commands (used by official SQLite CLI application) in the file and even executes some of them (i.e. .print and .read). All other dot commands are ignored.</translation>
     </message>
     <message>
       <location filename="../dialogs/execfromfiledialog.ui" line="117"/>
@@ -3554,27 +3554,27 @@ Please enter new, unique name, or press &apos;%1&apos; to abort the operation:</
       <translation type="unfinished">Extended (dot commands executed)</translation>
     </message>
     <message>
-      <location filename="../dialogs/execfromfiledialog.cpp" line="87"/>
+      <location filename="../dialogs/execfromfiledialog.cpp" line="148"/>
       <source>SQL scripts (*.sql);;All files (*)</source>
       <translation type="unfinished">SQL scripts (*.sql);;All files (*)</translation>
     </message>
     <message>
-      <location filename="../dialogs/execfromfiledialog.cpp" line="88"/>
+      <location filename="../dialogs/execfromfiledialog.cpp" line="149"/>
       <source>Execute SQL file</source>
       <translation type="unfinished">Execute SQL file</translation>
     </message>
     <message>
-      <location filename="../dialogs/execfromfiledialog.cpp" line="103"/>
+      <location filename="../dialogs/execfromfiledialog.cpp" line="164"/>
       <source>Please provide file to be executed.</source>
       <translation type="unfinished">Please provide file to be executed.</translation>
     </message>
     <message>
-      <location filename="../dialogs/execfromfiledialog.cpp" line="112"/>
+      <location filename="../dialogs/execfromfiledialog.cpp" line="173"/>
       <source>Provided file does not exist or cannot be read.</source>
       <translation type="unfinished">Provided file does not exist or cannot be read.</translation>
     </message>
     <message>
-      <location filename="../dialogs/execfromfiledialog.cpp" line="124"/>
+      <location filename="../dialogs/execfromfiledialog.cpp" line="185"/>
       <source>Select a database to execute the SQL file on.</source>
       <translation type="unfinished">Select a database to execute the SQL file on.</translation>
     </message>
