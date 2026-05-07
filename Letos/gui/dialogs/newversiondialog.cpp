@@ -48,7 +48,7 @@ void NewVersionDialog::downloadUpdates()
 
 void NewVersionDialog::openHomePage()
 {
-    QDesktopServices::openUrl(QUrl(SQLITESTUDIO->getHomePage()));
+    QDesktopServices::openUrl(QUrl(LETOS->getHomePage()));
     close();
 }
 

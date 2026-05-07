@@ -26,6 +26,6 @@ class API_EXPORT CodeFormatter
         bool modifyingConfig = false;
 };
 
-#define FORMATTER SQLITESTUDIO->getCodeFormatter()
+#define FORMATTER LETOS->getCodeFormatter()
 
 #endif // CODEFORMATTER_H

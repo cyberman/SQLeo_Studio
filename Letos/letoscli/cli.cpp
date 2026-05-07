@@ -120,7 +120,7 @@ Db* CLI::getCurrentDb() const
 
 void CLI::exit()
 {
-    SQLITESTUDIO->cleanUp();
+    LETOS->cleanUp();
     doExit = true;
 }
 

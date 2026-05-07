@@ -216,6 +216,6 @@ class API_EXPORT Config : public QObject
 
 };
 
-#define CFG SQLITESTUDIO->getConfig()
+#define CFG LETOS->getConfig()
 
 #endif // CONFIG_H

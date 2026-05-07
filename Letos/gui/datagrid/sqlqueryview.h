@@ -153,7 +153,7 @@ class GUI_API_EXPORT SqlQueryView : public QTableView, public ExtActionContainer
         void requestColumnSorting(int colIdx);
         void setItemDelegateForColumn(int column, QAbstractItemDelegate *delegate);
 
-        constexpr static const char* mimeDataId = "application/x-sqlitestudio-data-view-data";
+        constexpr static const char* mimeDataId = "application/x-letos-data-view-data";
         constexpr static const int minHeaderWidth = 15;
 
         SqlQueryItemDelegate* itemDelegate = nullptr;

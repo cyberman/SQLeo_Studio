@@ -129,7 +129,7 @@ int main(int argc, char *argv[])
     initHighDpi();
     QCoreApplication::setApplicationName("Letos");
     QCoreApplication::setOrganizationName("letos.org");
-    QCoreApplication::setApplicationVersion(SQLITESTUDIO->getVersionString());
+    QCoreApplication::setApplicationVersion(LETOS->getVersionString());
 
     SingleApplication a(argc, argv, true, SingleApplication::ExcludeAppPath|SingleApplication::ExcludeAppVersion|SingleApplication::User);
 
@@ -158,8 +158,8 @@ int main(int argc, char *argv[])
     SqlQueryModel::staticInit();
     ColorPickerPopup::staticInit();
 
-    SQLITESTUDIO->setInitialTranslationFiles({"core", "gui", "letos"});
-    SQLITESTUDIO->init(a.arguments(), true);
+    LETOS->setInitialTranslationFiles({"core", "gui", "letos"});
+    LETOS->init(a.arguments(), true);
     IconManager::getInstance()->init();
     DbTree::staticInit();
     DataView::staticInit();
@@ -178,7 +178,7 @@ int main(int argc, char *argv[])
     QObject::connect(&a, &SingleApplication::receivedMessage, mainWin, &MainWindow::messageFromSecondaryInstance);
 
     if (!doNotLoadPlugins)
-        SQLITESTUDIO->initPlugins();
+        LETOS->initPlugins();
 
     if (listPlugins)
     {
@@ -188,7 +188,7 @@ int main(int argc, char *argv[])
         return 0;
     }
 
-    if (!LanguageDialog::didAskForDefaultLanguage() && !SQLITESTUDIO->getConfig()->isInMemory())
+    if (!LanguageDialog::didAskForDefaultLanguage() && !LETOS->getConfig()->isInMemory())
     {
         LanguageDialog::askedForDefaultLanguage();
         QMap<QString, QString> langs = getAvailableLanguages();

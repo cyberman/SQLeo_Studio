@@ -45,7 +45,7 @@ class GUI_API_EXPORT CodeSnippetEditorModel : public QAbstractListModel
         QStringList mimeTypes() const override;
         QMimeData* mimeData(const QModelIndexList &indexes) const override;
 
-        static const constexpr char* MIMETYPE = "application/x-sqlitestudio-codesnippet";
+        static const constexpr char* MIMETYPE = "application/x-letos-codesnippet";
 
     private:
         struct Snippet

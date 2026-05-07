@@ -572,7 +572,7 @@ void ConfigImpl::rollback()
 void ConfigImpl::exportConfig(const QString& filePath, const ExportImportParams& params)
 {
     QVariantMap data;
-    data["exportAppVersion"] = SQLITESTUDIO->getVersion();
+    data["exportAppVersion"] = LETOS->getVersion();
 
     if (params.functions)
         data["functions"] = exportFunctions();
@@ -720,9 +720,9 @@ QString ConfigImpl::getConfigPath()
 QString ConfigImpl::getLegacyConfigPath()
 {
 #ifdef Q_OS_WIN
-    return SQLITESTUDIO->getEnv("APPDATA")+"/sqlitestudio";
+    return LETOS->getEnv("APPDATA")+"/sqlitestudio";
 #else
-    return SQLITESTUDIO->getEnv("HOME")+"/.config/sqlitestudio";
+    return LETOS->getEnv("HOME")+"/.config/sqlitestudio";
 #endif
 }
 

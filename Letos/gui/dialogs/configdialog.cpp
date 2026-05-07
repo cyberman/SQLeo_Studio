@@ -2025,7 +2025,7 @@ void ConfigDialog::initLangs()
     for (QString& lang : langList)
     {
         ui->langCombo->addItem(lang, langs[lang]);
-        if (langs[lang] == SQLITESTUDIO->getCurrentLang())
+        if (langs[lang] == LETOS->getCurrentLang())
             selected = idx;
 
         idx++;

@@ -1259,7 +1259,7 @@ void TableWindow::updateDdlTab()
     createTable->rebuildTokens();
     QString ddl = createTable->detokenize();
     if (createTable->columns.size() > 0)
-        ddl = SQLITESTUDIO->getCodeFormatter()->format("sql", ddl, db);
+        ddl = LETOS->getCodeFormatter()->format("sql", ddl, db);
 
     ui->ddlEdit->setPlainText(ddl);
 }

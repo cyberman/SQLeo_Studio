@@ -22,12 +22,12 @@ quint32 AbstractDb::asyncId = 1;
 AbstractDb::AbstractDb(const QString& name, const QString& path, const QHash<QString, QVariant>& connOptions) :
     name(name), path(path), connOptions(connOptions)
 {
-    connect(SQLITESTUDIO, SIGNAL(aboutToQuit()), this, SLOT(appIsAboutToQuit()));
+    connect(LETOS, SIGNAL(aboutToQuit()), this, SLOT(appIsAboutToQuit()));
 }
 
 AbstractDb::~AbstractDb()
 {
-    disconnect(SQLITESTUDIO, SIGNAL(aboutToQuit()), this, SLOT(appIsAboutToQuit()));
+    disconnect(LETOS, SIGNAL(aboutToQuit()), this, SLOT(appIsAboutToQuit()));
 }
 
 bool AbstractDb::open()

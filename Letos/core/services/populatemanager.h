@@ -44,6 +44,6 @@ class API_EXPORT PopulateManager : public PluginServiceBase
         void finishedStep(int step);
 };
 
-#define POPULATE_MANAGER SQLITESTUDIO->getPopulateManager()
+#define POPULATE_MANAGER LETOS->getPopulateManager()
 
 #endif // POPULATEMANAGER_H

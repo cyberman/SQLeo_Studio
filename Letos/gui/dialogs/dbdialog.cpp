@@ -497,7 +497,7 @@ void DbDialog::updateType()
     if (disableTypeAutodetection)
         return;
 
-    DbPlugin* validPlugin = SQLITESTUDIO->getDbManager()->getPluginForDbFile(getPath());
+    DbPlugin* validPlugin = LETOS->getDbManager()->getPluginForDbFile(getPath());
     if (!validPlugin || validPlugin->getLabel() == ui->typeCombo->currentText())
         return;
 

@@ -8,7 +8,7 @@
 #include <QDir>
 
 class QFile;
-class SQLiteStudio;
+class Letos;
 class DbManager;
 class CLI;
 class Config;

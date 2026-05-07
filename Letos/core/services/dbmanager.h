@@ -304,6 +304,6 @@ class API_EXPORT DbManager : public QObject
  * @brief Database manager.
  * Provides direct access to the database manager.
  */
-#define DBLIST SQLITESTUDIO->getDbManager()
+#define DBLIST LETOS->getDbManager()
 
 #endif // DBMANAGER_H

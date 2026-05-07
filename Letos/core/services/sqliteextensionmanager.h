@@ -45,6 +45,6 @@ class API_EXPORT SqliteExtensionManager : public QObject
         void extensionListChanged();
 };
 
-#define SQLITE_EXTENSIONS SQLITESTUDIO->getSqliteExtensionManager()
+#define SQLITE_EXTENSIONS LETOS->getSqliteExtensionManager()
 
 #endif // SQLITEEXTENSIONMANAGER_H

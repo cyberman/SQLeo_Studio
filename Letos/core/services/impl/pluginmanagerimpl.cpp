@@ -31,7 +31,7 @@ void PluginManagerImpl::init()
 
     pluginDirs += QDir(CFG->getConfigDir()).absoluteFilePath("plugins");
 
-    QString envDirs = SQLITESTUDIO->getEnv("SQLITESTUDIO_PLUGINS");
+    QString envDirs = LETOS->getEnv("SQLITESTUDIO_PLUGINS");
     if (!envDirs.isNull())
         pluginDirs += envDirs.split(PATH_LIST_SEPARATOR);
 
@@ -222,7 +222,7 @@ bool PluginManagerImpl::initPlugin(QPluginLoader* loader, const QString& fileNam
 
 bool PluginManagerImpl::checkPluginRequirements(const QString& pluginName, const QJsonObject& metaObject)
 {
-    if (metaObject.value("gui").toBool(false) && !SQLITESTUDIO->isGuiAvailable())
+    if (metaObject.value("gui").toBool(false) && !LETOS->isGuiAvailable())
     {
         qDebug() << "Plugin" << pluginName << "skipped, because it requires GUI and this is not GUI client running.";
         return false;
@@ -243,18 +243,18 @@ bool PluginManagerImpl::checkPluginRequirements(const QString& pluginName, const
     }
 
     minVer = metaObject.value("minAppVersion").toInt(0);
-    if (SQLITESTUDIO->getVersion() < minVer)
+    if (LETOS->getVersion() < minVer)
     {
         qDebug() << "Plugin" << pluginName << "skipped, because it requires at least SQLiteStudio version" << toPrintableVersion(minVer) << ", but got"
-                 << SQLITESTUDIO->getVersionString();
+                 << LETOS->getVersionString();
         return false;
     }
 
     maxVer = metaObject.value("maxAppVersion").toInt(999999);
-    if (SQLITESTUDIO->getVersion() > maxVer)
+    if (LETOS->getVersion() > maxVer)
     {
         qDebug() << "Plugin" << pluginName << "skipped, because it requires at most SQLiteStudio version" << toPrintableVersion(maxVer) << ", but got"
-                 << SQLITESTUDIO->getVersionString();
+                 << LETOS->getVersionString();
         return false;
     }
 

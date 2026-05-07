@@ -27,7 +27,7 @@ DdlPreviewDialog::~DdlPreviewDialog()
 
 void DdlPreviewDialog::setDdl(const QString& ddl)
 {
-    QString formatted = SQLITESTUDIO->getCodeFormatter()->format("sql", ddl, db);
+    QString formatted = LETOS->getCodeFormatter()->format("sql", ddl, db);
     ui->ddlEdit->setPlainText(formatted);
 }
 
@@ -41,7 +41,7 @@ void DdlPreviewDialog::setDdl(const QStringList& ddlList)
         if (!newDdl.endsWith(";"))
             newDdl.append(";");
 
-        fixedList << SQLITESTUDIO->getCodeFormatter()->format("sql", newDdl, db);
+        fixedList << LETOS->getCodeFormatter()->format("sql", newDdl, db);
     }
     setDdl(fixedList.join("\n"));
 }

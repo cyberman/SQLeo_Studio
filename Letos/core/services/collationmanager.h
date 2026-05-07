@@ -44,6 +44,6 @@ class API_EXPORT CollationManager : public QObject
         void collationListChanged();
 };
 
-#define COLLATIONS SQLITESTUDIO->getCollationManager()
+#define COLLATIONS LETOS->getCollationManager()
 
 #endif // COLLATIONMANAGER_H

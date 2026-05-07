@@ -29,11 +29,11 @@ void deleteMockRepo()
 
 void initMocks()
 {
-    SQLITESTUDIO->setConfig(new ConfigMock());
-    SQLITESTUDIO->setFunctionManager(new FunctionManagerMock());
-    SQLITESTUDIO->setPluginManager(new PluginManagerMock());
-    SQLITESTUDIO->setDbAttacherFactory(new DbAttacherFactoryMock());
-    SQLITESTUDIO->setDbManager(new DbManagerMock());
-    SQLITESTUDIO->setCollationManager(new CollationManagerMock());
-    SQLITESTUDIO->setSqliteExtensionManager(new ExtensionManagerMock());
+    LETOS->setConfig(new ConfigMock());
+    LETOS->setFunctionManager(new FunctionManagerMock());
+    LETOS->setPluginManager(new PluginManagerMock());
+    LETOS->setDbAttacherFactory(new DbAttacherFactoryMock());
+    LETOS->setDbManager(new DbManagerMock());
+    LETOS->setCollationManager(new CollationManagerMock());
+    LETOS->setSqliteExtensionManager(new ExtensionManagerMock());
 }

@@ -75,7 +75,7 @@ void UpdateManager::handleUpdatesResponse(QNetworkReply* response, bool enforced
     QString alignedVersion = versionParts[0] + versionParts[1].rightJustified(2, '0') + versionParts[2].rightJustified(2, '0');
     int versionNumber = alignedVersion.toInt();
 
-    if (SQLITESTUDIO->getVersion() >= versionNumber)
+    if (LETOS->getVersion() >= versionNumber)
     {
         emit noUpdatesAvailable(enforced);
         return;

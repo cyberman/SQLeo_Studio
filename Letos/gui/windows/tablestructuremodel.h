@@ -81,7 +81,7 @@ class GUI_API_EXPORT TableStructureModel : public QAbstractTableModel
         bool isColumnGenerate(SqliteCreateTable::Column* column) const;
         QString getToolTip(int row, TableStructureModel::Columns modelColumn) const;
 
-        static const constexpr char* mimeType = "application/x-sqlitestudio-tablestructuremodel-row-index";
+        static const constexpr char* mimeType = "application/x-letos-tablestructuremodel-row-index";
 
         QPointer<SqliteCreateTable> createTable;
         bool modified = false;

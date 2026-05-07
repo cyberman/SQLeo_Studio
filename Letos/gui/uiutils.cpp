@@ -240,7 +240,7 @@ void formatSqlInTextEdit(QPlainTextEdit* editor, Db* db)
     QString sql = cur.hasSelection() ? cur.selectedText() : editor->toPlainText();
     fixTextCursorSelectedText(sql);
 
-    sql = SQLITESTUDIO->getCodeFormatter()->format("sql", sql, db);
+    sql = LETOS->getCodeFormatter()->format("sql", sql, db);
 
     if (!cur.hasSelection())
         editor->selectAll();

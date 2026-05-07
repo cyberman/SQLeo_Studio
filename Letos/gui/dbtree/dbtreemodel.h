@@ -68,7 +68,7 @@ class GUI_API_EXPORT DbTreeModel : public QStandardItemModel
         static DbTreeItem* findFirstItem(QStandardItem* parentItem, DbTreeItem::Type type);
         static void staticInit();
 
-        static const constexpr char* MIMETYPE = "application/x-sqlitestudio-dbtreeitem";
+        static const constexpr char* MIMETYPE = "application/x-letos-dbtreeitem";
 
     private:
         class ItemFiltering : public Interruptable

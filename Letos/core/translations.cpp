@@ -34,7 +34,7 @@ void loadTranslation(const QString& baseName)
 
     QString fName;
     bool res = false;
-    QString lang = SQLITESTUDIO->getCurrentLang();
+    QString lang = LETOS->getCurrentLang();
     QStringList filters = QStringList({baseName+"_"+lang+".qm"});
     QDir dir;
 

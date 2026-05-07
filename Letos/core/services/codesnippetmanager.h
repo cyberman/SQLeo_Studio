@@ -44,6 +44,6 @@ class API_EXPORT CodeSnippetManager : public QObject
         void codeSnippetListChanged();
 };
 
-#define CODESNIPPETS SQLITESTUDIO->getCodeSnippetManager()
+#define CODESNIPPETS LETOS->getCodeSnippetManager()
 
 #endif // CODESNIPPETMANAGER_H

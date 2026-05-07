@@ -42,21 +42,21 @@
 #include <QThreadPool>
 #include <QCoreApplication>
 
-DEFINE_SINGLETON(SQLiteStudio)
+DEFINE_SINGLETON(Letos)
 
 static const int letosVersion = 40000;
 
-SQLiteStudio::SQLiteStudio()
+Letos::Letos()
 {
     if (qApp) // qApp is null in unit tests
         connect(qApp, SIGNAL(aboutToQuit()), this, SLOT(cleanUp()));
 }
 
-SQLiteStudio::~SQLiteStudio()
+Letos::~Letos()
 {
 }
 
-void SQLiteStudio::setupCrashHandler()
+void Letos::setupCrashHandler()
 {
     auto &chillout = Debug::Chillout::getInstance();
 
@@ -74,158 +74,158 @@ void SQLiteStudio::setupCrashHandler()
     });
 }
 
-QStringList SQLiteStudio::getInitialTranslationFiles() const
+QStringList Letos::getInitialTranslationFiles() const
 {
     return initialTranslationFiles;
 }
 
-void SQLiteStudio::setInitialTranslationFiles(const QStringList& value)
+void Letos::setInitialTranslationFiles(const QStringList& value)
 {
     initialTranslationFiles = value;
 }
 
-void SQLiteStudio::installCrashHandler(SQLiteStudio::CrashHandler handler)
+void Letos::installCrashHandler(Letos::CrashHandler handler)
 {
     crashHandlers << handler;
 }
 
 
-QString SQLiteStudio::getCurrentLang() const
+QString Letos::getCurrentLang() const
 {
     return currentLang;
 }
 
-ExtraLicenseManager* SQLiteStudio::getExtraLicenseManager() const
+ExtraLicenseManager* Letos::getExtraLicenseManager() const
 {
     return extraLicenseManager;
 }
 
-void SQLiteStudio::setExtraLicenseManager(ExtraLicenseManager* value)
+void Letos::setExtraLicenseManager(ExtraLicenseManager* value)
 {
     extraLicenseManager = value;
 }
 
 
-bool SQLiteStudio::getImmediateQuit() const
+bool Letos::getImmediateQuit() const
 {
     return immediateQuit;
 }
 
-void SQLiteStudio::setImmediateQuit(bool value)
+void Letos::setImmediateQuit(bool value)
 {
     immediateQuit = value;
 }
 
 #ifdef HAS_UPDATEMANAGER
-UpdateManager* SQLiteStudio::getUpdateManager() const
+UpdateManager* Letos::getUpdateManager() const
 {
     return updateManager;
 }
 
-void SQLiteStudio::setUpdateManager(UpdateManager* value)
+void Letos::setUpdateManager(UpdateManager* value)
 {
     updateManager = value;
 }
 #endif
 
-PopulateManager* SQLiteStudio::getPopulateManager() const
+PopulateManager* Letos::getPopulateManager() const
 {
     return populateManager;
 }
 
-void SQLiteStudio::setPopulateManager(PopulateManager* value)
+void Letos::setPopulateManager(PopulateManager* value)
 {
     populateManager = value;
 }
 
-CodeFormatter* SQLiteStudio::getCodeFormatter() const
+CodeFormatter* Letos::getCodeFormatter() const
 {
     return codeFormatter;
 }
 
-void SQLiteStudio::setCodeFormatter(CodeFormatter* codeFormatter)
+void Letos::setCodeFormatter(CodeFormatter* codeFormatter)
 {
     this->codeFormatter = codeFormatter;
 }
 
-QString SQLiteStudio::getHomePage() const
+QString Letos::getHomePage() const
 {
     static_qstring(url, "https://sqlitestudio.pl");
     return url;
 }
 
-QString SQLiteStudio::getGitHubReleases() const
+QString Letos::getGitHubReleases() const
 {
     static_qstring(url, "https://github.com/pawelsalawa/sqlitestudio/releases");
     return url;
 }
 
-QString SQLiteStudio::getUserManualPage() const
+QString Letos::getUserManualPage() const
 {
     static_qstring(url, "https://github.com/pawelsalawa/sqlitestudio/wiki/User_Manual");
     return url;
 }
 
-QString SQLiteStudio::getSqliteDocsPage() const
+QString Letos::getSqliteDocsPage() const
 {
     static_qstring(url, "http://sqlite.org/lang.html");
     return url;
 }
 
-QString SQLiteStudio::getIssuesPage() const
+QString Letos::getIssuesPage() const
 {
     static_qstring(url, "https://github.com/pawelsalawa/sqlitestudio/issues");
     return url;
 }
 
-QString SQLiteStudio::getDonatePage() const
+QString Letos::getDonatePage() const
 {
     static_qstring(url, "https://sqlitestudio.pl/donate/");
     return url;
 }
 
-QString SQLiteStudio::getNewIssuePage() const
+QString Letos::getNewIssuePage() const
 {
     static_qstring(url, "https://github.com/pawelsalawa/sqlitestudio/issues/new");
     return url;
 }
 
-ImportManager* SQLiteStudio::getImportManager() const
+ImportManager* Letos::getImportManager() const
 {
     return importManager;
 }
 
-void SQLiteStudio::setImportManager(ImportManager* value)
+void Letos::setImportManager(ImportManager* value)
 {
     importManager = value;
 }
 
-ExportManager* SQLiteStudio::getExportManager() const
+ExportManager* Letos::getExportManager() const
 {
     return exportManager;
 }
 
-void SQLiteStudio::setExportManager(ExportManager* value)
+void Letos::setExportManager(ExportManager* value)
 {
     exportManager = value;
 }
 
-CodeSnippetManager* SQLiteStudio::getCodeSnippetManager() const
+CodeSnippetManager* Letos::getCodeSnippetManager() const
 {
     return codeSnippetManager;
 }
 
-void SQLiteStudio::setCodeSnippetManager(CodeSnippetManager* newCodeSnippetManager)
+void Letos::setCodeSnippetManager(CodeSnippetManager* newCodeSnippetManager)
 {
     codeSnippetManager = newCodeSnippetManager;
 }
 
-int SQLiteStudio::getVersion() const
+int Letos::getVersion() const
 {
     return letosVersion;
 }
 
-QString SQLiteStudio::getVersionString() const
+QString Letos::getVersionString() const
 {
     int ver = getVersion();
     int majorVer = ver / 10000;
@@ -234,84 +234,84 @@ QString SQLiteStudio::getVersionString() const
     return QString::number(majorVer) + "." + QString::number(minorVer) + "." + QString::number(patchVer);
 }
 
-CollationManager* SQLiteStudio::getCollationManager() const
+CollationManager* Letos::getCollationManager() const
 {
     return collationManager;
 }
 
-void SQLiteStudio::setCollationManager(CollationManager* value)
+void Letos::setCollationManager(CollationManager* value)
 {
     safe_delete(collationManager);
     collationManager = value;
 }
 
-SqliteExtensionManager* SQLiteStudio::getSqliteExtensionManager() const
+SqliteExtensionManager* Letos::getSqliteExtensionManager() const
 {
     return extensionManager;
 }
 
-void SQLiteStudio::setSqliteExtensionManager(SqliteExtensionManager* value)
+void Letos::setSqliteExtensionManager(SqliteExtensionManager* value)
 {
     safe_delete(extensionManager);
     extensionManager = value;
 }
 
-DbAttacherFactory* SQLiteStudio::getDbAttacherFactory() const
+DbAttacherFactory* Letos::getDbAttacherFactory() const
 {
     return dbAttacherFactory;
 }
 
-void SQLiteStudio::setDbAttacherFactory(DbAttacherFactory* value)
+void Letos::setDbAttacherFactory(DbAttacherFactory* value)
 {
     safe_delete(dbAttacherFactory);
     dbAttacherFactory = value;
 }
 
-PluginManager* SQLiteStudio::getPluginManager() const
+PluginManager* Letos::getPluginManager() const
 {
     return pluginManager;
 }
 
-void SQLiteStudio::setPluginManager(PluginManager* value)
+void Letos::setPluginManager(PluginManager* value)
 {
     safe_delete(pluginManager);
     pluginManager = value;
 }
 
-FunctionManager* SQLiteStudio::getFunctionManager() const
+FunctionManager* Letos::getFunctionManager() const
 {
     return functionManager;
 }
 
-void SQLiteStudio::setFunctionManager(FunctionManager* value)
+void Letos::setFunctionManager(FunctionManager* value)
 {
     safe_delete(functionManager);
     functionManager = value;
 }
 
-DbManager* SQLiteStudio::getDbManager() const
+DbManager* Letos::getDbManager() const
 {
     return dbManager;
 }
 
-void SQLiteStudio::setDbManager(DbManager* value)
+void Letos::setDbManager(DbManager* value)
 {
     safe_delete(dbManager);
     dbManager = value;
 }
 
-Config* SQLiteStudio::getConfig() const
+Config* Letos::getConfig() const
 {
     return config;
 }
 
-void SQLiteStudio::setConfig(Config* value)
+void Letos::setConfig(Config* value)
 {
     safe_delete(config);
     config = value;
 }
 
-void SQLiteStudio::init(const QStringList& cmdListArguments, bool guiAvailable)
+void Letos::init(const QStringList& cmdListArguments, bool guiAvailable)
 {
     env = new QProcessEnvironment(QProcessEnvironment::systemEnvironment());
     this->guiAvailable = guiAvailable;
@@ -403,7 +403,7 @@ void SQLiteStudio::init(const QStringList& cmdListArguments, bool guiAvailable)
     setupCrashHandler();
 }
 
-void SQLiteStudio::initPlugins()
+void Letos::initPlugins()
 {
     pluginManager->init();
 
@@ -412,7 +412,7 @@ void SQLiteStudio::initPlugins()
     connect(pluginManager, SIGNAL(unloaded(QString,PluginType*)), this, SLOT(pluginUnloaded(QString,PluginType*)));
 }
 
-void SQLiteStudio::cleanUp()
+void Letos::cleanUp()
 {
     if (finalCleanupDone)
         return;
@@ -453,47 +453,47 @@ void SQLiteStudio::cleanUp()
 //    SQLS_CLEANUP_RESOURCE(core);
 }
 
-void SQLiteStudio::updateCodeFormatter()
+void Letos::updateCodeFormatter()
 {
     codeFormatter->fullUpdate();
 }
 
-void SQLiteStudio::updateCurrentCodeFormatter()
+void Letos::updateCurrentCodeFormatter()
 {
     codeFormatter->updateCurrent();
 }
 
-void SQLiteStudio::pluginLoaded(Plugin* plugin, PluginType* pluginType)
+void Letos::pluginLoaded(Plugin* plugin, PluginType* pluginType)
 {
     Q_UNUSED(plugin);
     if (pluginType->isForPluginType<CodeFormatterPlugin>()) // TODO move this to slot of CodeFormatter
         updateCodeFormatter();
 }
 
-void SQLiteStudio::pluginToBeUnloaded(Plugin* plugin, PluginType* pluginType)
+void Letos::pluginToBeUnloaded(Plugin* plugin, PluginType* pluginType)
 {
     Q_UNUSED(plugin);
     Q_UNUSED(pluginType);
 }
 
-void SQLiteStudio::pluginUnloaded(const QString& pluginName, PluginType* pluginType)
+void Letos::pluginUnloaded(const QString& pluginName, PluginType* pluginType)
 {
     Q_UNUSED(pluginName);
     if (pluginType->isForPluginType<CodeFormatterPlugin>()) // TODO move this to slot of CodeFormatter
         updateCodeFormatter();
 }
 
-QString SQLiteStudio::getEnv(const QString &name, const QString &defaultValue)
+QString Letos::getEnv(const QString &name, const QString &defaultValue)
 {
     return env->value(name, defaultValue);
 }
 
-DbAttacher* SQLiteStudio::createDbAttacher(Db* db)
+DbAttacher* Letos::createDbAttacher(Db* db)
 {
     return dbAttacherFactory->create(db);
 }
 
-bool SQLiteStudio::isGuiAvailable() const
+bool Letos::isGuiAvailable() const
 {
     return guiAvailable;
 }

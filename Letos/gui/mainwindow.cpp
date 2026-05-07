@@ -82,7 +82,7 @@ MainWindow::~MainWindow()
 void MainWindow::init()
 {
     ui->setupUi(this);
-    connect(SQLITESTUDIO, SIGNAL(aboutToQuit()), this, SLOT(cleanUp()));
+    connect(LETOS, SIGNAL(aboutToQuit()), this, SLOT(cleanUp()));
 
 #ifdef Q_OS_WIN
     setWindowIcon(ICONS.LETOS_APP.toQIcon().pixmap(256, 256));
@@ -90,7 +90,7 @@ void MainWindow::init()
     setWindowIcon(ICONS.LETOS_APP);
 #endif
 
-    setWindowTitle(QString("Letos (%1)").arg(SQLITESTUDIO->getVersionString()));
+    setWindowTitle(QString("Letos (%1)").arg(LETOS->getVersionString()));
 
 #ifdef Q_OS_MACX
     ui->centralWidget->layout()->setContentsMargins(0, 0, 0, 0);
@@ -191,7 +191,7 @@ void MainWindow::init()
     // this handler would overwrite session with incomplete/damaged session state.
     // At the same time, session saving is triggered frequently during the application
     // runtime, so it doesn't seem like saving is necessary during the crash.
-    // SQLITESTUDIO->installCrashHandler([this]()
+    // LETOS->installCrashHandler([this]()
     // {
     //     saveSession();
     // });
@@ -216,7 +216,7 @@ void MainWindow::observeSessionChanges()
 
 void MainWindow::cleanUp()
 {
-    if (SQLITESTUDIO->getImmediateQuit())
+    if (LETOS->getImmediateQuit())
         return;
 
 //    qDebug() << "MainWindow::cleanUp()";
@@ -287,7 +287,7 @@ StatusField *MainWindow::getStatusField() const
 
 void MainWindow::closeEvent(QCloseEvent* event)
 {
-    if (SQLITESTUDIO->getImmediateQuit())
+    if (LETOS->getImmediateQuit())
     {
         closingApp = true;
         QMainWindow::closeEvent(event);
@@ -306,7 +306,7 @@ void MainWindow::closeEvent(QCloseEvent* event)
     closingApp = true;
     closeNonSessionWindows();
     saveSession(true);
-    SQLITESTUDIO->cleanUp();
+    LETOS->cleanUp();
     QMainWindow::closeEvent(event);
 }
 
@@ -477,32 +477,32 @@ void MainWindow::initMenuBar()
     toolsMenu->addAction(actionMap[OPEN_CONFIG]);
 
     // Help menu
-    sqlitestudioMenu = new QMenu(this);
-    sqlitestudioMenu->setTitle(tr("&Help"));
-    menuBar()->addMenu(sqlitestudioMenu);
+    letosMenu = new QMenu(this);
+    letosMenu->setTitle(tr("&Help"));
+    menuBar()->addMenu(letosMenu);
     if (isDebugEnabled() && isDebugConsoleEnabled())
     {
-        sqlitestudioMenu->addAction(actionMap[OPEN_DEBUG_CONSOLE]);
-        sqlitestudioMenu->addSeparator();
+        letosMenu->addAction(actionMap[OPEN_DEBUG_CONSOLE]);
+        letosMenu->addSeparator();
     }
-    sqlitestudioMenu->addAction(actionMap[USER_MANUAL]);
-    sqlitestudioMenu->addAction(actionMap[SQLITE_DOCS]);
-    sqlitestudioMenu->addAction(actionMap[HOMEPAGE]);
-    sqlitestudioMenu->addSeparator();
+    letosMenu->addAction(actionMap[USER_MANUAL]);
+    letosMenu->addAction(actionMap[SQLITE_DOCS]);
+    letosMenu->addAction(actionMap[HOMEPAGE]);
+    letosMenu->addSeparator();
 #ifdef HAS_UPDATEMANAGER
     if (UPDATES->isPlatformEligibleForUpdate())
     {
-        sqlitestudioMenu->addAction(actionMap[CHECK_FOR_UPDATES]);
-        sqlitestudioMenu->addSeparator();
+        letosMenu->addAction(actionMap[CHECK_FOR_UPDATES]);
+        letosMenu->addSeparator();
     }
 #endif
-    sqlitestudioMenu->addAction(actionMap[REPORT_BUG]);
-    sqlitestudioMenu->addAction(actionMap[FEATURE_REQUEST]);
-    sqlitestudioMenu->addAction(actionMap[BUG_REPORT_HISTORY]);
-    sqlitestudioMenu->addSeparator();
-    sqlitestudioMenu->addAction(actionMap[LICENSES]);
-    sqlitestudioMenu->addAction(actionMap[DONATE]);
-    sqlitestudioMenu->addAction(actionMap[ABOUT]);
+    letosMenu->addAction(actionMap[REPORT_BUG]);
+    letosMenu->addAction(actionMap[FEATURE_REQUEST]);
+    letosMenu->addAction(actionMap[BUG_REPORT_HISTORY]);
+    letosMenu->addSeparator();
+    letosMenu->addAction(actionMap[LICENSES]);
+    letosMenu->addAction(actionMap[DONATE]);
+    letosMenu->addAction(actionMap[ABOUT]);
 }
 
 void MainWindow::saveSession(MdiWindow* currWindow)
@@ -992,12 +992,12 @@ void MainWindow::openCssConsole()
 
 void MainWindow::reportBug()
 {
-    QDesktopServices::openUrl(QUrl(SQLITESTUDIO->getNewIssuePage()));
+    QDesktopServices::openUrl(QUrl(LETOS->getNewIssuePage()));
 }
 
 void MainWindow::requestFeature()
 {
-    QDesktopServices::openUrl(QUrl(SQLITESTUDIO->getNewIssuePage()));
+    QDesktopServices::openUrl(QUrl(LETOS->getNewIssuePage()));
 }
 
 void MainWindow::aboutLetos()
@@ -1014,32 +1014,32 @@ void MainWindow::licenses()
 
 void MainWindow::homepage()
 {
-    QDesktopServices::openUrl(QUrl(SQLITESTUDIO->getHomePage()));
+    QDesktopServices::openUrl(QUrl(LETOS->getHomePage()));
 }
 
 void MainWindow::githubReleases()
 {
-    QDesktopServices::openUrl(QUrl(SQLITESTUDIO->getGitHubReleases()));
+    QDesktopServices::openUrl(QUrl(LETOS->getGitHubReleases()));
 }
 
 void MainWindow::userManual()
 {
-    QDesktopServices::openUrl(QUrl(SQLITESTUDIO->getUserManualPage()));
+    QDesktopServices::openUrl(QUrl(LETOS->getUserManualPage()));
 }
 
 void MainWindow::sqliteDocs()
 {
-    QDesktopServices::openUrl(QUrl(SQLITESTUDIO->getSqliteDocsPage()));
+    QDesktopServices::openUrl(QUrl(LETOS->getSqliteDocsPage()));
 }
 
 void MainWindow::reportHistory()
 {
-    QDesktopServices::openUrl(QUrl(SQLITESTUDIO->getIssuesPage()));
+    QDesktopServices::openUrl(QUrl(LETOS->getIssuesPage()));
 }
 
 void MainWindow::donate()
 {
-    QDesktopServices::openUrl(QUrl(SQLITESTUDIO->getDonatePage()));
+    QDesktopServices::openUrl(QUrl(LETOS->getDonatePage()));
 }
 
 void MainWindow::statusFieldLinkClicked(const QString& link)
@@ -1322,7 +1322,7 @@ void MainWindow::handleDroppedFile(const QString& filePath)
             break;
         }
         case MainWindow::DropFileType::SQLITE2:
-            notifyError(tr("The dropped file appears to be a SQLite 2 database, which is not supported by this SQLiteStudio version. Last version supporting SQLite 2 was 3.2.1."));
+            notifyError(tr("The dropped file appears to be a SQLite 2 database, which is not supported by this Letos version. Last version supporting SQLite 2 was 3.2.1."));
             break;
         case MainWindow::DropFileType::OTHER:
             notifyWarn(tr("The dropped file type is unsupported: %1 (%2)").arg(filePath, fileToDropContext(filePath).mimeValue));
@@ -1434,9 +1434,9 @@ QMenu* MainWindow::getToolsMenu() const
     return toolsMenu;
 }
 
-QMenu* MainWindow::getSQLiteStudioMenu() const
+QMenu* MainWindow::getLetosMenu() const
 {
-    return sqlitestudioMenu;
+    return letosMenu;
 }
 
 MainWindow *MainWindow::getInstance()
@@ -1466,7 +1466,7 @@ bool MainWindow::isInternalDrop(const QMimeData* data)
 {
     for (const QString& format : data->formats())
     {
-        if (format.startsWith("application/x-sqlitestudio-"))
+        if (format.startsWith("application/x-letos-"))
             return true;
     }
     return false;

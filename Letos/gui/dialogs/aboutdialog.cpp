@@ -49,14 +49,14 @@ void AboutDialog::init(InitialMode initialMode)
             break;
     }
 
-    QString newLabelValue = ui->aboutLabel->text().arg(SQLITESTUDIO->getVersionString(), distName);
+    QString newLabelValue = ui->aboutLabel->text().arg(LETOS->getVersionString(), distName);
     ui->aboutLabel->setText(newLabelValue);
 
     // Licenses
     licenseContents = "";
     int row = 1;
 
-    QHash<QString,QString> licenses = SQLITESTUDIO->getExtraLicenseManager()->getLicensesContents();
+    QHash<QString,QString> licenses = LETOS->getExtraLicenseManager()->getLicensesContents();
     QString violation;
     QString title;
     QHashIterator<QString,QString> it(licenses);
@@ -65,8 +65,8 @@ void AboutDialog::init(InitialMode initialMode)
         it.next();
         violation = QString();
         title = it.key();
-        if (SQLITESTUDIO->getExtraLicenseManager()->isViolatedLicense(title))
-            violation = SQLITESTUDIO->getExtraLicenseManager()->getViolationMessage(title);
+        if (LETOS->getExtraLicenseManager()->isViolatedLicense(title))
+            violation = LETOS->getExtraLicenseManager()->getViolationMessage(title);
 
         addLicense(row++, title, it.value(), violation);
     }

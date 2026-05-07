@@ -5,7 +5,7 @@
 
 bool QueryExecutorAttaches::exec()
 {
-    QScopedPointer<DbAttacher> attacher(SQLITESTUDIO->createDbAttacher(db));
+    QScopedPointer<DbAttacher> attacher(LETOS->createDbAttacher(db));
     if (!attacher->attachDatabases(context->parsedQueries))
         return false;
 

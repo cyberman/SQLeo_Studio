@@ -43,7 +43,7 @@ void IconManager::init()
 
     iconDirs += ":/icons";
 
-    QString envDirs = SQLITESTUDIO->getEnv("SQLITESTUDIO_ICONS");
+    QString envDirs = LETOS->getEnv("SQLITESTUDIO_ICONS");
     if (!envDirs.isNull())
         iconDirs += envDirs.split(PATH_LIST_SEPARATOR);
 

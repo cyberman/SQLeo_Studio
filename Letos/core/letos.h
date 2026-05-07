@@ -1,5 +1,5 @@
-#ifndef SQLITESTUDIO_H
-#define SQLITESTUDIO_H
+#ifndef LETOS_H
+#define LETOS_H
 
 #include "core_global.h"
 #include "common/global.h"
@@ -36,11 +36,11 @@ class CodeSnippetManager;
 
 /**
  * @mainpage
- * SQLiteStudio is SQLite 3 manager for Windows, MacOS X and Linux.
+ * Letos is SQLite 3 manager for Windows, MacOS X and Linux.
  *
  * Global variables and macros:
  * <ul>
- * <li>#SQLITESTUDIO - access point to all services (singleton instance of SQLiteStudio)</li>
+ * <li>#LETOS - access point to all services (singleton instance of Letos)</li>
  * <li>#PLUGINS - quick access to PluginManager</li>
  * <li>#DBLIST - quick access to DbManager</li>
  * <li>#FUNCTIONS - quick access to FunctionManager</li>
@@ -55,17 +55,17 @@ class CodeSnippetManager;
  * Get all managers, services, etc from this class.
  * It is a singleton.
  */
-class API_EXPORT SQLiteStudio : public QObject
+class API_EXPORT Letos : public QObject
 {
         Q_OBJECT
 
-        DECLARE_SINGLETON(SQLiteStudio)
+        DECLARE_SINGLETON(Letos)
 
     public:
         typedef std::function<void()> CrashHandler;
 
         /**
-         * @brief Initializes SQLiteStudio object.
+         * @brief Initializes Letos object.
          * @param cmdListArguments Command line arguments.
          * @param pluginLoadingHandler Factory for producing plugin loader.
          *
@@ -74,7 +74,7 @@ class API_EXPORT SQLiteStudio : public QObject
          * and applies them.
          *
          * The plugin loader factory (handler) is used to solve issue with GUI symbols visibility. while loading code being placed in the core shared library.
-         * It should be null when starting SQLiteStudio in CLI mode and not null when starting GUI client. See PluginLoadingHandler for more details on that.
+         * It should be null when starting Letos in CLI mode and not null when starting GUI client. See PluginLoadingHandler for more details on that.
          *
          * See parseCmdLineArgs() for details on supported options.
          */
@@ -175,14 +175,14 @@ class API_EXPORT SQLiteStudio : public QObject
          * It doesn't initialize anything, just constructs object.
          * Initialization of member data is done by init() method.
          */
-        SQLiteStudio();
+        Letos();
 
         /**
          * @brief Deinitializes object.
          *
          * Calls cleanUp().
          */
-        ~SQLiteStudio();
+        ~Letos();
 
         void setupCrashHandler();
 
@@ -262,11 +262,11 @@ class API_EXPORT SQLiteStudio : public QObject
 };
 
 /**
- * @def SQLITESTUDIO
+ * @def LETOS
  * @brief Global entry point for application services.
  *
- * This macro actually calls SQLiteStudio::getInstance(), which returns singleton instance
- * of the main class, which is SQLiteStudio. Use this class as starting point
+ * This macro actually calls Letos::getInstance(), which returns singleton instance
+ * of the main class, which is Letos. Use this class as starting point
  * to access all services of the application (database manager, plugins manager, etc).
  * This singleton instance is created at the very begining of application start (in main())
  * and so can be used from pretty much everywhere in the code.
@@ -279,7 +279,7 @@ class API_EXPORT SQLiteStudio : public QObject
 
    void someFunction()
    {
-       QList<Db*> dblist = SQLITESTUDIO->getDbManager()->getDbList();
+       QList<Db*> dblist = LETOS->getDbManager()->getDbList();
        for (Db* db : dblist)
        {
            qOut << db->getName();
@@ -287,6 +287,6 @@ class API_EXPORT SQLiteStudio : public QObject
    }
    @endcode
  */
-#define SQLITESTUDIO SQLiteStudio::getInstance()
+#define LETOS Letos::getInstance()
 
-#endif // SQLITESTUDIO_H
+#endif // LETOS_H

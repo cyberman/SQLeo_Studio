@@ -57,7 +57,7 @@ class GUI_API_EXPORT TableConstraintsModel : public QAbstractTableModel
         void columnRenamed(SqliteCreateTable::Constraint* constr, const QString& oldColumn, const QString& newColumn);
         bool handleColumnDeleted(SqliteCreateTable::Constraint* constr, const QString& column);
 
-        static const constexpr char* mimeType = "application/x-sqlitestudio-tablestructureconstraintmodel-row-index";
+        static const constexpr char* mimeType = "application/x-letos-tablestructureconstraintmodel-row-index";
 
         QPointer<SqliteCreateTable> createTable;
         bool modified = false;

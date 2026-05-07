@@ -60,7 +60,7 @@ void SqliteExtensionManagerImpl::scanExtensionDirs()
     extensionDirs += QDir(QCoreApplication::applicationDirPath()+"/../extensions").absolutePath();
 #endif
 
-    QString envDirs = SQLITESTUDIO->getEnv("SQLITESTUDIO_SQLITE_EXTENSIONS");
+    QString envDirs = LETOS->getEnv("SQLITESTUDIO_SQLITE_EXTENSIONS");
     if (!envDirs.isNull())
         extensionDirs += envDirs.split(PATH_LIST_SEPARATOR);
 

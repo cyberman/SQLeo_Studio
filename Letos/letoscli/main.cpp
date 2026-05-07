@@ -142,7 +142,7 @@ int main(int argc, char *argv[])
     QCoreApplication a(argc, argv);
     QCoreApplication::setApplicationName("Letos");
     QCoreApplication::setOrganizationName("letos.org");
-    QCoreApplication::setApplicationVersion(SQLITESTUDIO->getVersionString());
+    QCoreApplication::setApplicationVersion(LETOS->getVersionString());
 
     qInstallMessageHandler(cliMessageHandler);
 
@@ -152,9 +152,9 @@ int main(int argc, char *argv[])
     initCliUtils();
     CliResultsDisplay::staticInit();
 
-    SQLITESTUDIO->setInitialTranslationFiles({"core", "letoscli"});
-    SQLITESTUDIO->init(a.arguments(), false);
-    SQLITESTUDIO->initPlugins();
+    LETOS->setInitialTranslationFiles({"core", "letoscli"});
+    LETOS->init(a.arguments(), false);
+    LETOS->initPlugins();
 
     if (CliOpts::listPlugins)
     {

@@ -81,6 +81,6 @@ class API_EXPORT FunctionManager : public QObject
         void functionListChanged();
 };
 
-#define FUNCTIONS SQLITESTUDIO->getFunctionManager()
+#define FUNCTIONS LETOS->getFunctionManager()
 
 #endif // FUNCTIONMANAGER_H

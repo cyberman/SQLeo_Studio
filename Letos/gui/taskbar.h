@@ -47,7 +47,7 @@ class GUI_API_EXPORT TaskBar : public QToolBar
         QMimeData* generateMimeData();
         int getActiveTaskIdx();
 
-        constexpr static const char* mimeDataId = "application/x-sqlitestudio-taskbar-task";
+        constexpr static const char* mimeDataId = "application/x-letos-taskbar-task";
 
         /**
          * @brief getDropPositionIndex

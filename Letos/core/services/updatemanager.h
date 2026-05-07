@@ -40,7 +40,7 @@ class API_EXPORT UpdateManager : public QObject
         void finished(bool successful);
 };
 
-#define UPDATES SQLITESTUDIO->getUpdateManager()
+#define UPDATES LETOS->getUpdateManager()
 
 #endif // HAS_UPDATEMANAGER
 #endif // UPDATEMANAGER_H

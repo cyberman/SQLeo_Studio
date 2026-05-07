@@ -533,20 +533,20 @@ class API_EXPORT PluginManager : public QObject
  * @def PLUGINS
  * @brief PluginsManager instance access macro.
  *
- * Since SQLiteStudio creates only one instance of PluginsManager,
+ * Since Letos creates only one instance of PluginsManager,
  * there is a standard method for accessing it, using code:
  * @code
- * QList<PluginType*> types = SQLiteStudio::getInstance()->getPluginManager()->getPluginTypes();
+ * QList<PluginType*> types = Letos::getInstance()->getPluginManager()->getPluginTypes();
  * @endcode
  * or there's a slightly simpler way:
  * @code
- * QList<PluginType*> types = SQLITESTUDIO->getPluginManager()->getPluginTypes();
+ * QList<PluginType*> types = LETOS->getPluginManager()->getPluginTypes();
  * @endcode
  * or there is a very simplified method, using this macro:
  * @code
  * QList<PluginType*> types = PLUGINS->getPluginTypes();
  * @endcode
  */
-#define PLUGINS SQLITESTUDIO->getPluginManager()
+#define PLUGINS LETOS->getPluginManager()
 
 #endif // PLUGINMANAGER_H

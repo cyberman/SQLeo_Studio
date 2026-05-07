@@ -123,7 +123,7 @@ void FormManager::load()
     formDirs += ":/forms";
     formDirs += QDir(CFG->getConfigDir()).absoluteFilePath("forms");
 
-    QString envDirs = SQLITESTUDIO->getEnv("SQLITESTUDIO_FORMS");
+    QString envDirs = LETOS->getEnv("SQLITESTUDIO_FORMS");
     if (!envDirs.isNull())
         formDirs += envDirs.split(PATH_LIST_SEPARATOR);
 

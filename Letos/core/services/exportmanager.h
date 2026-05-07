@@ -235,7 +235,7 @@ class API_EXPORT ExportManager : public PluginServiceBase
         void orderWorkerToInterrupt();
 };
 
-#define EXPORT_MANAGER SQLITESTUDIO->getExportManager()
+#define EXPORT_MANAGER LETOS->getExportManager()
 
 Q_DECLARE_OPERATORS_FOR_FLAGS(ExportManager::StandardConfigFlags)
 Q_DECLARE_OPERATORS_FOR_FLAGS(ExportManager::ExportModes)

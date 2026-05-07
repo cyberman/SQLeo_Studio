@@ -26,7 +26,7 @@ MdiWindow::MdiWindow(MdiChild* mdiChild, MdiArea *mdiArea, Qt::WindowFlags flags
 
 MdiWindow::~MdiWindow()
 {
-    if (SQLITESTUDIO->getImmediateQuit())
+    if (LETOS->getImmediateQuit())
         return;
 
     if (!closeWithoutSessionSaving && !MAINWINDOW->isClosingApp())

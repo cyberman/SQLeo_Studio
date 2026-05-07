@@ -82,7 +82,7 @@ class API_EXPORT ImportManager : public PluginServiceBase
         void schemaModified(Db* db);
 };
 
-#define IMPORT_MANAGER SQLITESTUDIO->getImportManager()
+#define IMPORT_MANAGER LETOS->getImportManager()
 
 Q_DECLARE_OPERATORS_FOR_FLAGS(ImportManager::StandardConfigFlags)
 
