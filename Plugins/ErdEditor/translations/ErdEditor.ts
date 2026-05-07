@@ -294,117 +294,117 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../erdwindow.cpp" line="164"/>
+        <location filename="../erdwindow.cpp" line="165"/>
         <source>Cancels ongoing action</source>
         <comment>ERD editor</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../erdwindow.cpp" line="165"/>
+        <location filename="../erdwindow.cpp" line="166"/>
         <source>Create a table</source>
-        <comment>ERD editor</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../erdwindow.cpp" line="167"/>
-        <location filename="../erdwindow.cpp" line="644"/>
-        <source>Reload schema</source>
         <comment>ERD editor</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../erdwindow.cpp" line="168"/>
-        <source>Commit all pending changes</source>
+        <location filename="../erdwindow.cpp" line="649"/>
+        <source>Reload schema</source>
         <comment>ERD editor</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../erdwindow.cpp" line="169"/>
+        <source>Commit all pending changes</source>
+        <comment>ERD editor</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../erdwindow.cpp" line="170"/>
         <source>Revert diagram to initial state</source>
         <comment>ERD editor</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../erdwindow.cpp" line="171"/>
+        <location filename="../erdwindow.cpp" line="172"/>
         <source>Undo</source>
         <comment>ERD editor</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../erdwindow.cpp" line="172"/>
+        <location filename="../erdwindow.cpp" line="173"/>
         <source>Redo</source>
         <comment>ERD editor</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../erdwindow.cpp" line="188"/>
+        <location filename="../erdwindow.cpp" line="189"/>
         <source>Create a table</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../erdwindow.cpp" line="201"/>
+        <location filename="../erdwindow.cpp" line="202"/>
         <source>Select all</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../erdwindow.cpp" line="310"/>
+        <location filename="../erdwindow.cpp" line="311"/>
         <source>Filter items</source>
         <comment>ERD editor</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../erdwindow.cpp" line="311"/>
+        <location filename="../erdwindow.cpp" line="312"/>
         <source>Items that don’t match the filter will be dimmed.</source>
         <comment>ERD editor</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../erdwindow.cpp" line="447"/>
+        <location filename="../erdwindow.cpp" line="448"/>
         <source>table name</source>
         <comment>ERD editor</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../erdwindow.cpp" line="449"/>
+        <location filename="../erdwindow.cpp" line="450"/>
         <source>column name</source>
         <comment>ERD editor</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../erdwindow.cpp" line="569"/>
+        <location filename="../erdwindow.cpp" line="570"/>
         <source>All changes have been successfully applied to the database.</source>
         <comment>ERD editor</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../erdwindow.cpp" line="575"/>
+        <location filename="../erdwindow.cpp" line="578"/>
         <source>The changes were successfully committed. No modifications to the database schema were required.</source>
         <comment>ERD editor</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../erdwindow.cpp" line="583"/>
+        <location filename="../erdwindow.cpp" line="586"/>
         <source>Failed to apply changes to the database. Details: %1</source>
         <comment>ERD editor</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../erdwindow.cpp" line="645"/>
+        <location filename="../erdwindow.cpp" line="650"/>
         <source>This action will discard all your pending changes and reload the diagram from the current database schema. The undo/redo history will be cleared. Do you want to proceed?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../erdwindow.cpp" line="826"/>
+        <location filename="../erdwindow.cpp" line="833"/>
         <source>ERD window &quot;%1&quot; has uncommitted changes.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../erdwindow.cpp" line="1138"/>
+        <location filename="../erdwindow.cpp" line="1145"/>
         <source>ERD editor (%1)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../erdwindow.cpp" line="1140"/>
+        <location filename="../erdwindow.cpp" line="1147"/>
         <source>ERD editor</source>
         <translation type="unfinished"></translation>
     </message>
@@ -414,61 +414,61 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../erdwindow.cpp" line="180"/>
+        <location filename="../erdwindow.cpp" line="181"/>
         <source>The number of changes pending for commit. Click to see details.</source>
         <comment>ERD editor</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../erdwindow.cpp" line="189"/>
+        <location filename="../erdwindow.cpp" line="190"/>
         <source>Add a foreign key</source>
         <comment>ERD editor</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../erdwindow.cpp" line="191"/>
+        <location filename="../erdwindow.cpp" line="192"/>
         <source>Delete selected items</source>
         <comment>ERD editor</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../erdwindow.cpp" line="197"/>
+        <location filename="../erdwindow.cpp" line="198"/>
         <source>Auto-arrange (local forces)</source>
         <comment>ERD editor</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../erdwindow.cpp" line="198"/>
+        <location filename="../erdwindow.cpp" line="199"/>
         <source>Auto-arrange (global balance)</source>
         <comment>ERD editor</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../erdwindow.cpp" line="212"/>
+        <location filename="../erdwindow.cpp" line="213"/>
         <source>Set table color</source>
         <comment>ERD editor</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../erdwindow.cpp" line="240"/>
+        <location filename="../erdwindow.cpp" line="241"/>
         <source>Use straight line</source>
         <comment>ERD editor</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../erdwindow.cpp" line="241"/>
+        <location filename="../erdwindow.cpp" line="242"/>
         <source>Use curvy line</source>
         <comment>ERD editor</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../erdwindow.cpp" line="242"/>
+        <location filename="../erdwindow.cpp" line="243"/>
         <source>Use square line</source>
         <comment>ERD editor</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../erdwindow.cpp" line="253"/>
+        <location filename="../erdwindow.cpp" line="254"/>
         <source>Choose line type</source>
         <comment>ERD editor</comment>
         <translation type="unfinished"></translation>

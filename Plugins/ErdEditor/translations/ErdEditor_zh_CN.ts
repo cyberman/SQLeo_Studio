@@ -294,117 +294,117 @@
         <translation>选择要编辑其属性的项目</translation>
     </message>
     <message>
-        <location filename="../erdwindow.cpp" line="164"/>
+        <location filename="../erdwindow.cpp" line="165"/>
         <source>Cancels ongoing action</source>
         <comment>ERD editor</comment>
         <translation>取消正在进行的行动</translation>
     </message>
     <message>
-        <location filename="../erdwindow.cpp" line="165"/>
+        <location filename="../erdwindow.cpp" line="166"/>
         <source>Create a table</source>
         <comment>ERD editor</comment>
         <translation>创建一个表</translation>
     </message>
     <message>
-        <location filename="../erdwindow.cpp" line="167"/>
-        <location filename="../erdwindow.cpp" line="644"/>
+        <location filename="../erdwindow.cpp" line="168"/>
+        <location filename="../erdwindow.cpp" line="649"/>
         <source>Reload schema</source>
         <comment>ERD editor</comment>
         <translation>重新加载方案</translation>
     </message>
     <message>
-        <location filename="../erdwindow.cpp" line="168"/>
+        <location filename="../erdwindow.cpp" line="169"/>
         <source>Commit all pending changes</source>
         <comment>ERD editor</comment>
         <translation>提交所有待处理的更改</translation>
     </message>
     <message>
-        <location filename="../erdwindow.cpp" line="169"/>
+        <location filename="../erdwindow.cpp" line="170"/>
         <source>Revert diagram to initial state</source>
         <comment>ERD editor</comment>
         <translation>恢复图表到初始状态</translation>
     </message>
     <message>
-        <location filename="../erdwindow.cpp" line="171"/>
+        <location filename="../erdwindow.cpp" line="172"/>
         <source>Undo</source>
         <comment>ERD editor</comment>
         <translation>撤销</translation>
     </message>
     <message>
-        <location filename="../erdwindow.cpp" line="172"/>
+        <location filename="../erdwindow.cpp" line="173"/>
         <source>Redo</source>
         <comment>ERD editor</comment>
         <translation>重做</translation>
     </message>
     <message>
-        <location filename="../erdwindow.cpp" line="188"/>
+        <location filename="../erdwindow.cpp" line="189"/>
         <source>Create a table</source>
         <translation>创建一个表</translation>
     </message>
     <message>
-        <location filename="../erdwindow.cpp" line="201"/>
+        <location filename="../erdwindow.cpp" line="202"/>
         <source>Select all</source>
         <translation>全选</translation>
     </message>
     <message>
-        <location filename="../erdwindow.cpp" line="310"/>
+        <location filename="../erdwindow.cpp" line="311"/>
         <source>Filter items</source>
         <comment>ERD editor</comment>
         <translation>筛选条目</translation>
     </message>
     <message>
-        <location filename="../erdwindow.cpp" line="311"/>
+        <location filename="../erdwindow.cpp" line="312"/>
         <source>Items that don’t match the filter will be dimmed.</source>
         <comment>ERD editor</comment>
         <translation>不符合筛选条件的项目将会变暗。</translation>
     </message>
     <message>
-        <location filename="../erdwindow.cpp" line="447"/>
+        <location filename="../erdwindow.cpp" line="448"/>
         <source>table name</source>
         <comment>ERD editor</comment>
         <translation>表名</translation>
     </message>
     <message>
-        <location filename="../erdwindow.cpp" line="449"/>
+        <location filename="../erdwindow.cpp" line="450"/>
         <source>column name</source>
         <comment>ERD editor</comment>
         <translation>字段名</translation>
     </message>
     <message>
-        <location filename="../erdwindow.cpp" line="569"/>
+        <location filename="../erdwindow.cpp" line="570"/>
         <source>All changes have been successfully applied to the database.</source>
         <comment>ERD editor</comment>
         <translation>所有更改已成功应用到数据库。</translation>
     </message>
     <message>
-        <location filename="../erdwindow.cpp" line="575"/>
+        <location filename="../erdwindow.cpp" line="578"/>
         <source>The changes were successfully committed. No modifications to the database schema were required.</source>
         <comment>ERD editor</comment>
         <translation>更改已成功提交。无需修改数据库架构。</translation>
     </message>
     <message>
-        <location filename="../erdwindow.cpp" line="583"/>
+        <location filename="../erdwindow.cpp" line="586"/>
         <source>Failed to apply changes to the database. Details: %1</source>
         <comment>ERD editor</comment>
         <translation>数据库更改应用失败。详细信息：%1</translation>
     </message>
     <message>
-        <location filename="../erdwindow.cpp" line="645"/>
+        <location filename="../erdwindow.cpp" line="650"/>
         <source>This action will discard all your pending changes and reload the diagram from the current database schema. The undo/redo history will be cleared. Do you want to proceed?</source>
         <translation>此操作将放弃所有待处理的更改，并从当前数据库架构重新加载图表。撤销/重做历史记录将被清除。是否继续？</translation>
     </message>
     <message>
-        <location filename="../erdwindow.cpp" line="826"/>
+        <location filename="../erdwindow.cpp" line="833"/>
         <source>ERD window &quot;%1&quot; has uncommitted changes.</source>
         <translation>ERD 窗口“%1”有未提交的更改。</translation>
     </message>
     <message>
-        <location filename="../erdwindow.cpp" line="1138"/>
+        <location filename="../erdwindow.cpp" line="1145"/>
         <source>ERD editor (%1)</source>
         <translation>ERD 编辑器 (%1)</translation>
     </message>
     <message>
-        <location filename="../erdwindow.cpp" line="1140"/>
+        <location filename="../erdwindow.cpp" line="1147"/>
         <source>ERD editor</source>
         <translation>ERD 编辑器</translation>
     </message>
@@ -414,61 +414,61 @@
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;- 按住空格键并拖动鼠标，即可自由平移图表，无需选择任何项目。&lt;/p&gt;&lt;p&gt;- 使用鼠标滚轮放大和缩小。&lt;/p&gt;&lt;p&gt;- 取消选择表格（或单击侧边栏工具栏中的“提交”），即可将侧边栏的更改应用到图表。&lt;/p&gt;&lt;p&gt;- 按 Esc 键（或单击侧边栏工具栏中的“回滚”），即可放弃侧边栏的更改。&lt;/p&gt;&lt;p&gt;- 双击表名或列名，即可直接编辑名称。&lt;/p&gt;&lt;p&gt;- 按住 Shift 键并双击列名，即可编辑列详细信息（数据类型、约束）。&lt;/p&gt;&lt;p&gt;- 要在表之间创建外键，单击要连接的表格列上的鼠标中键。所有图表更改将保持待处理状态，直到您使用图表左上角的工具栏按钮显式提交或回滚它们。了解更多信息（点击打开在线帮助页面）&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/pawelsalawa/sqlitestudio/wiki/ERD-plugin-manual#usage&quot;&gt;&lt;span style=&quot; font-weight:700; text-decoration: underline; color:#058800;&quot;&gt;Learn more (click to open online help page)&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../erdwindow.cpp" line="180"/>
+        <location filename="../erdwindow.cpp" line="181"/>
         <source>The number of changes pending for commit. Click to see details.</source>
         <comment>ERD editor</comment>
         <translation>待提交的更改数量。点击查看详情。</translation>
     </message>
     <message>
-        <location filename="../erdwindow.cpp" line="189"/>
+        <location filename="../erdwindow.cpp" line="190"/>
         <source>Add a foreign key</source>
         <comment>ERD editor</comment>
         <translation>添加外键</translation>
     </message>
     <message>
-        <location filename="../erdwindow.cpp" line="191"/>
+        <location filename="../erdwindow.cpp" line="192"/>
         <source>Delete selected items</source>
         <comment>ERD editor</comment>
         <translation>删除所选项目</translation>
     </message>
     <message>
-        <location filename="../erdwindow.cpp" line="197"/>
+        <location filename="../erdwindow.cpp" line="198"/>
         <source>Auto-arrange (local forces)</source>
         <comment>ERD editor</comment>
         <translation>自动排列（局部力）</translation>
     </message>
     <message>
-        <location filename="../erdwindow.cpp" line="198"/>
+        <location filename="../erdwindow.cpp" line="199"/>
         <source>Auto-arrange (global balance)</source>
         <comment>ERD editor</comment>
         <translation>自动排列（全局平衡）</translation>
     </message>
     <message>
-        <location filename="../erdwindow.cpp" line="212"/>
+        <location filename="../erdwindow.cpp" line="213"/>
         <source>Set table color</source>
         <comment>ERD editor</comment>
         <translation>设置表颜色</translation>
     </message>
     <message>
-        <location filename="../erdwindow.cpp" line="240"/>
+        <location filename="../erdwindow.cpp" line="241"/>
         <source>Use straight line</source>
         <comment>ERD editor</comment>
         <translation>使用直线</translation>
     </message>
     <message>
-        <location filename="../erdwindow.cpp" line="241"/>
+        <location filename="../erdwindow.cpp" line="242"/>
         <source>Use curvy line</source>
         <comment>ERD editor</comment>
         <translation>使用曲线线</translation>
     </message>
     <message>
-        <location filename="../erdwindow.cpp" line="242"/>
+        <location filename="../erdwindow.cpp" line="243"/>
         <source>Use square line</source>
         <comment>ERD editor</comment>
         <translation>使用方形线</translation>
     </message>
     <message>
-        <location filename="../erdwindow.cpp" line="253"/>
+        <location filename="../erdwindow.cpp" line="254"/>
         <source>Choose line type</source>
         <comment>ERD editor</comment>
         <translation>选择线类型</translation>
