@@ -30,9 +30,9 @@ function(letos_set_plugin_properties target)
             target_link_directories(${target} PRIVATE "${CMAKE_INSTALL_PREFIX}")
         endif()
 
-        target_link_libraries(${target} PRIVATE core)
+        target_link_libraries(${target} PRIVATE coreLetos)
         if(Qt6Gui_FOUND)
-            target_link_libraries(${target} PRIVATE gui)
+            target_link_libraries(${target} PRIVATE guiLetos)
         endif()
     endif()
 
