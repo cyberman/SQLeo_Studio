@@ -395,16 +395,16 @@ jobs:
                 wait-for-completion: true
                 output-artifact-directory: '${{ env.SIGNED_DIR }}'
 
-            - name: "[Code Signing] Unzip signed portable files to use for the installer"
-              if: ${{ inputs.CODE_SIGN }}
-              shell: msys2 {0}
-              working-directory: ${{ env.SIGNED_DIR }}
-              run: |
-                set -x
-                ls -l
-                7z x letos-${{ env.PACKAGE_VERSION }}.zip
-                ls -l
-                echo "INSTALLER_BIN_PREFIX=$(pwd)/Letos" >> $GITHUB_ENV
+            # - name: "[Code Signing] Unzip signed portable files to use for the installer"
+            #   if: ${{ inputs.CODE_SIGN }}
+            #   shell: msys2 {0}
+            #   working-directory: ${{ env.SIGNED_DIR }}
+            #   run: |
+            #     set -x
+            #     ls -l
+            #     7z x letos-${{ env.PACKAGE_VERSION }}.zip
+            #     ls -l
+            #     echo "INSTALLER_BIN_PREFIX=$(pwd)/Letos" >> $GITHUB_ENV
 
             # - name: "[Assembling] Create installer package"
             #   shell: msys2 {0}
@@ -415,18 +415,18 @@ jobs:
             #         --setvars project.version=$LETOS_VERSION
             #     ls -l
 
-            - name: "[Assembling] Name fix for arm64"
-              if: ${{ matrix.OUTPUT_FILE_ARCH == 'arm64' }}
-              shell: msys2 {0}
-              run: |
-                mv Letos-${{ env.LETOS_VERSION }}-windows-x64-installer.exe Letos-${{ env.PACKAGE_VERSION }}-installer.exe
-
-            - name: "[Assembling] Prepare installer for uploading without signing"
-              if: ${{ !inputs.CODE_SIGN }}
-              shell: msys2 {0}
-              run: |
-                set -x
-                cp Letos-${{ env.PACKAGE_VERSION }}-installer.exe unsigned/
+            # - name: "[Assembling] Name fix for arm64"
+            #   if: ${{ matrix.OUTPUT_FILE_ARCH == 'arm64' }}
+            #   shell: msys2 {0}
+            #   run: |
+            #     mv Letos-${{ env.LETOS_VERSION }}-windows-x64-installer.exe Letos-${{ env.PACKAGE_VERSION }}-installer.exe
+            #
+            # - name: "[Assembling] Prepare installer for uploading without signing"
+            #   if: ${{ !inputs.CODE_SIGN }}
+            #   shell: msys2 {0}
+            #   run: |
+            #     set -x
+            #     cp Letos-${{ env.PACKAGE_VERSION }}-installer.exe unsigned/
 
             # - name: "[Code Signing] Prepare installer artifact for code signing"
             #   if: ${{ inputs.CODE_SIGN }}
@@ -461,7 +461,7 @@ jobs:
               working-directory: ${{ env.SIGNED_DIR }}
               run: |
                 sha256sum letos-${{ env.PACKAGE_VERSION }}.zip
-                sha256sum Letos-${{ env.PACKAGE_VERSION }}-installer.exe
+                # sha256sum Letos-${{ env.PACKAGE_VERSION }}-installer.exe
 
             - name: Upload package artifact
               uses: actions/upload-artifact@v4

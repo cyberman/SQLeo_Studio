@@ -411,7 +411,7 @@ jobs:
               shell: bash
               run: |
                 sha256sum output/portable/letos-${{ env.PACKAGE_VERSION }}.tar.xz
-                sha256sum Letos-${{ env.PACKAGE_VERSION }}-installer.run
+                sha256sum output/portable/$APPIMAGENAME
 
             - name: Upload package artifact
               uses: actions/upload-artifact@v4
