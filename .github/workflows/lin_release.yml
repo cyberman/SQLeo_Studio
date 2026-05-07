@@ -3,7 +3,6 @@ env:
     SQLITE_VERSION: '3510200'
     PYTHON_VERSION: '3.13'
     PORTABLE_DIR: ${{ github.workspace }}/output/portable/Letos
-    INSTALLBUILDER_DIR: ../ib
     ICU_VERSION: '73.2'
     ICU_URL: 'https://github.com/unicode-org/icu/releases/download/release-73-2/icu4c-73_2-src.tgz'
     BRANCH_NAME: ${{ github.head_ref || github.ref_name }}
@@ -56,7 +55,6 @@ jobs:
                     "QT_VERSION": "6.8.3",
                     "QT_ARCH": "linux_gcc_64",
                     "QT_HOST": "linux",
-                    "INSTALLBUILDER_URL": "https://releases.installbuilder.com/installbuilder/installbuilder-enterprise-26.2.0-linux-x64-installer.run",
                     "LIBSSL_DIR_URL": "http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/",
                     "LIBSSL_DEB": "libssl1.1_1.1.1f-1ubuntu2.24_amd64.deb",
                     "APPIMAGE_URL": "https://github.com/AppImage/appimagetool/releases/download/1.9.1/appimagetool-x86_64.AppImage",
@@ -70,7 +68,6 @@ jobs:
                     "QT_VERSION": "6.7.3",
                     "QT_ARCH": "linux_gcc_arm64",
                     "QT_HOST": "linux_arm64",
-                    "INSTALLBUILDER_URL": "https://releases.installbuilder.com/installbuilder/installbuilder-enterprise-26.2.0-linux-arm64-installer.run",
                     "LIBSSL_DIR_URL": "http://ports.ubuntu.com/pool/main/o/openssl/",
                     "LIBSSL_DEB": "libssl1.1_1.1.1f-1ubuntu2.24_arm64.deb",
                     "APPIMAGE_URL": "https://github.com/AppImage/appimagetool/releases/download/1.9.1/appimagetool-aarch64.AppImage",
@@ -146,16 +143,6 @@ jobs:
                 chmod +x gh-scripts/scripts/*.sh
                 echo "GH_SCRIPTS=$(pwd)/gh-scripts/scripts" >> $GITHUB_ENV
                 echo "DEBUG=${{ inputs.DEBUG }}" >> $GITHUB_ENV
-
-            - name: Install the InstalBuilder
-              shell: bash
-              run: |
-                curl -L ${{ matrix.INSTALLBUILDER_URL }} --output ib.run
-                chmod +x ib.run
-                ./ib.run --mode unattended --prefix ${{ env.INSTALLBUILDER_DIR }}
-                ${{ env.INSTALLBUILDER_DIR }}/bin/builder --version
-                echo "INSTALLER_SRC_PREFIX=$(pwd)" >> $GITHUB_ENV
-                echo "INSTALLER_BIN_PREFIX=${{ env.PORTABLE_DIR }}" >> $GITHUB_ENV
 
             - name: Clone repo
               uses: actions/checkout@v3
@@ -396,18 +383,6 @@ jobs:
                 pwd
                 ls -l
 
-            - name: Create installer package
-              shell: bash
-              env:
-                IB_LICENSE: ${{ secrets.INSTALLER_LICENSE }}
-              run: |
-                echo "$IB_LICENSE" > lic.xml
-                ${{ env.INSTALLBUILDER_DIR }}/bin/builder build Letos-installer.xml \
-                    --license lic.xml \
-                    --setvars project.outputDirectory=$(pwd) \
-                    --setvars project.version=$LETOS_VERSION
-                ls -l
-
             - name: Create AppImage
               shell: bash
               working-directory: ${{ env.PORTABLE_DIR }}/..
@@ -443,12 +418,6 @@ jobs:
               with:
                 name: letos-${{ env.PACKAGE_VERSION }}.tar.xz
                 path: output/portable/letos-${{ env.PACKAGE_VERSION }}.tar.xz
-
-            - name: Upload installer artifact
-              uses: actions/upload-artifact@v4
-              with:
-                name: Letos-${{ env.PACKAGE_VERSION }}-installer.run
-                path: Letos-${{ env.PACKAGE_VERSION }}-installer.run
 
             - name: Upload AppImage artifact
               uses: actions/upload-artifact@v4
