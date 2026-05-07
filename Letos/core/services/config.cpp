@@ -5,7 +5,6 @@
 
 CFG_DEFINE(Core)
 
-static const QString DB_FILE_NAME = QStringLiteral("settings3");
 static QString MASTER_CONFIG_FILE = QString();
 Config::AskUserForConfigDirFunc Config::askUserForConfigDirFunc;
 QSettings* globalSettingsInstance = nullptr;
@@ -32,10 +31,10 @@ void Config::setAskUserForConfigDirFunc(const AskUserForConfigDirFunc& value)
 QString Config::getPortableConfigPath()
 {
     QStringList paths = {
-        "./sqlitestudio-cfg",
-        qApp->applicationDirPath() + "/sqlitestudio-cfg",
         "./letos-cfg",
-        qApp->applicationDirPath() + "/letos-cfg"
+        qApp->applicationDirPath() + "/letos-cfg",
+        "./sqlitestudio-cfg",
+        qApp->applicationDirPath() + "/sqlitestudio-cfg"
     };
     QSet<QString> pathSet;
     QDir dir;

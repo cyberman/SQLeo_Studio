@@ -92,6 +92,8 @@ class API_EXPORT ConfigImpl : public Config
         void importConfig(const QString& filePath, const ExportImportParams& params);
         ExportImportParams getParamsForConfigImport(const QString& filePath, QString* errorMsg);
 
+        bool getConfigMigrated() const;
+
     private:
         struct ConfigDirCandidate
         {
@@ -141,6 +143,7 @@ class API_EXPORT ConfigImpl : public Config
         void updateConfigDb();
         bool tryToMigrateOldGlobalPath(const QString& oldPath, const QString& newPath);
         QString getLegacyConfigPath();
+        QString getLegacyPre4ConfigPath();
 
         QVariant exportFunctions();
         QVariant exportCollations();
@@ -160,6 +163,7 @@ class API_EXPORT ConfigImpl : public Config
         QString configDir;
         QString lastQueryError;
         bool massSaving = false;
+        bool configMigrated = false;
         SqlHistoryModel* sqlHistoryModel = nullptr;
         DdlHistoryModel* ddlHistoryModel = nullptr;
         QMutex sqlHistoryMutex;

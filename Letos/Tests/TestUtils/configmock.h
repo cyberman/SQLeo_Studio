@@ -60,6 +60,7 @@ class ConfigMock : public Config
         void exportConfig(const QString&, const ExportImportParams&);
         void importConfig(const QString&, const ExportImportParams&);
         ExportImportParams getParamsForConfigImport(const QString&, QString*);
+        bool getConfigMigrated() const;
 
     public slots:
         void refreshSqlHistory();

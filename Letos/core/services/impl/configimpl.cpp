@@ -24,7 +24,7 @@
 
 const int LETOS_CONFIG_VERSION = 15;
 
-static_qstring(DB_FILE_NAME, "settings3");
+static_qstring(DB_FILE_NAME, "settings");
 static_qstring(CONFIG_DIR_SETTING, "LetosConfigDir");
 qint64 ConfigImpl::sqlHistoryId = -1;
 QString ConfigImpl::memoryDbName = QStringLiteral(":memory:");
@@ -712,6 +712,11 @@ void ConfigImpl::importExtensions(const QVariant& data, bool overwrite)
     SQLITE_EXTENSIONS->loadFromConfig();
 }
 
+bool ConfigImpl::getConfigMigrated() const
+{
+    return configMigrated;
+}
+
 QString ConfigImpl::getConfigPath()
 {
     return QStandardPaths::writableLocation(QStandardPaths::AppConfigLocation) + "/" + DB_FILE_NAME;
@@ -724,6 +729,18 @@ QString ConfigImpl::getLegacyConfigPath()
 #else
     return LETOS->getEnv("HOME")+"/.config/sqlitestudio";
 #endif
+}
+
+QString ConfigImpl::getLegacyPre4ConfigPath()
+{
+    QString oldOrg = QCoreApplication::organizationName();
+    QString oldApp = QCoreApplication::applicationName();
+    QCoreApplication::setOrganizationName("SalSoft");
+    QCoreApplication::setApplicationName("SQLiteStudio");
+    QString pre4path = QStandardPaths::writableLocation(QStandardPaths::AppConfigLocation) + "/settings3";
+    QCoreApplication::setOrganizationName(oldOrg);
+    QCoreApplication::setApplicationName(oldApp);
+    return pre4path;
 }
 
 void ConfigImpl::dropTables(const QList<QString>& tables)
@@ -883,8 +900,13 @@ QList<ConfigImpl::ConfigDirCandidate> ConfigImpl::getStdDbPaths()
     {
         paths << ConfigDirCandidate{legacyGlobalPath+"/"+DB_FILE_NAME, true, false};
         if (!QFile::exists(globalPath))
-            tryToMigrateOldGlobalPath(legacyGlobalPath, globalPath);
+            configMigrated |= tryToMigrateOldGlobalPath(legacyGlobalPath, globalPath);
     }
+
+    // Now try to migrate from 3.4 to 4.0 location
+    QString pre4path = getLegacyPre4ConfigPath();
+    if (!QFile::exists(globalPath))
+        configMigrated |= tryToMigrateOldGlobalPath(pre4path, globalPath);
 
     return paths;
 }

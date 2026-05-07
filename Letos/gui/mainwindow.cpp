@@ -612,6 +612,15 @@ void MainWindow::restoreSession()
 
     updateCornerDocking();
     updateWindowActions();
+
+    if (LETOS->getConfig()->getConfigMigrated())
+    {
+        // This is needed to fix the sessions that were saved with older versions of Letos,
+        // where code snippets panel was not existing and the tabification gets lost upon session retoring from older vesion.
+        // This will happen only once, after config is migrated.
+        tabifyDockWidget(dbTree, codeSnippetsPanel);
+        dbTree->raise();
+    }
 }
 
 void MainWindow::restoreWindowSessions(const QList<QVariant>& windowSessions)

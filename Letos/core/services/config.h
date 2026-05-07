@@ -200,6 +200,8 @@ class API_EXPORT Config : public QObject
         virtual void importConfig(const QString& filePath, const ExportImportParams& params) = 0;
         virtual ExportImportParams getParamsForConfigImport(const QString& filePath, QString* errorMsg) = 0;
 
+        virtual bool getConfigMigrated() const = 0;
+
     signals:
         void massSaveBegins();
         void massSaveCommitted();

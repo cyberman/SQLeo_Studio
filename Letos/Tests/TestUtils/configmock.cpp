@@ -247,6 +247,11 @@ void ConfigMock::importConfig(const QString&, const ExportImportParams&)
 {
 }
 
+bool ConfigMock::getConfigMigrated() const
+{
+    return false;
+}
+
 Config::ExportImportParams ConfigMock::getParamsForConfigImport(const QString&, QString*)
 {
     return ExportImportParams();
