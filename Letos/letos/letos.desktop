@@ -1,13 +1,13 @@
 [Desktop Entry]
-Name=SQLiteStudio
+Name=Letos
 GenericName=SQLite database manager
-Comment=A free, open source, multi-platform SQLite database manager
+Comment=A free, open source, multi-platform SQLite database manager.
 Keywords=sqlite;database;explorer;
-Exec=sqlitestudio %f
-Icon=sqlitestudio
+Exec=letos %f
+Icon=letos
 Terminal=false
 X-MultipleArgs=false
 Type=Application
 Categories=Development;Database;
-MimeType=application/x-sqlitestudio;application/vnd.sqlite3;application/x-sqlite2;application/x-sqlite3;
-StartupWMClass=sqlitestudio
+MimeType=application/x-letos;application/vnd.sqlite3;application/x-sqlite2;application/x-sqlite3;
+StartupWMClass=letos
