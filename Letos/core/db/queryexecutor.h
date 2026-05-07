@@ -121,10 +121,10 @@ class API_EXPORT QueryExecutor : public QObject, public QRunnable
                                     * and it returned results, so they can be presented to the user,
                                     * but not edited.
                                     *
-                                    * This happens usually when there's a but in SQLiteStudio,
+                                    * This happens usually when there's a but in Letos,
                                     * which caused - for example - error during query parsing by Parser,
                                     * or other query syntax issues, that wasn't handled correctly
-                                    * by SQLiteStudio.
+                                    * by Letos.
                                     */
         };
 
@@ -135,17 +135,17 @@ class API_EXPORT QueryExecutor : public QObject, public QRunnable
         {
             COMPOUND_SELECT, /**<
                               * The data cell comes from compound SELECT (UNION, EXCEPT, INTERSECT),
-                              * which makes it problematic to SQLiteStudio to find out to which table
+                              * which makes it problematic to Letos to find out to which table
                               * does the particular row belong to.
                               *
-                              * It might be resolved in future SQLiteStudio versions and this enum value
+                              * It might be resolved in future Letos versions and this enum value
                               * would disappear then.
                               */
             GROUPED_RESULTS, /**<
                               * The data cell comes from SELECT with aggregated results, therefore it's
                               * hard to hard what were ROWIDs of each row in the results.
                               *
-                              * It might be resolved in future SQLiteStudio versions and this enum value
+                              * It might be resolved in future Letos versions and this enum value
                               * would disappear then.
                               */
             DISTINCT_RESULTS, /**<
@@ -155,7 +155,7 @@ class API_EXPORT QueryExecutor : public QObject, public QRunnable
                                * even the rest of the data (which matters to the user) would not be
                                * unique and should have been removed by the DISTINCT keyword.
                                *
-                               * Because of that, SQLiteStudio doesn't extract ROWIDs for DISTINCT
+                               * Because of that, Letos doesn't extract ROWIDs for DISTINCT
                                * queries, so the results are accurate, but in consequence,
                                * the data cannot be edited.
                                */
@@ -258,7 +258,7 @@ class API_EXPORT QueryExecutor : public QObject, public QRunnable
              * or symbolic name of registered database (as represented in the databases tree),
              * or the name of any attached databases.
              *
-             * Symbolic database name is provided when user used it in his query and SQLiteStudio attached
+             * Symbolic database name is provided when user used it in his query and Letos attached
              * it transparently. In that case the temporary name used for "ATTACH" statement would make no sense,
              * because that database was detached automatically after the query execution finished.
              *
@@ -967,7 +967,7 @@ class API_EXPORT QueryExecutor : public QObject, public QRunnable
          *
          * When QueryExecutor prepares query for execution, it applies SUBSTR()
          * to all result columns, so if the database has a huge value in some column,
-         * SQLiteStudio won't load 1000 rows with huge values - that would kill performance
+         * Letos won't load 1000 rows with huge values - that would kill performance
          * of the application. Instead it loads small chunk of every value.
          *
          * SqlQueryModel loads limited chunks of data and loads on-the-fly full cell values

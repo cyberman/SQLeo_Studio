@@ -505,7 +505,7 @@ bool DbObjectOrganizer::copyTableToDb(const QString& table)
     if (!useAttachingApproach())
     {
         notifyInfo(tr("Database %1 could not be attached to database %2, so the data of table %3 will be copied "
-                      "with SQLiteStudio as a mediator. This method can be slow for huge tables, so please be patient.")
+                      "with Letos as a mediator. This method can be slow for huge tables, so please be patient.")
                    .arg(dstDb->getName(), srcDb->getName(), srcTable));
 
         res = copyDataAsMiddleware(targetTable);

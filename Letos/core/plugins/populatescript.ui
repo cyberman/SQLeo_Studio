@@ -95,7 +95,7 @@
          <string notr="true">...</string>
         </property>
         <property name="openUrl" stdset="0">
-         <string notr="true">http://sqlitestudio.pl/wiki/index.php/Official_plugins#Script_.28built-in.29</string>
+         <string notr="true">https://github.com/pawelsalawa/letos/wiki/Official_plugins#populating-plugins</string>
         </property>
         <property name="customIcon" stdset="0">
          <string notr="true">help</string>

@@ -29,10 +29,10 @@ class GUI_API_EXPORT MultiEditorNumericPlugin : public BuiltInPlugin, public Mul
 {
     Q_OBJECT
 
-    SQLITESTUDIO_PLUGIN_AUTHOR("sqlitestudio.pl")
-    SQLITESTUDIO_PLUGIN_DESC("Numeric data editor.")
-    SQLITESTUDIO_PLUGIN_TITLE("Numeric types")
-    SQLITESTUDIO_PLUGIN_VERSION(10000)
+    LETOS_PLUGIN_AUTHOR("letos.org")
+    LETOS_PLUGIN_DESC("Numeric data editor.")
+    LETOS_PLUGIN_TITLE("Numeric types")
+    LETOS_PLUGIN_VERSION(10000)
 
     public:
         MultiEditorWidget* getInstance();

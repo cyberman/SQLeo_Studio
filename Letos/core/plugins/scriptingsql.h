@@ -8,10 +8,10 @@ class ScriptingSql : public BuiltInPlugin, public DbAwareScriptingPlugin
 {
     Q_OBJECT
 
-    SQLITESTUDIO_PLUGIN_TITLE("SQL scripting")
-    SQLITESTUDIO_PLUGIN_DESC("SQL scripting support.")
-    SQLITESTUDIO_PLUGIN_VERSION(10000)
-    SQLITESTUDIO_PLUGIN_AUTHOR("sqlitestudio.pl")
+    LETOS_PLUGIN_TITLE("SQL scripting")
+    LETOS_PLUGIN_DESC("SQL scripting support.")
+    LETOS_PLUGIN_VERSION(10000)
+    LETOS_PLUGIN_AUTHOR("letos.org")
 
     public:
         class SqlContext : public Context

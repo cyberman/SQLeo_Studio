@@ -11,7 +11,7 @@
 class TCLSYNTAXHIGHLIGHTER_EXPORT TclSyntaxHighlighterPlugin : public GenericPlugin, public SyntaxHighlighterPlugin
 {
         Q_OBJECT
-        SQLITESTUDIO_PLUGIN("tclsyntaxhighlighter.json")
+        LETOS_PLUGIN("tclsyntaxhighlighter.json")
 
     public:
         enum State

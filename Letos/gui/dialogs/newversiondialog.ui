@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>SQLiteStudio updates</string>
+   <string>Letos updates</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
@@ -68,7 +68,7 @@
    <item>
     <widget class="QCommandLinkButton" name="homepageButton">
      <property name="text">
-      <string>Open SQLiteStudio home page.</string>
+      <string>Open Letos home page.</string>
      </property>
      <property name="icon">
       <iconset resource="../icons.qrc">

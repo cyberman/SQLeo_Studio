@@ -12,7 +12,7 @@
 class PYTHONSYNTAXHIGHLIGHTERSHARED_EXPORT PythonSyntaxHighlighterPlugin : public GenericPlugin, public SyntaxHighlighterPlugin
 {
         Q_OBJECT
-        SQLITESTUDIO_PLUGIN("pythonsyntaxhighlighter.json")
+        LETOS_PLUGIN("pythonsyntaxhighlighter.json")
 
     public:
         enum State

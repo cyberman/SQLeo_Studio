@@ -308,7 +308,7 @@ bool AdbManager::execLongCommand(const QStringList& arguments, QProcess& proc, Q
     QString cmd = " '" + args.replaceInStrings("'", "'\\''").join("' '") + "'";
 
     // Now, the temporary file for the script
-    QTemporaryFile tmpFile("SQLiteStudio-XXXXXX.sh");
+    QTemporaryFile tmpFile("Letos-XXXXXX.sh");
     if (!tmpFile.open())
     {
         if (stdErr)

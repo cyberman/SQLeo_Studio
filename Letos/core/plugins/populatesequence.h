@@ -16,10 +16,10 @@ class PopulateSequence : public BuiltInPlugin, public PopulatePlugin
 {
         Q_OBJECT
 
-        SQLITESTUDIO_PLUGIN_TITLE("Sequence")
-        SQLITESTUDIO_PLUGIN_DESC("Support for populating tables with sequenced values.")
-        SQLITESTUDIO_PLUGIN_VERSION(10001)
-        SQLITESTUDIO_PLUGIN_AUTHOR("sqlitestudio.pl")
+        LETOS_PLUGIN_TITLE("Sequence")
+        LETOS_PLUGIN_DESC("Support for populating tables with sequenced values.")
+        LETOS_PLUGIN_VERSION(10001)
+        LETOS_PLUGIN_AUTHOR("letos.org")
 
     public:
         PopulateSequence();

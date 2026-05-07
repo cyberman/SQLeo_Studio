@@ -18,7 +18,7 @@ CFG_CATEGORIES(SqlFormatterSimpleConfig,
 class SQLFORMATTERSIMPLESHARED_EXPORT SqlFormatterSimplePlugin : public GenericPlugin, public SqlFormatterPlugin, public UiConfiguredPlugin
 {
         Q_OBJECT
-        SQLITESTUDIO_PLUGIN("sqlformattersimple.json")
+        LETOS_PLUGIN("sqlformattersimple.json")
 
     public:
         SqlFormatterSimplePlugin();

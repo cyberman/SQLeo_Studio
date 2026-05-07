@@ -1700,7 +1700,7 @@ void SqlEditor::focusInEvent(QFocusEvent* e)
 {
     if (completer->isVisible())
     {
-        // Sometimes, when switching to other application window and then getting back to SQLiteStudio,
+        // Sometimes, when switching to other application window and then getting back to Letos,
         // the completer loses focus, but doesn't close. In that case, the SqlEditor gets focused,
         // while completer still exists. Here we fix this case.
         completer->reject();

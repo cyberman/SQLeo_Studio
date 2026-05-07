@@ -69,10 +69,10 @@ class GUI_API_EXPORT MultiEditorDateTimePlugin : public BuiltInPlugin, public Mu
 {
     Q_OBJECT
 
-    SQLITESTUDIO_PLUGIN_AUTHOR("sqlitestudio.pl")
-    SQLITESTUDIO_PLUGIN_DESC("Date and time data editor.")
-    SQLITESTUDIO_PLUGIN_TITLE("Date and time")
-    SQLITESTUDIO_PLUGIN_VERSION(10000)
+    LETOS_PLUGIN_AUTHOR("letos.org")
+    LETOS_PLUGIN_DESC("Date and time data editor.")
+    LETOS_PLUGIN_TITLE("Date and time")
+    LETOS_PLUGIN_VERSION(10000)
 
     public:
         MultiEditorWidget* getInstance();

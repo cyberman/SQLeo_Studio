@@ -324,7 +324,7 @@ struct TolerantToken : public Token
  * @brief Ordered list of tokens.
  *
  * This is pretty much a QList of Token pointers, but it also provides some
- * utility methods regarding this collection, which is very common in SQLiteStudio.
+ * utility methods regarding this collection, which is very common in Letos.
  */
 class API_EXPORT TokenList : public QList<TokenPtr>
 {

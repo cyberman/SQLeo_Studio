@@ -74,10 +74,10 @@ class GUI_API_EXPORT MultiEditorTextPlugin : public BuiltInPlugin, public MultiE
 {
     Q_OBJECT
 
-    SQLITESTUDIO_PLUGIN_AUTHOR("sqlitestudio.pl")
-    SQLITESTUDIO_PLUGIN_DESC("Standard text data editor.")
-    SQLITESTUDIO_PLUGIN_TITLE("Text")
-    SQLITESTUDIO_PLUGIN_VERSION(10000)
+    LETOS_PLUGIN_AUTHOR("letos.org")
+    LETOS_PLUGIN_DESC("Standard text data editor.")
+    LETOS_PLUGIN_TITLE("Text")
+    LETOS_PLUGIN_VERSION(10000)
 
     public:
         MultiEditorWidget* getInstance();

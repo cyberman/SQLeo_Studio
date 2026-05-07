@@ -216,7 +216,7 @@ void ColumnGeneratedPanel::updateVirtualSql()
 QString ColumnGeneratedPanel::getTempTable()
 {
     SchemaResolver resolver(db);
-    return resolver.getUniqueName("sqlitestudio_temp_table");
+    return resolver.getUniqueName("letos_temp_table");
 }
 
 void ColumnGeneratedPanel::updateState()

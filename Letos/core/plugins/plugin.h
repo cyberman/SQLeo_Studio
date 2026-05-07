@@ -14,33 +14,33 @@ class CfgMain;
 /**
  * @brief General plugin interface.
  *
- * This is the top-most generic interface for SQLiteStudio plugins.
- * It's based in Qt's plugins framework. Every SQLiteStudio plugin must
+ * This is the top-most generic interface for Letos plugins.
+ * It's based in Qt's plugins framework. Every Letos plugin must
  * implement this (or its descendant) interface.
  *
- * SQLiteStudio plugin is basicly class implementing this interface,
+ * Letos plugin is basicly class implementing this interface,
  * compiled as shared library (*.dll, *.so, *.dylib).
  *
- * Apart from implementing Plugin interface, the plugin class must also declare ::SQLITESTUDIO_PLUGIN macro, like this:
+ * Apart from implementing Plugin interface, the plugin class must also declare ::LETOS_PLUGIN macro, like this:
  * @code
  * class MyPlugin : Plugin
  * {
  *     Q_OBJECT
  *
- *     SQLITESTUDIO_PLUGIN
+ *     LETOS_PLUGIN
  *
  *     public:
  *         // ...
  * };
  * @endcode
  *
- * Full tutorial for writting plugins is at: https://github.com/pawelsalawa/sqlitestudio/wiki/Writting_plugins
+ * Full tutorial for writting plugins is at: https://github.com/pawelsalawa/letos/wiki/Writting_plugins
  *
- * SQLiteStudio looks for plugins in following directories:
+ * Letos looks for plugins in following directories:
  * <ul>
  * <li><tt>{current_executable_dir}/plugins</tt> - a "plugins" subdirectory of the directory where application binary is placed,</li>
  * <li><tt>{configuration_dir}/plugins</tt> - a "plugins" subdirectory of configuration directory detected and defined in Config,</li>
- * <li><tt>{env_var:SQLITESTUDIO_PLUGINS}</tt> - environment variable with name "SQLITESTUDIO_PLUGINS",</li>
+ * <li><tt>{env_var:LETOS_PLUGINS}</tt> - environment variable with name "LETOS_PLUGINS",</li>
  * <li><tt>{compile_time:PLUGINS_DIR}</tt> - compile time defined parameter's value of parameter with the name "PLUGINS_DIR".</li>
  * </ul>
  */
@@ -65,7 +65,7 @@ class API_EXPORT Plugin
          * It's a good practice to keep it as single word. Providing plugin's class name can be a good idea.
          *
          * BUG: Currently this implementation of this method has to always return the name of the plugin's main implementation class
-         * (like DbSqlite2), otherwise SQLiteStudio will either unable to load it, or dependencies to this plugin will fail.
+         * (like DbSqlite2), otherwise Letos will either unable to load it, or dependencies to this plugin will fail.
          * This has to do with PluginManagerImpl relying on "className" entry returned from QPluginLoader's metadata.
          */
         virtual QString getName() const = 0;
@@ -107,8 +107,8 @@ class API_EXPORT Plugin
          * or 123200 (for version 12.32.0).
          *
          * This is of course just a suggestion, you don't have to stick to it. Just keep in mind,
-         * that this number is used by SQLiteStudio to compare plugin versions. If there's a plugin with higher version,
-         * SQLiteStudio will propose to update it.
+         * that this number is used by Letos to compare plugin versions. If there's a plugin with higher version,
+         * Letos will propose to update it.
          *
          * The suggested format is also easier to convert to printable (string) version later in getPrintableVersion().
          */
@@ -146,37 +146,37 @@ class API_EXPORT Plugin
 };
 
 /**
- * @def SqliteStudioPluginInterface
- * @brief SQLiteStudio plugin interface ID.
+ * @def LetosPluginInterface
+ * @brief Letos plugin interface ID.
  *
- * This is an ID string for Qt's plugins framework. It's used by ::SQLITESTUDIO_PLUGIN macro.
+ * This is an ID string for Qt's plugins framework. It's used by ::LETOS_PLUGIN macro.
  * No need to use it directly.
  */
-#define SqliteStudioPluginInterface "pl.sqlitestudio.Plugin/1.0"
+#define LetosPluginInterface "org.letos.Plugin/1.0"
 
 /**
- * @def SQLITESTUDIO_PLUGIN
- * @brief Defines class as a SQLiteStudio plugin
+ * @def LETOS_PLUGIN
+ * @brief Defines class as a Letos plugin
  *
- * Every class implementing SQLiteStudio plugin must have this declaration,
- * otherwise SQLiteStudio won't be able to load the plugin.
+ * Every class implementing Letos plugin must have this declaration,
+ * otherwise Letos won't be able to load the plugin.
  *
  * It has to be placed in class declaration:
  * @code
  * class MyPlugin : public QObject, public Plugin
  * {
  *     Q_OBJECT
- *     SQLITESTUDIO_PLUGIN
+ *     LETOS_PLUGIN
  *
  *     public:
  *         // ...
  * }
  * @endcode
  */
-#define SQLITESTUDIO_PLUGIN(file)\
-    Q_PLUGIN_METADATA(IID SqliteStudioPluginInterface FILE file) \
+#define LETOS_PLUGIN(file)\
+    Q_PLUGIN_METADATA(IID LetosPluginInterface FILE file) \
     Q_INTERFACES(Plugin)
 
-Q_DECLARE_INTERFACE(Plugin, SqliteStudioPluginInterface)
+Q_DECLARE_INTERFACE(Plugin, LetosPluginInterface)
 
 #endif // PLUGIN_H

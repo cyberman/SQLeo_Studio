@@ -31,9 +31,12 @@ void PluginManagerImpl::init()
 
     pluginDirs += QDir(CFG->getConfigDir()).absoluteFilePath("plugins");
 
-    QString envDirs = LETOS->getEnv("SQLITESTUDIO_PLUGINS");
-    if (!envDirs.isNull())
-        pluginDirs += envDirs.split(PATH_LIST_SEPARATOR);
+    for (const QString& varName : {"LETOS_PLUGINS", "SQLITESTUDIO_PLUGINS"})
+    {
+        QString envDirs = LETOS->getEnv(varName);
+        if (!envDirs.isNull())
+            pluginDirs += envDirs.split(PATH_LIST_SEPARATOR);
+    }
 
 #ifdef PLUGINS_DIR
     pluginDirs += PLUGINS_DIR;
@@ -143,7 +146,7 @@ void PluginManagerImpl::scanPlugins(const QDir& dirToScan)
 
         if (!initPlugin(loader, fileName))
         {
-            qDebug() << "File" << fileName << "was loaded as plugin, but SQLiteStudio couldn't initialize plugin.";
+            qDebug() << "File" << fileName << "was loaded as plugin, but Letos couldn't initialize plugin.";
             delete loader;
         }
     }
@@ -245,7 +248,7 @@ bool PluginManagerImpl::checkPluginRequirements(const QString& pluginName, const
     minVer = metaObject.value("minAppVersion").toInt(0);
     if (LETOS->getVersion() < minVer)
     {
-        qDebug() << "Plugin" << pluginName << "skipped, because it requires at least SQLiteStudio version" << toPrintableVersion(minVer) << ", but got"
+        qDebug() << "Plugin" << pluginName << "skipped, because it requires at least Letos version" << toPrintableVersion(minVer) << ", but got"
                  << LETOS->getVersionString();
         return false;
     }
@@ -253,7 +256,7 @@ bool PluginManagerImpl::checkPluginRequirements(const QString& pluginName, const
     maxVer = metaObject.value("maxAppVersion").toInt(999999);
     if (LETOS->getVersion() > maxVer)
     {
-        qDebug() << "Plugin" << pluginName << "skipped, because it requires at most SQLiteStudio version" << toPrintableVersion(maxVer) << ", but got"
+        qDebug() << "Plugin" << pluginName << "skipped, because it requires at most Letos version" << toPrintableVersion(maxVer) << ", but got"
                  << LETOS->getVersionString();
         return false;
     }

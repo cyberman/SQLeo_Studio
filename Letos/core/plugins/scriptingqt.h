@@ -17,10 +17,10 @@ class ScriptingQt : public BuiltInPlugin, public DbAwareScriptingPlugin
 {
     Q_OBJECT
 
-    SQLITESTUDIO_PLUGIN_TITLE("JavaScript scripting")
-    SQLITESTUDIO_PLUGIN_DESC("JavaScript scripting support.")
-    SQLITESTUDIO_PLUGIN_VERSION(10100)
-    SQLITESTUDIO_PLUGIN_AUTHOR("sqlitestudio.pl")
+    LETOS_PLUGIN_TITLE("JavaScript scripting")
+    LETOS_PLUGIN_DESC("JavaScript scripting support.")
+    LETOS_PLUGIN_VERSION(10100)
+    LETOS_PLUGIN_AUTHOR("letos.org")
 
     public:
         ScriptingQt();

@@ -1082,7 +1082,7 @@ bool ViewWindow::validate(bool skipWarnings)
     SqliteCreateViewPtr viewStmt = query.dynamicCast<SqliteCreateView>();
     if (!viewStmt)
     {
-        notifyError(tr("The view could not be modified due to internal SQLiteStudio error. Please report this!"));
+        notifyError(tr("The view could not be modified due to internal Letos error. Please report this!"));
         qCritical() << "Could not parse new view, because parsed object is of different type. The type is"
                     << sqliteQueryTypeToString(query->queryType) << "for following query:" << ddl;
         return false;
@@ -1108,7 +1108,7 @@ void ViewWindow::executeStructureChanges()
         if (!parser.parse(theDdl))
         {
             qCritical() << "Could not re-parse the view for executing it:" << parser.getErrorString();
-            notifyError(tr("The view code could not be parsed properly for execution. This is a SQLiteStudio's bug. Please report it."));
+            notifyError(tr("The view code could not be parsed properly for execution. This is a Letos's bug. Please report it."));
             return;
         }
 

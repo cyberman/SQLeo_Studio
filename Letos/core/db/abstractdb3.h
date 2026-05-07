@@ -14,7 +14,7 @@
 #include <QDebug>
 
 /**
- * @brief Complete implementation of SQLite 3 driver for SQLiteStudio.
+ * @brief Complete implementation of SQLite 3 driver for Letos.
  *
  * Inherit this when implementing Db for SQLite 3. In most cases you will only need
  * to create one public constructor, which forwards parameters to the AbstractDb constructor.

@@ -135,7 +135,7 @@ QString CliCommandTree::fullHelp() const
 {
     return tr(
                 "Prints all objects (tables, indexes, triggers and views) that are in the database as a tree. "
-                "The tree is very similar to the one that you can see in GUI client of the SQLiteStudio.\n"
+                "The tree is very similar to the one that you can see in GUI client of the Letos.\n"
                 "When -c option is given, then also columns will be listed under each table.\n"
                 "When -s option is given, then also system objects will be printed (sqlite_* tables, autoincrement indexes, etc).\n"
                 "The database argument is optional and if provided, then only given database will be printed. This is not a registered database name, "

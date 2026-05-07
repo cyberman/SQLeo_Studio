@@ -18,7 +18,7 @@ CFG_CATEGORIES(CsvExportConfig,
 class CSVEXPORTSHARED_EXPORT CsvExport : public GenericExportPlugin
 {
         Q_OBJECT
-        SQLITESTUDIO_PLUGIN("csvexport.json")
+        LETOS_PLUGIN("csvexport.json")
 
     public:
         CsvExport();

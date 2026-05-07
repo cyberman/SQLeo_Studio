@@ -24,7 +24,7 @@ class QTextStream;
 class CSVIMPORTSHARED_EXPORT CsvImport : public GenericPlugin, public ImportPlugin
 {
         Q_OBJECT
-        SQLITESTUDIO_PLUGIN("csvimport.json")
+        LETOS_PLUGIN("csvimport.json")
 
     public:
         CsvImport();

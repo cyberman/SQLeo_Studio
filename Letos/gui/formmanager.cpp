@@ -123,9 +123,12 @@ void FormManager::load()
     formDirs += ":/forms";
     formDirs += QDir(CFG->getConfigDir()).absoluteFilePath("forms");
 
-    QString envDirs = LETOS->getEnv("SQLITESTUDIO_FORMS");
-    if (!envDirs.isNull())
-        formDirs += envDirs.split(PATH_LIST_SEPARATOR);
+    for (const QString& varName : {"LETOS_FORMS", "SQLITESTUDIO_FORMS"})
+    {
+        QString envDirs = LETOS->getEnv(varName);
+        if (!envDirs.isNull())
+            formDirs += envDirs.split(PATH_LIST_SEPARATOR);
+    }
 
     formDirs += PLUGINS->getPluginDirs();
 

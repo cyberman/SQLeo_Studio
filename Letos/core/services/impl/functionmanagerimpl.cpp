@@ -398,7 +398,7 @@ void FunctionManagerImpl::clearFunctions()
 QString FunctionManagerImpl::cannotFindFunctionError(const QString& name, int argCount)
 {
     QStringList argMarkers = getArgMarkers(argCount);
-    return tr("No such function registered in SQLiteStudio: %1(%2)").arg(name, argMarkers.join(","));
+    return tr("No such function registered in Letos: %1(%2)").arg(name, argMarkers.join(","));
 }
 
 QString FunctionManagerImpl::langUnsupportedError(const QString& name, int argCount, const QString& lang)

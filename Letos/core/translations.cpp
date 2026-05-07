@@ -8,7 +8,7 @@
 #include <QRegularExpression>
 #include <QStandardPaths>
 
-QHash<QString,QTranslator*> SQLITESTUDIO_TRANSLATIONS;
+QHash<QString,QTranslator*> LETOS_TRANSLATIONS;
 
 static QStringList getTranslationDirs()
 {
@@ -16,18 +16,21 @@ static QStringList getTranslationDirs()
 
     // AppDataLocation, but APPNAME should be a fixed value
     for (const QString& path : QStandardPaths::standardLocations(QStandardPaths::GenericDataLocation))
+    {
+        translationDirs += QDir::cleanPath(path + "/letos/translations");
         translationDirs += QDir::cleanPath(path + "/sqlitestudio/translations");
+    }
 
     translationDirs += ":/msg/translations";
 
     return translationDirs;
 }
 
-QStringList SQLITESTUDIO_TRANSLATION_DIRS = getTranslationDirs();
+QStringList LETOS_TRANSLATION_DIRS = getTranslationDirs();
 
 void loadTranslation(const QString& baseName)
 {
-    if (SQLITESTUDIO_TRANSLATIONS.contains(baseName))
+    if (LETOS_TRANSLATIONS.contains(baseName))
         return;
 
     QTranslator* translator = new QTranslator();
@@ -38,7 +41,7 @@ void loadTranslation(const QString& baseName)
     QStringList filters = QStringList({baseName+"_"+lang+".qm"});
     QDir dir;
 
-    for (QString& dirPath : SQLITESTUDIO_TRANSLATION_DIRS)
+    for (QString& dirPath : LETOS_TRANSLATION_DIRS)
     {
         dir.setPath(dirPath);
         for (QString& f : dir.entryList(filters))
@@ -62,17 +65,17 @@ void loadTranslation(const QString& baseName)
     }
 
     qApp->installTranslator(translator);
-    SQLITESTUDIO_TRANSLATIONS[baseName] = translator;
+    LETOS_TRANSLATIONS[baseName] = translator;
     qDebug() << "Loaded:" << fName;
 }
 
 void unloadTranslation(const QString& baseName)
 {
-    if (!SQLITESTUDIO_TRANSLATIONS.contains(baseName))
+    if (!LETOS_TRANSLATIONS.contains(baseName))
         return;
 
-    QTranslator* trans = SQLITESTUDIO_TRANSLATIONS[baseName];
-    SQLITESTUDIO_TRANSLATIONS.remove(baseName);
+    QTranslator* trans = LETOS_TRANSLATIONS[baseName];
+    LETOS_TRANSLATIONS.remove(baseName);
     qApp->removeTranslator(trans);
     delete trans;
 }
@@ -90,7 +93,7 @@ QStringList getAvailableTranslations()
     QRegularExpressionMatch match;
     QDir dir;
     QStringList filters = QStringList({"*_*.qm"});
-    for (QString& dirPath : SQLITESTUDIO_TRANSLATION_DIRS)
+    for (QString& dirPath : LETOS_TRANSLATION_DIRS)
     {
         dir.setPath(dirPath);
         for (QString& f : dir.entryList(filters))

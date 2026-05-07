@@ -30,7 +30,7 @@ QPagedPaintDevice* PdfExport::createPaintDevice(const QString& documentTitle, bo
 {
     QPdfWriter* pdfWriter = new QPdfWriter(output);
     pdfWriter->setTitle(documentTitle);
-    pdfWriter->setCreator(tr("SQLiteStudio v%1").arg(SQLITESTUDIO->getVersionString()));
+    pdfWriter->setCreator(tr("Letos v%1").arg(LETOS->getVersionString()));
     takeOwnership = true;
     return pdfWriter;
 }
@@ -707,7 +707,7 @@ void PdfExport::drawObjectCellHeaderBackground(int x1, int y1, int x2, int y2)
 
 void PdfExport::drawFooter()
 {
-    QString footer = tr("Document generated with SQLiteStudio v%1").arg(SQLITESTUDIO->getVersionString());
+    QString footer = tr("Document generated with Letos v%1").arg(LETOS->getVersionString());
 
     QTextOption opt = *textOption;
     opt.setAlignment(Qt::AlignRight);

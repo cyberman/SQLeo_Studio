@@ -47,7 +47,7 @@ class MULTIEDITORIMAGE_EXPORT MultiEditorImagePlugin : public GenericPlugin, pub
 {
     Q_OBJECT
 
-    SQLITESTUDIO_PLUGIN("multieditorimage.json")
+    LETOS_PLUGIN("multieditorimage.json")
 
     public:
         MultiEditorWidget* getInstance();

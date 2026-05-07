@@ -77,7 +77,7 @@ void ViewModifier::collectNewColumns()
     QList<QList<SelectResolver::Column> > multiColumns = resolver.resolve(createView->select);
     if (multiColumns.size() < 1)
     {
-        warnings << QObject::tr("SQLiteStudio was unable to resolve columns returned by the new view, "
+        warnings << QObject::tr("Letos was unable to resolve columns returned by the new view, "
                                 "therefore it won't be able to tell which triggers might fail during the recreation process.");
         return;
     }

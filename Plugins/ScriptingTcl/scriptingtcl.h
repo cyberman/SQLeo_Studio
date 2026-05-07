@@ -15,7 +15,7 @@ struct Tcl_Obj;
 class SCRIPTINGTCLSHARED_EXPORT ScriptingTcl : public GenericPlugin, public DbAwareScriptingPlugin
 {
         Q_OBJECT
-        SQLITESTUDIO_PLUGIN("scriptingtcl.json")
+        LETOS_PLUGIN("scriptingtcl.json")
 
     public:
         ScriptingTcl();

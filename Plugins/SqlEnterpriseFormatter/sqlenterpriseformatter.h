@@ -63,7 +63,7 @@ CFG_CATEGORIES(SqlEnterpriseFormatterConfig,
 class SQLENTERPRISEFORMATTERSHARED_EXPORT SqlEnterpriseFormatter : public GenericPlugin, public SqlFormatterPlugin, public UiConfiguredPlugin
 {
     Q_OBJECT
-    SQLITESTUDIO_PLUGIN("sqlenterpriseformatter.json")
+    LETOS_PLUGIN("sqlenterpriseformatter.json")
 
     public:
         SqlEnterpriseFormatter();

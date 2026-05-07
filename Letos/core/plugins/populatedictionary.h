@@ -20,10 +20,10 @@ class PopulateDictionary : public BuiltInPlugin, public PopulatePlugin
 {
         Q_OBJECT
 
-        SQLITESTUDIO_PLUGIN_TITLE("Dictionary")
-        SQLITESTUDIO_PLUGIN_DESC("Support for populating tables with values from a dictionary file.")
-        SQLITESTUDIO_PLUGIN_VERSION(10001)
-        SQLITESTUDIO_PLUGIN_AUTHOR("sqlitestudio.pl")
+        LETOS_PLUGIN_TITLE("Dictionary")
+        LETOS_PLUGIN_DESC("Support for populating tables with values from a dictionary file.")
+        LETOS_PLUGIN_VERSION(10001)
+        LETOS_PLUGIN_AUTHOR("letos.org")
 
     public:
         PopulateDictionary();

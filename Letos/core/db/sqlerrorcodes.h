@@ -8,7 +8,7 @@
  *
  * Those are custom error codes that can be returned by SqlResults::getErrorCode().
  * Usually error codes come from SQLite itself, but some errors can be generated
- * by SQLiteStudio and for those cases this enum lists possible codes.
+ * by Letos and for those cases this enum lists possible codes.
  *
  * Codes in this enum are not conflicting with error codes returned from SQLite.
  */

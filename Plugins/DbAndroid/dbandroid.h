@@ -20,7 +20,7 @@ CFG_CATEGORIES(DbAndroidConfig,
 class DBANDROIDSHARED_EXPORT DbAndroid : public GenericPlugin, public DbPlugin
 {
         Q_OBJECT
-        SQLITESTUDIO_PLUGIN("dbandroid.json")
+        LETOS_PLUGIN("dbandroid.json")
 
     public:
         DbAndroid();
@@ -50,7 +50,7 @@ class DBANDROIDSHARED_EXPORT DbAndroid : public GenericPlugin, public DbPlugin
         bool adbValid = false;
         QAction* jarAction = nullptr;
 
-        static_char* PLUGIN_MANUAL_URL = "https://github.com/pawelsalawa/sqlitestudio/wiki/DbAndroid";
+        static_char* PLUGIN_MANUAL_URL = "https://github.com/pawelsalawa/letos/wiki/DbAndroid";
         static_char* SELECT_ADB_URL = "select_adb://";
 
         CFG_LOCAL_PERSISTABLE(DbAndroidConfig, cfg)

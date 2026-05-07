@@ -24,16 +24,16 @@
  *     "title":       "My plugin",
  *     "description": "Does nothing. It's an example plugin.",
  *     "version":     10000
- *     "author":      "sqlitestudio.pl"
+ *     "author":      "letos.org"
  * };
  * @endcode
  *
- * and then just declare the class as SQLiteStudio plugin, pointing the json file you just created:
+ * and then just declare the class as Letos plugin, pointing the json file you just created:
  * @code
  * class MyPlugin : public GenericPlugin, public ScriptingPlugin
  * {
  *     Q_OBJECT
- *     SQLITESTUDIO_PLUGIN("myplugin.json")
+ *     LETOS_PLUGIN("myplugin.json")
  *
  *     // rest of the class
  * };

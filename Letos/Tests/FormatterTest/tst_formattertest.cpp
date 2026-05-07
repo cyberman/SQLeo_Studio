@@ -65,7 +65,7 @@ void FormatterTest::initTestCase()
     QStringList nameFilters = {"*SqlEnterpriseFormatter*.so", "*SqlEnterpriseFormatter*.dll", "*SqlEnterpriseFormatter*.dylib"};
 
     QStringList pluginDirs = {"plugins"};
-    QString envDirs = QProcessEnvironment::systemEnvironment().value("SQLITESTUDIO_PLUGINS");
+    QString envDirs = QProcessEnvironment::systemEnvironment().value("LETOS_PLUGINS");
     if (!envDirs.isNull())
         pluginDirs += envDirs.split(PATH_LIST_SEPARATOR);
 

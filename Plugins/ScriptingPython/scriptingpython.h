@@ -39,7 +39,7 @@ class SCRIPTINGPYTHONSHARED_EXPORT ScriptingPython : public GenericPlugin,
                                                      public DbAwareScriptingPlugin
 {
         Q_OBJECT
-        SQLITESTUDIO_PLUGIN("scriptingpython.json")
+        LETOS_PLUGIN("scriptingpython.json")
 
     public:
         static PyObject* dbEval(PyObject *self, PyObject* const* args);

@@ -270,7 +270,7 @@ void ColumnDefaultPanel::updateVirtualSql()
 QString ColumnDefaultPanel::getTempTable()
 {
     SchemaResolver resolver(db);
-    return resolver.getUniqueName("sqlitestudio_temp_table");
+    return resolver.getUniqueName("letos_temp_table");
 }
 
 void ColumnDefaultPanel::updateState()

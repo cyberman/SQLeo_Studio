@@ -25,10 +25,10 @@ class PopulateScript : public BuiltInPlugin, public PopulatePlugin
 {
         Q_OBJECT
 
-        SQLITESTUDIO_PLUGIN_TITLE("Constant")
-        SQLITESTUDIO_PLUGIN_DESC("Support for populating tables with a constant value.")
-        SQLITESTUDIO_PLUGIN_VERSION(10001)
-        SQLITESTUDIO_PLUGIN_AUTHOR("sqlitestudio.pl")
+        LETOS_PLUGIN_TITLE("Constant")
+        LETOS_PLUGIN_DESC("Support for populating tables with a constant value.")
+        LETOS_PLUGIN_VERSION(10001)
+        LETOS_PLUGIN_AUTHOR("letos.org")
 
     public:
         PopulateScript();

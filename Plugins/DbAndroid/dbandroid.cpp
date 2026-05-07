@@ -181,7 +181,7 @@ void DbAndroid::showJarMessage()
     if (!cfg.DbAndroid.JarDownloadNotified.get())
     {
         notifyInfo(tr("You can grab Android connector JAR file from Tools menu. It's required for 2 of 3 connections supported by the Android plugin. "
-                      "For more details read plugin's documentation on <a href=\"%1\">SQLiteStudio's wiki page.</a>").arg(PLUGIN_MANUAL_URL));
+                      "For more details read plugin's documentation on <a href=\"%1\">Letos's wiki page.</a>").arg(PLUGIN_MANUAL_URL));
         cfg.DbAndroid.JarDownloadNotified.set(true);
     }
 }

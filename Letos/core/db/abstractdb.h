@@ -362,7 +362,7 @@ class API_EXPORT AbstractDb : public Db
             bool deterministic;
 
             /**
-             * @brief Flag indicating if this function is SQLiteStudio's built-in function or user's custom function.
+             * @brief Flag indicating if this function is Letos's built-in function or user's custom function.
              */
             bool builtIn = false;
         };
@@ -411,7 +411,7 @@ class API_EXPORT AbstractDb : public Db
          * This method works on a very simple rule. It assumes that queries: SELECT, ANALYZE, EXPLAIN,
          * and PRAGMA - are read-only, while all other queries are read-write.
          * In case of PRAGMA this is not entirely true, but it's not like using PRAGMA for changing
-         * some setting would cause database state inconsistency. At least not from perspective of SQLiteStudio.
+         * some setting would cause database state inconsistency. At least not from perspective of Letos.
          *
          * In case of WITH statement it filters out the "WITH clause" and then checks for SELECT keyword.
          */
@@ -439,7 +439,7 @@ class API_EXPORT AbstractDb : public Db
         void registerFunction(const RegisteredFunction& function);
 
         /**
-         * @brief Registers SQLiteStudio's built-in functions in the db.
+         * @brief Registers Letos's built-in functions in the db.
          *
          * This function is called once during opening the db.
          *

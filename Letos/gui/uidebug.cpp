@@ -5,7 +5,7 @@
 #include <QFile>
 #include <QTime>
 
-DebugConsole* sqliteStudioUiDebugConsole = nullptr;
+DebugConsole* letosUiDebugConsole = nullptr;
 MsgHandlerThreadProxy* msgHandlerThreadProxy = nullptr;
 bool UI_DEBUG_ENABLED = false;
 bool UI_DEBUG_CONSOLE = true;
@@ -52,11 +52,11 @@ void setUiDebug(bool enabled, bool useUiConsole, const QString& file)
     UI_DEBUG_CONSOLE =  useUiConsole && file.isEmpty();
     UI_DEBUG_FILE = file;
     safe_delete(msgHandlerThreadProxy);
-    safe_delete(sqliteStudioUiDebugConsole);
+    safe_delete(letosUiDebugConsole);
     if (enabled)
     {
         if (UI_DEBUG_CONSOLE)
-            sqliteStudioUiDebugConsole = new DebugConsole();
+            letosUiDebugConsole = new DebugConsole();
 
         if (file.isEmpty())
             msgHandlerThreadProxy = new MsgHandlerThreadProxy();
@@ -67,8 +67,8 @@ void setUiDebug(bool enabled, bool useUiConsole, const QString& file)
 
 void showUiDebugConsole()
 {
-    if (sqliteStudioUiDebugConsole)
-        sqliteStudioUiDebugConsole->show();
+    if (letosUiDebugConsole)
+        letosUiDebugConsole->show();
 }
 
 bool isDebugEnabled()
@@ -108,12 +108,12 @@ void MsgHandlerThreadProxy::init()
     ignoredWarnings << QStringLiteral("libpng warning: Unknown iTXt compression type or method");
     ignoredWarnings << QStringLiteral("QPainter::font: Painter not active");
 
-    if (sqliteStudioUiDebugConsole)
+    if (letosUiDebugConsole)
     {
-        connect(this, SIGNAL(debugRequested(QString)), sqliteStudioUiDebugConsole, SLOT(debug(QString)));
-        connect(this, SIGNAL(warnRequested(QString)), sqliteStudioUiDebugConsole, SLOT(warning(QString)));
-        connect(this, SIGNAL(criticalRequested(QString)), sqliteStudioUiDebugConsole, SLOT(critical(QString)));
-        connect(this, SIGNAL(fatalRequested(QString)), sqliteStudioUiDebugConsole, SLOT(fatal(QString)));
+        connect(this, SIGNAL(debugRequested(QString)), letosUiDebugConsole, SLOT(debug(QString)));
+        connect(this, SIGNAL(warnRequested(QString)), letosUiDebugConsole, SLOT(warning(QString)));
+        connect(this, SIGNAL(criticalRequested(QString)), letosUiDebugConsole, SLOT(critical(QString)));
+        connect(this, SIGNAL(fatalRequested(QString)), letosUiDebugConsole, SLOT(fatal(QString)));
     }
     else if (outFile)
     {

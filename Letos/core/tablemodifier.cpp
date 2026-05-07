@@ -1239,7 +1239,7 @@ QString TableModifier::getTempTableName()
 {
     SchemaResolver resolver(db);
     resolver.setIgnoreSystemObjects(true);
-    QString name = resolver.getUniqueName("sqlitestudio_temp_table", usedTempTableNames);
+    QString name = resolver.getUniqueName("letos_temp_table", usedTempTableNames);
     usedTempTableNames << name;
     return name;
 }

@@ -100,7 +100,7 @@ class API_EXPORT DbAttacher
 /**
  * @brief Abstract factory for DbAttacher objects.
  *
- * The abstract factory is accessed from SQLiteStudio class in order to produce DbAttacher instances.
+ * The abstract factory is accessed from Letos class in order to produce DbAttacher instances.
  * The default DbAttacherFactory implementation (DbAttacherFactoryImpl) produces default DbAttacher instances
  * (DbAttacherImpl), but it can be replaced with other factory to produce other attachers, just like unit tests
  * in this project do.

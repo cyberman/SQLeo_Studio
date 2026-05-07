@@ -33,12 +33,12 @@ typedef QSharedPointer<SqlQuery> SqlQueryPtr;
  * to be used internally (not exposed to the user) and you don't want any special features
  * (like custom SQL functions, custom collations) to be registered in that database.
  */
-static_char* DB_PURE_INIT = "sqlitestudio_pure_db_initalization";
+static_char* DB_PURE_INIT = "letos_pure_db_initalization";
 
 /**
  * @brief Option name for plugin handling the database.
  *
- * This is a constant naming the connection option, which tells SQLiteStudio which plugin was dedicated to handle
+ * This is a constant naming the connection option, which tells Letos which plugin was dedicated to handle
  * particular database.
  */
 static_char* DB_PLUGIN = "plugin";
@@ -140,7 +140,7 @@ class API_EXPORT Db : public QObject, public Interruptable
             NONE                = 0x00, /**< No flags. This is default. */
             PRELOAD             = 0x01, /**< Preloads all execution results into the results object. Useful for asynchronous execution. */
             NO_LOCK             = 0x02, /**<
-                                         * Prevents SQLiteStudio from setting the lock for execution on this base (not the SQLite lock,
+                                         * Prevents Letos from setting the lock for execution on this base (not the SQLite lock,
                                          * just a Db internal lock for multi-threading access to the Db::exec()). This should be used
                                          * only in justified circumstances. That is when the Db call has to be done from within the part
                                          * of code, where the lock on Db was already set. Never (!) use this to ommit lock from different
@@ -271,12 +271,12 @@ class API_EXPORT Db : public QObject, public Interruptable
          * @brief Sets the timeout for waiting for the database to be unlocked.
          * @param secs Number of seconds.
          *
-         * When the database is locked by another application, then the SQLiteStudio will wait given number
+         * When the database is locked by another application, then the Letos will wait given number
          * of seconds for the database to be released, before the execution error is reported.
          *
          * Set it to negative value to set infinite timeout.
          *
-         * This doesn't involve locking done by SQLiteStudio internally (see Db::Flag::NO_LOCK), which doesn't time out.
+         * This doesn't involve locking done by Letos internally (see Db::Flag::NO_LOCK), which doesn't time out.
          */
         virtual void setTimeout(int secs) = 0;
 
@@ -695,7 +695,7 @@ class API_EXPORT Db : public QObject, public Interruptable
          * This method is used only to let the database know, that the given function exists in FunctionManager and we want it to be visible
          * in this database's context. When the function is called from SQL query, then the function execution is delegated to the FunctionManager.
          *
-         * For details about usage of custom SQL functions see https://github.com/pawelsalawa/sqlitestudio/wiki/User_Manual#custom-sql-functions
+         * For details about usage of custom SQL functions see https://github.com/pawelsalawa/letos/wiki/User_Manual#custom-sql-functions
          *
          * @see FunctionManager
          */
@@ -713,13 +713,13 @@ class API_EXPORT Db : public QObject, public Interruptable
          * just collects the data) and then the second function, executed at the end. The latter one must return the result, which becomes the result
          * of aggregate function.
          *
-         * Aggregate functions in SQLiteStudio are almost the same as in SQLite itself, except SQLiteStudio has also a third function, which is called
+         * Aggregate functions in Letos are almost the same as in SQLite itself, except Letos has also a third function, which is called
          * at the very begining, before the first "per step" function is called. It's used to initialize anything that the step function might need.
          *
          * This method is used only to let the database know, that the given function exists in FunctionManager and we want it to be visible
          * in this database's context. When the function is called from SQL query, then the function execution is delegated to the FunctionManager.
          *
-         * For details about usage of custom SQL functions see https://github.com/pawelsalawa/sqlitestudio/wiki/User_Manual#custom-sql-functions
+         * For details about usage of custom SQL functions see https://github.com/pawelsalawa/letos/wiki/User_Manual#custom-sql-functions
          *
          * @see FunctionManager
          */
@@ -752,7 +752,7 @@ class API_EXPORT Db : public QObject, public Interruptable
          * when comparing 2 values in the database in order to sort query results. The name passed to this method is a name of the collation
          * as it is used in SQL queries and also the same name must be used when defining collation in Collations editor window.
          *
-         * For details about usage of custom collations see https://github.com/pawelsalawa/sqlitestudio/wiki/User_Manual#custom-sql-functions
+         * For details about usage of custom collations see https://github.com/pawelsalawa/letos/wiki/User_Manual#custom-sql-functions
          *
          * @see CollationManager
          */

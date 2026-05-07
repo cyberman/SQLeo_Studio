@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string notr="true">SQLiteStudio completer</string>
+   <string notr="true">Letos completer</string>
   </property>
   <property name="sizeGripEnabled">
    <bool>true</bool>

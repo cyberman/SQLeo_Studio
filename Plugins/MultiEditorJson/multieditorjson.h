@@ -59,7 +59,7 @@ class MULTIEDITORJSON_EXPORT MultiEditorJsonPlugin : public GenericPlugin, publi
 {
     Q_OBJECT
 
-    SQLITESTUDIO_PLUGIN("multieditorjson.json")
+    LETOS_PLUGIN("multieditorjson.json")
 
 public:
     MultiEditorWidget* getInstance() override;

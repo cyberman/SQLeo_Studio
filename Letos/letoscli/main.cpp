@@ -27,12 +27,12 @@ namespace CliOpts
 bool cliHandleCmdLineArgs()
 {
     QCommandLineParser parser;
-    parser.setApplicationDescription(QObject::tr("Command line interface to SQLiteStudio, a SQLite manager."));
+    parser.setApplicationDescription(QObject::tr("Command line interface to Letos, a SQLite manager."));
     parser.addHelpOption();
     parser.addVersionOption();
 
     QCommandLineOption execSqlOption({"e", "execute-sql-file"},
-                                     QObject::tr("Executes provided SQL file (including all rich features of SQLiteStudio's query executor) "
+                                     QObject::tr("Executes provided SQL file (including all rich features of Letos's query executor) "
                                                  "on the specified database file and quits. "
                                                  "The database parameter becomes mandatory if this option is used."),
                                      QObject::tr("SQL file"));
@@ -46,7 +46,7 @@ bool cliHandleCmdLineArgs()
                                                       "but rather continue until the end, ignoring errors."));
     QCommandLineOption debugOption({"d", "debug"}, QObject::tr("Enables debug messages on standard error output."));
     QCommandLineOption lemonDebugOption("debug-lemon", QObject::tr("Enables Lemon parser debug messages for SQL code assistant."));
-    QCommandLineOption listPluginsOption({"lp", "list-plugins"}, QObject::tr("Lists plugins installed in the SQLiteStudio and quits."));
+    QCommandLineOption listPluginsOption({"lp", "list-plugins"}, QObject::tr("Lists plugins installed in the Letos and quits."));
 #ifdef HAS_UPDATEMANAGER
     QCommandLineOption checkUpdatesOption({"cu", "check-updates"},
                                           QObject::tr("Checks for updates online and prints the result to standard output."));

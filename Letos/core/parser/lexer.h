@@ -183,7 +183,7 @@ class API_EXPORT Lexer
         /**
          * @brief Creates token for every token type internal tables.
          * @param lemonType Lemon token ID for this token type.
-         * @param type SQLiteStudio token type.
+         * @param type Letos token type.
          * @param value Sample value for the token.
          * @return Created token.
          *

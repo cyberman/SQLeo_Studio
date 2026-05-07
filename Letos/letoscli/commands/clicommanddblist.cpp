@@ -72,7 +72,7 @@ QString CliCommandDbList::shortHelp() const
 QString CliCommandDbList::fullHelp() const
 {
     return tr(
-                "Prints list of databases registered in the SQLiteStudio. Each database on the list can be in open or closed state "
+                "Prints list of databases registered in the Letos. Each database on the list can be in open or closed state "
                 "and %1 tells you that. The current working database (aka default database) is also marked on the list with '*' at the start of its name. "
                 "See help for %2 command to learn about the default database."
                 ).arg(cmdName("dblist"), cmdName("use"));

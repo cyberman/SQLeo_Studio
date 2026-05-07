@@ -21,7 +21,7 @@ class CELLRENDERERIMAGE_EXPORT CellRendererImagePlugin : public GenericPlugin,
                                                          public UiConfiguredPlugin
 {
     Q_OBJECT
-    SQLITESTUDIO_PLUGIN("cellrendererimage.json")
+    LETOS_PLUGIN("cellrendererimage.json")
 
     public:
         QList<DataType> getPreferredTypes();

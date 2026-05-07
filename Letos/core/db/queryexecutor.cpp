@@ -607,7 +607,7 @@ void QueryExecutor::simpleExecutionFinished(SqlQueryPtr results)
     }
 
     if (!forceSimpleMode && queriesForSimpleExecution.size() <= queryCountLimitForSmartMode)
-        notifyWarn(tr("SQLiteStudio was unable to extract metadata from the query. Results won't be editable."));
+        notifyWarn(tr("Letos was unable to extract metadata from the query. Results won't be editable."));
 
     emit executionFinished(results);
 }

@@ -7,7 +7,7 @@
 
 // Started from Qt Syntax Highlighter example and then ported https://wiki.python.org/moin/PyQt/Python%20syntax%20highlighting
 // Ported code copied from https://forum.qt.io/topic/96285/c-highlighter-for-python
-// and then adjusted for SQLiteStudio (i.e. migrated from QRegExp to QRegularExpression).
+// and then adjusted for Letos (i.e. migrated from QRegExp to QRegularExpression).
 class PythonHighlighter : public QSyntaxHighlighter
 {
     public:

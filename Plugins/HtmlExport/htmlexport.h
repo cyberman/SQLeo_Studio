@@ -24,7 +24,7 @@ CFG_CATEGORIES(HtmlExportConfig,
 class HTMLEXPORTSHARED_EXPORT HtmlExport : public GenericExportPlugin
 {
         Q_OBJECT
-        SQLITESTUDIO_PLUGIN("htmlexport.json")
+        LETOS_PLUGIN("htmlexport.json")
 
     public:
         QString getFormatName() const override;

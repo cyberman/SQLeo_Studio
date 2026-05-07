@@ -31,7 +31,12 @@ void Config::setAskUserForConfigDirFunc(const AskUserForConfigDirFunc& value)
 
 QString Config::getPortableConfigPath()
 {
-    QStringList paths = QStringList({"./sqlitestudio-cfg", qApp->applicationDirPath() + "/sqlitestudio-cfg"});
+    QStringList paths = {
+        "./sqlitestudio-cfg",
+        qApp->applicationDirPath() + "/sqlitestudio-cfg",
+        "./letos-cfg",
+        qApp->applicationDirPath() + "/letos-cfg"
+    };
     QSet<QString> pathSet;
     QDir dir;
     for (const QString& path : paths)

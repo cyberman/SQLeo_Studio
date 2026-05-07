@@ -15,7 +15,7 @@ CFG_CATEGORIES(JsonExportConfig,
 class JSONEXPORTSHARED_EXPORT JsonExport : public GenericExportPlugin
 {
         Q_OBJECT
-        SQLITESTUDIO_PLUGIN("jsonexport.json")
+        LETOS_PLUGIN("jsonexport.json")
 
     public:
         JsonExport();

@@ -78,10 +78,10 @@ void TableModifierTest::testCase1()
     verifyRe("CREATE TABLE test2 .*", sqls[i++]);
     verifyRe("INSERT INTO test2.*SELECT.*FROM test;", sqls[i++]);
     verifyRe("DROP TABLE test;", sqls[i++]);
-    verifyRe("CREATE TABLE sqlitestudio_temp_table.* REFERENCES test2.*", sqls[i++]);
-    verifyRe("INSERT INTO sqlitestudio_temp_table.*SELECT .* FROM abc.*", sqls[i++]);
+    verifyRe("CREATE TABLE letos_temp_table.* REFERENCES test2.*", sqls[i++]);
+    verifyRe("INSERT INTO letos_temp_table.*SELECT .* FROM abc.*", sqls[i++]);
     verifyRe("DROP TABLE abc;", sqls[i++]);
-    verifyRe("ALTER TABLE sqlitestudio_temp_table RENAME TO abc;", sqls[i++]);
+    verifyRe("ALTER TABLE letos_temp_table RENAME TO abc;", sqls[i++]);
     verifyRe("PRAGMA foreign_keys = 1;", sqls[i++]);
     verifyRe("PRAGMA legacy_alter_table = false;", sqls[i++]);
 }
@@ -113,14 +113,14 @@ void TableModifierTest::testCase2()
     QVERIFY(sqls.size() == 10);
     int i = 0;
     verifyRe("PRAGMA foreign_keys = 0;", sqls[i++]);
-    verifyRe("CREATE TABLE sqlitestudio_temp_table.*newCol.*", sqls[i++]);
-    verifyRe("INSERT INTO sqlitestudio_temp_table.*SELECT.*FROM test.*", sqls[i++]);
+    verifyRe("CREATE TABLE letos_temp_table.*newCol.*", sqls[i++]);
+    verifyRe("INSERT INTO letos_temp_table.*SELECT.*FROM test.*", sqls[i++]);
     verifyRe("DROP TABLE test;", sqls[i++]);
-    verifyRe("ALTER TABLE sqlitestudio_temp_table RENAME TO test;", sqls[i++]);
-    verifyRe("CREATE TABLE sqlitestudio_temp_table0.*REFERENCES test.*newCol.*", sqls[i++]);
-    verifyRe("INSERT INTO sqlitestudio_temp_table0.*SELECT.*FROM abc.*", sqls[i++]);
+    verifyRe("ALTER TABLE letos_temp_table RENAME TO test;", sqls[i++]);
+    verifyRe("CREATE TABLE letos_temp_table0.*REFERENCES test.*newCol.*", sqls[i++]);
+    verifyRe("INSERT INTO letos_temp_table0.*SELECT.*FROM abc.*", sqls[i++]);
     verifyRe("DROP TABLE abc;", sqls[i++]);
-    verifyRe("ALTER TABLE sqlitestudio_temp_table0 RENAME TO abc;", sqls[i++]);
+    verifyRe("ALTER TABLE letos_temp_table0 RENAME TO abc;", sqls[i++]);
     verifyRe("PRAGMA foreign_keys = 1;", sqls[i++]);
 }
 
@@ -158,10 +158,10 @@ void TableModifierTest::testCase3()
     verifyRe("CREATE TABLE newTable .*newCol.*", sqls[i++]);
     verifyRe("INSERT INTO newTable.*newCol.*SELECT.*val,.*FROM test;", sqls[i++]);
     verifyRe("DROP TABLE test;", sqls[i++]);
-    verifyRe("CREATE TABLE sqlitestudio_temp_table.*REFERENCES newTable.*newCol.*", sqls[i++]);
-    verifyRe("INSERT INTO sqlitestudio_temp_table.*SELECT.*FROM abc;", sqls[i++]);
+    verifyRe("CREATE TABLE letos_temp_table.*REFERENCES newTable.*newCol.*", sqls[i++]);
+    verifyRe("INSERT INTO letos_temp_table.*SELECT.*FROM abc;", sqls[i++]);
     verifyRe("DROP TABLE abc;", sqls[i++]);
-    verifyRe("ALTER TABLE sqlitestudio_temp_table RENAME TO abc;", sqls[i++]);
+    verifyRe("ALTER TABLE letos_temp_table RENAME TO abc;", sqls[i++]);
     verifyRe("CREATE INDEX i2 ON abc \\(id\\);", sqls[i++]);
     verifyRe("CREATE INDEX i1 ON newTable \\(newCol\\);", sqls[i++]);
     verifyRe("PRAGMA foreign_keys = 1;", sqls[i++]);

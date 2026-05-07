@@ -48,7 +48,7 @@ class API_EXPORT ReadWriteLocker
          * This method works on a very simple rule. It assumes that queries: SELECT, ANALYZE, EXPLAIN,
          * and PRAGMA - are read-only, while all other queries are read-write.
          * In case of PRAGMA this is not entirely true, but it's not like using PRAGMA for changing
-         * some setting would cause database state inconsistency. At least not from perspective of SQLiteStudio.
+         * some setting would cause database state inconsistency. At least not from perspective of Letos.
          *
          * In case of WITH statement it filters out the "WITH clause" and then checks for SELECT keyword.
          */

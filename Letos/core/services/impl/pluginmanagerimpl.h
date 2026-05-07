@@ -162,9 +162,9 @@ class API_EXPORT PluginManagerImpl : public PluginManager
             /**
              * @brief If not empty, contains Plugin's project name to be used for loading translation resource file.
              *
-             * For typical SQLiteStudio plugin the auto-generated translation resource name is the same
+             * For typical Letos plugin the auto-generated translation resource name is the same
              * as the name of the plugin project. Typically, name of loaded plugin class is made of
-             * the name of the plugin project and the "Plugin" word suffix. Therefore SQLiteStudio
+             * the name of the plugin project and the "Plugin" word suffix. Therefore Letos
              * by default just removes the "Plugin" suffix (if it has such) and attempts to load the translation
              * named this way.
              *
@@ -187,13 +187,13 @@ class API_EXPORT PluginManagerImpl : public PluginManager
          * <ul>
          * <li> application_directory/plugins/
          * <li> application_config_directory/plugins/
-         * <li> directory pointed by the SQLITESTUDIO_PLUGINS environment variable
+         * <li> directory pointed by the LETOS_PLUGINS environment variable
          * <li> directory compiled in as PLUGINS_DIR parameter of the compilation
          * </ul>
          *
          * The application_directory is a directory where the application executable is.
          * The application_config_directory can be different, see ConfigImpl::initDbFile() for details.
-         * The SQLITESTUDIO_PLUGINS variable can contain several paths, separated by : (for Unix/Mac) or ; (for Windows).
+         * The LETOS_PLUGINS variable can contain several paths, separated by : (for Unix/Mac) or ; (for Windows).
          */
         void scanPlugins();
 
@@ -223,7 +223,7 @@ class API_EXPORT PluginManagerImpl : public PluginManager
          * attempted to be loaded (and failed), so it doesn't warn twice about the same plugin if it failed
          * to load while it was a dependency for some other plugins.
          *
-         * It also allows to define minimum and maximum plugin version, so if SQLiteStudio has the plugin available,
+         * It also allows to define minimum and maximum plugin version, so if Letos has the plugin available,
          * but the version is out of required range, it will also fail to load.
          */
         bool load(const QString& pluginName, QStringList& alreadyAttempted, int minVersion = 0, int maxVersion = 0);

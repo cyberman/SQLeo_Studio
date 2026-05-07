@@ -13,11 +13,11 @@
  * There are macros defined to help you with defining those details. You don't need to define
  * Q_CLASSINFO and know all required keys. You can use following macros:
  * <ul>
- * <li>::SQLITESTUDIO_PLUGIN_TITLE</li>
- * <li>::SQLITESTUDIO_PLUGIN_DESC</li>
- * <li>::SQLITESTUDIO_PLUGIN_UI</li>
- * <li>::SQLITESTUDIO_PLUGIN_VERSION</li>
- * <li>::SQLITESTUDIO_PLUGIN_AUTHOR</li>
+ * <li>::LETOS_PLUGIN_TITLE</li>
+ * <li>::LETOS_PLUGIN_DESC</li>
+ * <li>::LETOS_PLUGIN_UI</li>
+ * <li>::LETOS_PLUGIN_VERSION</li>
+ * <li>::LETOS_PLUGIN_AUTHOR</li>
  * </ul>
  *
  * Most of plugin implementations will use this class as a base, because it simplifies process
@@ -28,12 +28,12 @@
  * {
  *     Q_OBJECT
  *
- *     SQLITESTUDIO_PLUGIN
- *     SQLITESTUDIO_PLUGIN_TITLE("My plugin")
- *     SQLITESTUDIO_PLUGIN_DESC("Does nothing. It's an example plugin.")
- *     SQLITESTUDIO_PLUGIN_UI("formObjectName")
- *     SQLITESTUDIO_PLUGIN_VERSION(10000)
- *     SQLITESTUDIO_PLUGIN_AUTHOR("sqlitestudio.pl")
+ *     LETOS_PLUGIN
+ *     LETOS_PLUGIN_TITLE("My plugin")
+ *     LETOS_PLUGIN_DESC("Does nothing. It's an example plugin.")
+ *     LETOS_PLUGIN_UI("formObjectName")
+ *     LETOS_PLUGIN_VERSION(10000)
+ *     LETOS_PLUGIN_AUTHOR("letos.org")
  * };
  * @endcode
  */
@@ -106,43 +106,43 @@ class API_EXPORT BuiltInPlugin : public QObject, public virtual Plugin
 };
 
 /**
- * @def SQLITESTUDIO_PLUGIN_TITLE
+ * @def LETOS_PLUGIN_TITLE
  * @brief Defines plugin title.
  *
  * This is a built-in plugin replacement for "title" key in external plugin's json metadata file.
  */
-#define SQLITESTUDIO_PLUGIN_TITLE(Title) Q_CLASSINFO("title", Title)
+#define LETOS_PLUGIN_TITLE(Title) Q_CLASSINFO("title", Title)
 
 /**
- * @def SQLITESTUDIO_PLUGIN_DESC
+ * @def LETOS_PLUGIN_DESC
  * @brief Defines plugin description.
  *
  * This is a built-in plugin replacement for "description" key in external plugin's json metadata file.
  */
-#define SQLITESTUDIO_PLUGIN_DESC(Desc) Q_CLASSINFO("description", Desc)
+#define LETOS_PLUGIN_DESC(Desc) Q_CLASSINFO("description", Desc)
 
 /**
- * @def SQLITESTUDIO_PLUGIN_UI
+ * @def LETOS_PLUGIN_UI
  * @brief Defines Qt Designer Form object name to be used in configuration dialog.
  *
  * This is a built-in plugin replacement for "ui" key in external plugin's json metadata file.
  */
-#define SQLITESTUDIO_PLUGIN_UI(FormName) Q_CLASSINFO("ui", FormName)
+#define LETOS_PLUGIN_UI(FormName) Q_CLASSINFO("ui", FormName)
 
 /**
- * @def SQLITESTUDIO_PLUGIN_VERSION
+ * @def LETOS_PLUGIN_VERSION
  * @brief Defines plugin version.
  *
  * This is a built-in plugin replacement for "version" key in external plugin's json metadata file.
  */
-#define SQLITESTUDIO_PLUGIN_VERSION(Ver) Q_CLASSINFO("version", #Ver)
+#define LETOS_PLUGIN_VERSION(Ver) Q_CLASSINFO("version", #Ver)
 
 /**
- * @def SQLITESTUDIO_PLUGIN_AUTHOR
+ * @def LETOS_PLUGIN_AUTHOR
  * @brief Defines an author of the plugin.
  *
  * This is a built-in plugin replacement for "author" key in external plugin's json metadata file.
  */
-#define SQLITESTUDIO_PLUGIN_AUTHOR(Author) Q_CLASSINFO("author", Author)
+#define LETOS_PLUGIN_AUTHOR(Author) Q_CLASSINFO("author", Author)
 
 #endif // BUILTINPLUGIN_H

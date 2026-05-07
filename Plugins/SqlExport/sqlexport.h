@@ -21,7 +21,7 @@ class SQLEXPORTSHARED_EXPORT SqlExport : public GenericExportPlugin
 {
         Q_OBJECT
 
-        SQLITESTUDIO_PLUGIN("sqlexport.json")
+        LETOS_PLUGIN("sqlexport.json")
 
     public:
         SqlExport();

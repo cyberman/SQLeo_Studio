@@ -124,7 +124,7 @@
       <item>
        <widget class="QLineEdit" name="passwordEdit">
         <property name="toolTip">
-         <string>&lt;p&gt;This is password configured in the SQLiteStudio service being embeded in the Android application.&lt;/p&gt;</string>
+         <string>&lt;p&gt;This is password configured in the Letos service being embeded in the Android application.&lt;/p&gt;</string>
         </property>
         <property name="echoMode">
          <enum>QLineEdit::Password</enum>

@@ -24,7 +24,7 @@ class ScriptingPlugin;
  * Description of Plugin interface contains list of directories scanned for plugins.
  *
  * There's a macro for global access to the PluginManager - ::PLUGINS. It actually calls
- * SQLiteStudio::getInstance() and from there it calls SQLiteStudio::getPluginManager().
+ * Letos::getInstance() and from there it calls Letos::getPluginManager().
  *
  * Plugins in PluginManager are organized by types. The manager has a list of types and for each type
  * there's a list of plugins of that type. Plugin types are represented by PluginType class.
@@ -340,11 +340,11 @@ class API_EXPORT PluginManager : public QObject
          * @return List of plugin names, usually an empty list.
          *
          * If a plugin declares other plugin (by name) to be its conflict (a "conflicts" key in plugin's metadata),
-         * then those 2 plugins cannot be loaded at the same time. SQLiteStudio will always refuse to load
+         * then those 2 plugins cannot be loaded at the same time. Letos will always refuse to load
          * the other one, if the first one is already loaded - and vice versa.
          *
          * Declaring conflicts for a plugin can be useful for example if somebody wants to proivde an alternative
-         * implementation of SQLCipher database plugin, etc. In that case SQLiteStudio won't get confused in
+         * implementation of SQLCipher database plugin, etc. In that case Letos won't get confused in
          * deciding which plugin to use for supporting such databases.
          */
         virtual QStringList getConflicts(const QString& pluginName) const = 0;

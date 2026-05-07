@@ -13,7 +13,7 @@
  * and its attach name is stored in the query executor context, so all attached databases
  * can be later detached.
  *
- * This step accomplishes a transparent database attaching feature of SQLiteStudio.
+ * This step accomplishes a transparent database attaching feature of Letos.
  *
  * @see DbAttacher
  */

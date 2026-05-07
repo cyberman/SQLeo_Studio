@@ -9,7 +9,7 @@
 class DbSqliteMc : public GenericPlugin, public DbPluginStdFileBase
 {
     Q_OBJECT
-    SQLITESTUDIO_PLUGIN("dbsqlitemc.json")
+    LETOS_PLUGIN("dbsqlitemc.json")
 
     public:
         DbSqliteMc();

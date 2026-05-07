@@ -11,7 +11,7 @@
 /**
  * @brief The JavaScript highlighter
  *
- * This class is mostly copied from Ofi Labs X2 project. It has been slightly modified for SQLiteStudio needs.
+ * This class is mostly copied from Ofi Labs X2 project. It has been slightly modified for Letos needs.
  * See the source code for the full license disclaimer.
  */
 class GUI_API_EXPORT JavaScriptSyntaxHighlighter : public QSyntaxHighlighter

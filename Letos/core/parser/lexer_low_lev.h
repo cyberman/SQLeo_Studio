@@ -22,7 +22,7 @@
  * You shouldn't normally need to use this method. Instead of that, use Lexer class, as it provides higher level API.
  *
  * Most of the method code was taken from SQLite tokenizer code. It is modified to support both SQLite 3 gramma
- * and other SQLiteStudio specific features.
+ * and other Letos specific features.
  */
 int lexerGetToken(const QString& z, TokenPtr& token, const TokenPtr& prevToken, int sqliteVersion, bool tolerant = false);
 

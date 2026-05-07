@@ -21,7 +21,7 @@ CFG_CATEGORIES(RegExpImportConfig,
 class REGEXPIMPORTSHARED_EXPORT RegExpImport : public GenericPlugin, public ImportPlugin
 {
         Q_OBJECT
-        SQLITESTUDIO_PLUGIN("regexpimport.json")
+        LETOS_PLUGIN("regexpimport.json")
 
     public:
         RegExpImport();

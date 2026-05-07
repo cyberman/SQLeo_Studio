@@ -18,7 +18,7 @@ class PluginType;
 /**
  * @brief Database registry manager.
  *
- * Manages list of databases in SQLiteStudio core.
+ * Manages list of databases in Letos core.
  *
  * It's a singleton asseccible with DBLIST macro.
  */
@@ -171,7 +171,7 @@ class API_EXPORT DbManager : public QObject
          * @return true if database is temporary, or false if it's stored in the configuration.
          *
          * Temporary databases are databases that are not stored in configuration and will not be restored
-         * upon next SQLiteStudio start. This can be decided by user on UI when he edits database registration info
+         * upon next Letos start. This can be decided by user on UI when he edits database registration info
          * (there is a checkbox for that).
          */
         virtual bool isTemporary(Db* db) = 0;
@@ -201,7 +201,7 @@ class API_EXPORT DbManager : public QObject
         /**
          * @brief Sends signal to all interested entities, that databases are loaded.
          *
-         * This is called by the managing entity (the SQLiteStudio instance) to let all know,
+         * This is called by the managing entity (the Letos instance) to let all know,
          * that all db-related plugins and configuration related to databases are now loaded
          * and list of databases in the manager is complete.
          */

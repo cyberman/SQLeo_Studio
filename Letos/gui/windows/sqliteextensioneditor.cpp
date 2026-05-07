@@ -305,7 +305,7 @@ void SqliteExtensionEditor::initStateForAll()
 
 void SqliteExtensionEditor::help()
 {
-    static const QString url = QStringLiteral("https://github.com/pawelsalawa/sqlitestudio/wiki/SQLite-extensions-manager");
+    static const QString url = QStringLiteral("https://github.com/pawelsalawa/letos/wiki/SQLite-extensions-manager");
     QDesktopServices::openUrl(QUrl(url, QUrl::StrictMode));
 }
 

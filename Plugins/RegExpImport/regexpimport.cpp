@@ -2,7 +2,7 @@
 #include "services/notifymanager.h"
 #include "common/utils.h"
 #include "services/importmanager.h"
-#include "sqlitestudio.h"
+#include "letos.h"
 #include <QRegularExpression>
 #include <QFile>
 #include <QTextStream>

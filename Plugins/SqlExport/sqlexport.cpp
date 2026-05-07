@@ -1,6 +1,6 @@
 #include "sqlexport.h"
 #include "common/utils_sql.h"
-#include "sqlitestudio.h"
+#include "letos.h"
 #include "config_builder.h"
 #include "services/exportmanager.h"
 #include "services/codeformatter.h"
@@ -281,7 +281,7 @@ void SqlExport::writeHeader()
 {
     QDateTime ctime = QDateTime::currentDateTime();
     writeln("--");
-    writeln(tr("-- File generated with SQLiteStudio v%1 on %2").arg(SQLITESTUDIO->getVersionString(), ctime.toString()));
+    writeln(tr("-- File generated with Letos v%1 on %2").arg(LETOS->getVersionString(), ctime.toString()));
     writeln("--");
     if (standardOptionsToEnable().testFlag(ExportManager::CODEC))
     {

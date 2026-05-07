@@ -39,13 +39,19 @@ void IconManager::init()
 
     // AppDataLocation, but APPNAME should be a fixed value
     for (const QString& path : QStandardPaths::standardLocations(QStandardPaths::GenericDataLocation))
+    {
+        iconDirs += QDir::cleanPath(path + "/letos/img");
         iconDirs += QDir::cleanPath(path + "/sqlitestudio/img");
+    }
 
     iconDirs += ":/icons";
 
-    QString envDirs = LETOS->getEnv("SQLITESTUDIO_ICONS");
-    if (!envDirs.isNull())
-        iconDirs += envDirs.split(PATH_LIST_SEPARATOR);
+    for (const QString& varName : {"LETOS_ICONS", "SQLITESTUDIO_ICONS"})
+    {
+        QString envDirs = LETOS->getEnv(varName);
+        if (!envDirs.isNull())
+            iconDirs += envDirs.split(PATH_LIST_SEPARATOR);
+    }
 
 #ifdef ICONS_DIR
     iconDirs += ICONS_DIR;

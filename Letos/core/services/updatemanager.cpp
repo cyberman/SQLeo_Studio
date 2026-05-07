@@ -38,7 +38,7 @@ void UpdateManager::checkForUpdates(bool enforce)
     qDebug() << "Available SSL backends:" << QSslSocket::availableBackends();
     qDebug() << "Active SSL backend:" << QSslSocket::activeBackend();
 
-    static_qstring(url, "https://sqlitestudio.pl/rest/updates");
+    static_qstring(url, "https://letos.org/rest/updates");
     QNetworkRequest request(url);
     QNetworkReply* response = netManager->get(request);
     connect(response, &QNetworkReply::finished, [this, response, enforce]()

@@ -47,7 +47,7 @@ CFG_CATEGORIES(PdfExportConfig,
 class PDFEXPORTSHARED_EXPORT PdfExport : public GenericExportPlugin
 {
         Q_OBJECT
-        SQLITESTUDIO_PLUGIN("pdfexport.json")
+        LETOS_PLUGIN("pdfexport.json")
 
     public:
         QString getFormatName() const override;

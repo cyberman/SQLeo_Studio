@@ -17,7 +17,7 @@ CFG_CATEGORIES(XmlExportConfig,
 class XMLEXPORTSHARED_EXPORT XmlExport : public GenericExportPlugin
 {
         Q_OBJECT
-        SQLITESTUDIO_PLUGIN("xmlexport.json")
+        LETOS_PLUGIN("xmlexport.json")
 
     public:
         XmlExport();

@@ -137,7 +137,7 @@ class ExportPlugin : virtual public Plugin
          *
          * See details http://qt-project.org/doc/qt-5/qmimedata.html#setData
          *
-         * If the plugin exports just a string, then this method can return QString() and SqliteStudio will assume
+         * If the plugin exports just a string, then this method can return QString() and Letos will assume
          * that the data is of "text/plain" type.
          */
         virtual QString getMimeType() const = 0;
@@ -146,7 +146,7 @@ class ExportPlugin : virtual public Plugin
          * @brief Tells if the data being exported is a binary or text.
          * @return true for binary data, false for textual data.
          *
-         * This is used by the SQLiteStudio to configure output device properly. For example CSV format is textual,
+         * This is used by the Letos to configure output device properly. For example CSV format is textual,
          * but PNG is considered binary.
          */
         virtual bool isBinaryData() const = 0;

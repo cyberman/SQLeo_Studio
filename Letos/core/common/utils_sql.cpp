@@ -961,5 +961,5 @@ QString columnToBindParamName(const QString& colName)
 QString generateUniqueTxName(const QString& prefix)
 {
     int seq = uniqueTxNameSequence++;
-    return QString("%1sqlitestudio_tx_%2").arg(prefix).arg(seq);
+    return QString("%1letos_tx_%2").arg(prefix).arg(seq);
 }

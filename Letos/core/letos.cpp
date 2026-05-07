@@ -150,19 +150,19 @@ void Letos::setCodeFormatter(CodeFormatter* codeFormatter)
 
 QString Letos::getHomePage() const
 {
-    static_qstring(url, "https://sqlitestudio.pl");
+    static_qstring(url, "https://letos.org");
     return url;
 }
 
 QString Letos::getGitHubReleases() const
 {
-    static_qstring(url, "https://github.com/pawelsalawa/sqlitestudio/releases");
+    static_qstring(url, "https://github.com/pawelsalawa/letos/releases");
     return url;
 }
 
 QString Letos::getUserManualPage() const
 {
-    static_qstring(url, "https://github.com/pawelsalawa/sqlitestudio/wiki/User_Manual");
+    static_qstring(url, "https://github.com/pawelsalawa/letos/wiki/User_Manual");
     return url;
 }
 
@@ -174,19 +174,19 @@ QString Letos::getSqliteDocsPage() const
 
 QString Letos::getIssuesPage() const
 {
-    static_qstring(url, "https://github.com/pawelsalawa/sqlitestudio/issues");
+    static_qstring(url, "https://github.com/pawelsalawa/letos/issues");
     return url;
 }
 
 QString Letos::getDonatePage() const
 {
-    static_qstring(url, "https://sqlitestudio.pl/donate/");
+    static_qstring(url, "https://letos.org/donate/");
     return url;
 }
 
 QString Letos::getNewIssuePage() const
 {
-    static_qstring(url, "https://github.com/pawelsalawa/sqlitestudio/issues/new");
+    static_qstring(url, "https://github.com/pawelsalawa/letos/issues/new");
     return url;
 }
 
@@ -393,7 +393,7 @@ void Letos::init(const QStringList& cmdListArguments, bool guiAvailable)
     extraLicenseManager = new ExtraLicenseManager();
     codeSnippetManager = new CodeSnippetManager(config);
 
-    extraLicenseManager->addLicense("SQLiteStudio license (GPL v3)", ":/docs/licenses/sqlitestudio_license.txt");
+    extraLicenseManager->addLicense("Letos license (GPL v3)", ":/docs/licenses/letos_license.txt");
     extraLicenseManager->addLicense("Qt, QHexEdit (LGPL v2.1)", ":/docs/licenses/lgpl.txt");
     extraLicenseManager->addLicense("diff_match (Apache License v2.0)", ":/docs/licenses/diff_match.txt");
     extraLicenseManager->addLicense("RSA library (GPL v3)", ":/docs/licenses/gpl.txt");

@@ -8,10 +8,10 @@ class DbPluginSqlite3 : public BuiltInPlugin, public DbPlugin
 {
     Q_OBJECT
 
-    SQLITESTUDIO_PLUGIN_TITLE("SQLite 3")
-    SQLITESTUDIO_PLUGIN_DESC("SQLite 3 databases support.")
-    SQLITESTUDIO_PLUGIN_VERSION(10001)
-    SQLITESTUDIO_PLUGIN_AUTHOR("sqlitestudio.pl")
+    LETOS_PLUGIN_TITLE("SQLite 3")
+    LETOS_PLUGIN_DESC("SQLite 3 databases support.")
+    LETOS_PLUGIN_VERSION(10001)
+    LETOS_PLUGIN_AUTHOR("letos.org")
 
     public:
         Db* getInstance(const QString& name, const QString& path, const QHash<QString, QVariant>& options, QString* errorMessage);

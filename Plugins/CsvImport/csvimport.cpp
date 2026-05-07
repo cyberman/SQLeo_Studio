@@ -1,7 +1,7 @@
 #include "csvimport.h"
 #include "common/utils.h"
 #include "services/importmanager.h"
-#include "sqlitestudio.h"
+#include "letos.h"
 #include "services/notifymanager.h"
 #include "common/utils.h"
 #include <QVariant>

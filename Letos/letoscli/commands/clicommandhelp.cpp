@@ -19,7 +19,7 @@ QString CliCommandHelp::shortHelp() const
 QString CliCommandHelp::fullHelp() const
 {
     return tr(
-                "Use %1 to learn about certain commands supported by the command line interface (CLI) of the SQLiteStudio.\n"
+                "Use %1 to learn about certain commands supported by the command line interface (CLI) of the Letos.\n"
                 "To see list of supported commands, type %2 without any arguments.\n\n"
                 "When passing <command> name, you can skip special prefix character ('%3').\n\n"
                 "You can always execute any command with exactly single '--help' option to see help for that command. "

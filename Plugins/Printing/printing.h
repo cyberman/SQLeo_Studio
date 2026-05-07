@@ -14,7 +14,7 @@ class QPrintDialog;
 class PRINTINGSHARED_EXPORT Printing : public GenericPlugin, public GeneralPurposePlugin
 {
         Q_OBJECT
-        SQLITESTUDIO_PLUGIN("printing.json")
+        LETOS_PLUGIN("printing.json")
 
     public:
         bool init();

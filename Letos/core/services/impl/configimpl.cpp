@@ -22,10 +22,10 @@
 #include <QSettings>
 #include <QtWidgets/QFileDialog>
 
-const int SQLITESTUDIO_CONFIG_VERSION = 15;
+const int LETOS_CONFIG_VERSION = 15;
 
 static_qstring(DB_FILE_NAME, "settings3");
-static_qstring(CONFIG_DIR_SETTING, "SQLiteStudioConfigDir");
+static_qstring(CONFIG_DIR_SETTING, "LetosConfigDir");
 qint64 ConfigImpl::sqlHistoryId = -1;
 QString ConfigImpl::memoryDbName = QStringLiteral(":memory:");
 
@@ -742,7 +742,7 @@ void ConfigImpl::initTables()
         dropTables(tables);
         tables.clear();
         db->exec("CREATE TABLE version (version NUMERIC)");
-        db->exec("INSERT INTO version VALUES ("+QString::number(SQLITESTUDIO_CONFIG_VERSION)+")");
+        db->exec("INSERT INTO version VALUES ("+QString::number(LETOS_CONFIG_VERSION)+")");
     }
 
     if (!tables.contains("settings"))
@@ -899,7 +899,7 @@ bool ConfigImpl::tryInitDbFile(const ConfigDirCandidate& dbPath)
             QDir::root().mkpath(dir.absolutePath());
     }
 
-    db = new DbSqlite3("SQLiteStudio settings", dbPath.path, {{DB_PURE_INIT, true}});
+    db = new DbSqlite3("Letos settings", dbPath.path, {{DB_PURE_INIT, true}});
     if (!db->open())
     {
         safe_delete(db);
@@ -1161,7 +1161,7 @@ void ConfigImpl::mergeMasterConfig()
 
     qInfo() << "Updating settings from master configuration file: " << masterConfigFile;
 
-    Db* masterDb = new DbSqlite3("SQLiteStudio master settings", masterConfigFile, {{DB_PURE_INIT, true}});
+    Db* masterDb = new DbSqlite3("Letos master settings", masterConfigFile, {{DB_PURE_INIT, true}});
     if (!masterDb->open())
     {
         safe_delete(masterDb);
@@ -1199,7 +1199,7 @@ void ConfigImpl::updateConfigDb()
     SqlQueryPtr result = db->exec("SELECT version FROM version LIMIT 1");
     int dbVersion = result->getSingleCell().toInt();
 
-    if (dbVersion >= SQLITESTUDIO_CONFIG_VERSION)
+    if (dbVersion >= LETOS_CONFIG_VERSION)
         return;
 
     db->begin();
@@ -1364,7 +1364,7 @@ void ConfigImpl::updateConfigDb()
         // version to latest at once.
     }
 
-    db->exec("UPDATE version SET version = ?", {SQLITESTUDIO_CONFIG_VERSION});
+    db->exec("UPDATE version SET version = ?", {LETOS_CONFIG_VERSION});
     db->commit();
 }
 

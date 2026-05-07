@@ -40,10 +40,10 @@ class GUI_API_EXPORT JavaScriptHighlighterPlugin : public BuiltInPlugin, public 
 {
     Q_OBJECT
 
-    SQLITESTUDIO_PLUGIN_TITLE("JavaScript highlighter")
-    SQLITESTUDIO_PLUGIN_DESC("JavaScript syntax highlighter.")
-    SQLITESTUDIO_PLUGIN_VERSION(10200)
-    SQLITESTUDIO_PLUGIN_AUTHOR("sqlitestudio.pl")
+    LETOS_PLUGIN_TITLE("JavaScript highlighter")
+    LETOS_PLUGIN_DESC("JavaScript syntax highlighter.")
+    LETOS_PLUGIN_VERSION(10200)
+    LETOS_PLUGIN_AUTHOR("letos.org")
 
     public:
         enum State
