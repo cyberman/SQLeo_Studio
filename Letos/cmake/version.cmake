@@ -1,0 +1,30 @@
+set(DIR_OF_VERSION_CMAKE ${CMAKE_CURRENT_LIST_DIR})
+
+function(letos_find_version)
+    set(LETOS_CPP_PATH "${DIR_OF_VERSION_CMAKE}/../core/letos.cpp")
+
+    file(STRINGS "${LETOS_CPP_PATH}" LETOS_VERSION_LINE REGEX "letosVersion *= *([0-9]+)")
+    if(NOT LETOS_VERSION_LINE)
+        message(FATAL_ERROR "Could not find 'letosVersion' in ${LETOS_CPP_PATH}")
+    endif()
+
+    if(LETOS_VERSION_LINE MATCHES "letosVersion *= *([0-9]+)")
+        set(LETOS_VERSION_INT "${CMAKE_MATCH_1}")
+    else()
+        message(FATAL_ERROR "Could not extract version number from '${LETOS_VERSION_LINE}'")
+    endif()
+
+    math(EXPR LETOS_VERSION_MAJOR "${LETOS_VERSION_INT} / 10000")
+    math(EXPR LETOS_VERSION_MINOR "(${LETOS_VERSION_INT} / 100) % 100")
+    math(EXPR LETOS_VERSION_PATCH "${LETOS_VERSION_INT} % 100")
+
+    set(LETOS_VERSION_STRING "${LETOS_VERSION_MAJOR}.${LETOS_VERSION_MINOR}.${LETOS_VERSION_PATCH}")
+
+    message(STATUS "Letos version: ${LETOS_VERSION_STRING} (${LETOS_VERSION_INT})")
+
+    set(LETOS_VERSION_INT "${LETOS_VERSION_INT}" PARENT_SCOPE)
+    set(LETOS_VERSION_MAJOR "${LETOS_VERSION_MAJOR}" PARENT_SCOPE)
+    set(LETOS_VERSION_MINOR "${LETOS_VERSION_MINOR}" PARENT_SCOPE)
+    set(LETOS_VERSION_PATCH "${LETOS_VERSION_PATCH}" PARENT_SCOPE)
+    set(LETOS_VERSION_STRING "${LETOS_VERSION_STRING}" PARENT_SCOPE)
+endfunction()

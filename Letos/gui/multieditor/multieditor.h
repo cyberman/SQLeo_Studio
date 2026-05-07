@@ -1,0 +1,177 @@
+#ifndef MULTIEDITOR_H
+#define MULTIEDITOR_H
+
+#include "datatype.h"
+#include "gui_global.h"
+#include <QWidget>
+#include <QVariant>
+
+class SearchTextLocator;
+class SearchTextDialog;
+class Db;
+class SqlQueryModelColumn;
+class QCheckBox;
+class QTabWidget;
+class MultiEditorWidget;
+class QLabel;
+class MultiEditorWidgetPlugin;
+class QToolButton;
+class QMenu;
+
+class GUI_API_EXPORT MultiEditor : public QWidget
+{
+        Q_OBJECT
+
+        Q_PROPERTY(QVariant value READ getValue WRITE setValue)
+        Q_PROPERTY(bool untouched READ isUntouched WRITE setUntouched)
+        Q_PROPERTY(bool newRow READ isNewRow WRITE setNewRow)
+
+    public:
+        enum BuiltInEditor
+        {
+            TEXT,
+            NUMERIC,
+            BOOLEAN,
+            DATE,
+            TIME,
+            DATETIME,
+            HEX
+        };
+
+        enum TabsMode {
+            CONFIGURABLE,       /**< Tabs are loaded from datatype and also have configure button visible. */
+            PRECONFIGURED,      /**< Tabs are loaded from datatype. No config button is present. */
+            DYNAMIC             /**< No tabs are loaded, but user has button to add new tabs, can close them and reorder them. */
+        };
+
+        enum FileDialogFilters
+        {
+            ALL_FILES,   /**< *.* */
+            TEXT_FILES,  /**< *.txt *.log *.csv *.tsv *.md *.json *.xml *.yaml *.yml */
+            SQL_FILES,   /**< *.sql */
+            BINARY_DATA, /**< *.bin *.dat *.raw */
+            IMAGES,      /**< *.jpeg *.jpg *.png *.bmp *.gif *.tiff *.jp2 *.svg *.tga *.icns *.webp *.wbmp *.mng */
+            ARCHIVES,    /**< *.zip *.7z *.rar *.tar *.gz *.bz2 *.xz */
+            DOCUMENTS,   /**< *.pdf *.rtf *.doc *.docx *.odt *.xls *.xlsx *.ods */
+            EXEUTABLES   /**< *.exe *.dll *.so *.dylib */
+        };
+
+        explicit MultiEditor(QWidget *parent = nullptr, TabsMode tabsMode = CONFIGURABLE);
+
+        void addEditor(MultiEditorWidget* editorWidget);
+        void showTab(int idx);
+
+        void setValue(const QVariant& value);
+        void setValueAndType(const QVariant& value, const DataType& dataType, bool selectTabByValuePriority = false);
+        QVariant getValue() const;
+        bool isModified() const;
+        void setUntouched(bool value);
+        bool isUntouched() const;
+        void setNewRow(bool value);
+        bool isNewRow() const;
+        bool eventFilter(QObject* obj, QEvent* event);
+        bool getReadOnly() const;
+        void setReadOnly(bool value);
+        void setDeletedRow(bool value);
+        void configureResetButton(SqlQueryModelColumn* column);
+        void setDataType(const DataType& dataType);
+        void enableFk(Db* db, SqlQueryModelColumn* column);
+        void focusThisEditor();
+        void setCornerLabel(const QString& label);
+        QString getEditorFileFilter();
+        int getCornerLabelWidth() const;
+        void adjustCornerLabelMinWidth(int value);
+        void setSaveButtonVisible(bool visible);
+
+        template <class T>
+        T* getEditorWidget() const
+        {
+            QListIterator<MultiEditorWidget*> it(editors);
+            while (it.hasNext())
+            {
+                T* casted = dynamic_cast<T*>(it.next());
+                if (casted)
+                    return casted;
+            }
+            return nullptr;
+        }
+
+        static void loadBuiltInEditors();
+        static QString getFileDialogFilter(FileDialogFilters filter);
+
+    private:
+        void init(TabsMode tabsMode);
+        void setDataType(const DataType& dataType, const QVariant& forValue);
+        void updateVisibility();
+        void updateNullEffect();
+        void updateValue(const QVariant& newValue);
+        void setValueToWidget(MultiEditorWidget* editorWidget, const QVariant& newValue);
+        void updateLabel();
+        void updateNullCheckLabel();
+        QVariant getValueOmmitNull() const;
+        void initAddTabMenu();
+        void addPluginToMenu(MultiEditorWidgetPlugin* plugin);
+        void sortAddTabMenu();
+        QString getFileFilter(const QString& customFilter) const;
+        QToolButton* createButton(const QIcon& icon, const QString& tooltip, const char* slot);
+
+        static QList<MultiEditorWidget*> getEditorTypes(const DataType& dataType, const QVariant& value, int* priorityEditorIndex = nullptr);
+
+        static const int margins = 2;
+        static const int spacing = 2;
+
+        static SearchTextLocator* currentTextLocator;
+        static SearchTextDialog* searchDialog;
+
+        QLabel* cornerLabel = nullptr;
+        QCheckBox* nullCheck = nullptr;
+        QToolButton* saveToFileButton = nullptr;
+        QToolButton* loadFromFileButton = nullptr;
+        QToolButton* resetValueButton = nullptr;
+        QTabWidget* tabs = nullptr;
+        QList<MultiEditorWidget*> editors;
+        QLabel* stateLabel = nullptr;
+        bool readOnly = false;
+        bool deleted = false;
+        bool untouched = false;
+        bool newRow = false;
+        bool hasDefaultValueForInsert = false;
+        bool invalidatingDisabled = false;
+        QString defaultValueForInsertLabel;
+        QGraphicsEffect* nullEffect = nullptr;
+        bool valueModified = false;
+        QVariant valueBeforeNull;
+        QToolButton* configBtn = nullptr;
+        QToolButton* addTabBtn = nullptr;
+        QMenu* addTabMenu = nullptr;
+        DataType dataType;
+
+        /**
+         * @brief currentTab
+         * Hold current tab index. It might seem as duplicate for tabs->currentIndex,
+         * but this is necessary when we want to know what was the previous tab,
+         * while being in tabChanged() slot.
+         */
+        int currentTab = -1;
+
+    private slots:
+        void configClicked();
+        void tabChanged(int idx);
+#if QT_VERSION < QT_VERSION_CHECK(6, 7, 0)
+        void nullStateChanged(int state);
+#else
+        void nullStateChanged(Qt::CheckState state);
+#endif
+        void invalidateValue();
+        void setModified();
+        void removeTab(int idx);
+        void openFile();
+        void saveFile();
+        void find();
+        void resetValue();
+
+    signals:
+        void modified();
+};
+
+#endif // MULTIEDITOR_H

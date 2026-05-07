@@ -10,7 +10,7 @@ set(PROJECT_SOURCES
 )
 
 add_library(PythonSyntaxHighlighter SHARED ${PROJECT_HEADERS} ${PROJECT_SOURCES})
-sqlitestudio_set_plugin_properties(PythonSyntaxHighlighter)
+letos_set_plugin_properties(PythonSyntaxHighlighter)
 target_compile_definitions(PythonSyntaxHighlighter PRIVATE
     PYTHONSYNTAXHIGHLIGHTER_LIBRARY
 )

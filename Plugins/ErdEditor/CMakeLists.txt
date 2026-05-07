@@ -80,7 +80,7 @@ qt_wrap_ui(PROJECT_SOURCES
 )
 
 add_library(ErdEditor SHARED ${PROJECT_HEADERS} ${PROJECT_SOURCES})
-sqlitestudio_set_plugin_properties(ErdEditor)
+letos_set_plugin_properties(ErdEditor)
 target_compile_definitions(ErdEditor PRIVATE
     ERDEDITOR_LIBRARY
 )

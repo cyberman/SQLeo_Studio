@@ -1,0 +1,25 @@
+#ifndef COMPLETERLIST_H
+#define COMPLETERLIST_H
+
+#include "gui_global.h"
+#include <QListWidget>
+
+class GUI_API_EXPORT CompleterView : public QListView
+{
+        Q_OBJECT
+
+    public:
+        explicit CompleterView(QWidget *parent = 0);
+
+        void selectFirstVisible();
+        bool hasVisibleItem() const;
+        int countVisibleItem() const;
+
+    protected:
+        void focusOutEvent(QFocusEvent* e);
+
+    signals:
+        void focusOut();
+};
+
+#endif // COMPLETERLIST_H

@@ -2,7 +2,7 @@ env:
     TCL_VERSION: '8.6'
     SQLITE_VERSION: '3510200'
     PYTHON_VERSION: '3.13'
-    PORTABLE_DIR: ${{ github.workspace }}/output/portable/SQLiteStudio
+    PORTABLE_DIR: ${{ github.workspace }}/output/portable/Letos
     INSTALLBUILDER_DIR: ../ib
     ICU_VERSION: '73.2'
     ICU_URL: 'https://github.com/unicode-org/icu/releases/download/release-73-2/icu4c-73_2-src.tgz'
@@ -246,13 +246,13 @@ jobs:
             - name: Prepare output dir
               run: mkdir output output/build output/build-plugins
 
-            - name: Compile SQLiteStudio3
+            - name: Compile Letos
               working-directory: output/build
               run: |
-                cmake ../../SQLiteStudio3 -G Ninja \
+                cmake ../../Letos -G Ninja \
                     -DCMAKE_BUILD_TYPE=Release \
                     -DCMAKE_PREFIX_PATH="${{ env.QT_ROOT_DIR }}" \
-                    -DCMAKE_INSTALL_PREFIX=../SQLiteStudio \
+                    -DCMAKE_INSTALL_PREFIX=../Letos \
                     -DWITH_PORTABLE=1 \
                     -DWITH_UPDATER=1 \
                     -DBUILD_TESTING=0
@@ -265,7 +265,7 @@ jobs:
                 cmake ../../Plugins -G Ninja \
                     -DCMAKE_BUILD_TYPE=Release \
                     -DCMAKE_PREFIX_PATH="${{ env.QT_ROOT_DIR }}:${{ env.Python3_ROOT_DIR }}" \
-                    -DCMAKE_INSTALL_PREFIX=../SQLiteStudio \
+                    -DCMAKE_INSTALL_PREFIX=../Letos \
                     -DWITH_PORTABLE=1 \
                     -DWITH_DYNAMIC_PYTHON=1 \
                     -DWITH_ALL_PLUGINS=1
@@ -275,13 +275,13 @@ jobs:
             - name: Copy SQLite extensions to output dir
               shell: bash
               run: |
-                cp -R ../ext output/SQLiteStudio/extensions
+                cp -R ../ext output/Letos/extensions
 
             - name: Prepare portable dir
               working-directory: output
               run: |
                 mkdir portable portable/lib
-                cp -R SQLiteStudio portable/
+                cp -R Letos portable/
 
             - name: Copy SQLite3 to portable dir
               working-directory: ${{ env.PORTABLE_DIR }}
@@ -358,41 +358,41 @@ jobs:
                 set -x
                 patchelf --set-rpath '$ORIGIN/../lib'   platforms/*.so imageformats/*.so iconengines/*.so printsupport/*.so platformthemes/*.so plugins/*.so wayland-*/*.so tls/*.so extensions/*.so 2>&1 >/dev/null
                 patchelf --set-rpath '$ORIGIN'          lib/libicu*.*.*
-                patchelf --set-rpath '$ORIGIN'          lib/libcoreSQLiteStudio.so lib/libguiSQLiteStudio.so 2>&1 >/dev/null
-                patchelf --set-rpath '$ORIGIN/lib'      sqlitestudio 2>&1 >/dev/null
-                patchelf --set-rpath '$ORIGIN/lib'      sqlitestudiocli 2>&1 >/dev/null
+                patchelf --set-rpath '$ORIGIN'          lib/libcoreLetos.so lib/libguiLetos.so 2>&1 >/dev/null
+                patchelf --set-rpath '$ORIGIN/lib'      letos 2>&1 >/dev/null
+                patchelf --set-rpath '$ORIGIN/lib'      letoscli 2>&1 >/dev/null
                 # CMake may consider manually installed SQLite as "IMPORTED", therefore linking it with a full path. We need to fix it.
-                patchelf --replace-needed /usr/local/lib/libsqlite3.so libsqlite3.so lib/libcoreSQLiteStudio.so
+                patchelf --replace-needed /usr/local/lib/libsqlite3.so libsqlite3.so lib/libcoreLetos.so
 
             - name: Final preparations for packaging
               run: |
                 mkdir "${{ env.PORTABLE_DIR }}"/assets
-                cp SQLiteStudio3/guiSQLiteStudio/img/sqlitestudio_256.png "${{ env.PORTABLE_DIR }}"/assets/appicon.png
-                cp SQLiteStudio3/guiSQLiteStudio/img/sqlitestudio.svg "${{ env.PORTABLE_DIR }}"/assets/appicon.svg
+                cp Letos/gui/img/letos_256.png "${{ env.PORTABLE_DIR }}"/assets/appicon.png
+                cp Letos/gui/img/letos.svg "${{ env.PORTABLE_DIR }}"/assets/appicon.svg
 
             - name: Final preparations for packaging
               working-directory: ${{ env.PORTABLE_DIR }}
               run: |
-                cp `ldd sqlitestudiocli | grep readline | awk '{print $3}'` lib/
+                cp `ldd letoscli | grep readline | awk '{print $3}'` lib/
                 cp `ldd lib/libreadline* | grep tinfo | awk '{print $3}'` lib/
-                strip lib/*.so sqlitestudio sqlitestudiocli platforms/*.so imageformats/*.so iconengines/*.so printsupport/*.so platformthemes/*.so plugins/*.so tls/*.so
+                strip lib/*.so letos letoscli platforms/*.so imageformats/*.so iconengines/*.so printsupport/*.so platformthemes/*.so plugins/*.so tls/*.so
                 patchelf --set-rpath '$ORIGIN' \
                   lib/libQt6Core.so.*.*.* \
                   lib/libreadline*
 
-            - name: Determine SQLiteStudio version
+            - name: Determine Letos version
               working-directory: ${{ env.PORTABLE_DIR }}
               run: |
-                SQLITESTUDIO_VERSION=$(./sqlitestudiocli --version | cut -f 2 -d ' ')
-                echo "SQLITESTUDIO_VERSION=$SQLITESTUDIO_VERSION" >> $GITHUB_ENV
-                echo "PACKAGE_VERSION=${SQLITESTUDIO_VERSION}-linux-${{ matrix.OUTPUT_FILE_ARCH }}" >> $GITHUB_ENV
+                LETOS_VERSION=$(./letoscli --version | cut -f 2 -d ' ')
+                echo "LETOS_VERSION=$LETOS_VERSION" >> $GITHUB_ENV
+                echo "PACKAGE_VERSION=${LETOS_VERSION}-linux-${{ matrix.OUTPUT_FILE_ARCH }}" >> $GITHUB_ENV
 
             - name: Assemble portable package
               shell: bash
               working-directory: ${{ env.PORTABLE_DIR }}/..
               run: |
-                tar cf sqlitestudio-$PACKAGE_VERSION.tar SQLiteStudio
-                xz -z sqlitestudio-$PACKAGE_VERSION.tar
+                tar cf letos-$PACKAGE_VERSION.tar Letos
+                xz -z letos-$PACKAGE_VERSION.tar
                 pwd
                 ls -l
 
@@ -402,10 +402,10 @@ jobs:
                 IB_LICENSE: ${{ secrets.INSTALLER_LICENSE }}
               run: |
                 echo "$IB_LICENSE" > lic.xml
-                ${{ env.INSTALLBUILDER_DIR }}/bin/builder build SQLiteStudio-installer.xml \
+                ${{ env.INSTALLBUILDER_DIR }}/bin/builder build Letos-installer.xml \
                     --license lic.xml \
                     --setvars project.outputDirectory=$(pwd) \
-                    --setvars project.version=$SQLITESTUDIO_VERSION
+                    --setvars project.version=$LETOS_VERSION
                 ls -l
 
             - name: Create AppImage
@@ -416,39 +416,39 @@ jobs:
                 sudo wget ${{ matrix.APPIMAGE_URL }} -O /usr/local/bin/appimagetool
                 sudo chmod +x /usr/local/bin/appimagetool
 
-                mkdir SQLiteStudio.AppDir
-                cp -R SQLiteStudio SQLiteStudio.AppDir/
+                mkdir Letos.AppDir
+                cp -R Letos Letos.AppDir/
 
-                cd SQLiteStudio.AppDir
+                cd Letos.AppDir
 
-                ln -s SQLiteStudio/sqlitestudio AppRun
-                cp SQLiteStudio/sqlitestudio_256.png sqlitestudio.png
-                cp SQLiteStudio/sqlitestudio.desktop sqlitestudio.desktop
+                ln -s Letos/letos AppRun
+                cp Letos/letos_256.png letos.png
+                cp Letos/letos.desktop letos.desktop
 
                 cd ..
 
-                APPIMAGENAME=SQLiteStudio-${SQLITESTUDIO_VERSION}-${{ matrix.TARGET_ARCH }}.AppImage
-                ARCH=${{ matrix.TARGET_ARCH }} appimagetool SQLiteStudio.AppDir $APPIMAGENAME
+                APPIMAGENAME=Letos-${LETOS_VERSION}-${{ matrix.TARGET_ARCH }}.AppImage
+                ARCH=${{ matrix.TARGET_ARCH }} appimagetool Letos.AppDir $APPIMAGENAME
                 ls -l
                 echo "APPIMAGENAME=$APPIMAGENAME" >> $GITHUB_ENV
 
             - name: SHA256 checksums
               shell: bash
               run: |
-                sha256sum output/portable/sqlitestudio-${{ env.PACKAGE_VERSION }}.tar.xz
-                sha256sum SQLiteStudio-${{ env.PACKAGE_VERSION }}-installer.run
+                sha256sum output/portable/letos-${{ env.PACKAGE_VERSION }}.tar.xz
+                sha256sum Letos-${{ env.PACKAGE_VERSION }}-installer.run
 
             - name: Upload package artifact
               uses: actions/upload-artifact@v4
               with:
-                name: sqlitestudio-${{ env.PACKAGE_VERSION }}.tar.xz
-                path: output/portable/sqlitestudio-${{ env.PACKAGE_VERSION }}.tar.xz
+                name: letos-${{ env.PACKAGE_VERSION }}.tar.xz
+                path: output/portable/letos-${{ env.PACKAGE_VERSION }}.tar.xz
 
             - name: Upload installer artifact
               uses: actions/upload-artifact@v4
               with:
-                name: SQLiteStudio-${{ env.PACKAGE_VERSION }}-installer.run
-                path: SQLiteStudio-${{ env.PACKAGE_VERSION }}-installer.run
+                name: Letos-${{ env.PACKAGE_VERSION }}-installer.run
+                path: Letos-${{ env.PACKAGE_VERSION }}-installer.run
 
             - name: Upload AppImage artifact
               uses: actions/upload-artifact@v4

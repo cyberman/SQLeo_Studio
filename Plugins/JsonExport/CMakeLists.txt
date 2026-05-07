@@ -16,7 +16,7 @@ qt_wrap_ui(PROJECT_SOURCES
 )
 
 add_library(JsonExport SHARED ${PROJECT_HEADERS} ${PROJECT_SOURCES})
-sqlitestudio_set_plugin_properties(JsonExport)
+letos_set_plugin_properties(JsonExport)
 target_compile_definitions(JsonExport PRIVATE
     JSONEXPORT_LIBRARY
 )

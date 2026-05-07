@@ -1,0 +1,64 @@
+#ifndef FKCOMBOBOX_H
+#define FKCOMBOBOX_H
+
+#include "gui_global.h"
+#include "datagrid/sqlquerymodelcolumn.h"
+#include <QComboBox>
+
+class SqlQueryModel;
+class SqlQueryView;
+class Db;
+
+class GUI_API_EXPORT FkComboBox : public QComboBox
+{
+    Q_OBJECT
+
+    public:
+        FkComboBox(QWidget *parent = nullptr, int dropDownViewMinWidth = -1);
+
+        static QString getSqlForFkEditor(Db* db, SqlQueryModelColumn* columnModel, const QVariant& currentValue, QString* currColName = nullptr);
+        static qlonglong getRowCountForFkEditor(Db* db, const QString& query, bool* isError);
+
+        static const qlonglong MAX_ROWS_FOR_FK = 10000L;
+        static const int FK_CELL_LENGTH_LIMIT = 30;
+
+        void init(Db* db, SqlQueryModelColumn* columnModel);
+        void setValue(const QVariant& value);
+        QVariant getValue(bool* manualValueUsed = nullptr, bool* ok = nullptr) const;
+
+    private:
+        class GUI_API_EXPORT FkComboShowFilter : public QObject
+        {
+            public:
+                explicit FkComboShowFilter(FkComboBox* parentCombo);
+                bool eventFilter(QObject *obj, QEvent *event);
+        };
+
+        void init();
+        void updateComboViewGeometry(bool initial) const;
+        void updateCurrentItemIndex(const QString& value = QString());
+        int getFkViewHeaderWidth(bool includeScrollBar) const;
+        QString getSql() const;
+
+        static QString resolveImplicitColumn(Db *db, SqlQueryModelColumn* columnModel, SqlQueryModelColumn::ConstraintFk*& fk, QHash<QString, int>& implicitFkColumnIdxByTable, QHash<QString, QStringList>& implicitFkColumnsByTable);
+
+        int dropDownViewMinWidth;
+        SqlQueryView* comboView = nullptr;
+        SqlQueryModel* comboModel = nullptr;
+        SqlQueryModelColumn* columnModel = nullptr;
+        QString beforeLoadValue;
+        QVariant sourceValue;
+        bool disableValueChangeNotifications = false;
+        QString oldValue;
+
+    private slots:
+        void fkDataAboutToLoad();
+        void fkDataReady();
+        void fkDataFailed(const QString& errorText);
+        void notifyValueModified();
+
+    signals:
+        void valueModified();
+};
+
+#endif // FKCOMBOBOX_H

@@ -9,7 +9,7 @@ set(PROJECT_SOURCES
 )
 
 add_library(FusionDarkStyle SHARED ${PROJECT_HEADERS} ${PROJECT_SOURCES})
-sqlitestudio_set_style_properties(FusionDarkStyle)
+letos_set_style_properties(FusionDarkStyle)
 target_compile_definitions(FusionDarkStyle PRIVATE
     QT_DEPRECATED_WARNINGS
 )

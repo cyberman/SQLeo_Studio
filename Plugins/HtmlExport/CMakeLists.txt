@@ -16,7 +16,7 @@ qt_wrap_ui(PROJECT_SOURCES
 )
 
 add_library(HtmlExport SHARED ${PROJECT_HEADERS} ${PROJECT_SOURCES})
-sqlitestudio_set_plugin_properties(HtmlExport)
+letos_set_plugin_properties(HtmlExport)
 target_compile_definitions(HtmlExport PRIVATE
     HTMLEXPORT_LIBRARY
 )

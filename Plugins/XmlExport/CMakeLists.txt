@@ -16,7 +16,7 @@ qt_wrap_ui(PROJECT_SOURCES
 )
 
 add_library(XmlExport SHARED ${PROJECT_HEADERS} ${PROJECT_SOURCES})
-sqlitestudio_set_plugin_properties(XmlExport)
+letos_set_plugin_properties(XmlExport)
 target_compile_definitions(XmlExport PRIVATE
     XMLEXPORT_LIBRARY
 )

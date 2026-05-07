@@ -18,7 +18,7 @@ qt_wrap_ui(PROJECT_SOURCES
 )
 
 add_library(CellRendererImage SHARED ${PROJECT_HEADERS} ${PROJECT_SOURCES})
-sqlitestudio_set_plugin_properties(CellRendererImage)
+letos_set_plugin_properties(CellRendererImage)
 target_compile_definitions(CellRendererImage PRIVATE
     CELLRENDERERIMAGE_LIBRARY
 )

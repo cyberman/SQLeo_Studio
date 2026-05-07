@@ -42,9 +42,9 @@ jobs:
 
                 dirs=()
 
-                for p in coreSQLiteStudio guiSQLiteStudio sqlitestudio sqlitestudiocli
+                for p in core gui letos letoscli
                 do
-                    dirs+=("SQLiteStudio3/$p")
+                    dirs+=("Letos/$p")
                 done
 
                 for d in Plugins/*

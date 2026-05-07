@@ -26,7 +26,7 @@ else()
 endif()
 
 add_library(ScriptingPython SHARED ${PROJECT_HEADERS} ${PROJECT_SOURCES})
-sqlitestudio_set_plugin_properties(ScriptingPython)
+letos_set_plugin_properties(ScriptingPython)
 target_compile_definitions(ScriptingPython PRIVATE
     SCRIPTINGPYTHON_LIBRARY
 )

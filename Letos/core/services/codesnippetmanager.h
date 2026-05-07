@@ -1,0 +1,49 @@
+#ifndef CODESNIPPETMANAGER_H
+#define CODESNIPPETMANAGER_H
+
+#include "core_global.h"
+#include <QObject>
+
+class Config;
+
+class API_EXPORT CodeSnippetManager : public QObject
+{
+    Q_OBJECT
+
+    public:
+        struct API_EXPORT CodeSnippet
+        {
+            QString name;
+            QString code;
+            QString hotkey;
+
+            QVariantHash toHash() const;
+        };
+
+        CodeSnippetManager(Config* config);
+
+        void setSnippets(const QList<CodeSnippet*>& snippets);
+        void addSnippet(CodeSnippet* snippet);
+        const QList<CodeSnippet*>& getSnippets() const;
+        const QStringList& getNames() const;
+        void saveToConfig();
+        QString getCodeByName(const QString& name) const;
+        void loadFromConfig();
+        static QList<CodeSnippet*> createDefaultSnippetsFor(int appVersion);
+
+    private:
+        void refreshNames();
+        void clearSnippets();
+        void createDefaultSnippets();
+
+        Config* config = nullptr;
+        QList<CodeSnippet*> allSnippets;
+        QStringList names;
+
+    signals:
+        void codeSnippetListChanged();
+};
+
+#define CODESNIPPETS SQLITESTUDIO->getCodeSnippetManager()
+
+#endif // CODESNIPPETMANAGER_H

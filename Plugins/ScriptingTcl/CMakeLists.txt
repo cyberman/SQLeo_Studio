@@ -20,7 +20,7 @@ qt_wrap_ui(PROJECT_SOURCES
 )
 
 add_library(ScriptingTcl SHARED ${PROJECT_HEADERS} ${PROJECT_SOURCES})
-sqlitestudio_set_plugin_properties(ScriptingTcl)
+letos_set_plugin_properties(ScriptingTcl)
 target_compile_definitions(ScriptingTcl PRIVATE
     SCRIPTINGTCL_LIBRARY
 )

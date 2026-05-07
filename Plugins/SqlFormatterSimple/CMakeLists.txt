@@ -16,7 +16,7 @@ qt_wrap_ui(PROJECT_SOURCES
 )
 
 add_library(SqlFormatterSimple SHARED ${PROJECT_HEADERS} ${PROJECT_SOURCES})
-sqlitestudio_set_plugin_properties(SqlFormatterSimple)
+letos_set_plugin_properties(SqlFormatterSimple)
 target_compile_definitions(SqlFormatterSimple PRIVATE
     SQLFORMATTERSIMPLE_LIBRARY
 )

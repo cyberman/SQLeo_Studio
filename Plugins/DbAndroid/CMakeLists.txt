@@ -37,7 +37,7 @@ qt_wrap_ui(PROJECT_SOURCES
 )
 
 add_library(DbAndroid SHARED ${PROJECT_HEADERS} ${PROJECT_SOURCES})
-sqlitestudio_set_plugin_properties(DbAndroid)
+letos_set_plugin_properties(DbAndroid)
 target_compile_definitions(DbAndroid PRIVATE
     DBANDROID_LIBRARY
 )

@@ -92,7 +92,7 @@ qt_wrap_ui(PROJECT_SOURCES
 )
 
 add_library(SqlEnterpriseFormatter SHARED ${PROJECT_HEADERS} ${PROJECT_SOURCES})
-sqlitestudio_set_plugin_properties(SqlEnterpriseFormatter)
+letos_set_plugin_properties(SqlEnterpriseFormatter)
 target_compile_definitions(SqlEnterpriseFormatter PRIVATE
     SQLENTERPRISEFORMATTER_LIBRARY
 )

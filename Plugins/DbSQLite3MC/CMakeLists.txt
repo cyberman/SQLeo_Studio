@@ -19,7 +19,7 @@ if(NOT WITH_SYSTEM_SQLITE_MC)
 endif()
 
 add_library(DbSqliteMc SHARED ${PROJECT_HEADERS} ${PROJECT_SOURCES})
-sqlitestudio_set_plugin_properties(DbSqliteMc)
+letos_set_plugin_properties(DbSqliteMc)
 target_compile_definitions(DbSqliteMc PRIVATE
     DBSQLITEMC_LIBRARY
 )

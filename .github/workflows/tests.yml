@@ -1,7 +1,7 @@
 env:
     TCL_VERSION: '8.6'
     SQLITE_VERSION: '3510200'
-    PORTABLE_DIR: ${{ github.workspace }}/output/portable/SQLiteStudio
+    PORTABLE_DIR: ${{ github.workspace }}/output/portable/Letos
 
 name: Unit tests
 
@@ -161,13 +161,13 @@ jobs:
             - name: Prepare output dir
               run: mkdir output output/build output/build-plugins
 
-            - name: Compile SQLiteStudio3
+            - name: Compile Letos
               working-directory: output/build
               run: |
-                cmake ../../SQLiteStudio3 -G Ninja \
+                cmake ../../Letos -G Ninja \
                     -DCMAKE_BUILD_TYPE=Debug \
                     -DCMAKE_PREFIX_PATH="${{ env.QT_ROOT_DIR }}" \
-                    -DCMAKE_INSTALL_PREFIX=../SQLiteStudio \
+                    -DCMAKE_INSTALL_PREFIX=../Letos \
                     -DWITH_PORTABLE=1 \
                     -DWITH_UPDATER=1 \
                     -DBUILD_TESTING=1
@@ -180,7 +180,7 @@ jobs:
                 cmake ../../Plugins -G Ninja \
                     -DCMAKE_BUILD_TYPE=Debug \
                     -DCMAKE_PREFIX_PATH="${{ env.QT_ROOT_DIR }}:${{ env.Python3_ROOT_DIR }}" \
-                    -DCMAKE_INSTALL_PREFIX=../SQLiteStudio \
+                    -DCMAKE_INSTALL_PREFIX=../Letos \
                     -DWITH_PORTABLE=1 \
                     -DWITH_DYNAMIC_PYTHON=1 \
                     -DWITH_ALL_PLUGINS=1
@@ -192,7 +192,7 @@ jobs:
               run: |
                 set -x
                 export LD_LIBRARY_PATH=./lib:${{ env.QT_ROOT_DIR }}/lib:/usr/local/lib
-                export SQLITESTUDIO_PLUGINS="${{ github.workspace }}/output/build-plugins/SqlEnterpriseFormatter"
+                export LETOS_PLUGINS="${{ github.workspace }}/output/build-plugins/SqlEnterpriseFormatter"
                 ctest --verbose
 
             - name: Install Midnight Commander

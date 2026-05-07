@@ -10,7 +10,7 @@ set(PROJECT_SOURCES
 )
 
 add_library(TclSyntaxHighlighter SHARED ${PROJECT_HEADERS} ${PROJECT_SOURCES})
-sqlitestudio_set_plugin_properties(TclSyntaxHighlighter)
+letos_set_plugin_properties(TclSyntaxHighlighter)
 target_compile_definitions(TclSyntaxHighlighter PRIVATE
     TCLSYNTAXHIGHLIGHTER_LIBRARY
 )

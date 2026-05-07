@@ -16,7 +16,7 @@ qt_wrap_ui(PROJECT_SOURCES
 )
 
 add_library(CsvImport SHARED ${PROJECT_HEADERS} ${PROJECT_SOURCES})
-sqlitestudio_set_plugin_properties(CsvImport)
+letos_set_plugin_properties(CsvImport)
 target_compile_definitions(CsvImport PRIVATE
     CSVIMPORT_LIBRARY
 )

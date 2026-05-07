@@ -13,7 +13,7 @@ qt_add_resources(PROJECT_SOURCES
 )
 
 add_library(MultiEditorImage SHARED ${PROJECT_HEADERS} ${PROJECT_SOURCES})
-sqlitestudio_set_plugin_properties(MultiEditorImage)
+letos_set_plugin_properties(MultiEditorImage)
 target_compile_definitions(MultiEditorImage PRIVATE
     MULTIEDITORIMAGE_LIBRARY
 )

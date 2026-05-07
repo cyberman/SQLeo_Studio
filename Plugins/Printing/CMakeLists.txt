@@ -15,7 +15,7 @@ qt_add_resources(PROJECT_SOURCES
 )
 
 add_library(Printing SHARED ${PROJECT_HEADERS} ${PROJECT_SOURCES})
-sqlitestudio_set_plugin_properties(Printing)
+letos_set_plugin_properties(Printing)
 target_compile_definitions(Printing PRIVATE
     PRINTING_LIBRARY
 )

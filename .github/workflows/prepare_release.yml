@@ -139,14 +139,14 @@ jobs:
                     echo "CHILD_IDS=$CHILD_IDS" >> $GITHUB_ENV
                 fi
 
-            - name: Get SQLiteStudio version
+            - name: Get Letos version
               shell: bash
               run: |
                 ref="${{ env.BRANCH_NAME }}"
-                url="https://raw.githubusercontent.com/pawelsalawa/sqlitestudio/refs/heads/$ref/SQLiteStudio3/coreSQLiteStudio/sqlitestudio.cpp"
-                int_ver=$(curl -s -L $url | grep "static const int sqlitestudioVersion" | grep -o "[0-9]*")
-                SQLITESTUDIO_VERSION=$($SCRIPTS/convert_int_ver.sh $int_ver)
-                echo "SQLITESTUDIO_VERSION=$SQLITESTUDIO_VERSION" >> $GITHUB_ENV
+                url="https://raw.githubusercontent.com/pawelsalawa/letos/refs/heads/$ref/Letos/core/letos.cpp"
+                int_ver=$(curl -s -L $url | grep "static const int letosVersion" | grep -o "[0-9]*")
+                LETOS_VERSION=$($SCRIPTS/convert_int_ver.sh $int_ver)
+                echo "LETOS_VERSION=$LETOS_VERSION" >> $GITHUB_ENV
 
             - name: Download artifacts
               shell: bash
@@ -177,8 +177,8 @@ jobs:
               shell: bash
               working-directory: assets
               run: |
-                tag_name="$SQLITESTUDIO_VERSION"
-                rel_name="$SQLITESTUDIO_VERSION release"
+                tag_name="$LETOS_VERSION"
+                rel_name="$LETOS_VERSION release"
                 if [ "${{ inputs.TEST_RUN }}" == "true" ]
                 then
                     tag_name="${tag_name}-test"
@@ -229,7 +229,7 @@ jobs:
 
                         echo "Uploading $file..."
                         url=$($SCRIPTS/upload_artifact.sh $RELEASE_ID "$file")
-                        url=$(echo $url | sed -E "s/untagged-[^\/]*/$SQLITESTUDIO_VERSION/")
+                        url=$(echo $url | sed -E "s/untagged-[^\/]*/$LETOS_VERSION/")
                         echo "Download url for $file is: $url"
 
                         NEW_META=$(

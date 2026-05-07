@@ -16,7 +16,7 @@ qt_wrap_ui(PROJECT_SOURCES
 )
 
 add_library(PdfExport SHARED ${PROJECT_HEADERS} ${PROJECT_SOURCES})
-sqlitestudio_set_plugin_properties(PdfExport)
+letos_set_plugin_properties(PdfExport)
 target_compile_definitions(PdfExport PRIVATE
     PDFEXPORT_LIBRARY
 )
