@@ -23,7 +23,7 @@ jobs:
                 echo "/usr/lib/qt6/bin" >> $GITHUB_PATH
 
             - name: Clone repo
-              uses: actions/checkout@v4
+              uses: actions/checkout@v6
               with:
                 ref: ${{ env.GITHUB_REF }}
 

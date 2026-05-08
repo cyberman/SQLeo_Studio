@@ -206,7 +206,7 @@ jobs:
                 echo "LDFLAGS=-arch x86_64 -arch x86_64" >> $GITHUB_ENV
 
             - name: Clone GH scripts
-              uses: actions/checkout@v4
+              uses: actions/checkout@v6
               with:
                 repository: pawelsalawa/gh-action-scripts
                 ref: main
@@ -222,7 +222,7 @@ jobs:
                 echo "DEBUG=${{ inputs.DEBUG }}" >> $GITHUB_ENV
 
             - name: Clone repo
-              uses: actions/checkout@v4
+              uses: actions/checkout@v6
               with:
                 ref: ${{ env.BRANCH_NAME }}
 
