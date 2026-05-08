@@ -4,11 +4,6 @@
 <context>
     <name>PdfExport</name>
     <message>
-        <location filename="../pdfexport.cpp" line="33"/>
-        <source>SQLiteStudio v%1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../pdfexport.cpp" line="66"/>
         <source>SQL query results</source>
         <translation type="unfinished"></translation>
@@ -22,6 +17,11 @@
         <location filename="../pdfexport.cpp" line="101"/>
         <location filename="../pdfexport.cpp" line="153"/>
         <source>Table: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pdfexport.cpp" line="33"/>
+        <source>Letos v%1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -160,14 +160,14 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../pdfexport.cpp" line="69"/>
-        <location filename="../pdfexport.cpp" line="335"/>
-        <source>Query:</source>
+        <location filename="../pdfexport.cpp" line="710"/>
+        <source>Document generated with Letos v%1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../pdfexport.cpp" line="710"/>
-        <source>Document generated with SQLiteStudio v%1</source>
+        <location filename="../pdfexport.cpp" line="69"/>
+        <location filename="../pdfexport.cpp" line="335"/>
+        <source>Query:</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
