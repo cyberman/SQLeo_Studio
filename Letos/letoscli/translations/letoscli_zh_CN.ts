@@ -195,7 +195,7 @@
     <message>
       <location filename="../commands/clicommanddblist.cpp" line="74"/>
       <source>Prints list of databases registered in the Letos. Each database on the list can be in open or closed state and %1 tells you that. The current working database (aka default database) is also marked on the list with &apos;*&apos; at the start of its name. See help for %2 command to learn about the default database.</source>
-      <translation type="unfinished">Prints list of databases registered in the Letos. Each database on the list can be in open or closed state and %1 tells you that. The current working database (aka default database) is also marked on the list with &apos;*&apos; at the start of its name. See help for %2 command to learn about the default database.</translation>
+      <translation>打印已在 Letos 中注册的数据库列表。列表中的每个数据库都可能处于打开或关闭状态，%1 命令会显示该状态。当前工作数据库（也称为默认数据库）也会在列表中以 &apos;*&apos; 开头进行标记。有关默认数据库的更多信息，请参阅 %2 命令的帮助文档。</translation>
     </message>
   </context>
   <context>
@@ -315,12 +315,12 @@ To see list of supported commands, type %2 without any arguments.
 When passing &lt;command&gt; name, you can skip special prefix character (&apos;%3&apos;).
 
 You can always execute any command with exactly single &apos;--help&apos; option to see help for that command. It&apos;s an alternative for typing: %1 &lt;command&gt;.</source>
-      <translation type="unfinished">Use %1 to learn about certain commands supported by the command line interface (CLI) of the Letos.
-To see list of supported commands, type %2 without any arguments.
+      <translation>使用 %1 可以了解 Letos 命令行界面 (CLI) 支持的特定命令。
+要查看支持的命令列表，请键入 %2（不带任何参数）。
 
-When passing &lt;command&gt; name, you can skip special prefix character (&apos;%3&apos;).
+传递 &lt;命令&gt; 名称时，可以省略特殊前缀字符 (&apos;%3&apos;)。
 
-You can always execute any command with exactly single &apos;--help&apos; option to see help for that command. It&apos;s an alternative for typing: %1 &lt;command&gt;.</translation>
+您始终可以使用单个 &apos;--help&apos; 选项来执行任何命令，以查看该命令的帮助信息。这是键入 %1 &lt;命令&gt; 的替代方案。</translation>
     </message>
     <message>
       <location filename="../commands/clicommandhelp.cpp" line="33"/>
@@ -589,7 +589,7 @@ Call %2 to see list of all databases.</source>
       <location filename="../commands/clicommandsql.cpp" line="84"/>
       <source>sql</source>
       <comment>CLI command syntax</comment>
-      <translation type="unfinished">sql</translation>
+      <translation>sql</translation>
     </message>
     <message>
       <location filename="../commands/clicommandsql.cpp" line="133"/>
@@ -698,10 +698,10 @@ When the -s option is given, then system tables are also listed.</source>
 When -c option is given, then also columns will be listed under each table.
 When -s option is given, then also system objects will be printed (sqlite_* tables, autoincrement indexes, etc).
 The database argument is optional and if provided, then only given database will be printed. This is not a registered database name, but instead it&apos;s an internal SQLite database name, like &apos;main&apos;, &apos;temp&apos;, or any attached database name. To print tree for other registered database, call %1 first to switch the working database, and then use %2 command.</source>
-      <translation type="unfinished">Prints all objects (tables, indexes, triggers and views) that are in the database as a tree. The tree is very similar to the one that you can see in GUI client of the Letos.
-When -c option is given, then also columns will be listed under each table.
-When -s option is given, then also system objects will be printed (sqlite_* tables, autoincrement indexes, etc).
-The database argument is optional and if provided, then only given database will be printed. This is not a registered database name, but instead it&apos;s an internal SQLite database name, like &apos;main&apos;, &apos;temp&apos;, or any attached database name. To print tree for other registered database, call %1 first to switch the working database, and then use %2 command.</translation>
+      <translation>将数据库中的所有对象（表、索引、触发器和视图）以树状结构打印出来。该树状结构与 Letos 图形用户界面客户端中显示的树状结构非常相似。
+如果使用 `-c` 选项，则每个表下还会列出列。
+如果使用 `-s` 选项，则还会打印系统对象（sqlite_* 表、自增索引等）。
+`database` 参数是可选的，如果提供，则只会打印指定的数据库。这不是已注册的数据库名称，而是 SQLite 内部数据库名称，例如 `main`、`temp` 或任何附加的数据库名称。要打印其他已注册数据库的树状结构，请先调用 `%1` 切换当前数据库，然后再使用 `%2` 命令。</translation>
     </message>
   </context>
   <context>
@@ -809,12 +809,12 @@ Expected one of: %2</source>
     <message>
       <location filename="../main.cpp" line="30"/>
       <source>Command line interface to Letos, a SQLite manager.</source>
-      <translation type="unfinished">Command line interface to Letos, a SQLite manager.</translation>
+      <translation>Letos（SQLite 管理器）的命令行界面。</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="35"/>
       <source>Executes provided SQL file (including all rich features of Letos&apos;s query executor) on the specified database file and quits. The database parameter becomes mandatory if this option is used.</source>
-      <translation type="unfinished">Executes provided SQL file (including all rich features of Letos&apos;s query executor) on the specified database file and quits. The database parameter becomes mandatory if this option is used.</translation>
+      <translation>在指定的数据库文件上执行提供的 SQL 文件（包括 Letos 查询执行器的所有强大功能），然后退出。如果使用此选项，数据库参数将变为必填项。</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="38"/>
@@ -844,7 +844,7 @@ Expected one of: %2</source>
     <message>
       <location filename="../main.cpp" line="49"/>
       <source>Lists plugins installed in the Letos and quits.</source>
-      <translation type="unfinished">Lists plugins installed in the Letos and quits.</translation>
+      <translation>列出 Letos 中已安装的插件并退出。</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="52"/>
