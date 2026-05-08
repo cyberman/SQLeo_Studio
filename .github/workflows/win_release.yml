@@ -164,7 +164,7 @@ jobs:
 
                 cd ..
                 SQLITE3_ZIP=sqlite3-windows-${{ matrix.SQLITE_ARCH }}-$SQLITE_VERSION.zip
-                curl -L https://github.com/pawelsalawa/sqlite3-sqls/releases/download/v$SQLITE_DOT_VERSION/$SQLITE3_ZIP --output $SQLITE3_ZIP
+                curl -L https://github.com/pawelsalawa/sqlite3-letos/releases/download/v$SQLITE_DOT_VERSION/$SQLITE3_ZIP --output $SQLITE3_ZIP
                 
                 unzip $SQLITE3_ZIP sqlite3.dll sqlite3.h sqlite3ext.h -d sqlite
                 
@@ -179,7 +179,7 @@ jobs:
               run: |
                 cd ..
                 mkdir ext
-                curl -L https://github.com/pawelsalawa/sqlite3-sqls/releases/download/v$SQLITE_DOT_VERSION/sqlite3-extensions-src-$SQLITE_VERSION.zip --output sqlite3-extensions-src-$SQLITE_VERSION.zip
+                curl -L https://github.com/pawelsalawa/sqlite3-letos/releases/download/v$SQLITE_DOT_VERSION/sqlite3-extensions-src-$SQLITE_VERSION.zip --output sqlite3-extensions-src-$SQLITE_VERSION.zip
                 
                 mkdir ext-src
                 unzip sqlite3-extensions-src-$SQLITE_VERSION.zip -d ext-src
