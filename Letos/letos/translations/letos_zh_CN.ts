@@ -6,7 +6,7 @@
     <message>
       <location filename="../main.cpp" line="52"/>
       <source>GUI interface to Letos, a SQLite manager.</source>
-      <translation type="unfinished">GUI interface to Letos, a SQLite manager.</translation>
+      <translation>Letos（SQLite 管理器）的图形用户界面。</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="57"/>
@@ -71,12 +71,12 @@
     <message>
       <location filename="../main.cpp" line="65"/>
       <source>Enables debugging of Letos&apos;s query executor.</source>
-      <translation type="unfinished">Enables debugging of Letos&apos;s query executor.</translation>
+      <translation>启用对 Letos 查询执行器的调试功能。</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="66"/>
       <source>Lists plugins installed in the Letos and quits.</source>
-      <translation type="unfinished">Lists plugins installed in the Letos and quits.</translation>
+      <translation>列出 Letos 中已安装的插件并退出。</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="79"/>
