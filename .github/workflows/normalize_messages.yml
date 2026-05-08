@@ -42,13 +42,10 @@ jobs:
             mv "$f.tmp" "$f"
           done
 
-      - name: Configure Git
+      - name: Commit normalization changes
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
-
-      - name: Commit normalization changes
-        run: |
           git add .
 
           if ! git diff --cached --quiet; then
