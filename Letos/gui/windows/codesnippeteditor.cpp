@@ -175,9 +175,9 @@ void CodeSnippetEditor::snippetDeselected(const QModelIndex& idx)
 void CodeSnippetEditor::snippetSelected(const QModelIndex& idx)
 {
     updatesForSelection = true;
-    ui->nameEdit->setText(viewModel->data(idx, Qt::DisplayRole).toString());
-    ui->mainCodeEdit->setPlainText(viewModel->data(idx, CodeSnippetEditorModel::CODE).toString());
-    ui->assistantShortcutEdit->setKeySequence(viewModel->data(idx, CodeSnippetEditorModel::HOTKEY).toString());
+    ui->nameEdit->setText(idx.data(Qt::DisplayRole).toString());
+    ui->mainCodeEdit->setPlainText(idx.data(CodeSnippetEditorModel::CODE).toString());
+    ui->assistantShortcutEdit->setKeySequence(idx.data(CodeSnippetEditorModel::HOTKEY).toString());
 
     updatesForSelection = false;
     currentModified = idx.data(CodeSnippetEditorModel::MODIFIED).toBool();

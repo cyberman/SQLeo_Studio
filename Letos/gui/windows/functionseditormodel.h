@@ -18,60 +18,41 @@ class GUI_API_EXPORT FunctionsEditorModel : public QAbstractListModel
             CODE = 1000,
             MODIFIED = 1001,
             VALID = 1002,
-            TYPE = 1003
+            TYPE = 1003,
+            FINAL_CODE = 1004,
+            STEP_CODE = 1005,
+            INVERSE_CODE = 1006,
+            INIT_CODE = 1007,
+            NAME = 1008,
+            LANG = 1009,
+            DATABASES = 1010,
+            ALL_DATABASES = 1011,
+            ARGUMENTS = 1012,
+            UNDEF_ARGS = 1013,
+            DETERMINISTIC = 1014,
         };
 
         explicit FunctionsEditorModel(QObject *parent = 0);
 
         void clearModified();
         bool isModified() const;
-        bool isModified(int row) const;
-        void setModified(int row, bool modified);
         bool isValid() const;
-        bool isValid(int row) const;
-        void setValid(int row, bool valid);
-        void setCode(int row, const QString& code);
-        QString getCode(int row) const;
-        void setFinalCode(int row, const QString& code);
-        QString getFinalCode(int row) const;
-        void setStepCode(int row, const QString& code);
-        QString getStepCode(int row) const;
-        void setInverseCode(int row, const QString& code);
-        QString getInverseCode(int row) const;
-        void setInitCode(int row, const QString& code);
-        QString getInitCode(int row) const;
-        void setName(int row, const QString& newName);
-        QString getName(int row) const;
-        void setLang(int row, const QString& lang);
-        QString getLang(int row) const;
-        QStringList getDatabases(int row) const;
-        void setDatabases(int row, const QStringList& value);
-        QStringList getArguments(int row) const;
-        void setArguments(int row, const QStringList& value);
-        FunctionManager::ScriptFunction::Type getType(int row) const;
-        void setType(int row, FunctionManager::ScriptFunction::Type type);
-        bool isAggregate(int row) const;
-        bool isAggregateWindow(int row) const;
-        bool isAnyAggregate(int row) const;
-        bool isScalar(int row) const;
-        void setDeterministic(int row, bool value);
-        bool isDeterministic(int row) const;
-        bool getUndefinedArgs(int row) const;
-        void setUndefinedArgs(int row, bool value);
-        bool getAllDatabases(int row) const;
-        void setAllDatabases(int row, bool value);
+        bool isAggregate(const QModelIndex& idx) const;
+        bool isAggregateWindow(const QModelIndex& idx) const;
+        bool isAnyAggregate(const QModelIndex& idx) const;
+        bool isScalar(const QModelIndex& idx) const;
         void setData(const QList<FunctionManager::ScriptFunction*>& functions);
         void addFunction(FunctionManager::ScriptFunction* function);
-        void deleteFunction(int row);
+        void deleteFunction(const QModelIndex& idx);
         QList<FunctionManager::ScriptFunction*> generateFunctions() const;
         QStringList getFunctionNames() const;
         void validateNames();
-        bool isAllowedName(int rowToSkip, const QString& nameToValidate, const QStringList &argList, bool undefinedArgs);
-        bool isValidRowIndex(int row) const;
+        bool isAllowedName(const QModelIndex& idx, const QString& nameToValidate, const QStringList &argList, bool undefinedArgs);
 
-        int rowCount(const QModelIndex& parent = QModelIndex()) const;
-        int columnCount(const QModelIndex& parent = QModelIndex()) const;
-        QVariant data(const QModelIndex& index, int role) const;
+        int rowCount(const QModelIndex& parent = QModelIndex()) const override;
+        int columnCount(const QModelIndex& parent = QModelIndex()) const override;
+        bool setData(const QModelIndex& index, const QVariant& value, int role) override;
+        QVariant data(const QModelIndex& index, int role) const override;
 
     private:
         struct UniqueFunctionName
@@ -97,7 +78,6 @@ class GUI_API_EXPORT FunctionsEditorModel : public QAbstractListModel
         };
 
         void init();
-        void emitDataChanged(int row);
         QList<UniqueFunctionName> getUniqueFunctionNames() const;
 
         friend int qHash(FunctionsEditorModel::UniqueFunctionName fnName);
