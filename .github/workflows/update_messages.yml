@@ -48,7 +48,7 @@ jobs:
                 for d in "${dirs[@]}"
                 do
                     [ -d "$d"/translations ] || continue
-                    lupdate "$d" -ts "$d"/translations/*.ts -locations none -no-obsolete
+                    lupdate "$d" -ts "$d"/translations/*.ts
 
                     find "$d"/translations -name "*.ts" | while read f; do
                         lconvert -sort-contexts -o "$f.tmp" "$f"
@@ -64,8 +64,8 @@ jobs:
 
             - name: Committing changes
               run: |
-                # git config user.name github-actions
-                # git config user.email github-actions@github.com
-                # git add .
-                # git diff-index --quiet HEAD || git commit -m "Automated update of translation files."
-                # git push
+                git config user.name github-actions
+                git config user.email github-actions@github.com
+                git add .
+                git diff-index --quiet HEAD || git commit -m "Automated update of translation files."
+                git push

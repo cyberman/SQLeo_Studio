@@ -34,12 +34,7 @@ jobs:
         run: |
           find . -name "*.ts" | while read f; do
             echo "Normalizing $f"
-
-            lconvert \
-              -sort-contexts \
-              -o "$f.tmp" \
-              "$f"
-
+            lconvert -sort-contexts -o "$f.tmp" "$f"
             mv "$f.tmp" "$f"
           done
 
