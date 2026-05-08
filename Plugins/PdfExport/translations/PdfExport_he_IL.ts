@@ -4,11 +4,6 @@
   <context>
     <name>PdfExport</name>
     <message>
-      <location filename="../pdfexport.cpp" line="33"/>
-      <source>SQLiteStudio v%1</source>
-      <translation>SQLiteStudio v%1</translation>
-    </message>
-    <message>
       <location filename="../pdfexport.cpp" line="66"/>
       <source>SQL query results</source>
       <translation>תוצאות שאילתת SQL</translation>
@@ -23,6 +18,11 @@
       <location filename="../pdfexport.cpp" line="153"/>
       <source>Table: %1</source>
       <translation>טבלה: %1</translation>
+    </message>
+    <message>
+      <location filename="../pdfexport.cpp" line="33"/>
+      <source>Letos v%1</source>
+      <translation type="unfinished">Letos v%1</translation>
     </message>
     <message>
       <location filename="../pdfexport.cpp" line="104"/>
@@ -160,15 +160,15 @@
       <translation>מצג: %1</translation>
     </message>
     <message>
+      <location filename="../pdfexport.cpp" line="710"/>
+      <source>Document generated with Letos v%1</source>
+      <translation type="unfinished">Document generated with Letos v%1</translation>
+    </message>
+    <message>
       <location filename="../pdfexport.cpp" line="69"/>
       <location filename="../pdfexport.cpp" line="335"/>
       <source>Query:</source>
       <translation>שאילתה:</translation>
-    </message>
-    <message>
-      <location filename="../pdfexport.cpp" line="710"/>
-      <source>Document generated with SQLiteStudio v%1</source>
-      <translation>מסמך חולל על ידי SQLiteStudio v%1</translation>
     </message>
   </context>
   <context>
