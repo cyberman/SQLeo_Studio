@@ -194,8 +194,8 @@
     </message>
     <message>
       <location filename="../commands/clicommanddblist.cpp" line="74"/>
-      <source>Prints list of databases registered in the SQLiteStudio. Each database on the list can be in open or closed state and %1 tells you that. The current working database (aka default database) is also marked on the list with &apos;*&apos; at the start of its name. See help for %2 command to learn about the default database.</source>
-      <translation>Выводит список баз данных, зарегистрированных в SQLiteStudio. Каждая база данных может быть либо открыта, либо закрыта, %1 это также указывает. Текущая рабочая база данных (она же база данных по умолчанию) дополнительно отмечена символом &apos;*&apos; в начале имени. Смотрите справку по команде %2 для сведений о базе данных по умолчанию.</translation>
+      <source>Prints list of databases registered in the Letos. Each database on the list can be in open or closed state and %1 tells you that. The current working database (aka default database) is also marked on the list with &apos;*&apos; at the start of its name. See help for %2 command to learn about the default database.</source>
+      <translation type="unfinished">Prints list of databases registered in the Letos. Each database on the list can be in open or closed state and %1 tells you that. The current working database (aka default database) is also marked on the list with &apos;*&apos; at the start of its name. See help for %2 command to learn about the default database.</translation>
     </message>
   </context>
   <context>
@@ -309,18 +309,18 @@ You can pass &lt;pattern&gt; with wildcard characters to filter output.</source>
     </message>
     <message>
       <location filename="../commands/clicommandhelp.cpp" line="21"/>
-      <source>Use %1 to learn about certain commands supported by the command line interface (CLI) of the SQLiteStudio.
+      <source>Use %1 to learn about certain commands supported by the command line interface (CLI) of the Letos.
 To see list of supported commands, type %2 without any arguments.
 
 When passing &lt;command&gt; name, you can skip special prefix character (&apos;%3&apos;).
 
 You can always execute any command with exactly single &apos;--help&apos; option to see help for that command. It&apos;s an alternative for typing: %1 &lt;command&gt;.</source>
-      <translation>Используйте %1 для получения сведений о командах, поддерживаемых интерфейсом командной строки (CLI) SQLiteStudio.
-Для просмотра списка доступных команд, введите %2 без указания аргументов.
+      <translation type="unfinished">Use %1 to learn about certain commands supported by the command line interface (CLI) of the Letos.
+To see list of supported commands, type %2 without any arguments.
 
-При указании имени &lt;команды&gt; можно не указывать префиксный символ (&apos;%3&apos;).
+When passing &lt;command&gt; name, you can skip special prefix character (&apos;%3&apos;).
 
-Для получения справки по команде вы также можете выполнить команду с единственным ключом &apos;--help&apos;. Это альтернатива вводу: %1 &lt;команда&gt;.</translation>
+You can always execute any command with exactly single &apos;--help&apos; option to see help for that command. It&apos;s an alternative for typing: %1 &lt;command&gt;.</translation>
     </message>
     <message>
       <location filename="../commands/clicommandhelp.cpp" line="33"/>
@@ -587,7 +587,7 @@ Call %2 to see list of all databases.</source>
       <location filename="../commands/clicommandsql.cpp" line="84"/>
       <source>sql</source>
       <comment>CLI command syntax</comment>
-      <translation>sql</translation>
+      <translation type="unfinished">sql</translation>
     </message>
     <message>
       <location filename="../commands/clicommandsql.cpp" line="133"/>
@@ -693,14 +693,14 @@ When the -s option is given, then system tables are also listed.</source>
     </message>
     <message>
       <location filename="../commands/clicommandtree.cpp" line="136"/>
-      <source>Prints all objects (tables, indexes, triggers and views) that are in the database as a tree. The tree is very similar to the one that you can see in GUI client of the SQLiteStudio.
+      <source>Prints all objects (tables, indexes, triggers and views) that are in the database as a tree. The tree is very similar to the one that you can see in GUI client of the Letos.
 When -c option is given, then also columns will be listed under each table.
 When -s option is given, then also system objects will be printed (sqlite_* tables, autoincrement indexes, etc).
 The database argument is optional and if provided, then only given database will be printed. This is not a registered database name, but instead it&apos;s an internal SQLite database name, like &apos;main&apos;, &apos;temp&apos;, or any attached database name. To print tree for other registered database, call %1 first to switch the working database, and then use %2 command.</source>
-      <translation>Отображает все объекты (таблицы, индексы, триггеры и представления) базы данных в виде дерева. Структура дерева аналогична тому, которое отображается в GUI клиенте SQLiteStudio.
-При вызове с ключом -c также будут выведены столбцы под каждой таблицей.
-При вызове с ключом -s также будут выведены системные объекты (таблицы sqlite_*, индексы автоинкремента и т.д.).
-При вызове с необязательным аргументом &apos;база данных&apos; будут выведены объекты только указнной базы данных. Под &apos;базой данных&apos; подразумевается не зарегистрированное имя базы данных, а внутреннее имя базы данных SQLite, например &apos;main&apos;, &apos;temp&apos; или имя присоединённной базы данных. Для отображения дерева другой зарегистрированной базы данных, сперва смените рабочую базу данных командой %1, а затем воспользуйтесь командой %2.</translation>
+      <translation type="unfinished">Prints all objects (tables, indexes, triggers and views) that are in the database as a tree. The tree is very similar to the one that you can see in GUI client of the Letos.
+When -c option is given, then also columns will be listed under each table.
+When -s option is given, then also system objects will be printed (sqlite_* tables, autoincrement indexes, etc).
+The database argument is optional and if provided, then only given database will be printed. This is not a registered database name, but instead it&apos;s an internal SQLite database name, like &apos;main&apos;, &apos;temp&apos;, or any attached database name. To print tree for other registered database, call %1 first to switch the working database, and then use %2 command.</translation>
     </message>
   </context>
   <context>
@@ -796,11 +796,6 @@ Expected one of: %2</source>
       <translation>строка</translation>
     </message>
     <message>
-      <location filename="../main.cpp" line="30"/>
-      <source>Command line interface to SQLiteStudio, a SQLite manager.</source>
-      <translation>Интерфейс командной строки для SQLiteStudio, менеджера баз данных SQLite.</translation>
-    </message>
-    <message>
       <location filename="../main.cpp" line="47"/>
       <source>Enables debug messages on standard error output.</source>
       <translation>Включает вывод отладочных сообщений в стандартный поток ошибок.</translation>
@@ -811,14 +806,14 @@ Expected one of: %2</source>
       <translation>Включает вывод отладочных сообщений анализатора Lemon для автодополнения SQL кода.</translation>
     </message>
     <message>
-      <location filename="../main.cpp" line="49"/>
-      <source>Lists plugins installed in the SQLiteStudio and quits.</source>
-      <translation>Выводит список установленных в SQLiteStudio модулей и осуществляет выход.</translation>
+      <location filename="../main.cpp" line="30"/>
+      <source>Command line interface to Letos, a SQLite manager.</source>
+      <translation type="unfinished">Command line interface to Letos, a SQLite manager.</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="35"/>
-      <source>Executes provided SQL file (including all rich features of SQLiteStudio&apos;s query executor) on the specified database file and quits. The database parameter becomes mandatory if this option is used.</source>
-      <translation>Выполняет предоставленный SQL-файл (используя все многочисленные функции исполнителя запросов SQLiteStudio) на указанном файле базы данных и выходит. При использовании этой опции обязательно указывать параметр database.</translation>
+      <source>Executes provided SQL file (including all rich features of Letos&apos;s query executor) on the specified database file and quits. The database parameter becomes mandatory if this option is used.</source>
+      <translation type="unfinished">Executes provided SQL file (including all rich features of Letos&apos;s query executor) on the specified database file and quits. The database parameter becomes mandatory if this option is used.</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="38"/>
@@ -844,6 +839,11 @@ Expected one of: %2</source>
       <location filename="../main.cpp" line="45"/>
       <source>When used together with -e option, the execution will not stop on an error, but rather continue until the end, ignoring errors.</source>
       <translation>При использовании вместе с параметром -e выполнение не останавливается при возникновении ошибки, а продолжается до конца, игнорируя все ошибки.</translation>
+    </message>
+    <message>
+      <location filename="../main.cpp" line="49"/>
+      <source>Lists plugins installed in the Letos and quits.</source>
+      <translation type="unfinished">Lists plugins installed in the Letos and quits.</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="52"/>

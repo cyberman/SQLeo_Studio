@@ -5,8 +5,8 @@
     <name>QObject</name>
     <message>
       <location filename="../main.cpp" line="52"/>
-      <source>GUI interface to SQLiteStudio, a SQLite manager.</source>
-      <translation>Interfejs graficzny dla SQLiteStudio, menadżera SQLite.</translation>
+      <source>GUI interface to Letos, a SQLite manager.</source>
+      <translation type="unfinished">GUI interface to Letos, a SQLite manager.</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="57"/>
@@ -59,16 +59,6 @@
       <translation>baza danych</translation>
     </message>
     <message>
-      <location filename="../main.cpp" line="65"/>
-      <source>Enables debugging of SQLiteStudio&apos;s query executor.</source>
-      <translation>Włącza debugowanie wykonawcy zapytań w SQLiteStudio.</translation>
-    </message>
-    <message>
-      <location filename="../main.cpp" line="66"/>
-      <source>Lists plugins installed in the SQLiteStudio and quits.</source>
-      <translation>Wypisuje listę zainstalowanych w SQLiteStudio wtyczek i wychodzi.</translation>
-    </message>
-    <message>
       <location filename="../main.cpp" line="56"/>
       <source>Points to the master configuration file. Read manual at wiki page for more details.</source>
       <translation>Wskazuje na główny plik konfiguracyjny. Więcej szczegółów w podręczniku na stronie wiki.</translation>
@@ -77,6 +67,16 @@
       <location filename="../main.cpp" line="56"/>
       <source>settings file</source>
       <translation type="unfinished">settings file</translation>
+    </message>
+    <message>
+      <location filename="../main.cpp" line="65"/>
+      <source>Enables debugging of Letos&apos;s query executor.</source>
+      <translation type="unfinished">Enables debugging of Letos&apos;s query executor.</translation>
+    </message>
+    <message>
+      <location filename="../main.cpp" line="66"/>
+      <source>Lists plugins installed in the Letos and quits.</source>
+      <translation type="unfinished">Lists plugins installed in the Letos and quits.</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="79"/>

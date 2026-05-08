@@ -29,11 +29,6 @@
       <translation>使用 Android 除錯橋 (ADB)：%1</translation>
     </message>
     <message>
-      <location filename="../dbandroid.cpp" line="183"/>
-      <source>You can grab Android connector JAR file from Tools menu. It&apos;s required for 2 of 3 connections supported by the Android plugin. For more details read plugin&apos;s documentation on &lt;a href=&quot;%1&quot;&gt;SQLiteStudio&apos;s wiki page.&lt;/a&gt;</source>
-      <translation>您可以從工具選單取得 Android 聯結器 JAR 檔案。Android 外掛支援的 3 種連線方式有 2 個需要它。更多細節見 SQLiteStudio wiki 頁面上的&lt;a href=&quot;%1&quot;&gt;外掛文件&lt;/a&gt;。</translation>
-    </message>
-    <message>
       <location filename="../dbandroid.cpp" line="198"/>
       <source>Could not find Android Debug Bridge application. &lt;a href=&quot;%1&quot;&gt;Click here&lt;/a&gt; to point out the location of the ADB application, otherwise the %2 plugin will not support USB cable connections, only the network connection.</source>
       <translation type="unfinished">Could not find Android Debug Bridge application. &lt;a href=&quot;%1&quot;&gt;Click here&lt;/a&gt; to point out the location of the ADB application, otherwise the %2 plugin will not support USB cable connections, only the network connection.</translation>
@@ -57,6 +52,11 @@
       <location filename="../dbandroid.cpp" line="216"/>
       <source>Invalid ADB</source>
       <translation>無效的 ADB</translation>
+    </message>
+    <message>
+      <location filename="../dbandroid.cpp" line="183"/>
+      <source>You can grab Android connector JAR file from Tools menu. It&apos;s required for 2 of 3 connections supported by the Android plugin. For more details read plugin&apos;s documentation on &lt;a href=&quot;%1&quot;&gt;Letos&apos;s wiki page.&lt;/a&gt;</source>
+      <translation type="unfinished">You can grab Android connector JAR file from Tools menu. It&apos;s required for 2 of 3 connections supported by the Android plugin. For more details read plugin&apos;s documentation on &lt;a href=&quot;%1&quot;&gt;Letos&apos;s wiki page.&lt;/a&gt;</translation>
     </message>
     <message>
       <location filename="../dbandroid.cpp" line="219"/>
@@ -185,8 +185,8 @@
     </message>
     <message>
       <location filename="../dbandroidpathdialog.ui" line="127"/>
-      <source>&lt;p&gt;This is password configured in the SQLiteStudio service being embeded in the Android application.&lt;/p&gt;</source>
-      <translation>&lt;p&gt;這是在 Android 應用程式中嵌入的為 SQLiteStudio 服務設定檔的密碼。&lt;/p&gt;</translation>
+      <source>&lt;p&gt;This is password configured in the Letos service being embeded in the Android application.&lt;/p&gt;</source>
+      <translation type="unfinished">&lt;p&gt;This is password configured in the Letos service being embeded in the Android application.&lt;/p&gt;</translation>
     </message>
     <message>
       <location filename="../dbandroidpathdialog.ui" line="140"/>

@@ -182,17 +182,17 @@
       <translation type="unfinished">Cannot read file %1: %2</translation>
     </message>
     <message>
-      <location filename="../services/impl/configimpl.cpp" line="979"/>
+      <location filename="../services/impl/configimpl.cpp" line="1001"/>
       <source>Could not start database transaction for deleting SQL history, therefore it&apos;s not deleted.</source>
       <translation>לא ניתן לאתחל תנועת מסד נתונים למחיקת היסטוריית SQL, לכן היא לא נמחקה.</translation>
     </message>
     <message>
-      <location filename="../services/impl/configimpl.cpp" line="986"/>
+      <location filename="../services/impl/configimpl.cpp" line="1008"/>
       <source>Could not commit database transaction for deleting SQL history, therefore it&apos;s not deleted.</source>
       <translation>לא ניתן היה לקבע תנועת מסד נתונים למחיקת היסטוריית SQL, לכן היא לא נמחקה.</translation>
     </message>
     <message>
-      <location filename="../services/impl/configimpl.cpp" line="1344"/>
+      <location filename="../services/impl/configimpl.cpp" line="1366"/>
       <source>Configured hotkeys have been reset to their default settings following the update to version 4.0.0, where many shortcuts were revised to align with modern IDE standards.</source>
       <translation type="unfinished">Configured hotkeys have been reset to their default settings following the update to version 4.0.0, where many shortcuts were revised to align with modern IDE standards.</translation>
     </message>
@@ -265,8 +265,8 @@
     </message>
     <message>
       <location filename="../dbobjectorganizer.cpp" line="507"/>
-      <source>Database %1 could not be attached to database %2, so the data of table %3 will be copied with SQLiteStudio as a mediator. This method can be slow for huge tables, so please be patient.</source>
-      <translation type="unfinished">Database %1 could not be attached to database %2, so the data of table %3 will be copied with SQLiteStudio as a mediator. This method can be slow for huge tables, so please be patient.</translation>
+      <source>Database %1 could not be attached to database %2, so the data of table %3 will be copied with Letos as a mediator. This method can be slow for huge tables, so please be patient.</source>
+      <translation type="unfinished">Database %1 could not be attached to database %2, so the data of table %3 will be copied with Letos as a mediator. This method can be slow for huge tables, so please be patient.</translation>
     </message>
     <message>
       <location filename="../dbobjectorganizer.cpp" line="531"/>
@@ -452,8 +452,8 @@ Tables, indexes, triggers and views copied to database %3 will remain.</source>
     </message>
     <message>
       <location filename="../services/impl/functionmanagerimpl.cpp" line="401"/>
-      <source>No such function registered in SQLiteStudio: %1(%2)</source>
-      <translation type="unfinished">No such function registered in SQLiteStudio: %1(%2)</translation>
+      <source>No such function registered in Letos: %1(%2)</source>
+      <translation type="unfinished">No such function registered in Letos: %1(%2)</translation>
     </message>
     <message>
       <location filename="../services/impl/functionmanagerimpl.cpp" line="407"/>
@@ -558,33 +558,33 @@ Tables, indexes, triggers and views copied to database %3 will remain.</source>
   <context>
     <name>PluginManagerImpl</name>
     <message>
-      <location filename="../services/impl/pluginmanagerimpl.cpp" line="561"/>
+      <location filename="../services/impl/pluginmanagerimpl.cpp" line="564"/>
       <source>Cannot load plugin %1, because it&apos;s in conflict with plugin %2.</source>
       <translation>לא ניתן לטעון מתקע %1, מאחר והוא &apos;מתנגש עם מתקע %2.</translation>
     </message>
     <message>
-      <location filename="../services/impl/pluginmanagerimpl.cpp" line="572"/>
+      <location filename="../services/impl/pluginmanagerimpl.cpp" line="575"/>
       <source>Cannot load plugin %1, because its dependency was not loaded: %2.</source>
       <translation>לא ניתן לטעון מתקע %1, מאחר והתלויות שלו לא נטענו: %2.</translation>
     </message>
     <message>
-      <location filename="../services/impl/pluginmanagerimpl.cpp" line="581"/>
+      <location filename="../services/impl/pluginmanagerimpl.cpp" line="584"/>
       <source>Cannot load plugin %1. Error details: %2</source>
       <translation>לא ניתן לטעון מתקע %1. פרטי שגיאה: %2</translation>
     </message>
     <message>
-      <location filename="../services/impl/pluginmanagerimpl.cpp" line="597"/>
+      <location filename="../services/impl/pluginmanagerimpl.cpp" line="600"/>
       <source>Cannot load plugin %1 (error while initializing plugin).</source>
       <translation>לא ניתן לטעון מתקע %1 (שגיאה בעת אתחול מתקע).</translation>
     </message>
     <message>
-      <location filename="../services/impl/pluginmanagerimpl.cpp" line="758"/>
+      <location filename="../services/impl/pluginmanagerimpl.cpp" line="761"/>
       <source>min: %1</source>
       <comment>plugin dependency version</comment>
       <translation>מזערי: %1</translation>
     </message>
     <message>
-      <location filename="../services/impl/pluginmanagerimpl.cpp" line="759"/>
+      <location filename="../services/impl/pluginmanagerimpl.cpp" line="762"/>
       <source>max: %1</source>
       <comment>plugin dependency version</comment>
       <translation>מירבי: %1</translation>
@@ -994,48 +994,48 @@ Tables, indexes, triggers and views copied to database %3 will remain.</source>
       <translation type="unfinished">Could not resolve table for column &apos;%1&apos;.</translation>
     </message>
     <message>
-      <location filename="../services/impl/configimpl.cpp" line="859"/>
+      <location filename="../services/impl/configimpl.cpp" line="876"/>
       <source>Could not initialize configuration file. Any configuration changes and queries history will be lost after application restart. Unable to create a file at following locations: %1.</source>
       <translation type="unfinished">Could not initialize configuration file. Any configuration changes and queries history will be lost after application restart. Unable to create a file at following locations: %1.</translation>
     </message>
     <message>
-      <location filename="../sqlitestudio.cpp" line="363"/>
+      <location filename="../letos.cpp" line="363"/>
       <source>General purpose</source>
       <comment>plugin category name</comment>
       <translation>מטרה כללית</translation>
     </message>
     <message>
-      <location filename="../sqlitestudio.cpp" line="364"/>
+      <location filename="../letos.cpp" line="364"/>
       <source>Database support</source>
       <comment>plugin category name</comment>
       <translation>תמיכת מסד נתונים</translation>
     </message>
     <message>
-      <location filename="../sqlitestudio.cpp" line="365"/>
+      <location filename="../letos.cpp" line="365"/>
       <source>Code formatter</source>
       <comment>plugin category name</comment>
       <translation>מתבנת קוד</translation>
     </message>
     <message>
-      <location filename="../sqlitestudio.cpp" line="366"/>
+      <location filename="../letos.cpp" line="366"/>
       <source>Scripting languages</source>
       <comment>plugin category name</comment>
       <translation>שפת תסריט</translation>
     </message>
     <message>
-      <location filename="../sqlitestudio.cpp" line="368"/>
+      <location filename="../letos.cpp" line="368"/>
       <source>Exporting</source>
       <comment>plugin category name</comment>
       <translation>מייצא</translation>
     </message>
     <message>
-      <location filename="../sqlitestudio.cpp" line="369"/>
+      <location filename="../letos.cpp" line="369"/>
       <source>Importing</source>
       <comment>plugin category name</comment>
       <translation>מייבא</translation>
     </message>
     <message>
-      <location filename="../sqlitestudio.cpp" line="370"/>
+      <location filename="../letos.cpp" line="370"/>
       <source>Table populating</source>
       <comment>plugin category name</comment>
       <translation>אכלוס טבלה</translation>
@@ -1091,8 +1091,8 @@ The view will remain as it is.</translation>
     </message>
     <message>
       <location filename="../viewmodifier.cpp" line="80"/>
-      <source>SQLiteStudio was unable to resolve columns returned by the new view, therefore it won&apos;t be able to tell which triggers might fail during the recreation process.</source>
-      <translation type="unfinished">SQLiteStudio was unable to resolve columns returned by the new view, therefore it won&apos;t be able to tell which triggers might fail during the recreation process.</translation>
+      <source>Letos was unable to resolve columns returned by the new view, therefore it won&apos;t be able to tell which triggers might fail during the recreation process.</source>
+      <translation type="unfinished">Letos was unable to resolve columns returned by the new view, therefore it won&apos;t be able to tell which triggers might fail during the recreation process.</translation>
     </message>
   </context>
   <context>
@@ -1121,8 +1121,8 @@ The view will remain as it is.</translation>
     </message>
     <message>
       <location filename="../db/queryexecutor.cpp" line="610"/>
-      <source>SQLiteStudio was unable to extract metadata from the query. Results won&apos;t be editable.</source>
-      <translation type="unfinished">SQLiteStudio was unable to extract metadata from the query. Results won&apos;t be editable.</translation>
+      <source>Letos was unable to extract metadata from the query. Results won&apos;t be editable.</source>
+      <translation type="unfinished">Letos was unable to extract metadata from the query. Results won&apos;t be editable.</translation>
     </message>
   </context>
   <context>
@@ -1214,7 +1214,7 @@ The view will remain as it is.</translation>
       <location filename="../sqlhistorymodel.cpp" line="40"/>
       <source>SQL</source>
       <comment>sql history header</comment>
-      <translation>SQL</translation>
+      <translation type="unfinished">SQL</translation>
     </message>
   </context>
   <context>

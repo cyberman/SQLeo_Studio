@@ -182,17 +182,17 @@
       <translation type="unfinished">Cannot read file %1: %2</translation>
     </message>
     <message>
-      <location filename="../services/impl/configimpl.cpp" line="979"/>
+      <location filename="../services/impl/configimpl.cpp" line="1001"/>
       <source>Could not start database transaction for deleting SQL history, therefore it&apos;s not deleted.</source>
       <translation>因無法啟動資料庫交易, 造成刪除SQL 歷史失敗</translation>
     </message>
     <message>
-      <location filename="../services/impl/configimpl.cpp" line="986"/>
+      <location filename="../services/impl/configimpl.cpp" line="1008"/>
       <source>Could not commit database transaction for deleting SQL history, therefore it&apos;s not deleted.</source>
       <translation>因無法commit資料庫交易, 造成刪除SQL 歷史失敗</translation>
     </message>
     <message>
-      <location filename="../services/impl/configimpl.cpp" line="1344"/>
+      <location filename="../services/impl/configimpl.cpp" line="1366"/>
       <source>Configured hotkeys have been reset to their default settings following the update to version 4.0.0, where many shortcuts were revised to align with modern IDE standards.</source>
       <translation type="unfinished">Configured hotkeys have been reset to their default settings following the update to version 4.0.0, where many shortcuts were revised to align with modern IDE standards.</translation>
     </message>
@@ -265,8 +265,8 @@
     </message>
     <message>
       <location filename="../dbobjectorganizer.cpp" line="507"/>
-      <source>Database %1 could not be attached to database %2, so the data of table %3 will be copied with SQLiteStudio as a mediator. This method can be slow for huge tables, so please be patient.</source>
-      <translation>資料庫 %1 無法被附加至資料庫 %2, 所以 table %3 的資料將會被SQLiteStudio複製一份作為mediator. 此方法對於大table會很慢，請耐心等待.</translation>
+      <source>Database %1 could not be attached to database %2, so the data of table %3 will be copied with Letos as a mediator. This method can be slow for huge tables, so please be patient.</source>
+      <translation type="unfinished">Database %1 could not be attached to database %2, so the data of table %3 will be copied with Letos as a mediator. This method can be slow for huge tables, so please be patient.</translation>
     </message>
     <message>
       <location filename="../dbobjectorganizer.cpp" line="531"/>
@@ -452,8 +452,8 @@ Tables, indexes, triggers and views copied to database %3 will remain.</translat
     </message>
     <message>
       <location filename="../services/impl/functionmanagerimpl.cpp" line="401"/>
-      <source>No such function registered in SQLiteStudio: %1(%2)</source>
-      <translation>於 SQLiteStudio: %1(%2) ，找不到此function 被註冊的紀錄</translation>
+      <source>No such function registered in Letos: %1(%2)</source>
+      <translation type="unfinished">No such function registered in Letos: %1(%2)</translation>
     </message>
     <message>
       <location filename="../services/impl/functionmanagerimpl.cpp" line="407"/>
@@ -558,33 +558,33 @@ Tables, indexes, triggers and views copied to database %3 will remain.</translat
   <context>
     <name>PluginManagerImpl</name>
     <message>
-      <location filename="../services/impl/pluginmanagerimpl.cpp" line="561"/>
+      <location filename="../services/impl/pluginmanagerimpl.cpp" line="564"/>
       <source>Cannot load plugin %1, because it&apos;s in conflict with plugin %2.</source>
       <translation type="unfinished">Cannot load plugin %1, because it&apos;s in conflict with plugin %2.</translation>
     </message>
     <message>
-      <location filename="../services/impl/pluginmanagerimpl.cpp" line="572"/>
+      <location filename="../services/impl/pluginmanagerimpl.cpp" line="575"/>
       <source>Cannot load plugin %1, because its dependency was not loaded: %2.</source>
       <translation type="unfinished">Cannot load plugin %1, because its dependency was not loaded: %2.</translation>
     </message>
     <message>
-      <location filename="../services/impl/pluginmanagerimpl.cpp" line="581"/>
+      <location filename="../services/impl/pluginmanagerimpl.cpp" line="584"/>
       <source>Cannot load plugin %1. Error details: %2</source>
       <translation type="unfinished">Cannot load plugin %1. Error details: %2</translation>
     </message>
     <message>
-      <location filename="../services/impl/pluginmanagerimpl.cpp" line="597"/>
+      <location filename="../services/impl/pluginmanagerimpl.cpp" line="600"/>
       <source>Cannot load plugin %1 (error while initializing plugin).</source>
       <translation type="unfinished">Cannot load plugin %1 (error while initializing plugin).</translation>
     </message>
     <message>
-      <location filename="../services/impl/pluginmanagerimpl.cpp" line="758"/>
+      <location filename="../services/impl/pluginmanagerimpl.cpp" line="761"/>
       <source>min: %1</source>
       <comment>plugin dependency version</comment>
       <translation>最小值: %1</translation>
     </message>
     <message>
-      <location filename="../services/impl/pluginmanagerimpl.cpp" line="759"/>
+      <location filename="../services/impl/pluginmanagerimpl.cpp" line="762"/>
       <source>max: %1</source>
       <comment>plugin dependency version</comment>
       <translation>最大值: %1</translation>
@@ -994,48 +994,48 @@ Tables, indexes, triggers and views copied to database %3 will remain.</translat
       <translation>無法解析table, Column: &apos;%1&apos;.</translation>
     </message>
     <message>
-      <location filename="../services/impl/configimpl.cpp" line="859"/>
+      <location filename="../services/impl/configimpl.cpp" line="876"/>
       <source>Could not initialize configuration file. Any configuration changes and queries history will be lost after application restart. Unable to create a file at following locations: %1.</source>
       <translation>無法初始化設定檔. 在應用程式重啟時，任何設定檔的異動及查詢歷史將遺失. 無法建立檔案在以下位置: %1</translation>
     </message>
     <message>
-      <location filename="../sqlitestudio.cpp" line="363"/>
+      <location filename="../letos.cpp" line="363"/>
       <source>General purpose</source>
       <comment>plugin category name</comment>
       <translation>通用目的說明</translation>
     </message>
     <message>
-      <location filename="../sqlitestudio.cpp" line="364"/>
+      <location filename="../letos.cpp" line="364"/>
       <source>Database support</source>
       <comment>plugin category name</comment>
       <translation>資料庫支援</translation>
     </message>
     <message>
-      <location filename="../sqlitestudio.cpp" line="365"/>
+      <location filename="../letos.cpp" line="365"/>
       <source>Code formatter</source>
       <comment>plugin category name</comment>
-      <translation>Code formatter</translation>
+      <translation type="unfinished">Code formatter</translation>
     </message>
     <message>
-      <location filename="../sqlitestudio.cpp" line="366"/>
+      <location filename="../letos.cpp" line="366"/>
       <source>Scripting languages</source>
       <comment>plugin category name</comment>
-      <translation>Scripting languages</translation>
+      <translation type="unfinished">Scripting languages</translation>
     </message>
     <message>
-      <location filename="../sqlitestudio.cpp" line="368"/>
+      <location filename="../letos.cpp" line="368"/>
       <source>Exporting</source>
       <comment>plugin category name</comment>
       <translation>匯出中</translation>
     </message>
     <message>
-      <location filename="../sqlitestudio.cpp" line="369"/>
+      <location filename="../letos.cpp" line="369"/>
       <source>Importing</source>
       <comment>plugin category name</comment>
       <translation>匯入中...</translation>
     </message>
     <message>
-      <location filename="../sqlitestudio.cpp" line="370"/>
+      <location filename="../letos.cpp" line="370"/>
       <source>Table populating</source>
       <comment>plugin category name</comment>
       <translation>Table 產生中</translation>
@@ -1091,8 +1091,8 @@ view 將保留原始內容</translation>
     </message>
     <message>
       <location filename="../viewmodifier.cpp" line="80"/>
-      <source>SQLiteStudio was unable to resolve columns returned by the new view, therefore it won&apos;t be able to tell which triggers might fail during the recreation process.</source>
-      <translation>SQLiteStudio 無法從回傳的新view中解析columns, 亦無法確認trigger 在重建程序中將導致失敗的狀況.</translation>
+      <source>Letos was unable to resolve columns returned by the new view, therefore it won&apos;t be able to tell which triggers might fail during the recreation process.</source>
+      <translation type="unfinished">Letos was unable to resolve columns returned by the new view, therefore it won&apos;t be able to tell which triggers might fail during the recreation process.</translation>
     </message>
   </context>
   <context>
@@ -1121,8 +1121,8 @@ view 將保留原始內容</translation>
     </message>
     <message>
       <location filename="../db/queryexecutor.cpp" line="610"/>
-      <source>SQLiteStudio was unable to extract metadata from the query. Results won&apos;t be editable.</source>
-      <translation>SQLiteStudio無法從此查詢解析metadata. 結果亦無法編輯</translation>
+      <source>Letos was unable to extract metadata from the query. Results won&apos;t be editable.</source>
+      <translation type="unfinished">Letos was unable to extract metadata from the query. Results won&apos;t be editable.</translation>
     </message>
   </context>
   <context>
@@ -1214,7 +1214,7 @@ view 將保留原始內容</translation>
       <location filename="../sqlhistorymodel.cpp" line="40"/>
       <source>SQL</source>
       <comment>sql history header</comment>
-      <translation>SQL</translation>
+      <translation type="unfinished">SQL</translation>
     </message>
   </context>
   <context>

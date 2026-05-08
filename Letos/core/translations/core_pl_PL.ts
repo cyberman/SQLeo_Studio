@@ -182,17 +182,17 @@
       <translation type="unfinished">Cannot read file %1: %2</translation>
     </message>
     <message>
-      <location filename="../services/impl/configimpl.cpp" line="979"/>
+      <location filename="../services/impl/configimpl.cpp" line="1001"/>
       <source>Could not start database transaction for deleting SQL history, therefore it&apos;s not deleted.</source>
       <translation>Nie można rozpocząć transakcji dla usuwania historii SQL, więc nie można usunąć historii.</translation>
     </message>
     <message>
-      <location filename="../services/impl/configimpl.cpp" line="986"/>
+      <location filename="../services/impl/configimpl.cpp" line="1008"/>
       <source>Could not commit database transaction for deleting SQL history, therefore it&apos;s not deleted.</source>
       <translation>Nie można zatwierdzić transakcji dla usuwania historii SQL, więc nie można usunąć historii.</translation>
     </message>
     <message>
-      <location filename="../services/impl/configimpl.cpp" line="1344"/>
+      <location filename="../services/impl/configimpl.cpp" line="1366"/>
       <source>Configured hotkeys have been reset to their default settings following the update to version 4.0.0, where many shortcuts were revised to align with modern IDE standards.</source>
       <translation type="unfinished">Configured hotkeys have been reset to their default settings following the update to version 4.0.0, where many shortcuts were revised to align with modern IDE standards.</translation>
     </message>
@@ -265,8 +265,8 @@
     </message>
     <message>
       <location filename="../dbobjectorganizer.cpp" line="507"/>
-      <source>Database %1 could not be attached to database %2, so the data of table %3 will be copied with SQLiteStudio as a mediator. This method can be slow for huge tables, so please be patient.</source>
-      <translation>Nie udało się dołączyć bazy danych %1 do bazy danych %2, więc dane tabeli %3 będą skopiowane przez SQLiteStudio jako pośrednika. Ta metoda może być powolna dla dużych tabel, więc proszę o cierpliwość.</translation>
+      <source>Database %1 could not be attached to database %2, so the data of table %3 will be copied with Letos as a mediator. This method can be slow for huge tables, so please be patient.</source>
+      <translation type="unfinished">Database %1 could not be attached to database %2, so the data of table %3 will be copied with Letos as a mediator. This method can be slow for huge tables, so please be patient.</translation>
     </message>
     <message>
       <location filename="../dbobjectorganizer.cpp" line="531"/>
@@ -452,8 +452,8 @@ Tabele, indeksy, wyzwalacze i widoki skopiowane do bazy danych %3 pozostaną na 
     </message>
     <message>
       <location filename="../services/impl/functionmanagerimpl.cpp" line="401"/>
-      <source>No such function registered in SQLiteStudio: %1(%2)</source>
-      <translation>Nie znaleziono funkcji zarejestrowanej w SQLiteStudio: %1 (%2)</translation>
+      <source>No such function registered in Letos: %1(%2)</source>
+      <translation type="unfinished">No such function registered in Letos: %1(%2)</translation>
     </message>
     <message>
       <location filename="../services/impl/functionmanagerimpl.cpp" line="407"/>
@@ -558,33 +558,33 @@ Tabele, indeksy, wyzwalacze i widoki skopiowane do bazy danych %3 pozostaną na 
   <context>
     <name>PluginManagerImpl</name>
     <message>
-      <location filename="../services/impl/pluginmanagerimpl.cpp" line="561"/>
+      <location filename="../services/impl/pluginmanagerimpl.cpp" line="564"/>
       <source>Cannot load plugin %1, because it&apos;s in conflict with plugin %2.</source>
       <translation>Nie udało się załadować wtyczki %1, ponieważ jest ona w konflikcie z wtyczką %2.</translation>
     </message>
     <message>
-      <location filename="../services/impl/pluginmanagerimpl.cpp" line="572"/>
+      <location filename="../services/impl/pluginmanagerimpl.cpp" line="575"/>
       <source>Cannot load plugin %1, because its dependency was not loaded: %2.</source>
       <translation>Nie udało się załadować wtyczki %1, ponieważ jej zależność nie została załadowana: %2</translation>
     </message>
     <message>
-      <location filename="../services/impl/pluginmanagerimpl.cpp" line="581"/>
+      <location filename="../services/impl/pluginmanagerimpl.cpp" line="584"/>
       <source>Cannot load plugin %1. Error details: %2</source>
       <translation>Nie udało się załadować wtyczki %1. Szczegóły błędu: %2</translation>
     </message>
     <message>
-      <location filename="../services/impl/pluginmanagerimpl.cpp" line="597"/>
+      <location filename="../services/impl/pluginmanagerimpl.cpp" line="600"/>
       <source>Cannot load plugin %1 (error while initializing plugin).</source>
       <translation>Nie udało się załadować wtyczki %1 (błąd podczas inicjalizacji wtyczki).</translation>
     </message>
     <message>
-      <location filename="../services/impl/pluginmanagerimpl.cpp" line="758"/>
+      <location filename="../services/impl/pluginmanagerimpl.cpp" line="761"/>
       <source>min: %1</source>
       <comment>plugin dependency version</comment>
-      <translation>min: %1</translation>
+      <translation type="unfinished">min: %1</translation>
     </message>
     <message>
-      <location filename="../services/impl/pluginmanagerimpl.cpp" line="759"/>
+      <location filename="../services/impl/pluginmanagerimpl.cpp" line="762"/>
       <source>max: %1</source>
       <comment>plugin dependency version</comment>
       <translation>maks: %1</translation>
@@ -994,48 +994,48 @@ Tabele, indeksy, wyzwalacze i widoki skopiowane do bazy danych %3 pozostaną na 
       <translation>Nie można ustalić tabeli lub kolumny &apos;%1&apos;.</translation>
     </message>
     <message>
-      <location filename="../services/impl/configimpl.cpp" line="859"/>
+      <location filename="../services/impl/configimpl.cpp" line="876"/>
       <source>Could not initialize configuration file. Any configuration changes and queries history will be lost after application restart. Unable to create a file at following locations: %1.</source>
       <translation>Nie udało się zainicjalizować pliku konfiguracyjnego. Wszelkie zmiany w konfiguracji i historia zapytań zostaną utracone po restarcie aplikacji. Nie udało się utworzyć pliku w lokalizacji: %1.</translation>
     </message>
     <message>
-      <location filename="../sqlitestudio.cpp" line="363"/>
+      <location filename="../letos.cpp" line="363"/>
       <source>General purpose</source>
       <comment>plugin category name</comment>
       <translation>Ogólne</translation>
     </message>
     <message>
-      <location filename="../sqlitestudio.cpp" line="364"/>
+      <location filename="../letos.cpp" line="364"/>
       <source>Database support</source>
       <comment>plugin category name</comment>
       <translation>Wsparcie baz danych</translation>
     </message>
     <message>
-      <location filename="../sqlitestudio.cpp" line="365"/>
+      <location filename="../letos.cpp" line="365"/>
       <source>Code formatter</source>
       <comment>plugin category name</comment>
       <translation>Formatowanie kodu</translation>
     </message>
     <message>
-      <location filename="../sqlitestudio.cpp" line="366"/>
+      <location filename="../letos.cpp" line="366"/>
       <source>Scripting languages</source>
       <comment>plugin category name</comment>
       <translation>Języki skryptowe</translation>
     </message>
     <message>
-      <location filename="../sqlitestudio.cpp" line="368"/>
+      <location filename="../letos.cpp" line="368"/>
       <source>Exporting</source>
       <comment>plugin category name</comment>
       <translation>Eksportowanie</translation>
     </message>
     <message>
-      <location filename="../sqlitestudio.cpp" line="369"/>
+      <location filename="../letos.cpp" line="369"/>
       <source>Importing</source>
       <comment>plugin category name</comment>
       <translation>Importowanie</translation>
     </message>
     <message>
-      <location filename="../sqlitestudio.cpp" line="370"/>
+      <location filename="../letos.cpp" line="370"/>
       <source>Table populating</source>
       <comment>plugin category name</comment>
       <translation>Zaludnianie tabel</translation>
@@ -1091,8 +1091,8 @@ Widok pozostanie nienaruszony.</translation>
     </message>
     <message>
       <location filename="../viewmodifier.cpp" line="80"/>
-      <source>SQLiteStudio was unable to resolve columns returned by the new view, therefore it won&apos;t be able to tell which triggers might fail during the recreation process.</source>
-      <translation>SQLiteStudio nie było w stanie określić kolumn zwracanych przez nowy widok, w związku z czym nie może określić które wyzwalacze mogą się nie powieść podczas procesu odtwarzania.</translation>
+      <source>Letos was unable to resolve columns returned by the new view, therefore it won&apos;t be able to tell which triggers might fail during the recreation process.</source>
+      <translation type="unfinished">Letos was unable to resolve columns returned by the new view, therefore it won&apos;t be able to tell which triggers might fail during the recreation process.</translation>
     </message>
   </context>
   <context>
@@ -1121,8 +1121,8 @@ Widok pozostanie nienaruszony.</translation>
     </message>
     <message>
       <location filename="../db/queryexecutor.cpp" line="610"/>
-      <source>SQLiteStudio was unable to extract metadata from the query. Results won&apos;t be editable.</source>
-      <translation>SQLiteStudio nie mogło uzyskać metadanych z zapytania. Nie będzie można edytować wyników zapytania.</translation>
+      <source>Letos was unable to extract metadata from the query. Results won&apos;t be editable.</source>
+      <translation type="unfinished">Letos was unable to extract metadata from the query. Results won&apos;t be editable.</translation>
     </message>
   </context>
   <context>
@@ -1214,7 +1214,7 @@ Widok pozostanie nienaruszony.</translation>
       <location filename="../sqlhistorymodel.cpp" line="40"/>
       <source>SQL</source>
       <comment>sql history header</comment>
-      <translation>SQL</translation>
+      <translation type="unfinished">SQL</translation>
     </message>
   </context>
   <context>

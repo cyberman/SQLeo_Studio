@@ -5,8 +5,8 @@
     <name>QObject</name>
     <message>
       <location filename="../main.cpp" line="52"/>
-      <source>GUI interface to SQLiteStudio, a SQLite manager.</source>
-      <translation>Interfaccia GUI per SQLiteStudio, un gestore SQLite.</translation>
+      <source>GUI interface to Letos, a SQLite manager.</source>
+      <translation type="unfinished">GUI interface to Letos, a SQLite manager.</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="57"/>
@@ -56,17 +56,7 @@
     <message>
       <location filename="../main.cpp" line="64"/>
       <source>database</source>
-      <translation>database</translation>
-    </message>
-    <message>
-      <location filename="../main.cpp" line="65"/>
-      <source>Enables debugging of SQLiteStudio&apos;s query executor.</source>
-      <translation>Abilita il debug di SQLiteStudio&apos;s query executor.</translation>
-    </message>
-    <message>
-      <location filename="../main.cpp" line="66"/>
-      <source>Lists plugins installed in the SQLiteStudio and quits.</source>
-      <translation>Elenca i plugin installati in SQLiteStudio ed esce.</translation>
+      <translation type="unfinished">database</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="56"/>
@@ -79,9 +69,19 @@
       <translation type="unfinished">settings file</translation>
     </message>
     <message>
+      <location filename="../main.cpp" line="65"/>
+      <source>Enables debugging of Letos&apos;s query executor.</source>
+      <translation type="unfinished">Enables debugging of Letos&apos;s query executor.</translation>
+    </message>
+    <message>
+      <location filename="../main.cpp" line="66"/>
+      <source>Lists plugins installed in the Letos and quits.</source>
+      <translation type="unfinished">Lists plugins installed in the Letos and quits.</translation>
+    </message>
+    <message>
       <location filename="../main.cpp" line="79"/>
       <source>file</source>
-      <translation>file</translation>
+      <translation type="unfinished">file</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="79"/>

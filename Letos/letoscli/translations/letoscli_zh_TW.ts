@@ -194,8 +194,8 @@
     </message>
     <message>
       <location filename="../commands/clicommanddblist.cpp" line="74"/>
-      <source>Prints list of databases registered in the SQLiteStudio. Each database on the list can be in open or closed state and %1 tells you that. The current working database (aka default database) is also marked on the list with &apos;*&apos; at the start of its name. See help for %2 command to learn about the default database.</source>
-      <translation>列出在 SQLiteStudio 中註冊的資料庫的清單。清單中的每個資料庫都可以處於開啟或關閉狀態，用 %1 檢視狀態。 當前工作資料庫(又名預設資料庫)也在清單中，在它名字的開頭用&apos;*&apos;標記。請參閱 %2 命令的幫助以瞭解預設資料庫。</translation>
+      <source>Prints list of databases registered in the Letos. Each database on the list can be in open or closed state and %1 tells you that. The current working database (aka default database) is also marked on the list with &apos;*&apos; at the start of its name. See help for %2 command to learn about the default database.</source>
+      <translation type="unfinished">Prints list of databases registered in the Letos. Each database on the list can be in open or closed state and %1 tells you that. The current working database (aka default database) is also marked on the list with &apos;*&apos; at the start of its name. See help for %2 command to learn about the default database.</translation>
     </message>
   </context>
   <context>
@@ -309,18 +309,18 @@ You can pass &lt;pattern&gt; with wildcard characters to filter output.</source>
     </message>
     <message>
       <location filename="../commands/clicommandhelp.cpp" line="21"/>
-      <source>Use %1 to learn about certain commands supported by the command line interface (CLI) of the SQLiteStudio.
+      <source>Use %1 to learn about certain commands supported by the command line interface (CLI) of the Letos.
 To see list of supported commands, type %2 without any arguments.
 
 When passing &lt;command&gt; name, you can skip special prefix character (&apos;%3&apos;).
 
 You can always execute any command with exactly single &apos;--help&apos; option to see help for that command. It&apos;s an alternative for typing: %1 &lt;command&gt;.</source>
-      <translation>使用 %1 瞭解 SQLiteStudio 的命令列介面(CLI)所支援的特定命令。
-輸入 %2 不帶任何引數來檢視支援的命令清單。
+      <translation type="unfinished">Use %1 to learn about certain commands supported by the command line interface (CLI) of the Letos.
+To see list of supported commands, type %2 without any arguments.
 
-傳入&lt;命令&gt;名稱時，您可以跳過特殊的字首字元(&apos;%3&apos;)。
+When passing &lt;command&gt; name, you can skip special prefix character (&apos;%3&apos;).
 
-您可以為任何命令指定 &apos;--help&apos; 選項並執行來檢視特定命令的幫助。另一種方法：%1 &lt;命令&gt;。</translation>
+You can always execute any command with exactly single &apos;--help&apos; option to see help for that command. It&apos;s an alternative for typing: %1 &lt;command&gt;.</translation>
     </message>
     <message>
       <location filename="../commands/clicommandhelp.cpp" line="33"/>
@@ -589,7 +589,7 @@ Call %2 to see list of all databases.</source>
       <location filename="../commands/clicommandsql.cpp" line="84"/>
       <source>sql</source>
       <comment>CLI command syntax</comment>
-      <translation>sql</translation>
+      <translation type="unfinished">sql</translation>
     </message>
     <message>
       <location filename="../commands/clicommandsql.cpp" line="133"/>
@@ -695,14 +695,14 @@ When the -s option is given, then system tables are also listed.</source>
     </message>
     <message>
       <location filename="../commands/clicommandtree.cpp" line="136"/>
-      <source>Prints all objects (tables, indexes, triggers and views) that are in the database as a tree. The tree is very similar to the one that you can see in GUI client of the SQLiteStudio.
+      <source>Prints all objects (tables, indexes, triggers and views) that are in the database as a tree. The tree is very similar to the one that you can see in GUI client of the Letos.
 When -c option is given, then also columns will be listed under each table.
 When -s option is given, then also system objects will be printed (sqlite_* tables, autoincrement indexes, etc).
 The database argument is optional and if provided, then only given database will be printed. This is not a registered database name, but instead it&apos;s an internal SQLite database name, like &apos;main&apos;, &apos;temp&apos;, or any attached database name. To print tree for other registered database, call %1 first to switch the working database, and then use %2 command.</source>
-      <translation>列出資料庫中的所有物件(表、索引、觸發器和檢視)為一個樹。此樹非常類似您在 SQLiteStudio 的圖形使用者介面(GUI)版本中看到的效果。
-提供 -c 選項時，會同時在每個表下列出它的列。
-提供 -s 選項時，會同時列出系統物件(sqlite_* 表、自動增量索引等)。
-資料庫引數為可選，如果提供則僅列出所給出的資料庫。這不是資料庫在清單中註冊的名稱，而是其在 SQLIte 資料庫內部的名稱，例如 &apos;main&apos;、&apos;temp&apos; 等。如果要列出清單中註冊的其他資料庫，先呼叫 %1 切換當前操作的資料庫，然後再使用 %2 命令。</translation>
+      <translation type="unfinished">Prints all objects (tables, indexes, triggers and views) that are in the database as a tree. The tree is very similar to the one that you can see in GUI client of the Letos.
+When -c option is given, then also columns will be listed under each table.
+When -s option is given, then also system objects will be printed (sqlite_* tables, autoincrement indexes, etc).
+The database argument is optional and if provided, then only given database will be printed. This is not a registered database name, but instead it&apos;s an internal SQLite database name, like &apos;main&apos;, &apos;temp&apos;, or any attached database name. To print tree for other registered database, call %1 first to switch the working database, and then use %2 command.</translation>
     </message>
   </context>
   <context>
@@ -798,11 +798,6 @@ Expected one of: %2</source>
       <translation>字串</translation>
     </message>
     <message>
-      <location filename="../main.cpp" line="30"/>
-      <source>Command line interface to SQLiteStudio, a SQLite manager.</source>
-      <translation>SQLite 管理工具 SQLiteStudio 的命令列介面。</translation>
-    </message>
-    <message>
       <location filename="../main.cpp" line="47"/>
       <source>Enables debug messages on standard error output.</source>
       <translation>啟用除錯訊息輸出到標準錯誤輸出。</translation>
@@ -813,14 +808,14 @@ Expected one of: %2</source>
       <translation>啟用 SQL 程式碼助手的 Lemon 解析器除錯訊息。</translation>
     </message>
     <message>
-      <location filename="../main.cpp" line="49"/>
-      <source>Lists plugins installed in the SQLiteStudio and quits.</source>
-      <translation>列出 SQLiteStudio 中已安裝的外掛然後退出。</translation>
+      <location filename="../main.cpp" line="30"/>
+      <source>Command line interface to Letos, a SQLite manager.</source>
+      <translation type="unfinished">Command line interface to Letos, a SQLite manager.</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="35"/>
-      <source>Executes provided SQL file (including all rich features of SQLiteStudio&apos;s query executor) on the specified database file and quits. The database parameter becomes mandatory if this option is used.</source>
-      <translation type="unfinished">Executes provided SQL file (including all rich features of SQLiteStudio&apos;s query executor) on the specified database file and quits. The database parameter becomes mandatory if this option is used.</translation>
+      <source>Executes provided SQL file (including all rich features of Letos&apos;s query executor) on the specified database file and quits. The database parameter becomes mandatory if this option is used.</source>
+      <translation type="unfinished">Executes provided SQL file (including all rich features of Letos&apos;s query executor) on the specified database file and quits. The database parameter becomes mandatory if this option is used.</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="38"/>
@@ -846,6 +841,11 @@ Expected one of: %2</source>
       <location filename="../main.cpp" line="45"/>
       <source>When used together with -e option, the execution will not stop on an error, but rather continue until the end, ignoring errors.</source>
       <translation type="unfinished">When used together with -e option, the execution will not stop on an error, but rather continue until the end, ignoring errors.</translation>
+    </message>
+    <message>
+      <location filename="../main.cpp" line="49"/>
+      <source>Lists plugins installed in the Letos and quits.</source>
+      <translation type="unfinished">Lists plugins installed in the Letos and quits.</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="52"/>

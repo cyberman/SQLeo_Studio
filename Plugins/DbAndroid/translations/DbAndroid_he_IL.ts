@@ -29,11 +29,6 @@
       <translation>שימוש בגשר ניפוי־תקלים אנדרואיד: %1</translation>
     </message>
     <message>
-      <location filename="../dbandroid.cpp" line="183"/>
-      <source>You can grab Android connector JAR file from Tools menu. It&apos;s required for 2 of 3 connections supported by the Android plugin. For more details read plugin&apos;s documentation on &lt;a href=&quot;%1&quot;&gt;SQLiteStudio&apos;s wiki page.&lt;/a&gt;</source>
-      <translation>לא ניתן לבחור קובץ מחבר אנדרואיד JAR מתפריט כלים. נדרש עבור שנים מתוך שלושת המחברים בהם מתקע אנדרואיד תומך. לפרטים נוספים נא לקרא את תיעוד המתקע בעמוד הוויקי &lt;a href=&quot;%1&quot;&gt;SQLiteStudio.&lt;/a&gt;</translation>
-    </message>
-    <message>
       <location filename="../dbandroid.cpp" line="198"/>
       <source>Could not find Android Debug Bridge application. &lt;a href=&quot;%1&quot;&gt;Click here&lt;/a&gt; to point out the location of the ADB application, otherwise the %2 plugin will not support USB cable connections, only the network connection.</source>
       <translation type="unfinished">Could not find Android Debug Bridge application. &lt;a href=&quot;%1&quot;&gt;Click here&lt;/a&gt; to point out the location of the ADB application, otherwise the %2 plugin will not support USB cable connections, only the network connection.</translation>
@@ -57,6 +52,11 @@
       <location filename="../dbandroid.cpp" line="216"/>
       <source>Invalid ADB</source>
       <translation>ADB לא תקין</translation>
+    </message>
+    <message>
+      <location filename="../dbandroid.cpp" line="183"/>
+      <source>You can grab Android connector JAR file from Tools menu. It&apos;s required for 2 of 3 connections supported by the Android plugin. For more details read plugin&apos;s documentation on &lt;a href=&quot;%1&quot;&gt;Letos&apos;s wiki page.&lt;/a&gt;</source>
+      <translation type="unfinished">You can grab Android connector JAR file from Tools menu. It&apos;s required for 2 of 3 connections supported by the Android plugin. For more details read plugin&apos;s documentation on &lt;a href=&quot;%1&quot;&gt;Letos&apos;s wiki page.&lt;/a&gt;</translation>
     </message>
     <message>
       <location filename="../dbandroid.cpp" line="219"/>
@@ -185,8 +185,8 @@
     </message>
     <message>
       <location filename="../dbandroidpathdialog.ui" line="127"/>
-      <source>&lt;p&gt;This is password configured in the SQLiteStudio service being embeded in the Android application.&lt;/p&gt;</source>
-      <translation type="unfinished">&lt;p&gt;This is password configured in the SQLiteStudio service being embeded in the Android application.&lt;/p&gt;</translation>
+      <source>&lt;p&gt;This is password configured in the Letos service being embeded in the Android application.&lt;/p&gt;</source>
+      <translation type="unfinished">&lt;p&gt;This is password configured in the Letos service being embeded in the Android application.&lt;/p&gt;</translation>
     </message>
     <message>
       <location filename="../dbandroidpathdialog.ui" line="140"/>

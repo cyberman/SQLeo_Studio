@@ -4,19 +4,9 @@
   <context>
     <name>AboutDialog</name>
     <message>
-      <location filename="../dialogs/aboutdialog.ui" line="14"/>
-      <source>About SQLiteStudio and licenses</source>
-      <translation>关于 SQLiteStudio 和许可协议</translation>
-    </message>
-    <message>
       <location filename="../dialogs/aboutdialog.ui" line="24"/>
       <source>About</source>
       <translation>关于</translation>
-    </message>
-    <message>
-      <location filename="../dialogs/aboutdialog.ui" line="30"/>
-      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:11pt; font-weight:600;&quot;&gt;SQLiteStudio v%1&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;Free, open-source, cross-platform SQLite database manager.&lt;br/&gt;&lt;a href=&quot;https://sqlitestudio.pl&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://sqlitestudio.pl&lt;/span&gt;&lt;/a&gt;&lt;br/&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;%2&lt;br/&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;Author and active maintainer:&lt;br/&gt;SalSoft (&lt;a href=&quot;https://salsoft.com.pl&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://salsoft.com.pl&lt;/span&gt;&lt;/a&gt;)&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:11pt; font-weight:600;&quot;&gt;SQLiteStudio v%1&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;自由、开源、跨平台的 SQLite 数据库管理工具。&lt;br/&gt;&lt;a href=&quot;https://sqlitestudio.pl&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://sqlitestudio.pl&lt;/span&gt;&lt;/a&gt;&lt;br/&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;%2&lt;br/&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;作者和活跃维护人：&lt;br/&gt;SalSoft (&lt;a href=&quot;https://salsoft.com.pl&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://salsoft.com.pl&lt;/span&gt;&lt;/a&gt;)&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/aboutdialog.ui" line="41"/>
@@ -47,6 +37,16 @@
       <location filename="../dialogs/aboutdialog.ui" line="140"/>
       <source>Plugin directories</source>
       <translation>插件目录</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/aboutdialog.ui" line="14"/>
+      <source>About Letos and licenses</source>
+      <translation>关于 Letos 和许可证</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/aboutdialog.ui" line="30"/>
+      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:11pt; font-weight:600;&quot;&gt;Letos v%1&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;Free, open-source, cross-platform SQLite database manager.&lt;br/&gt;&lt;a href=&quot;https://letos.org&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://letos.org&lt;/span&gt;&lt;/a&gt;&lt;br/&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;%2&lt;br/&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;Author and active maintainer:&lt;br/&gt;SalSoft (&lt;a href=&quot;https://salsoft.com.pl&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://salsoft.com.pl&lt;/span&gt;&lt;/a&gt;)&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:11pt; font-weight:600;&quot;&gt;Letos v%1&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;免费、开源、跨平台的 SQLite 数据库管理器。&lt;br/&gt;&lt;a href=&quot;https://letos.org&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://letos.org&lt;/span&gt;&lt;/a&gt;&lt;br/&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;%2&lt;br/&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;作者和活跃维护者：&lt;br/&gt;SalSoft (&lt;a href=&quot;https://salsoft.com.pl&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://salsoft.com.pl&lt;/span&gt;&lt;/a&gt;)&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/aboutdialog.ui" line="75"/>
@@ -192,12 +192,12 @@
     <message>
       <location filename="../windows/codesnippeteditor.cpp" line="85"/>
       <source>Import snippets from file</source>
-      <translation type="unfinished">Import snippets from file</translation>
+      <translation>从文件中导入代码片段</translation>
     </message>
     <message>
       <location filename="../windows/codesnippeteditor.cpp" line="86"/>
       <source>Export snippets to file</source>
-      <translation type="unfinished">Export snippets to file</translation>
+      <translation>导出代码片段到文件</translation>
     </message>
     <message>
       <location filename="../windows/codesnippeteditor.cpp" line="87"/>
@@ -225,12 +225,12 @@
     <message>
       <location filename="../windows/codesnippeteditormodel.cpp" line="253"/>
       <source>Name:</source>
-      <translation type="unfinished">Name:</translation>
+      <translation>名称：</translation>
     </message>
     <message>
       <location filename="../windows/codesnippeteditormodel.cpp" line="254"/>
       <source>Hotkey:</source>
-      <translation type="unfinished">Hotkey:</translation>
+      <translation>热键：</translation>
     </message>
   </context>
   <context>
@@ -238,12 +238,12 @@
     <message>
       <location filename="../codesnippetspanel.ui" line="17"/>
       <source>Code Snippets</source>
-      <translation type="unfinished">Code Snippets</translation>
+      <translation>代码片段</translation>
     </message>
     <message>
       <location filename="../codesnippetspanel.ui" line="31"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Drag to the SQL editor to use the snippet.&lt;/p&gt;&lt;p&gt;Drop any code (or a text) here to add a new code snippet.&lt;/p&gt;&lt;p&gt;Double-click to edit the snippet.&lt;/p&gt;&lt;p&gt;Code snippets are also available in Code Assistant. Invoke it twice to show snippets.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Drag to the SQL editor to use the snippet.&lt;/p&gt;&lt;p&gt;Drop any code (or a text) here to add a new code snippet.&lt;/p&gt;&lt;p&gt;Double-click to edit the snippet.&lt;/p&gt;&lt;p&gt;Code snippets are also available in Code Assistant. Invoke it twice to show snippets.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;将代码片段拖到 SQL 编辑器中即可使用。&lt;/p&gt;&lt;p&gt;在此处放置任何代码（或文本）即可添加新的代码片段。&lt;/p&gt;&lt;p&gt;双击即可编辑代码片段。&lt;/p&gt;&lt;p&gt;代码片段也可在代码助手中使用。调用两次代码助手即可显示代码片段。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../codesnippetspanel.ui" line="57"/>
@@ -253,12 +253,12 @@
     <message>
       <location filename="../codesnippetspanel.cpp" line="69"/>
       <source>Add code snippet</source>
-      <translation type="unfinished">Add code snippet</translation>
+      <translation>添加代码片段</translation>
     </message>
     <message>
       <location filename="../codesnippetspanel.cpp" line="69"/>
       <source>Enter a name for the new code snippet:</source>
-      <translation type="unfinished">Enter a name for the new code snippet:</translation>
+      <translation>请输入新代码片段的名称：</translation>
     </message>
     <message>
       <location filename="../codesnippetspanel.cpp" line="97"/>
@@ -351,12 +351,12 @@
     <message>
       <location filename="../windows/collationseditor.cpp" line="67"/>
       <source>Import collations from file</source>
-      <translation type="unfinished">Import collations from file</translation>
+      <translation>从文件导入排序</translation>
     </message>
     <message>
       <location filename="../windows/collationseditor.cpp" line="68"/>
       <source>Export collations to file</source>
-      <translation type="unfinished">Export collations to file</translation>
+      <translation>导出排序到文件</translation>
     </message>
     <message>
       <location filename="../windows/collationseditor.cpp" line="69"/>
@@ -817,7 +817,7 @@
     <message>
       <location filename="../constraints/columnforeignkeypanel.cpp" line="56"/>
       <source>The referenced column should be a PRIMARY KEY or UNIQUE.</source>
-      <translation type="unfinished">The referenced column should be a PRIMARY KEY or UNIQUE.</translation>
+      <translation>引用的列应该是主键或唯一键。</translation>
     </message>
     <message>
       <location filename="../constraints/columnforeignkeypanel.cpp" line="162"/>
@@ -924,12 +924,12 @@
     <message>
       <location filename="../completer/completerwindow.cpp" line="95"/>
       <source>Press / to filter snippets</source>
-      <translation type="unfinished">Press / to filter snippets</translation>
+      <translation>按 / 键筛选片段</translation>
     </message>
     <message>
       <location filename="../completer/completerwindow.cpp" line="95"/>
       <source>Press / to use hotkeys</source>
-      <translation type="unfinished">Press / to use hotkeys</translation>
+      <translation>按 / 键使用快捷键</translation>
     </message>
     <message>
       <location filename="../completer/completerwindow.cpp" line="310"/>
@@ -1209,11 +1209,6 @@
       <translation>General.UseLfForMultilineEditors</translation>
     </message>
     <message>
-      <location filename="../dialogs/configdialog.ui" line="523"/>
-      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;When enabled, SQLiteStudio automatically switches to scientific notation for very small real numbers (e.g. &lt;span style=&quot; font-style:italic;&quot;&gt;5.3e-21&lt;/span&gt;).&lt;br/&gt;Decimal notation is used for values whose magnitude allows a readable decimal representation.&lt;/p&gt;&lt;p&gt;When disabled, real numbers are always displayed using decimal notation, even if this results in very long fractional parts.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;启用后，SQLiteStudio 会自动将非常小的实数（例如 &lt;span style=&quot; font-style:italic;&quot;&gt;5.3e-21&lt;/span&gt;).&lt;br/&gt;）转换为科学计数法。&lt;/p&gt;&lt;p&gt;对于数值大小允许以可读的十进制表示的值，则使用十进制表示法。禁用后，实数始终以十进制表示法显示，即使这会导致小数部分非常长。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
       <location filename="../dialogs/configdialog.ui" line="526"/>
       <source>Use scientific notation for very small real numbers in the grid view</source>
       <translation>在网格视图中，对于非常小的实数，请使用科学计数法。</translation>
@@ -1262,11 +1257,6 @@
       <location filename="../dialogs/configdialog.ui" line="608"/>
       <source>Keep NULL value when entering empty value</source>
       <translation>当输入空值时保持 NULL 值</translation>
-    </message>
-    <message>
-      <location filename="../dialogs/configdialog.ui" line="592"/>
-      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If query results contain dozens (or hundreds) of columns, it is more likely that it will exhaust free memory of your computer by loading several gigabytes of data at once. SQLiteStudio may try to limit number of results displayed on one page in such cases to protect your computer. If you know that you don&apos;t work with big values in database, you can disable this limit and you will always see as many rows as defined per page.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;如果查询结果包含数十乃至上百个列，则加载可能占用数个 GB 的空闲内存。SQLiteStudio 在这种情况下可能限制一页上显示的结果数量以保护您的计算机。如果您了解自己不会在如此大的数据库上作业，则可以禁用此限制以始终在一页上看到大量的行。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/configdialog.ui" line="595"/>
@@ -1378,12 +1368,6 @@
       <location filename="../dialogs/configdialog.ui" line="1375"/>
       <source>Number of queries kept in the history.</source>
       <translation>查询历史记录数量。</translation>
-    </message>
-    <message>
-      <location filename="../dialogs/configdialog.ui" line="1388"/>
-      <location filename="../dialogs/configdialog.ui" line="1398"/>
-      <source>&lt;p&gt;Maximum number of query parameters (:param, @param, $param, ?) stored in history. When you re-use parameter with the same name/position, SQLiteStudio will pre-initialize it with most recent memorized value (you will still be able to change it). Value of 1000 should be sufficient.&lt;/p&gt;</source>
-      <translation>&lt;p&gt;历史记录中存储查询参数（:param, @param, $param, ?）的最大数量。当您重新在同一名称/位置下使用参数时，SQLiteStudio 将使用最近记忆的值预填充初始化它（仍可修改）。值 1000 应已足够。&lt;/p&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/configdialog.ui" line="1305"/>
@@ -1568,17 +1552,17 @@
     <message>
       <location filename="../dialogs/configdialog.ui" line="363"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Shows data type next to the column when Columns node is expanded.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Shows data type next to the column when Columns node is expanded.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;展开“列”节点时，在列旁边显示数据类型。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/configdialog.ui" line="366"/>
       <source>Display column data types</source>
-      <translation type="unfinished">Display column data types</translation>
+      <translation>显示列数据类型</translation>
     </message>
     <message>
       <location filename="../dialogs/configdialog.ui" line="369"/>
       <source>DbList.ShowColumnTypeLabels</source>
-      <translation type="unfinished">DbList.ShowColumnTypeLabels</translation>
+      <translation>DbList.ShowColumnTypeLabels</translation>
     </message>
     <message>
       <location filename="../dialogs/configdialog.ui" line="376"/>
@@ -1646,88 +1630,98 @@
       <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;突出显示光标下的查询 - 使用 &lt;span style=&quot; font-style:italic;&quot;&gt;执行查询&lt;/span&gt;时将执行的相同查询。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
+      <location filename="../dialogs/configdialog.ui" line="523"/>
+      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;When enabled, Letos automatically switches to scientific notation for very small real numbers (e.g. &lt;span style=&quot; font-style:italic;&quot;&gt;5.3e-21&lt;/span&gt;).&lt;br/&gt;Decimal notation is used for values whose magnitude allows a readable decimal representation.&lt;/p&gt;&lt;p&gt;When disabled, real numbers are always displayed using decimal notation, even if this results in very long fractional parts.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;启用后，Letos 会自动将非常小的实数（例如 &lt;span style=&quot; font-style:italic;&quot;&gt;5.3e-21&lt;/span&gt;）转换为科学计数法。&lt;br/&gt;对于数值大小允许以可读的十进制表示的值，则使用十进制表示法。&lt;/p&gt;&lt;p&gt;禁用后，实数始终以十进制表示法显示，即使这会导致小数部分非常长。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/configdialog.ui" line="592"/>
+      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If query results contain dozens (or hundreds) of columns, it is more likely that it will exhaust free memory of your computer by loading several gigabytes of data at once. Letos may try to limit number of results displayed on one page in such cases to protect your computer. If you know that you don&apos;t work with big values in database, you can disable this limit and you will always see as many rows as defined per page.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;如果查询结果包含数十列（甚至数百列），则很可能一次性加载数 GB 的数据，从而耗尽计算机的可用内存。在这种情况下，Letos 可能会尝试限制每页显示的结果数量，以保护您的计算机。如果您确定数据库中的数据量不大，则可以禁用此限制，这样您始终可以看到每页定义的行数。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
       <location filename="../dialogs/configdialog.ui" line="691"/>
       <source>Column header actions</source>
-      <translation type="unfinished">Column header actions</translation>
+      <translation>列标题操作</translation>
     </message>
     <message>
       <location filename="../dialogs/configdialog.ui" line="697"/>
       <source>Single-click selects column data; double-click sorts by column</source>
-      <translation type="unfinished">Single-click selects column data; double-click sorts by column</translation>
+      <translation>单击选择列数据；双击按列排序</translation>
     </message>
     <message>
       <location filename="../dialogs/configdialog.ui" line="700"/>
       <location filename="../dialogs/configdialog.ui" line="713"/>
       <source>General.SingleColumnClickSort</source>
-      <translation type="unfinished">General.SingleColumnClickSort</translation>
+      <translation>General.SingleColumnClickSort</translation>
     </message>
     <message>
       <location filename="../dialogs/configdialog.ui" line="710"/>
       <source>Single-click sorts by column; Alt+click selects column data</source>
-      <translation type="unfinished">Single-click sorts by column; Alt+click selects column data</translation>
+      <translation>单击按列排序；按住 Alt 键并单击选择列数据</translation>
     </message>
     <message>
       <location filename="../dialogs/configdialog.ui" line="1141"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;When user manually closes the Status panel, this option makes sure that if any new message is printed in the Status panel it will be reopened. If it&apos;s disabled, then Status panel can only be open manually by the user from the &amp;quot;View&amp;quot; menu.&lt;/p&gt;&lt;p&gt;You can always hide the Status panel with the Esc key.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;When user manually closes the Status panel, this option makes sure that if any new message is printed in the Status panel it will be reopened. If it&apos;s disabled, then Status panel can only be open manually by the user from the &amp;quot;View&amp;quot; menu.&lt;/p&gt;&lt;p&gt;You can always hide the Status panel with the Esc key.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;当用户手动关闭状态面板时，此选项可确保状态面板中如有新消息打印，则会自动重新打开。如果此选项被禁用，则用户只能通过“视图”菜单手动打开状态面板。&lt;/p&gt;&lt;p&gt;您始终可以使用 Esc 键隐藏状态面板。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/configdialog.ui" line="1154"/>
       <source>Older status messages</source>
-      <translation type="unfinished">Older status messages</translation>
+      <translation>旧的状态消息</translation>
     </message>
     <message>
       <location filename="../dialogs/configdialog.ui" line="1160"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Older status messages are kept unchanged.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Older status messages are kept unchanged.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;旧的状态消息保持不变。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/configdialog.ui" line="1163"/>
       <source>Keep messages</source>
-      <translation type="unfinished">Keep messages</translation>
+      <translation>保留消息</translation>
     </message>
     <message>
       <location filename="../dialogs/configdialog.ui" line="1166"/>
       <location filename="../dialogs/configdialog.ui" line="1182"/>
       <location filename="../dialogs/configdialog.ui" line="1198"/>
       <source>General.StatusFieldMsgFadingMode</source>
-      <translation type="unfinished">General.StatusFieldMsgFadingMode</translation>
+      <translation>General.StatusFieldMsgFadingMode</translation>
     </message>
     <message>
       <location filename="../dialogs/configdialog.ui" line="1176"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Older status messages remain visible, but are visually dimmed to make recent messages stand out.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Older status messages remain visible, but are visually dimmed to make recent messages stand out.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;旧的状态消息仍然可见，但会变暗，以便突出显示最新消息。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/configdialog.ui" line="1179"/>
       <source>Dim older messages</source>
-      <translation type="unfinished">Dim older messages</translation>
+      <translation>旧消息变暗</translation>
     </message>
     <message>
       <location filename="../dialogs/configdialog.ui" line="1192"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Older status messages are automatically removed from the status field.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Older status messages are automatically removed from the status field.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;较旧的状态消息将自动从状态字段中删除。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/configdialog.ui" line="1195"/>
       <source>Remove older messages</source>
-      <translation type="unfinished">Remove older messages</translation>
+      <translation>删除旧消息</translation>
     </message>
     <message>
       <location filename="../dialogs/configdialog.ui" line="1237"/>
       <location filename="../dialogs/configdialog.ui" line="1253"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specifies the maximum number of decimal places shown for query execution time. Up to 9 digits (nanoseconds) can be configured. Trailing zeros are automatically trimmed.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specifies the maximum number of decimal places shown for query execution time. Up to 9 digits (nanoseconds) can be configured. Trailing zeros are automatically trimmed.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;指定查询执行时间显示的最大小数位数。最多可配置 9 位（纳秒）。末尾的零会自动去除。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/configdialog.ui" line="1240"/>
       <source>Execution time precision (decimal places)</source>
-      <translation type="unfinished">Execution time precision (decimal places)</translation>
+      <translation>执行时间精度（小数位数）</translation>
     </message>
     <message>
       <location filename="../dialogs/configdialog.ui" line="1259"/>
       <source>General.SqlEditorExecTimePrecision</source>
-      <translation type="unfinished">General.SqlEditorExecTimePrecision</translation>
+      <translation>General.SqlEditorExecTimePrecision</translation>
     </message>
     <message>
       <location filename="../dialogs/configdialog.ui" line="1279"/>
@@ -1742,17 +1736,17 @@
     <message>
       <location filename="../dialogs/configdialog.ui" line="1337"/>
       <source>When enabled, invoking code completion in an empty editor shows code snippets first instead of syntax suggestions. Invoking code completion again switches to syntax suggestions (and vice versa).</source>
-      <translation type="unfinished">When enabled, invoking code completion in an empty editor shows code snippets first instead of syntax suggestions. Invoking code completion again switches to syntax suggestions (and vice versa).</translation>
+      <translation>启用此功能后，在空白编辑器中调用代码补全功能时，会首先显示代码片段而不是语法建议。再次调用代码补全功能则会切换回语法建议（反之亦然）。</translation>
     </message>
     <message>
       <location filename="../dialogs/configdialog.ui" line="1340"/>
       <source>Prefer snippets in empty editor</source>
-      <translation type="unfinished">Prefer snippets in empty editor</translation>
+      <translation>优先在空白编辑器中使用代码片段</translation>
     </message>
     <message>
       <location filename="../dialogs/configdialog.ui" line="1343"/>
       <source>General.SqlEditorSnippetsIfEmpty</source>
-      <translation type="unfinished">General.SqlEditorSnippetsIfEmpty</translation>
+      <translation>General.SqlEditorSnippetsIfEmpty</translation>
     </message>
     <message>
       <location filename="../dialogs/configdialog.ui" line="1353"/>
@@ -1763,6 +1757,12 @@
       <location filename="../dialogs/configdialog.ui" line="1362"/>
       <source>Query history size:</source>
       <translation>查询历史记录大小：</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/configdialog.ui" line="1388"/>
+      <location filename="../dialogs/configdialog.ui" line="1398"/>
+      <source>&lt;p&gt;Maximum number of query parameters (:param, @param, $param, ?) stored in history. When you re-use parameter with the same name/position, Letos will pre-initialize it with most recent memorized value (you will still be able to change it). Value of 1000 should be sufficient.&lt;/p&gt;</source>
+      <translation>&lt;p&gt;历史记录中存储的查询参数（:param、@param、$param、?）的最大数量。当您重复使用名称/位置相同的参数时，Letos 会使用最近一次记忆的值预先初始化它（您仍然可以更改它）。1000 这个值应该足够了。&lt;/p&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/configdialog.ui" line="1505"/>
@@ -2207,8 +2207,8 @@
     <name>CssDebugDialog</name>
     <message>
       <location filename="../dialogs/cssdebugdialog.ui" line="14"/>
-      <source>SQLiteStudio CSS console</source>
-      <translation>SQLiteStudio CSS 控制台</translation>
+      <source>Letos CSS console</source>
+      <translation>Letos CSS 控制台</translation>
     </message>
   </context>
   <context>
@@ -2293,12 +2293,12 @@
       <location filename="../dataview.cpp" line="527"/>
       <source>Rows available on current page: %1 - %2</source>
       <comment>data view</comment>
-      <translation type="unfinished">Rows available on current page: %1 - %2</translation>
+      <translation>当前页码可用行数：%1 - %2</translation>
     </message>
     <message>
       <location filename="../dataview.cpp" line="804"/>
       <source>Sum: %1</source>
-      <translation type="unfinished">Sum: %1</translation>
+      <translation>总计：%1</translation>
     </message>
     <message>
       <location filename="../dataview.cpp" line="956"/>
@@ -2332,12 +2332,12 @@
       <location filename="../dataview.cpp" line="54"/>
       <source>Sum of values in selected cells</source>
       <comment>data view</comment>
-      <translation type="unfinished">Sum of values in selected cells</translation>
+      <translation>所选单元格中的值之和</translation>
     </message>
     <message>
       <location filename="../dataview.cpp" line="104"/>
       <source>Row:</source>
-      <translation type="unfinished">Row:</translation>
+      <translation>行：</translation>
     </message>
     <message>
       <location filename="../dataview.cpp" line="386"/>
@@ -2455,9 +2455,9 @@ Browsing other pages will be possible after the row counting is done.</source>
     </message>
     <message>
       <location filename="../dialogs/dbdialog.ui" line="133"/>
-      <source>&lt;p&gt;Enable this if you want the database to be stored in configuration file and restored every time SQLiteStudio is started.&lt;/p&gt;</source>
+      <source>&lt;p&gt;Enable this if you want the database to be stored in configuration file and restored every time Letos is started.&lt;/p&gt;</source>
       <extracomment>aasfd</extracomment>
-      <translation>&lt;p&gt;启用此选项后，配置文件中将记住该数据库，并在每次启动 SQLiteStudio 时还原（打开）它。&lt;/p&gt;</translation>
+      <translation>&lt;p&gt;如果您希望将数据库存储在配置文件中，并在每次启动 Letos 时恢复数据库，请启用此选项。&lt;/p&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/dbdialog.ui" line="136"/>
@@ -3299,20 +3299,20 @@ Please enter new, unique name, or press &apos;%1&apos; to abort the operation:</
     <message>
       <location filename="../dialogs/ddlpreviewdialog.ui" line="49"/>
       <source>Opens the DDL in the SQL Editor without executing it.</source>
-      <translation type="unfinished">Opens the DDL in the SQL Editor without executing it.</translation>
+      <translation>在 SQL 编辑器中打开 DDL 语句，但不执行它。</translation>
     </message>
     <message>
       <location filename="../dialogs/ddlpreviewdialog.ui" line="52"/>
       <source>Open in editor</source>
-      <translation type="unfinished">Open in editor</translation>
+      <translation>在编辑器打开</translation>
     </message>
   </context>
   <context>
     <name>DebugConsole</name>
     <message>
       <location filename="../debugconsole.ui" line="14"/>
-      <source>SQLiteStudio Debug Console</source>
-      <translation>SQLiteStudio 调试终端</translation>
+      <source>Letos Debug Console</source>
+      <translation>Letos 调试控制台</translation>
     </message>
   </context>
   <context>
@@ -3563,37 +3563,37 @@ Please enter new, unique name, or press &apos;%1&apos; to abort the operation:</
     <message>
       <location filename="../dialogs/execfromfiledialog.ui" line="88"/>
       <source>Exection mode</source>
-      <translation type="unfinished">Exection mode</translation>
+      <translation>执行模式</translation>
     </message>
     <message>
       <location filename="../dialogs/execfromfiledialog.ui" line="94"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Any content that is not valid SQL will cause a statement to fail.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Any content that is not valid SQL will cause a statement to fail.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;任何不符合 SQL 规范的内容都会导致语句执行失败。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/execfromfiledialog.ui" line="104"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Allows dot commands (used by official SQLite CLI application) in the file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Allows dot commands (used by official SQLite CLI application) in the file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;允许在文件中使用点命令（由官方 SQLite CLI 应用程序使用）。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/execfromfiledialog.ui" line="114"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Allows dot commands (used by official SQLite CLI application) in the file and even executes some of them (i.e. .print and .read). All other dot commands are ignored.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Allows dot commands (used by official SQLite CLI application) in the file and even executes some of them (i.e. .print and .read). All other dot commands are ignored.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;允许在文件中使用点命令（官方 SQLite CLI 应用程序使用的命令），甚至会执行其中一些命令（例如 .print 和 .read）。所有其他点命令都将被忽略。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/execfromfiledialog.ui" line="97"/>
       <source>Strict (only SQL content allowed)</source>
-      <translation type="unfinished">Strict (only SQL content allowed)</translation>
+      <translation>严格模式（仅允许 SQL 内容）</translation>
     </message>
     <message>
       <location filename="../dialogs/execfromfiledialog.ui" line="107"/>
       <source>Permissive (dot commands ignored)</source>
-      <translation type="unfinished">Permissive (dot commands ignored)</translation>
+      <translation>宽松模式（忽略点命令）</translation>
     </message>
     <message>
       <location filename="../dialogs/execfromfiledialog.ui" line="117"/>
       <source>Extended (dot commands executed)</source>
-      <translation type="unfinished">Extended (dot commands executed)</translation>
+      <translation>扩展（执行点命令）</translation>
     </message>
     <message>
       <location filename="../dialogs/execfromfiledialog.cpp" line="148"/>
@@ -3618,7 +3618,7 @@ Please enter new, unique name, or press &apos;%1&apos; to abort the operation:</
     <message>
       <location filename="../dialogs/execfromfiledialog.cpp" line="185"/>
       <source>Select a database to execute the SQL file on.</source>
-      <translation type="unfinished">Select a database to execute the SQL file on.</translation>
+      <translation>选择要执行 SQL 文件的数据库。</translation>
     </message>
   </context>
   <context>
@@ -4150,12 +4150,12 @@ Please enter new, unique name, or press &apos;%1&apos; to abort the operation:</
     <message>
       <location filename="../windows/functionseditor.cpp" line="72"/>
       <source>Import functions from file</source>
-      <translation type="unfinished">Import functions from file</translation>
+      <translation>从文件中导入函数</translation>
     </message>
     <message>
       <location filename="../windows/functionseditor.cpp" line="73"/>
       <source>Export functions to file</source>
-      <translation type="unfinished">Export functions to file</translation>
+      <translation>导出函数到文件</translation>
     </message>
     <message>
       <location filename="../windows/functionseditor.cpp" line="74"/>
@@ -4226,42 +4226,42 @@ Please enter new, unique name, or press &apos;%1&apos; to abort the operation:</
     <message>
       <location filename="../windows/functionseditormodel.cpp" line="401"/>
       <source>all databases</source>
-      <translation type="unfinished">all databases</translation>
+      <translation>所有数据库</translation>
     </message>
     <message>
       <location filename="../windows/functionseditormodel.cpp" line="406"/>
       <source>Function:</source>
-      <translation type="unfinished">Function:</translation>
+      <translation>函数：</translation>
     </message>
     <message>
       <location filename="../windows/functionseditormodel.cpp" line="407"/>
       <source>Type:</source>
-      <translation type="unfinished">Type:</translation>
+      <translation>类型：</translation>
     </message>
     <message>
       <location filename="../windows/functionseditormodel.cpp" line="408"/>
       <source>Deterministic:</source>
-      <translation type="unfinished">Deterministic:</translation>
+      <translation>确定性：</translation>
     </message>
     <message>
       <location filename="../windows/functionseditormodel.cpp" line="408"/>
       <source>Yes</source>
-      <translation type="unfinished">Yes</translation>
+      <translation>是</translation>
     </message>
     <message>
       <location filename="../windows/functionseditormodel.cpp" line="408"/>
       <source>No</source>
-      <translation type="unfinished">No</translation>
+      <translation>否</translation>
     </message>
     <message>
       <location filename="../windows/functionseditormodel.cpp" line="409"/>
       <source>Language:</source>
-      <translation type="unfinished">Language:</translation>
+      <translation>语言：</translation>
     </message>
     <message>
       <location filename="../windows/functionseditormodel.cpp" line="410"/>
       <source>Registered in:</source>
-      <translation type="unfinished">Registered in:</translation>
+      <translation>注册于：</translation>
     </message>
   </context>
   <context>
@@ -4807,10 +4807,15 @@ Please enter new, unique name, or press &apos;%1&apos; to abort the operation:</
       <translation>结构(&amp;S)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="740"/>
+      <location filename="../mainwindow.cpp" line="749"/>
       <source>&amp;View</source>
       <comment>menubar</comment>
       <translation>视图(&amp;V)</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="1334"/>
+      <source>The dropped file appears to be a SQLite 2 database, which is not supported by this Letos version. Last version supporting SQLite 2 was 3.2.1.</source>
+      <translation>丢弃的文件似乎是一个 SQLite 2 数据库，而此 Letos 版本不支持该数据库。最后一个支持 SQLite 2 的版本是 3.2.1。</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="432"/>
@@ -4850,120 +4855,115 @@ Please enter new, unique name, or press &apos;%1&apos; to abort the operation:</
       <translation>帮助(&amp;H)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="677"/>
+      <location filename="../mainwindow.cpp" line="686"/>
       <source>Could not set style: %1</source>
       <comment>main window</comment>
       <translation>未能设置风格：%1</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="914"/>
+      <location filename="../mainwindow.cpp" line="923"/>
       <source>Cannot export, because no export plugin is loaded.</source>
       <translation>无法导出，没有加载导出插件。</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="931"/>
+      <location filename="../mainwindow.cpp" line="940"/>
       <source>Cannot import, because no import plugin is loaded.</source>
       <translation>无法导入，没有加载导入插件。</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="974"/>
+      <location filename="../mainwindow.cpp" line="983"/>
       <source>Rename window</source>
       <translation>重命名窗口</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="974"/>
+      <location filename="../mainwindow.cpp" line="983"/>
       <source>Enter new name for the window:</source>
       <translation>请输入窗口的新名称：</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1076"/>
+      <location filename="../mainwindow.cpp" line="1085"/>
       <source>New updates are available. &lt;a href=&quot;%1&quot;&gt;Click here for details&lt;/a&gt;.</source>
       <translation>有新更新 &lt;a href=&quot;%1&quot;&gt;点此查看更新详情&lt;/a&gt;.</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1082"/>
+      <location filename="../mainwindow.cpp" line="1091"/>
       <source>You&apos;re running the most recent version. No updates are available.</source>
       <translation>您使用的是最新版，不需要更新。</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1166"/>
+      <location filename="../mainwindow.cpp" line="1175"/>
       <source>Toolbar &amp;icons</source>
       <comment>menubar</comment>
       <translation>工具栏图标(&amp;I)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1173"/>
+      <location filename="../mainwindow.cpp" line="1182"/>
       <source>Size: %1%</source>
       <comment>toolbar icons</comment>
       <translation>大小：1%</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1261"/>
+      <location filename="../mainwindow.cpp" line="1270"/>
       <source>Drop files to open them</source>
       <translation>拖放文件以打开这些文件</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1325"/>
-      <source>The dropped file appears to be a SQLite 2 database, which is not supported by this SQLiteStudio version. Last version supporting SQLite 2 was 3.2.1.</source>
-      <translation>丢弃的文件似乎是一个 SQLite 2 数据库，而此 SQLiteStudio 版本不支持该数据库。最后一个支持 SQLite 2 的版本是 3.2.1。</translation>
-    </message>
-    <message>
-      <location filename="../mainwindow.cpp" line="1328"/>
+      <location filename="../mainwindow.cpp" line="1337"/>
       <source>The dropped file type is unsupported: %1 (%2)</source>
       <translation>丢弃的文件类型不受支持：%1 (%2)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1338"/>
+      <location filename="../mainwindow.cpp" line="1347"/>
       <source>SQLite 3 database - add to database list and open</source>
       <translation>SQLite 3 数据库 - 添加到数据库列表并打开</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1340"/>
+      <location filename="../mainwindow.cpp" line="1349"/>
       <source>It may be an encrypted SQLite 3 database. You can try to open it.</source>
       <translation>这可能是一个加密的 SQLite 3 数据库。您可以尝试打开它。</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1342"/>
+      <location filename="../mainwindow.cpp" line="1351"/>
       <source>Empty file, but also empty SQLite 3 database - open as database</source>
       <translation>文件为空，但 SQLite 3 数据库也为空 - 以数据库模式打开</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1344"/>
+      <location filename="../mainwindow.cpp" line="1353"/>
       <source>SQL file - open in SQL Editor</source>
       <translation>SQL 文件 - 在 SQL 编辑器中打开</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1346"/>
+      <location filename="../mainwindow.cpp" line="1355"/>
       <source>Text file - open in SQL Editor</source>
       <translation>文本文件 - 在 SQL 编辑器中打开</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1348"/>
+      <location filename="../mainwindow.cpp" line="1357"/>
       <source>CSV file - import using Import Dialog</source>
       <translation>CSV 文件 - 使用导入对话框导入</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1350"/>
+      <location filename="../mainwindow.cpp" line="1359"/>
       <source>SQLite 2 database - not supported anymore</source>
       <translation>SQLite 2 数据库 - 已停止支持</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1352"/>
+      <location filename="../mainwindow.cpp" line="1361"/>
       <source>Unsupported file type</source>
       <translation>不支持的文件类型</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1402"/>
+      <location filename="../mainwindow.cpp" line="1411"/>
       <source>Database passed in command line parameters (%1) was already on the list under name: %2</source>
       <translation>命令行参数传递的数据库（%1）已在列表中，名为：%2</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1409"/>
+      <location filename="../mainwindow.cpp" line="1418"/>
       <source>Database passed in command line parameters (%1) has been temporarily added to the list under name: %2</source>
       <translation>命令行参数传递的数据库（%1）已临时添加到列表中，名为：%2</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1414"/>
+      <location filename="../mainwindow.cpp" line="1423"/>
       <source>Could not add database %1 to list.</source>
       <translation>未能将数据 %1 添加到列表</translation>
     </message>
@@ -5275,8 +5275,8 @@ Please enter new, unique name, or press &apos;%1&apos; to abort the operation:</
     <name>NewVersionDialog</name>
     <message>
       <location filename="../dialogs/newversiondialog.ui" line="14"/>
-      <source>SQLiteStudio updates</source>
-      <translation>SQLiteStudio 更新</translation>
+      <source>Letos updates</source>
+      <translation>Letos 更新</translation>
     </message>
     <message>
       <location filename="../dialogs/newversiondialog.ui" line="25"/>
@@ -5295,8 +5295,8 @@ Please enter new, unique name, or press &apos;%1&apos; to abort the operation:</
     </message>
     <message>
       <location filename="../dialogs/newversiondialog.ui" line="71"/>
-      <source>Open SQLiteStudio home page.</source>
-      <translation>打开 SQLiteStudio 主页</translation>
+      <source>Open Letos home page.</source>
+      <translation>打开 Letos 的主页。</translation>
     </message>
     <message>
       <location filename="../dialogs/newversiondialog.ui" line="84"/>
@@ -5545,7 +5545,7 @@ Please enter new, unique name, or press &apos;%1&apos; to abort the operation:</
     <message>
       <location filename="../datagrid/sqlqueryview.h" line="27"/>
       <source>Cut cell(s) contents to clipboard</source>
-      <translation type="unfinished">Cut cell(s) contents to clipboard</translation>
+      <translation>复制单元格内容至剪贴板</translation>
     </message>
     <message>
       <location filename="../datagrid/sqlqueryview.h" line="28"/>
@@ -6431,87 +6431,87 @@ find next</source>
       <location filename="../dialogs/settingsimportdialog.ui" line="29"/>
       <location filename="../dialogs/settingsimportdialog.cpp" line="31"/>
       <source>Input JSON file</source>
-      <translation type="unfinished">Input JSON file</translation>
+      <translation>输出 JSON 文件</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsimportdialog.ui" line="26"/>
       <source>JSON file (*.json);;All files (*)</source>
-      <translation type="unfinished">JSON file (*.json);;All files (*)</translation>
+      <translation>JSON 文件 (*.json)；所有文件 (*)</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsimportdialog.ui" line="39"/>
       <source>What to import?</source>
-      <translation type="unfinished">What to import?</translation>
+      <translation>导出什么？</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsimportdialog.ui" line="45"/>
       <source>User-defined SQL functions</source>
-      <translation type="unfinished">User-defined SQL functions</translation>
+      <translation>用户自定义 SQL 函数</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsimportdialog.ui" line="56"/>
       <source>User-defined collation sequences</source>
-      <translation type="unfinished">User-defined collation sequences</translation>
+      <translation>用户自定义排序序列</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsimportdialog.ui" line="67"/>
       <source>User-defined code snippets</source>
-      <translation type="unfinished">User-defined code snippets</translation>
+      <translation>用户自定义代码片段</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsimportdialog.ui" line="78"/>
       <source>Configured SQLite extensions</source>
-      <translation type="unfinished">Configured SQLite extensions</translation>
+      <translation>已配置的 SQLite 扩展</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsimportdialog.ui" line="92"/>
       <source>Import mode</source>
-      <translation type="unfinished">Import mode</translation>
+      <translation>导入模式</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsimportdialog.ui" line="98"/>
       <source>Imports selected items without modifying or removing ones existing in your current configuration.</source>
-      <translation type="unfinished">Imports selected items without modifying or removing ones existing in your current configuration.</translation>
+      <translation>导入选定的项目，而不修改或删除当前配置中已存在的项目。</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsimportdialog.ui" line="101"/>
       <source>Add to existing items</source>
-      <translation type="unfinished">Add to existing items</translation>
+      <translation>添加到现有项目</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsimportdialog.ui" line="111"/>
       <source>Removes all existing items in the selected categories, then imports the new ones from the file. This action cannot be undone!</source>
-      <translation type="unfinished">Removes all existing items in the selected categories, then imports the new ones from the file. This action cannot be undone!</translation>
+      <translation>删除所选类别中的所有现有项目，然后从文件中导入新项目。此操作无法撤销！</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsimportdialog.ui" line="114"/>
       <source>Replace existing items</source>
-      <translation type="unfinished">Replace existing items</translation>
+      <translation>替换现有项目</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsimportdialog.cpp" line="42"/>
       <source>Invalid input file to import: %1</source>
-      <translation type="unfinished">Invalid input file to import: %1</translation>
+      <translation>导入的输入文件无效：%1</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsimportdialog.cpp" line="53"/>
       <source>Selected file does not contain functions to import.</source>
-      <translation type="unfinished">Selected file does not contain functions to import.</translation>
+      <translation>所选文件不包含要导入的函数。</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsimportdialog.cpp" line="62"/>
       <source>Selected file does not contain collation sequences to import.</source>
-      <translation type="unfinished">Selected file does not contain collation sequences to import.</translation>
+      <translation>所选文件不包含要导入的排序序列。</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsimportdialog.cpp" line="70"/>
       <source>Selected file does not contain code snippets to import.</source>
-      <translation type="unfinished">Selected file does not contain code snippets to import.</translation>
+      <translation>所选文件不包含要导入的代码片段。</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsimportdialog.cpp" line="78"/>
       <source>Selected file does not contain SQLite extensions to import.</source>
-      <translation type="unfinished">Selected file does not contain SQLite extensions to import.</translation>
+      <translation>所选文件不包含要导入的 SQLite 扩展名。</translation>
     </message>
   </context>
   <context>
@@ -6755,7 +6755,7 @@ find next</source>
     <message>
       <location filename="../sqleditor.cpp" line="1745"/>
       <source>Ctrl+click to open this table or view</source>
-      <translation type="unfinished">Ctrl+click to open this table or view</translation>
+      <translation>按住 Ctrl 键并单击以打开此表格或视图</translation>
     </message>
   </context>
   <context>
@@ -6949,22 +6949,22 @@ Such deletion will be permanent. Are you sure you want to delete them?</source>
     <message>
       <location filename="../datagrid/sqlquerymodel.cpp" line="2171"/>
       <source>Single-click sorts by the column.&lt;br&gt;Alt+click selects data in the column.</source>
-      <translation type="unfinished">Single-click sorts by the column.&lt;br&gt;Alt+click selects data in the column.</translation>
+      <translation>单击按列排序。&lt;br&gt;按住 Alt 键并单击选择列中的数据。</translation>
     </message>
     <message>
       <location filename="../datagrid/sqlquerymodel.cpp" line="2173"/>
       <source>Single-click selects data in the column.&lt;br&gt;Double-click sorts by the column.</source>
-      <translation type="unfinished">Single-click selects data in the column.&lt;br&gt;Double-click sorts by the column.</translation>
+      <translation>单击选中该列中的数据。&lt;br&gt;双击按该列排序。</translation>
     </message>
     <message>
       <location filename="../datagrid/sqlquerymodel.cpp" line="2178"/>
       <source>Middle-click resets sorting.</source>
-      <translation type="unfinished">Middle-click resets sorting.</translation>
+      <translation>单击鼠标中键可重置排序。</translation>
     </message>
     <message>
       <location filename="../datagrid/sqlquerymodel.cpp" line="2179"/>
       <source>More options are available in the context menu.</source>
-      <translation type="unfinished">More options are available in the context menu.</translation>
+      <translation>上下文菜单中提供了更多选项。</translation>
     </message>
   </context>
   <context>
@@ -7155,7 +7155,7 @@ Such deletion will be permanent. Are you sure you want to delete them?</source>
     <message>
       <location filename="../datagrid/sqlqueryview.cpp" line="1160"/>
       <source>Pin column</source>
-      <translation type="unfinished">Pin column</translation>
+      <translation>固定列</translation>
     </message>
     <message>
       <location filename="../datagrid/sqlqueryview.cpp" line="1187"/>
@@ -7276,12 +7276,12 @@ Such deletion will be permanent. Are you sure you want to delete them?</source>
     <message>
       <location filename="../windows/sqliteextensioneditor.cpp" line="79"/>
       <source>Import extension list from file</source>
-      <translation type="unfinished">Import extension list from file</translation>
+      <translation>从文件导入扩展名列表</translation>
     </message>
     <message>
       <location filename="../windows/sqliteextensioneditor.cpp" line="80"/>
       <source>Export extension list file</source>
-      <translation type="unfinished">Export extension list file</translation>
+      <translation>导出扩展名列表文件</translation>
     </message>
     <message>
       <location filename="../windows/sqliteextensioneditor.cpp" line="81"/>
@@ -7444,7 +7444,7 @@ Such deletion will be permanent. Are you sure you want to delete them?</source>
     <message>
       <location filename="../constraints/tableforeignkeypanel.cpp" line="427"/>
       <source>Referenced column is not PRIMARY KEY or UNIQUE. It may cause issues while inserting or updating data.</source>
-      <translation type="unfinished">Referenced column is not PRIMARY KEY or UNIQUE. It may cause issues while inserting or updating data.</translation>
+      <translation>引用的列不是主键或唯一键。这可能会导致插入或更新数据时出现问题。</translation>
     </message>
     <message>
       <location filename="../constraints/tableforeignkeypanel.cpp" line="450"/>
@@ -8404,6 +8404,16 @@ Do you want to commit the structure, or do you want to go back to the structure 
       <translation>提交修改并浏览数据</translation>
     </message>
     <message>
+      <location filename="../windows/viewwindow.cpp" line="1085"/>
+      <source>The view could not be modified due to internal Letos error. Please report this!</source>
+      <translation>由于 Letos 内部错误，视图无法修改。请报告此错误！</translation>
+    </message>
+    <message>
+      <location filename="../windows/viewwindow.cpp" line="1111"/>
+      <source>The view code could not be parsed properly for execution. This is a Letos&apos;s bug. Please report it.</source>
+      <translation>视图代码无法正确解析执行。这是 Letos 的一个 bug。请提交报告。</translation>
+    </message>
+    <message>
       <location filename="../windows/viewwindow.cpp" line="656"/>
       <source>Go back to structure tab</source>
       <translation>返回结构选项卡</translation>
@@ -8496,16 +8506,6 @@ Are you sure you want to create a view with blank name?</source>
 Details: %1</source>
       <translation>SELECT 语句解析失败。请更正查询并重试。
 详情：%1</translation>
-    </message>
-    <message>
-      <location filename="../windows/viewwindow.cpp" line="1085"/>
-      <source>The view could not be modified due to internal SQLiteStudio error. Please report this!</source>
-      <translation>因 SQLiteStudio 内部错误，无法修改该视图。请报告该问题！</translation>
-    </message>
-    <message>
-      <location filename="../windows/viewwindow.cpp" line="1111"/>
-      <source>The view code could not be parsed properly for execution. This is a SQLiteStudio&apos;s bug. Please report it.</source>
-      <translation>用于执行的视图代码无法正确解析。这是 SQLiteStudio 的 bug，请报告。</translation>
     </message>
     <message>
       <location filename="../windows/viewwindow.cpp" line="1123"/>

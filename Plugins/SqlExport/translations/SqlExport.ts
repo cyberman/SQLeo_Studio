@@ -30,7 +30,7 @@
     </message>
     <message>
         <location filename="../sqlexport.cpp" line="284"/>
-        <source>-- File generated with SQLiteStudio v%1 on %2</source>
+        <source>-- File generated with Letos v%1 on %2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

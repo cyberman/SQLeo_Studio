@@ -4,19 +4,9 @@
   <context>
     <name>AboutDialog</name>
     <message>
-      <location filename="../dialogs/aboutdialog.ui" line="14"/>
-      <source>About SQLiteStudio and licenses</source>
-      <translation>Informazioni su SQLiteStudio e licenze</translation>
-    </message>
-    <message>
       <location filename="../dialogs/aboutdialog.ui" line="24"/>
       <source>About</source>
       <translation>Circa</translation>
-    </message>
-    <message>
-      <location filename="../dialogs/aboutdialog.ui" line="30"/>
-      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:11pt; font-weight:600;&quot;&gt;SQLiteStudio v%1&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;Free, open-source, cross-platform SQLite database manager.&lt;br/&gt;&lt;a href=&quot;https://sqlitestudio.pl&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://sqlitestudio.pl&lt;/span&gt;&lt;/a&gt;&lt;br/&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;%2&lt;br/&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;Author and active maintainer:&lt;br/&gt;SalSoft (&lt;a href=&quot;https://salsoft.com.pl&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://salsoft.com.pl&lt;/span&gt;&lt;/a&gt;)&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:11pt; font-weight:600;&quot;&gt;SQLiteStudio v%1&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;Gestore di database SQLite gratuito, open-source e cross-platform.&lt;br/&gt;&lt;a href=&quot;https://sqlitestudio.pl&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://sqlitestudio.pl&lt;/span&gt;&lt;/a&gt;&lt;br/&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;%2&lt;br/&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;Autore e manutentore attivo:&lt;br/&gt;SalSoft (&lt;a href=&quot;https://salsoft.com.pl&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://salsoft.com.pl&lt;/span&gt;&lt;/a&gt;)&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/aboutdialog.ui" line="41"/>
@@ -47,6 +37,16 @@
       <location filename="../dialogs/aboutdialog.ui" line="140"/>
       <source>Plugin directories</source>
       <translation>Cartella dei plugin</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/aboutdialog.ui" line="14"/>
+      <source>About Letos and licenses</source>
+      <translation type="unfinished">About Letos and licenses</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/aboutdialog.ui" line="30"/>
+      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:11pt; font-weight:600;&quot;&gt;Letos v%1&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;Free, open-source, cross-platform SQLite database manager.&lt;br/&gt;&lt;a href=&quot;https://letos.org&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://letos.org&lt;/span&gt;&lt;/a&gt;&lt;br/&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;%2&lt;br/&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;Author and active maintainer:&lt;br/&gt;SalSoft (&lt;a href=&quot;https://salsoft.com.pl&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://salsoft.com.pl&lt;/span&gt;&lt;/a&gt;)&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:11pt; font-weight:600;&quot;&gt;Letos v%1&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;Free, open-source, cross-platform SQLite database manager.&lt;br/&gt;&lt;a href=&quot;https://letos.org&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://letos.org&lt;/span&gt;&lt;/a&gt;&lt;br/&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;%2&lt;br/&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;Author and active maintainer:&lt;br/&gt;SalSoft (&lt;a href=&quot;https://salsoft.com.pl&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://salsoft.com.pl&lt;/span&gt;&lt;/a&gt;)&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/aboutdialog.ui" line="75"/>
@@ -965,7 +965,7 @@
       <location filename="../completer/completerwindow.cpp" line="320"/>
       <source>Database: %1</source>
       <comment>completer statusbar</comment>
-      <translation>Database: %1</translation>
+      <translation type="unfinished">Database: %1</translation>
     </message>
     <message>
       <location filename="../completer/completerwindow.cpp" line="332"/>
@@ -1209,11 +1209,6 @@
       <translation type="unfinished">General.UseLfForMultilineEditors</translation>
     </message>
     <message>
-      <location filename="../dialogs/configdialog.ui" line="523"/>
-      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;When enabled, SQLiteStudio automatically switches to scientific notation for very small real numbers (e.g. &lt;span style=&quot; font-style:italic;&quot;&gt;5.3e-21&lt;/span&gt;).&lt;br/&gt;Decimal notation is used for values whose magnitude allows a readable decimal representation.&lt;/p&gt;&lt;p&gt;When disabled, real numbers are always displayed using decimal notation, even if this results in very long fractional parts.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;When enabled, SQLiteStudio automatically switches to scientific notation for very small real numbers (e.g. &lt;span style=&quot; font-style:italic;&quot;&gt;5.3e-21&lt;/span&gt;).&lt;br/&gt;Decimal notation is used for values whose magnitude allows a readable decimal representation.&lt;/p&gt;&lt;p&gt;When disabled, real numbers are always displayed using decimal notation, even if this results in very long fractional parts.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
       <location filename="../dialogs/configdialog.ui" line="526"/>
       <source>Use scientific notation for very small real numbers in the grid view</source>
       <translation type="unfinished">Use scientific notation for very small real numbers in the grid view</translation>
@@ -1262,11 +1257,6 @@
       <location filename="../dialogs/configdialog.ui" line="608"/>
       <source>Keep NULL value when entering empty value</source>
       <translation>Mantiene il valore NULL quando si inserisce un valore vuoto</translation>
-    </message>
-    <message>
-      <location filename="../dialogs/configdialog.ui" line="592"/>
-      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If query results contain dozens (or hundreds) of columns, it is more likely that it will exhaust free memory of your computer by loading several gigabytes of data at once. SQLiteStudio may try to limit number of results displayed on one page in such cases to protect your computer. If you know that you don&apos;t work with big values in database, you can disable this limit and you will always see as many rows as defined per page.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Se i risultati della query contengono dozzine (o centinaia) di colonne, è più probabile che esaurirà la memoria libera del Tuo computer caricando parecchi gigabyte di dati contemporaneamente. SQLiteStudio può cercare di limitare il numero di risultati visualizzati su una pagina in tali casi per proteggere il computer. Se sei conscio che non lavori con grandi quantità di record nel database, puoi disabilitare questo limite e vedrai sempre tante righe per pagina così come sono state definite.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/configdialog.ui" line="595"/>
@@ -1378,12 +1368,6 @@
       <location filename="../dialogs/configdialog.ui" line="1375"/>
       <source>Number of queries kept in the history.</source>
       <translation>Numero di query conservate nella cronologia.</translation>
-    </message>
-    <message>
-      <location filename="../dialogs/configdialog.ui" line="1388"/>
-      <location filename="../dialogs/configdialog.ui" line="1398"/>
-      <source>&lt;p&gt;Maximum number of query parameters (:param, @param, $param, ?) stored in history. When you re-use parameter with the same name/position, SQLiteStudio will pre-initialize it with most recent memorized value (you will still be able to change it). Value of 1000 should be sufficient.&lt;/p&gt;</source>
-      <translation>&lt;p&gt;Numero massimo di parametri di interrogazione (:param, @param, $param, ?) memorizzati nella cronologia. Quando riutilizzi il parametro con lo stesso nome/posizione, SQLiteStudio lo preinizializzerà con il valore memorizzato più recente (sarà ancora possibile comunque cambiarlo). Il valore di 1000 dovrebbe essere sufficiente.&lt;/p&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/configdialog.ui" line="1305"/>
@@ -1646,6 +1630,16 @@
       <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlights the query under the cursor - the same query that will be executed when using &lt;span style=&quot; font-style:italic;&quot;&gt;Execute query&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
+      <location filename="../dialogs/configdialog.ui" line="523"/>
+      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;When enabled, Letos automatically switches to scientific notation for very small real numbers (e.g. &lt;span style=&quot; font-style:italic;&quot;&gt;5.3e-21&lt;/span&gt;).&lt;br/&gt;Decimal notation is used for values whose magnitude allows a readable decimal representation.&lt;/p&gt;&lt;p&gt;When disabled, real numbers are always displayed using decimal notation, even if this results in very long fractional parts.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;When enabled, Letos automatically switches to scientific notation for very small real numbers (e.g. &lt;span style=&quot; font-style:italic;&quot;&gt;5.3e-21&lt;/span&gt;).&lt;br/&gt;Decimal notation is used for values whose magnitude allows a readable decimal representation.&lt;/p&gt;&lt;p&gt;When disabled, real numbers are always displayed using decimal notation, even if this results in very long fractional parts.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/configdialog.ui" line="592"/>
+      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If query results contain dozens (or hundreds) of columns, it is more likely that it will exhaust free memory of your computer by loading several gigabytes of data at once. Letos may try to limit number of results displayed on one page in such cases to protect your computer. If you know that you don&apos;t work with big values in database, you can disable this limit and you will always see as many rows as defined per page.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If query results contain dozens (or hundreds) of columns, it is more likely that it will exhaust free memory of your computer by loading several gigabytes of data at once. Letos may try to limit number of results displayed on one page in such cases to protect your computer. If you know that you don&apos;t work with big values in database, you can disable this limit and you will always see as many rows as defined per page.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
       <location filename="../dialogs/configdialog.ui" line="691"/>
       <source>Column header actions</source>
       <translation type="unfinished">Column header actions</translation>
@@ -1763,6 +1757,12 @@
       <location filename="../dialogs/configdialog.ui" line="1362"/>
       <source>Query history size:</source>
       <translation type="unfinished">Query history size:</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/configdialog.ui" line="1388"/>
+      <location filename="../dialogs/configdialog.ui" line="1398"/>
+      <source>&lt;p&gt;Maximum number of query parameters (:param, @param, $param, ?) stored in history. When you re-use parameter with the same name/position, Letos will pre-initialize it with most recent memorized value (you will still be able to change it). Value of 1000 should be sufficient.&lt;/p&gt;</source>
+      <translation type="unfinished">&lt;p&gt;Maximum number of query parameters (:param, @param, $param, ?) stored in history. When you re-use parameter with the same name/position, Letos will pre-initialize it with most recent memorized value (you will still be able to change it). Value of 1000 should be sufficient.&lt;/p&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/configdialog.ui" line="1505"/>
@@ -2207,8 +2207,8 @@
     <name>CssDebugDialog</name>
     <message>
       <location filename="../dialogs/cssdebugdialog.ui" line="14"/>
-      <source>SQLiteStudio CSS console</source>
-      <translation>SQLiteStudio CSS console</translation>
+      <source>Letos CSS console</source>
+      <translation type="unfinished">Letos CSS console</translation>
     </message>
   </context>
   <context>
@@ -2410,7 +2410,7 @@ L&apos;esplorazione di altre pagine sarà possibile dopo il conteggio delle righ
     <message>
       <location filename="../dialogs/dbdialog.ui" line="23"/>
       <source>Database</source>
-      <translation>Database</translation>
+      <translation type="unfinished">Database</translation>
     </message>
     <message>
       <location filename="../dialogs/dbdialog.ui" line="29"/>
@@ -2426,7 +2426,7 @@ L&apos;esplorazione di altre pagine sarà possibile dopo il conteggio delle righ
       <location filename="../dialogs/dbdialog.ui" line="45"/>
       <location filename="../dialogs/dbdialog.cpp" line="194"/>
       <source>File</source>
-      <translation>File</translation>
+      <translation type="unfinished">File</translation>
     </message>
     <message>
       <location filename="../dialogs/dbdialog.ui" line="51"/>
@@ -2455,9 +2455,9 @@ L&apos;esplorazione di altre pagine sarà possibile dopo il conteggio delle righ
     </message>
     <message>
       <location filename="../dialogs/dbdialog.ui" line="133"/>
-      <source>&lt;p&gt;Enable this if you want the database to be stored in configuration file and restored every time SQLiteStudio is started.&lt;/p&gt;</source>
+      <source>&lt;p&gt;Enable this if you want the database to be stored in configuration file and restored every time Letos is started.&lt;/p&gt;</source>
       <extracomment>aasfd</extracomment>
-      <translation>&lt;p&gt;Abilita questa opzione se vuoi che il database sia memorizzato nel file di configurazione e ripristinato ogni volta che SQLiteStudio viene avviato.&lt;/p&gt;</translation>
+      <translation type="unfinished">&lt;p&gt;Enable this if you want the database to be stored in configuration file and restored every time Letos is started.&lt;/p&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/dbdialog.ui" line="136"/>
@@ -2623,7 +2623,7 @@ L&apos;esplorazione di altre pagine sarà possibile dopo il conteggio delle righ
     <message>
       <location filename="../dbtree/dbtree.ui" line="20"/>
       <source>Databases</source>
-      <translation>Databases</translation>
+      <translation type="unfinished">Databases</translation>
     </message>
     <message>
       <location filename="../dbtree/dbtree.cpp" line="2518"/>
@@ -2683,7 +2683,7 @@ L&apos;esplorazione di altre pagine sarà possibile dopo il conteggio delle righ
     <message>
       <location filename="../dbtree/dbtree.cpp" line="159"/>
       <source>Vac&amp;uum</source>
-      <translation>Vac&amp;uum</translation>
+      <translation type="unfinished">Vac&amp;uum</translation>
     </message>
     <message>
       <location filename="../dbtree/dbtree.cpp" line="160"/>
@@ -2915,7 +2915,7 @@ L&apos;esplorazione di altre pagine sarà possibile dopo il conteggio delle righ
       <location filename="../dbtree/dbtree.cpp" line="417"/>
       <location filename="../dbtree/dbtree.cpp" line="424"/>
       <source>Database</source>
-      <translation>Database</translation>
+      <translation type="unfinished">Database</translation>
     </message>
     <message>
       <location filename="../dbtree/dbtree.cpp" line="436"/>
@@ -2993,7 +2993,7 @@ All objects from these groups will be moved to respective parent groups.</transl
     <message>
       <location filename="../dbtree/dbtree.cpp" line="1821"/>
       <source>Vacuum (%1)</source>
-      <translation>Vacuum (%1)</translation>
+      <translation type="unfinished">Vacuum (%1)</translation>
     </message>
     <message>
       <location filename="../dbtree/dbtree.cpp" line="1835"/>
@@ -3077,7 +3077,7 @@ All objects from these groups will be moved to respective parent groups.</transl
       <location filename="../dbtree/dbtreeitemdelegate.cpp" line="97"/>
       <source>error</source>
       <comment>dbtree labels</comment>
-      <translation>error</translation>
+      <translation type="unfinished">error</translation>
     </message>
     <message>
       <location filename="../dbtree/dbtreeitemdelegate.cpp" line="114"/>
@@ -3104,13 +3104,13 @@ All objects from these groups will be moved to respective parent groups.</transl
       <location filename="../dbtree/dbtreemodel.cpp" line="493"/>
       <source>Database: %1</source>
       <comment>dbtree tooltip</comment>
-      <translation>Database: %1</translation>
+      <translation type="unfinished">Database: %1</translation>
     </message>
     <message>
       <location filename="../dbtree/dbtreemodel.cpp" line="494"/>
       <source>URI:</source>
       <comment>dbtree tooltip</comment>
-      <translation>URI:</translation>
+      <translation type="unfinished">URI:</translation>
     </message>
     <message>
       <location filename="../dbtree/dbtreemodel.cpp" line="498"/>
@@ -3281,7 +3281,7 @@ Inserisci un nuovo nome univoco o premi &apos;%1&apos; per interrompere l&apos;o
     <message>
       <location filename="../windows/ddlhistorywindow.cpp" line="129"/>
       <source>DDL history</source>
-      <translation>DDL history</translation>
+      <translation type="unfinished">DDL history</translation>
     </message>
   </context>
   <context>
@@ -3311,8 +3311,8 @@ Inserisci un nuovo nome univoco o premi &apos;%1&apos; per interrompere l&apos;o
     <name>DebugConsole</name>
     <message>
       <location filename="../debugconsole.ui" line="14"/>
-      <source>SQLiteStudio Debug Console</source>
-      <translation>Console Debug SQLiteStudio</translation>
+      <source>Letos Debug Console</source>
+      <translation type="unfinished">Letos Debug Console</translation>
     </message>
   </context>
   <context>
@@ -3325,7 +3325,7 @@ Inserisci un nuovo nome univoco o premi &apos;%1&apos; per interrompere l&apos;o
     <message>
       <location filename="../windows/editorwindow.ui" line="39"/>
       <source>Query</source>
-      <translation>Query</translation>
+      <translation type="unfinished">Query</translation>
     </message>
     <message>
       <location filename="../windows/editorwindow.ui" line="130"/>
@@ -3362,7 +3362,7 @@ Inserisci un nuovo nome univoco o premi &apos;%1&apos; per interrompere l&apos;o
     <message>
       <location filename="../windows/editorwindow.cpp" line="426"/>
       <source>Explain query</source>
-      <translation>Explain query</translation>
+      <translation type="unfinished">Explain query</translation>
     </message>
     <message>
       <location filename="../windows/editorwindow.cpp" line="443"/>
@@ -3662,7 +3662,7 @@ Inserisci un nuovo nome univoco o premi &apos;%1&apos; per interrompere l&apos;o
       <location filename="../dialogs/exportdialog.ui" line="110"/>
       <location filename="../dialogs/exportdialog.ui" line="234"/>
       <source>Database</source>
-      <translation>Database</translation>
+      <translation type="unfinished">Database</translation>
     </message>
     <message>
       <location filename="../dialogs/exportdialog.ui" line="117"/>
@@ -3765,7 +3765,7 @@ Inserisci un nuovo nome univoco o premi &apos;%1&apos; per interrompere l&apos;o
       <location filename="../dialogs/exportdialog.ui" line="360"/>
       <location filename="../dialogs/exportdialog.ui" line="394"/>
       <source>Database:</source>
-      <translation>Database:</translation>
+      <translation type="unfinished">Database:</translation>
     </message>
     <message>
       <location filename="../dialogs/exportdialog.ui" line="382"/>
@@ -3790,7 +3790,7 @@ Inserisci un nuovo nome univoco o premi &apos;%1&apos; per interrompere l&apos;o
     <message>
       <location filename="../dialogs/exportdialog.ui" line="475"/>
       <source>Output</source>
-      <translation>Output</translation>
+      <translation type="unfinished">Output</translation>
     </message>
     <message>
       <location filename="../dialogs/exportdialog.ui" line="481"/>
@@ -3805,7 +3805,7 @@ Inserisci un nuovo nome univoco o premi &apos;%1&apos; per interrompere l&apos;o
     <message>
       <location filename="../dialogs/exportdialog.ui" line="502"/>
       <source>File</source>
-      <translation>File</translation>
+      <translation type="unfinished">File</translation>
     </message>
     <message>
       <location filename="../dialogs/exportdialog.ui" line="527"/>
@@ -3901,7 +3901,7 @@ Inserisci un nuovo nome univoco o premi &apos;%1&apos; per interrompere l&apos;o
     <message>
       <location filename="../dialogs/fileexecerrorsdialog.ui" line="49"/>
       <source>SQL</source>
-      <translation>SQL</translation>
+      <translation type="unfinished">SQL</translation>
     </message>
     <message>
       <location filename="../dialogs/fileexecerrorsdialog.ui" line="54"/>
@@ -4284,7 +4284,7 @@ Inserisci un nuovo nome univoco o premi &apos;%1&apos; per interrompere l&apos;o
     <message>
       <location filename="../dialogs/importdialog.ui" line="193"/>
       <source>Database</source>
-      <translation>Database</translation>
+      <translation type="unfinished">Database</translation>
     </message>
     <message>
       <location filename="../dialogs/importdialog.ui" line="24"/>
@@ -4388,7 +4388,7 @@ Inserisci un nuovo nome univoco o premi &apos;%1&apos; per interrompere l&apos;o
     <message>
       <location filename="../dialogs/indexdialog.ui" line="80"/>
       <source>Collation</source>
-      <translation>Collation</translation>
+      <translation type="unfinished">Collation</translation>
     </message>
     <message>
       <location filename="../dialogs/indexdialog.ui" line="88"/>
@@ -4438,7 +4438,7 @@ Inserisci un nuovo nome univoco o premi &apos;%1&apos; per interrompere l&apos;o
     <message>
       <location filename="../dialogs/indexdialog.ui" line="180"/>
       <source>DDL</source>
-      <translation>DDL</translation>
+      <translation type="unfinished">DDL</translation>
     </message>
     <message>
       <location filename="../dialogs/indexdialog.cpp" line="73"/>
@@ -4469,7 +4469,7 @@ Inserisci un nuovo nome univoco o premi &apos;%1&apos; per interrompere l&apos;o
       <location filename="../dialogs/indexdialog.cpp" line="270"/>
       <source>default</source>
       <comment>index dialog</comment>
-      <translation>default</translation>
+      <translation type="unfinished">default</translation>
     </message>
     <message>
       <location filename="../dialogs/indexdialog.cpp" line="274"/>
@@ -4799,7 +4799,7 @@ Inserisci un nuovo nome univoco o premi &apos;%1&apos; per interrompere l&apos;o
       <location filename="../mainwindow.cpp" line="381"/>
       <source>&amp;Database</source>
       <comment>menubar</comment>
-      <translation>&amp;Database</translation>
+      <translation type="unfinished">&amp;Database</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="406"/>
@@ -4808,10 +4808,15 @@ Inserisci un nuovo nome univoco o premi &apos;%1&apos; per interrompere l&apos;o
       <translation>&amp;Struttura</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="740"/>
+      <location filename="../mainwindow.cpp" line="749"/>
       <source>&amp;View</source>
       <comment>menubar</comment>
       <translation>&amp;Visualizza</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="1334"/>
+      <source>The dropped file appears to be a SQLite 2 database, which is not supported by this Letos version. Last version supporting SQLite 2 was 3.2.1.</source>
+      <translation type="unfinished">The dropped file appears to be a SQLite 2 database, which is not supported by this Letos version. Last version supporting SQLite 2 was 3.2.1.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="432"/>
@@ -4851,120 +4856,115 @@ Inserisci un nuovo nome univoco o premi &apos;%1&apos; per interrompere l&apos;o
       <translation>&amp;Aiuto</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="677"/>
+      <location filename="../mainwindow.cpp" line="686"/>
       <source>Could not set style: %1</source>
       <comment>main window</comment>
       <translation>Impossibile impostare lo stile: %1</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="914"/>
+      <location filename="../mainwindow.cpp" line="923"/>
       <source>Cannot export, because no export plugin is loaded.</source>
       <translation>Impossibile esportare, perché non è stato caricato alcun plugin di esportazione.</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="931"/>
+      <location filename="../mainwindow.cpp" line="940"/>
       <source>Cannot import, because no import plugin is loaded.</source>
       <translation>Impossibile importare, perché non è stato caricato alcun plugin di importazione.</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="974"/>
+      <location filename="../mainwindow.cpp" line="983"/>
       <source>Rename window</source>
       <translation>Rinomina finestra</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="974"/>
+      <location filename="../mainwindow.cpp" line="983"/>
       <source>Enter new name for the window:</source>
       <translation>Inserisci un nuovo nome per la finestra:</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1076"/>
+      <location filename="../mainwindow.cpp" line="1085"/>
       <source>New updates are available. &lt;a href=&quot;%1&quot;&gt;Click here for details&lt;/a&gt;.</source>
       <translation>Sono disponibili nuovi aggiornamenti. &lt;a href=&quot;%1&quot;&gt;Clicca qui per maggiori dettagli&lt;/a&gt;.</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1082"/>
+      <location filename="../mainwindow.cpp" line="1091"/>
       <source>You&apos;re running the most recent version. No updates are available.</source>
       <translation>Stai usando la versione più recente. Non sono disponibili aggiornamenti.</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1166"/>
+      <location filename="../mainwindow.cpp" line="1175"/>
       <source>Toolbar &amp;icons</source>
       <comment>menubar</comment>
       <translation type="unfinished">Toolbar &amp;icons</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1173"/>
+      <location filename="../mainwindow.cpp" line="1182"/>
       <source>Size: %1%</source>
       <comment>toolbar icons</comment>
       <translation type="unfinished">Size: %1%</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1261"/>
+      <location filename="../mainwindow.cpp" line="1270"/>
       <source>Drop files to open them</source>
       <translation type="unfinished">Drop files to open them</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1325"/>
-      <source>The dropped file appears to be a SQLite 2 database, which is not supported by this SQLiteStudio version. Last version supporting SQLite 2 was 3.2.1.</source>
-      <translation type="unfinished">The dropped file appears to be a SQLite 2 database, which is not supported by this SQLiteStudio version. Last version supporting SQLite 2 was 3.2.1.</translation>
-    </message>
-    <message>
-      <location filename="../mainwindow.cpp" line="1328"/>
+      <location filename="../mainwindow.cpp" line="1337"/>
       <source>The dropped file type is unsupported: %1 (%2)</source>
       <translation type="unfinished">The dropped file type is unsupported: %1 (%2)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1338"/>
+      <location filename="../mainwindow.cpp" line="1347"/>
       <source>SQLite 3 database - add to database list and open</source>
       <translation type="unfinished">SQLite 3 database - add to database list and open</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1340"/>
+      <location filename="../mainwindow.cpp" line="1349"/>
       <source>It may be an encrypted SQLite 3 database. You can try to open it.</source>
       <translation type="unfinished">It may be an encrypted SQLite 3 database. You can try to open it.</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1342"/>
+      <location filename="../mainwindow.cpp" line="1351"/>
       <source>Empty file, but also empty SQLite 3 database - open as database</source>
       <translation type="unfinished">Empty file, but also empty SQLite 3 database - open as database</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1344"/>
+      <location filename="../mainwindow.cpp" line="1353"/>
       <source>SQL file - open in SQL Editor</source>
       <translation type="unfinished">SQL file - open in SQL Editor</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1346"/>
+      <location filename="../mainwindow.cpp" line="1355"/>
       <source>Text file - open in SQL Editor</source>
       <translation type="unfinished">Text file - open in SQL Editor</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1348"/>
+      <location filename="../mainwindow.cpp" line="1357"/>
       <source>CSV file - import using Import Dialog</source>
       <translation type="unfinished">CSV file - import using Import Dialog</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1350"/>
+      <location filename="../mainwindow.cpp" line="1359"/>
       <source>SQLite 2 database - not supported anymore</source>
       <translation type="unfinished">SQLite 2 database - not supported anymore</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1352"/>
+      <location filename="../mainwindow.cpp" line="1361"/>
       <source>Unsupported file type</source>
       <translation type="unfinished">Unsupported file type</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1402"/>
+      <location filename="../mainwindow.cpp" line="1411"/>
       <source>Database passed in command line parameters (%1) was already on the list under name: %2</source>
       <translation>Il database passato nei parametri della riga di comando (%1) era già nell&apos;elenco con il nome: %2</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1409"/>
+      <location filename="../mainwindow.cpp" line="1418"/>
       <source>Database passed in command line parameters (%1) has been temporarily added to the list under name: %2</source>
       <translation>Il database passato nei parametri della riga di comando (%1) è stato temporaneamente aggiunto all&apos;elenco con nome: %2</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1414"/>
+      <location filename="../mainwindow.cpp" line="1423"/>
       <source>Could not add database %1 to list.</source>
       <translation>Impossibile aggiungere il database %1 all&apos;elenco.</translation>
     </message>
@@ -5146,7 +5146,7 @@ Inserisci un nuovo nome univoco o premi &apos;%1&apos; per interrompere l&apos;o
     <message>
       <location filename="../multieditor/multieditorhex.cpp" line="102"/>
       <source>Hex</source>
-      <translation>Hex</translation>
+      <translation type="unfinished">Hex</translation>
     </message>
   </context>
   <context>
@@ -5276,8 +5276,8 @@ Inserisci un nuovo nome univoco o premi &apos;%1&apos; per interrompere l&apos;o
     <name>NewVersionDialog</name>
     <message>
       <location filename="../dialogs/newversiondialog.ui" line="14"/>
-      <source>SQLiteStudio updates</source>
-      <translation>Aggiornamenti di SQLiteStudio</translation>
+      <source>Letos updates</source>
+      <translation type="unfinished">Letos updates</translation>
     </message>
     <message>
       <location filename="../dialogs/newversiondialog.ui" line="25"/>
@@ -5296,8 +5296,8 @@ Inserisci un nuovo nome univoco o premi &apos;%1&apos; per interrompere l&apos;o
     </message>
     <message>
       <location filename="../dialogs/newversiondialog.ui" line="71"/>
-      <source>Open SQLiteStudio home page.</source>
-      <translation>Apri la home page SQLiteStudio.</translation>
+      <source>Open Letos home page.</source>
+      <translation type="unfinished">Open Letos home page.</translation>
     </message>
     <message>
       <location filename="../dialogs/newversiondialog.ui" line="84"/>
@@ -5351,7 +5351,7 @@ Inserisci un nuovo nome univoco o premi &apos;%1&apos; per interrompere l&apos;o
     <message>
       <location filename="../dialogs/populatedialog.ui" line="84"/>
       <source>Database</source>
-      <translation>Database</translation>
+      <translation type="unfinished">Database</translation>
     </message>
     <message>
       <location filename="../dialogs/populatedialog.ui" line="102"/>
@@ -5727,7 +5727,7 @@ Inserisci un nuovo nome univoco o premi &apos;%1&apos; per interrompere l&apos;o
     <message>
       <location filename="../dbtree/dbtreeitemfactory.cpp" line="63"/>
       <source>Triggers</source>
-      <translation>Triggers</translation>
+      <translation type="unfinished">Triggers</translation>
     </message>
     <message>
       <location filename="../dbtree/dbtreeitemfactory.cpp" line="68"/>
@@ -6605,7 +6605,7 @@ trova il prossimo</translation>
       <location filename="../sqleditor.cpp" line="183"/>
       <source>Complete</source>
       <comment>sql editor</comment>
-      <translation>Complete</translation>
+      <translation type="unfinished">Complete</translation>
     </message>
     <message>
       <location filename="../sqleditor.cpp" line="184"/>
@@ -7024,12 +7024,12 @@ Tale cancellazione sarà permanente. Sei sicuro di volerle cancellare?</translat
     <message>
       <location filename="../datagrid/sqlqueryview.cpp" line="157"/>
       <source>Commit</source>
-      <translation>Commit</translation>
+      <translation type="unfinished">Commit</translation>
     </message>
     <message>
       <location filename="../datagrid/sqlqueryview.cpp" line="158"/>
       <source>Rollback</source>
-      <translation>Rollback</translation>
+      <translation type="unfinished">Rollback</translation>
     </message>
     <message>
       <location filename="../datagrid/sqlqueryview.cpp" line="159"/>
@@ -7469,7 +7469,7 @@ Tale cancellazione sarà permanente. Sei sicuro di volerle cancellare?</translat
     <message>
       <location filename="../constraints/tablepkanduniquepanel.ui" line="84"/>
       <source>Collation</source>
-      <translation>Collation</translation>
+      <translation type="unfinished">Collation</translation>
     </message>
     <message>
       <location filename="../constraints/tablepkanduniquepanel.ui" line="109"/>
@@ -7636,7 +7636,7 @@ NULL</source>
     <message>
       <location filename="../windows/tablewindow.ui" line="311"/>
       <source>DDL</source>
-      <translation>DDL</translation>
+      <translation type="unfinished">DDL</translation>
     </message>
     <message>
       <location filename="../windows/tablewindow.cpp" line="242"/>
@@ -7852,7 +7852,7 @@ Vuoi procedere?</translation>
     <message>
       <location filename="../windows/tablewindow.cpp" line="680"/>
       <source>Database</source>
-      <translation>Database</translation>
+      <translation type="unfinished">Database</translation>
     </message>
     <message>
       <location filename="../windows/tablewindow.cpp" line="723"/>
@@ -8090,7 +8090,7 @@ Do you want to commit the structure, or do you want to go back to the structure 
       <location filename="../dialogs/triggerdialog.ui" line="14"/>
       <location filename="../dialogs/triggerdialog.ui" line="24"/>
       <source>Trigger</source>
-      <translation>Trigger</translation>
+      <translation type="unfinished">Trigger</translation>
     </message>
     <message>
       <location filename="../dialogs/triggerdialog.ui" line="30"/>
@@ -8151,7 +8151,7 @@ Do you want to commit the structure, or do you want to go back to the structure 
     <message>
       <location filename="../dialogs/triggerdialog.ui" line="138"/>
       <source>DDL</source>
-      <translation>DDL</translation>
+      <translation type="unfinished">DDL</translation>
     </message>
     <message>
       <location filename="../dialogs/triggerdialog.cpp" line="154"/>
@@ -8215,7 +8215,7 @@ Do you want to commit the structure, or do you want to go back to the structure 
     <message>
       <location filename="../windows/viewwindow.ui" line="36"/>
       <source>Query</source>
-      <translation>Query</translation>
+      <translation type="unfinished">Query</translation>
     </message>
     <message>
       <location filename="../windows/viewwindow.ui" line="70"/>
@@ -8241,7 +8241,7 @@ Do you want to commit the structure, or do you want to go back to the structure 
     <message>
       <location filename="../windows/viewwindow.ui" line="215"/>
       <source>DDL</source>
-      <translation>DDL</translation>
+      <translation type="unfinished">DDL</translation>
     </message>
     <message>
       <location filename="../windows/viewwindow.cpp" line="110"/>
@@ -8273,7 +8273,7 @@ Do you want to commit the structure, or do you want to go back to the structure 
     <message>
       <location filename="../windows/viewwindow.cpp" line="294"/>
       <source>Database</source>
-      <translation>Database</translation>
+      <translation type="unfinished">Database</translation>
     </message>
     <message>
       <location filename="../windows/viewwindow.cpp" line="349"/>
@@ -8406,6 +8406,16 @@ Do you want to commit the structure, or do you want to go back to the structure 
       <translation type="unfinished">Commit modifications and browse data</translation>
     </message>
     <message>
+      <location filename="../windows/viewwindow.cpp" line="1085"/>
+      <source>The view could not be modified due to internal Letos error. Please report this!</source>
+      <translation type="unfinished">The view could not be modified due to internal Letos error. Please report this!</translation>
+    </message>
+    <message>
+      <location filename="../windows/viewwindow.cpp" line="1111"/>
+      <source>The view code could not be parsed properly for execution. This is a Letos&apos;s bug. Please report it.</source>
+      <translation type="unfinished">The view code could not be parsed properly for execution. This is a Letos&apos;s bug. Please report it.</translation>
+    </message>
+    <message>
       <location filename="../windows/viewwindow.cpp" line="656"/>
       <source>Go back to structure tab</source>
       <translation>Torna alla scheda struttura</translation>
@@ -8498,16 +8508,6 @@ Sei sicuro di voler creare una vista con il nome vuoto?</translation>
 Details: %1</source>
       <translation>L&apos;istruzione SELECT non può essere analizzata. Correggi la richiesta e riprova.
 Dettagli: %1</translation>
-    </message>
-    <message>
-      <location filename="../windows/viewwindow.cpp" line="1085"/>
-      <source>The view could not be modified due to internal SQLiteStudio error. Please report this!</source>
-      <translation>La vista non può essere modificata a causa di un errore interno di SQLiteStudio. Si prega di segnalarlo!</translation>
-    </message>
-    <message>
-      <location filename="../windows/viewwindow.cpp" line="1111"/>
-      <source>The view code could not be parsed properly for execution. This is a SQLiteStudio&apos;s bug. Please report it.</source>
-      <translation>Il codice di visualizzazione non può essere analizzato correttamente per l&apos;esecuzione. Questo è un bug di SQLiteStudio&apos;s. Si prega di segnalarlo.</translation>
     </message>
     <message>
       <location filename="../windows/viewwindow.cpp" line="1123"/>

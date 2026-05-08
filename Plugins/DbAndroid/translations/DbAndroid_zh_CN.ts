@@ -29,11 +29,6 @@
       <translation>使用 Android 调试桥（ADB）：%1</translation>
     </message>
     <message>
-      <location filename="../dbandroid.cpp" line="183"/>
-      <source>You can grab Android connector JAR file from Tools menu. It&apos;s required for 2 of 3 connections supported by the Android plugin. For more details read plugin&apos;s documentation on &lt;a href=&quot;%1&quot;&gt;SQLiteStudio&apos;s wiki page.&lt;/a&gt;</source>
-      <translation>您可以从工具菜单取得 Android 连接器 JAR 文件。 It&apos;s required for 2 of 3 connections supported by the Android plugin. 更多细节见 SQLiteStudio wiki 页面上的&lt;a href=&quot;%1&quot;&gt;插件文档&lt;/a&gt;。</translation>
-    </message>
-    <message>
       <location filename="../dbandroid.cpp" line="198"/>
       <source>Could not find Android Debug Bridge application. &lt;a href=&quot;%1&quot;&gt;Click here&lt;/a&gt; to point out the location of the ADB application, otherwise the %2 plugin will not support USB cable connections, only the network connection.</source>
       <translation>未能找到 Android 调试桥（ADB）应用程序。&lt;a href=&quot;%1&quot;&gt;单击此处&lt;/a&gt;以指明 ADB 应用程序的位置，否则 %2 插件将无法支持 USB 线缆连接，只通过网络连接。</translation>
@@ -57,6 +52,11 @@
       <location filename="../dbandroid.cpp" line="216"/>
       <source>Invalid ADB</source>
       <translation>无效的 ADB</translation>
+    </message>
+    <message>
+      <location filename="../dbandroid.cpp" line="183"/>
+      <source>You can grab Android connector JAR file from Tools menu. It&apos;s required for 2 of 3 connections supported by the Android plugin. For more details read plugin&apos;s documentation on &lt;a href=&quot;%1&quot;&gt;Letos&apos;s wiki page.&lt;/a&gt;</source>
+      <translation>您可以从“工具”菜单获取 Android 连接器 JAR 文件。Android 插件支持的 3 个连接中，有 2 个需要用到它。更多详情请阅读 &lt;a href=&quot;%1&quot;&gt;Letos wiki&lt;/a&gt;页面上的插件文档。</translation>
     </message>
     <message>
       <location filename="../dbandroid.cpp" line="219"/>
@@ -185,8 +185,8 @@
     </message>
     <message>
       <location filename="../dbandroidpathdialog.ui" line="127"/>
-      <source>&lt;p&gt;This is password configured in the SQLiteStudio service being embeded in the Android application.&lt;/p&gt;</source>
-      <translation>&lt;p&gt;这是在 Android 应用程序中嵌入的为 SQLiteStudio 服务配置的密码。&lt;/p&gt;</translation>
+      <source>&lt;p&gt;This is password configured in the Letos service being embeded in the Android application.&lt;/p&gt;</source>
+      <translation>&lt;p&gt;这是在嵌入到 Android 应用程序中的 Letos 服务中配置的密码。&lt;/p&gt;</translation>
     </message>
     <message>
       <location filename="../dbandroidpathdialog.ui" line="140"/>

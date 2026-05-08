@@ -5,8 +5,8 @@
     <name>QObject</name>
     <message>
       <location filename="../main.cpp" line="52"/>
-      <source>GUI interface to SQLiteStudio, a SQLite manager.</source>
-      <translation>SQLiteStudio 图形界面，一款 SQLite 管理软件。</translation>
+      <source>GUI interface to Letos, a SQLite manager.</source>
+      <translation>Letos（SQLite 管理器）的图形用户界面。</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="57"/>
@@ -59,16 +59,6 @@
       <translation>数据库</translation>
     </message>
     <message>
-      <location filename="../main.cpp" line="65"/>
-      <source>Enables debugging of SQLiteStudio&apos;s query executor.</source>
-      <translation>启用 SQLiteStudio 的查询执行器的调试。</translation>
-    </message>
-    <message>
-      <location filename="../main.cpp" line="66"/>
-      <source>Lists plugins installed in the SQLiteStudio and quits.</source>
-      <translation>列出 SQLiteStudio 中已安装的插件并退出。</translation>
-    </message>
-    <message>
       <location filename="../main.cpp" line="56"/>
       <source>Points to the master configuration file. Read manual at wiki page for more details.</source>
       <translation>指向主配置文件。更多细节见 Wiki 页面上的手册。</translation>
@@ -77,6 +67,16 @@
       <location filename="../main.cpp" line="56"/>
       <source>settings file</source>
       <translation>设置文件</translation>
+    </message>
+    <message>
+      <location filename="../main.cpp" line="65"/>
+      <source>Enables debugging of Letos&apos;s query executor.</source>
+      <translation>启用对 Letos 查询执行器的调试功能。</translation>
+    </message>
+    <message>
+      <location filename="../main.cpp" line="66"/>
+      <source>Lists plugins installed in the Letos and quits.</source>
+      <translation>列出 Letos 中已安装的插件并退出。</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="79"/>
