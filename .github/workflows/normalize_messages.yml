@@ -1,0 +1,86 @@
+name: Normalize Crowdin TS Files
+
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+      - reopened
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  normalize-ts:
+    if: github.head_ref == 'l10n_master'
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout PR branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.head_ref }}
+
+      - name: Install Qt tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y qt6-tools-dev-tools
+
+      - name: Normalize TS files
+        run: |
+          find . -name "*.ts" | while read f; do
+            echo "Normalizing $f"
+
+            lconvert \
+              -sort-contexts \
+              -o "$f.tmp" \
+              "$f"
+
+            mv "$f.tmp" "$f"
+          done
+
+      - name: Configure Git
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+      - name: Commit normalization changes
+        run: |
+          git add .
+
+          if ! git diff --cached --quiet; then
+            git commit -m "Normalize Qt TS files"
+            git push
+          else
+            echo "No normalization changes"
+          fi
+
+      - name: Fetch target branch
+        run: |
+          git fetch origin ${{ github.base_ref }}
+
+      - name: Check whether PR is empty
+        id: check_empty
+        run: |
+          if git diff --quiet origin/${{ github.base_ref }}...HEAD; then
+            echo "empty=true" >> $GITHUB_OUTPUT
+            echo "PR became empty after normalization"
+          else
+            echo "empty=false" >> $GITHUB_OUTPUT
+            echo "PR still contains semantic changes"
+          fi
+
+      - name: Close empty PR
+        if: steps.check_empty.outputs.empty == 'true'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.pulls.update({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: context.issue.number,
+              state: 'closed'
+            });
