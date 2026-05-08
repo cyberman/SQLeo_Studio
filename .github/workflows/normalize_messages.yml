@@ -27,7 +27,7 @@ jobs:
       - name: Install Qt tools
         run: |
           sudo apt-get update
-          sudo apt-get install -y qt6-tools-dev-tools
+          sudo apt-get install -y qt6-l10n-tools
 
       - name: Normalize TS files
         run: |
