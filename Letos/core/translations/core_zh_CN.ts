@@ -266,7 +266,7 @@
     <message>
       <location filename="../dbobjectorganizer.cpp" line="507"/>
       <source>Database %1 could not be attached to database %2, so the data of table %3 will be copied with Letos as a mediator. This method can be slow for huge tables, so please be patient.</source>
-      <translation type="unfinished">Database %1 could not be attached to database %2, so the data of table %3 will be copied with Letos as a mediator. This method can be slow for huge tables, so please be patient.</translation>
+      <translation>数据库 %1 无法连接到数据库 %2，因此表 %3 的数据将通过 Letos 作为中间媒介进行复制。对于大型表，此方法可能速度较慢，请耐心等待。</translation>
     </message>
     <message>
       <location filename="../dbobjectorganizer.cpp" line="531"/>
@@ -425,17 +425,17 @@ Tables, indexes, triggers and views copied to database %3 will remain.</source>
     <message>
       <location filename="../services/functionmanager.cpp" line="37"/>
       <source>Scalar</source>
-      <translation type="unfinished">Scalar</translation>
+      <translation>标量</translation>
     </message>
     <message>
       <location filename="../services/functionmanager.cpp" line="39"/>
       <source>Aggregate</source>
-      <translation type="unfinished">Aggregate</translation>
+      <translation>总计</translation>
     </message>
     <message>
       <location filename="../services/functionmanager.cpp" line="41"/>
       <source>Window</source>
-      <translation type="unfinished">Window</translation>
+      <translation>窗口</translation>
     </message>
   </context>
   <context>
@@ -453,7 +453,7 @@ Tables, indexes, triggers and views copied to database %3 will remain.</source>
     <message>
       <location filename="../services/impl/functionmanagerimpl.cpp" line="401"/>
       <source>No such function registered in Letos: %1(%2)</source>
-      <translation type="unfinished">No such function registered in Letos: %1(%2)</translation>
+      <translation>Letos 中未注册此函数：%1(%2)</translation>
     </message>
     <message>
       <location filename="../services/impl/functionmanagerimpl.cpp" line="407"/>
@@ -859,27 +859,27 @@ Tables, indexes, triggers and views copied to database %3 will remain.</source>
     <message>
       <location filename="../common/utils.cpp" line="79"/>
       <source>SQLite database or SQL file</source>
-      <translation type="unfinished">SQLite database or SQL file</translation>
+      <translation>SQLite 数据库或 SQL 文件</translation>
     </message>
     <message>
       <location filename="../common/utils.cpp" line="81"/>
       <source>SQL files</source>
-      <translation type="unfinished">SQL files</translation>
+      <translation>SQL 文件</translation>
     </message>
     <message>
       <location filename="../common/utils.cpp" line="82"/>
       <source>CSV files</source>
-      <translation type="unfinished">CSV files</translation>
+      <translation>CSV 文件</translation>
     </message>
     <message>
       <location filename="../common/utils.cpp" line="83"/>
       <source>Text files</source>
-      <translation type="unfinished">Text files</translation>
+      <translation>文本文件</translation>
     </message>
     <message>
       <location filename="../common/utils.cpp" line="84"/>
       <source>All files</source>
-      <translation type="unfinished">All files</translation>
+      <translation>所有文件</translation>
     </message>
     <message>
       <location filename="../common/utils.cpp" line="968"/>
@@ -1092,7 +1092,7 @@ The view will remain as it is.</source>
     <message>
       <location filename="../viewmodifier.cpp" line="80"/>
       <source>Letos was unable to resolve columns returned by the new view, therefore it won&apos;t be able to tell which triggers might fail during the recreation process.</source>
-      <translation type="unfinished">Letos was unable to resolve columns returned by the new view, therefore it won&apos;t be able to tell which triggers might fail during the recreation process.</translation>
+      <translation>Letos 无法解析新视图返回的列，因此无法判断在重新创建过程中哪些触发器可能会失败。</translation>
     </message>
   </context>
   <context>
@@ -1122,7 +1122,7 @@ The view will remain as it is.</source>
     <message>
       <location filename="../db/queryexecutor.cpp" line="610"/>
       <source>Letos was unable to extract metadata from the query. Results won&apos;t be editable.</source>
-      <translation type="unfinished">Letos was unable to extract metadata from the query. Results won&apos;t be editable.</translation>
+      <translation>Letos 无法从查询中提取元数据。结果将无法编辑。</translation>
     </message>
   </context>
   <context>
@@ -1214,7 +1214,7 @@ The view will remain as it is.</source>
       <location filename="../sqlhistorymodel.cpp" line="40"/>
       <source>SQL</source>
       <comment>sql history header</comment>
-      <translation type="unfinished">SQL</translation>
+      <translation>SQL</translation>
     </message>
   </context>
   <context>
