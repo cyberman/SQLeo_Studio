@@ -63,21 +63,20 @@ class GUI_API_EXPORT CollationsEditor : public MdiChild
 
     private:
         void init();
-        int getCurrentCollationRow() const;
-        QModelIndex collRowToSrc(const QModelIndex& idx) const;
+        QModelIndex getCurrentCollationIdx() const;
         CollationManager::CollationType getCurrentType() const;
-        void collationDeselected(int srcRow);
-        void collationSelected(int srcRow);
+        void collationDeselected(const QModelIndex& idx);
+        void collationSelected(const QModelIndex& idx);
         void clearEdits();
-        void selectCollation(int srcRow);
+        void selectCollation(const QModelIndex& idx);
         QStringList getCurrentDatabases() const;
         void setFont(const QFont& font);
         void updateLangCombo();
         void setupContextMenu();
 
         Ui::CollationsEditor *ui = nullptr;
-        CollationsEditorModel* model = nullptr;
-        QSortFilterProxyModel* collationFilterModel = nullptr;
+        CollationsEditorModel* dataModel = nullptr;
+        QSortFilterProxyModel* viewModel = nullptr;
         SelectableDbModel* dbListModel = nullptr;
         QHash<QString,SyntaxHighlighterPlugin*> highlighterPlugins;
         QSyntaxHighlighter* currentHighlighter = nullptr;

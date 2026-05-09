@@ -40,6 +40,18 @@ class API_EXPORT CollationManager : public QObject
         virtual void loadFromConfig() = 0;
         virtual void init() = 0;
 
+        static QString typeDisplayString(CollationType type)
+        {
+            switch (type)
+            {
+                case FUNCTION_BASED:
+                    return QObject::tr("Function-based");
+                case EXTENSION_BASED:
+                    return QObject::tr("Extension-based");
+            }
+            return QString();
+        }
+
     signals:
         void collationListChanged();
 };
