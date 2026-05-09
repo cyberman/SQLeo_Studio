@@ -274,10 +274,8 @@ jobs:
                 echo "PORTABLE_DIR_FOR_INSTALLER=$(pwd)/Letos" >> $GITHUB_ENV
 
             - name: "[Assembling] Create installer package"
-              shell: msys2 {0}
               run: |
-                $ISCC -DMyPortableDir=${{ env.PORTABLE_DIR_FOR_INSTALLER }} -DMyArch=${{ matrix.OUTPUT_FILE_ARCH }} InnoSetupScript.iss
-                ls -l
+                ISCC.exe -DMyPortableDir=${{ env.PORTABLE_DIR_FOR_INSTALLER }} -DMyArch=${{ matrix.OUTPUT_FILE_ARCH }} InnoSetupScript.iss
                 INSTALLER_FILE_NAME="Letos-${{ env.PACKAGE_VERSION }}-setup.exe"
                 echo "INSTALLER_FILE_NAME=$INSTALLER_FILE_NAME" >> $GITHUB_ENV
 
