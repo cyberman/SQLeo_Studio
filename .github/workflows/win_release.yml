@@ -95,10 +95,6 @@ jobs:
                 ABSOLUTE_PORTABLE_DIR=$(realpath -m ${{ env.PORTABLE_DIR }})
                 echo "ABSOLUTE_PORTABLE_DIR=$ABSOLUTE_PORTABLE_DIR" >> $GITHUB_ENV
 
-            - name: "[Prerequisites] Install Inno Setup"
-              run: |
-                choco install innosetup -y
-
             - name: "[Prerequisites] Install MSYS2"
               uses: msys2/setup-msys2@v2
               with: 
