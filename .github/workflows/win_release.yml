@@ -92,7 +92,7 @@ jobs:
             - name:
               shell: bash
               run: |
-                eho "env.PORTABLE_DIR: ${{ env.PORTABLE_DIR }})"
+                echo "env.PORTABLE_DIR: ${{ env.PORTABLE_DIR }})"
                 ABSOLUTE_PORTABLE_DIR=$(realpath -m ${{ env.PORTABLE_DIR }})
                 echo "ABSOLUTE_PORTABLE_DIR: $ABSOLUTE_PORTABLE_DIR"
                 echo "ABSOLUTE_PORTABLE_DIR=$ABSOLUTE_PORTABLE_DIR" >> $GITHUB_ENV
