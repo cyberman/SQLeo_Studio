@@ -102,15 +102,6 @@ jobs:
                 ISCC=$(which iscc)
                 echo "ISCC=$ISCC" >> $GITHUB_ENV
 
-            - name: Setup debugging SSH
-              uses: owenthereal/action-upterm@v1
-              with:
-                wait-timeout-minutes: 10
-
-            - name: stop
-              shell: bash
-              run: exit 1
-
             - name: "[Prerequisites] Install MSYS2"
               uses: msys2/setup-msys2@v2
               with: 
