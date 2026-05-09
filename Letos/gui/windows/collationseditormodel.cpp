@@ -284,12 +284,6 @@ void CollationsEditorModel::init()
         langToIcon[plugin->getLanguage()] = QIcon(plugin->getIconPath());
 }
 
-void CollationsEditorModel::emitDataChanged(int row)
-{
-    QModelIndex idx = index(row);
-    emit dataChanged(idx, idx);
-}
-
 CollationsEditorModel::Collation::Collation()
 {
     data = CollationManager::CollationPtr::create();

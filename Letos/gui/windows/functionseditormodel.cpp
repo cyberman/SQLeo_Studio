@@ -187,73 +187,6 @@ int FunctionsEditorModel::columnCount(const QModelIndex& parent) const
     return 2;
 }
 
-bool FunctionsEditorModel::setData(const QModelIndex& index, const QVariant& value, int role)
-{
-    if (!index.isValid())
-        return false;
-
-    if (index.column() != 0)
-        return false;
-
-    if (index.row() < 0 || index.row() >= functionList.size())
-        return false;
-
-    Function* fn = functionList[index.row()];
-    switch (role)
-    {
-        case CODE:
-            fn->data.code = value.toString();
-            break;
-        case MODIFIED:
-            fn->modified = value.toBool();
-            break;
-        case VALID:
-            fn->valid = value.toBool();
-            break;
-        case TYPE:
-            fn->data.type = static_cast<FunctionManager::ScriptFunction::Type>(value.toInt());
-            break;
-        case FINAL_CODE:
-            fn->data.finalCode = value.toString();
-            break;
-        case STEP_CODE:
-            fn->data.code = value.toString();
-            break;
-        case INVERSE_CODE:
-            fn->data.inverseCode = value.toString();
-            break;
-        case INIT_CODE:
-            fn->data.initCode = value.toString();
-            break;
-        case NAME:
-            fn->data.name = value.toString();
-            break;
-        case LANG:
-            fn->data.lang = value.toString();
-            break;
-        case DATABASES:
-            fn->data.databases = value.toStringList();
-            break;
-        case ALL_DATABASES:
-            fn->data.allDatabases = value.toBool();
-            break;
-        case ARGUMENTS:
-            fn->data.arguments = value.toStringList();
-            break;
-        case UNDEF_ARGS:
-            fn->data.undefinedArgs = value.toBool();
-            break;
-        case DETERMINISTIC:
-            fn->data.deterministic = value.toBool();
-            break;
-        defaut:
-            return true;
-    }
-
-    emit dataChanged(index, index);
-    return true;
-}
-
 QVariant FunctionsEditorModel::data(const QModelIndex& index, int role) const
 {
     if (!index.isValid())
@@ -339,6 +272,73 @@ QVariant FunctionsEditorModel::data(const QModelIndex& index, int role) const
     }
 
     return QVariant();
+}
+
+bool FunctionsEditorModel::setData(const QModelIndex& index, const QVariant& value, int role)
+{
+    if (!index.isValid())
+        return false;
+
+    if (index.column() != 0)
+        return false;
+
+    if (index.row() < 0 || index.row() >= functionList.size())
+        return false;
+
+    Function* fn = functionList[index.row()];
+    switch (role)
+    {
+        case CODE:
+            fn->data.code = value.toString();
+            break;
+        case MODIFIED:
+            fn->modified = value.toBool();
+            break;
+        case VALID:
+            fn->valid = value.toBool();
+            break;
+        case TYPE:
+            fn->data.type = static_cast<FunctionManager::ScriptFunction::Type>(value.toInt());
+            break;
+        case FINAL_CODE:
+            fn->data.finalCode = value.toString();
+            break;
+        case STEP_CODE:
+            fn->data.code = value.toString();
+            break;
+        case INVERSE_CODE:
+            fn->data.inverseCode = value.toString();
+            break;
+        case INIT_CODE:
+            fn->data.initCode = value.toString();
+            break;
+        case NAME:
+            fn->data.name = value.toString();
+            break;
+        case LANG:
+            fn->data.lang = value.toString();
+            break;
+        case DATABASES:
+            fn->data.databases = value.toStringList();
+            break;
+        case ALL_DATABASES:
+            fn->data.allDatabases = value.toBool();
+            break;
+        case ARGUMENTS:
+            fn->data.arguments = value.toStringList();
+            break;
+        case UNDEF_ARGS:
+            fn->data.undefinedArgs = value.toBool();
+            break;
+        case DETERMINISTIC:
+            fn->data.deterministic = value.toBool();
+            break;
+        defaut:
+            return true;
+    }
+
+    emit dataChanged(index, index);
+    return true;
 }
 
 void FunctionsEditorModel::init()

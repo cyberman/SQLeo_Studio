@@ -63,18 +63,18 @@ class GUI_API_EXPORT SqliteExtensionEditor : public MdiChild
 
     private:
         void init();
-        int getCurrentExtensionRow() const;
+        QModelIndex getCurrentExtensionIndex() const;
         QModelIndex extRowToSrc(const QModelIndex& idx) const;
-        void extensionDeselected(int srcRow);
-        void extensionSelected(int srcRow);
+        void extensionDeselected(const QModelIndex& idx);
+        void extensionSelected(const QModelIndex& idx);
         void clearEdits();
-        void selectExtension(int srcRow);
+        void selectExtension(const QModelIndex& idx);
         QStringList getCurrentDatabases() const;
         bool tryToLoad(const QString& filePath, const QString& initFunc, QString* resultError);
         bool validateExtension(bool* fileOk = nullptr,
                                bool* initOk = nullptr,
                                QString* fileError = nullptr);
-        bool validateExtension(int row);
+        bool validateExtension(const QModelIndex& idx);
         bool validateCurrentExtension();
         bool validateExtension(const QString& filePath,
                                const QString& initFunc,
@@ -84,8 +84,8 @@ class GUI_API_EXPORT SqliteExtensionEditor : public MdiChild
         void initStateForAll();
 
         Ui::SqliteExtensionEditor *ui;
-        SqliteExtensionEditorModel* model = nullptr;
-        QSortFilterProxyModel* extensionFilterModel = nullptr;
+        SqliteExtensionEditorModel* dataModel = nullptr;
+        QSortFilterProxyModel* viewModel = nullptr;
         SelectableDbModel* dbListModel = nullptr;
         bool currentModified = false;
         bool updatesForSelection = false;

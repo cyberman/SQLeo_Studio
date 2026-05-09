@@ -54,7 +54,6 @@ class GUI_API_EXPORT CollationsEditorModel : public QAbstractListModel
         };
 
         void init();
-        void emitDataChanged(int row);
 
         QList<Collation*> collationList;
 
