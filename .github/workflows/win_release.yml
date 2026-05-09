@@ -89,6 +89,15 @@ jobs:
         runs-on: ${{ matrix.OS }}
 
         steps:
+            - name:
+              shell: msys2 {0}
+              run: |
+                eho "env.PORTABLE_DIR: ${{ env.PORTABLE_DIR }})"
+                ABSOLUTE_PORTABLE_DIR=$(realpath -m ${{ env.PORTABLE_DIR }})
+                echo "ABSOLUTE_PORTABLE_DIR: $ABSOLUTE_PORTABLE_DIR"
+                echo "ABSOLUTE_PORTABLE_DIR=$ABSOLUTE_PORTABLE_DIR" >> $GITHUB_ENV
+                exit 1
+
             - name: "[Prerequisites] Install MSYS2"
               uses: msys2/setup-msys2@v2
               with: 
@@ -187,7 +196,6 @@ jobs:
                 set -x
                 cd scripts/win32
                 ./compile.sh
-                echo "ABSOLUTE_PORTABLE_DIR=$(realpath -m ${{ env.PORTABLE_DIR }})" >> $GITHUB_ENV
 
             - name: "[Assembling] Prepare portable distro (Resources)"
               shell: msys2 {0}
