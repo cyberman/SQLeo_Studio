@@ -414,13 +414,13 @@ jobs:
                 sha256sum output/portable/$APPIMAGENAME
 
             - name: Upload package artifact
-              uses: actions/upload-artifact@v4
+              uses: actions/upload-artifact@v7
               with:
                 name: letos-${{ env.PACKAGE_VERSION }}.tar.xz
                 path: output/portable/letos-${{ env.PACKAGE_VERSION }}.tar.xz
 
             - name: Upload AppImage artifact
-              uses: actions/upload-artifact@v4
+              uses: actions/upload-artifact@v7
               with:
                 name: ${{ env.APPIMAGENAME }}
                 path: output/portable/${{ env.APPIMAGENAME }}
