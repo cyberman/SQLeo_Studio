@@ -95,6 +95,13 @@ jobs:
                 ABSOLUTE_PORTABLE_DIR=$(realpath -m ${{ env.PORTABLE_DIR }})
                 echo "ABSOLUTE_PORTABLE_DIR=$ABSOLUTE_PORTABLE_DIR" >> $GITHUB_ENV
 
+            - name: "[Prerequisites] Define ISCC command"
+              shell: bash
+              run: |
+                # Later the msys2 doesn't have it in the PATH
+                ISCC=$(which iscc)
+                echo "ISCC=$ISCC" >> $GITHUB_ENV
+
             - name: Setup debugging SSH
               uses: owenthereal/action-upterm@v1
               with:
@@ -288,7 +295,7 @@ jobs:
             - name: "[Assembling] Create installer package"
               shell: msys2 {0}
               run: |
-                ISCC.exe "/DMyPortableDir=${{ env.SIGNED_DIR }}/Letos" "/DMyArch=${{ matrix.OUTPUT_FILE_ARCH }}" InnoSetupScript.iss
+                $ISCC "/DMyPortableDir=${{ env.SIGNED_DIR }}/Letos" "/DMyArch=${{ matrix.OUTPUT_FILE_ARCH }}" InnoSetupScript.iss
                 ls -l
                 INSTALLER_FILE_NAME="Letos-${{ env.PACKAGE_VERSION }}-setup.exe"
                 echo "INSTALLER_FILE_NAME=$INSTALLER_FILE_NAME" >> $GITHUB_ENV
