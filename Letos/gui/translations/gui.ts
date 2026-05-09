@@ -4115,100 +4115,100 @@ Please enter new, unique name, or press &apos;%1&apos; to abort the operation:</
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../windows/functionseditor.cpp" line="61"/>
+        <location filename="../windows/functionseditor.cpp" line="62"/>
         <source>SQL functions editor</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../windows/functionseditor.cpp" line="66"/>
+        <location filename="../windows/functionseditor.cpp" line="67"/>
         <source>Commit all function changes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../windows/functionseditor.cpp" line="67"/>
+        <location filename="../windows/functionseditor.cpp" line="68"/>
         <source>Rollback all function changes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../windows/functionseditor.cpp" line="69"/>
+        <location filename="../windows/functionseditor.cpp" line="70"/>
         <source>Create new function</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../windows/functionseditor.cpp" line="70"/>
+        <location filename="../windows/functionseditor.cpp" line="71"/>
         <source>Delete selected function</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../windows/functionseditor.cpp" line="72"/>
+        <location filename="../windows/functionseditor.cpp" line="73"/>
         <source>Import functions from file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../windows/functionseditor.cpp" line="73"/>
+        <location filename="../windows/functionseditor.cpp" line="74"/>
         <source>Export functions to file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../windows/functionseditor.cpp" line="74"/>
+        <location filename="../windows/functionseditor.cpp" line="75"/>
         <source>Custom SQL functions manual</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../windows/functionseditor.cpp" line="77"/>
+        <location filename="../windows/functionseditor.cpp" line="78"/>
         <source>Add function argument</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../windows/functionseditor.cpp" line="78"/>
+        <location filename="../windows/functionseditor.cpp" line="79"/>
         <source>Rename function argument</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../windows/functionseditor.cpp" line="79"/>
+        <location filename="../windows/functionseditor.cpp" line="80"/>
         <source>Delete function argument</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../windows/functionseditor.cpp" line="81"/>
+        <location filename="../windows/functionseditor.cpp" line="82"/>
         <source>Move function argument up</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../windows/functionseditor.cpp" line="82"/>
+        <location filename="../windows/functionseditor.cpp" line="83"/>
         <source>Move function argument down</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../windows/functionseditor.cpp" line="535"/>
+        <location filename="../windows/functionseditor.cpp" line="540"/>
         <source>Enter a unique, non-empty function name. Duplicate names are allowed if the number of input parameters differs.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../windows/functionseditor.cpp" line="546"/>
+        <location filename="../windows/functionseditor.cpp" line="551"/>
         <source>Pick the implementation language.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../windows/functionseditor.cpp" line="564"/>
-        <location filename="../windows/functionseditor.cpp" line="574"/>
-        <location filename="../windows/functionseditor.cpp" line="575"/>
+        <location filename="../windows/functionseditor.cpp" line="569"/>
+        <location filename="../windows/functionseditor.cpp" line="579"/>
+        <location filename="../windows/functionseditor.cpp" line="580"/>
         <source>Enter a non-empty implementation code.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../windows/functionseditor.cpp" line="624"/>
+        <location filename="../windows/functionseditor.cpp" line="629"/>
         <source>argument</source>
         <comment>new function argument name in function editor window</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../windows/functionseditor.cpp" line="728"/>
+        <location filename="../windows/functionseditor.cpp" line="733"/>
         <source>Function argument cannot be empty and it cannot have duplicated name.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../windows/functionseditor.cpp" line="795"/>
+        <location filename="../windows/functionseditor.cpp" line="800"/>
         <source>Functions editor window has uncommitted modifications.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4216,42 +4216,42 @@ Please enter new, unique name, or press &apos;%1&apos; to abort the operation:</
 <context>
     <name>FunctionsEditorModel</name>
     <message>
-        <location filename="../windows/functionseditormodel.cpp" line="401"/>
+        <location filename="../windows/functionseditormodel.cpp" line="328"/>
         <source>all databases</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../windows/functionseditormodel.cpp" line="406"/>
+        <location filename="../windows/functionseditormodel.cpp" line="333"/>
         <source>Function:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../windows/functionseditormodel.cpp" line="407"/>
+        <location filename="../windows/functionseditormodel.cpp" line="334"/>
         <source>Type:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../windows/functionseditormodel.cpp" line="408"/>
+        <location filename="../windows/functionseditormodel.cpp" line="335"/>
         <source>Deterministic:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../windows/functionseditormodel.cpp" line="408"/>
+        <location filename="../windows/functionseditormodel.cpp" line="335"/>
         <source>Yes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../windows/functionseditormodel.cpp" line="408"/>
+        <location filename="../windows/functionseditormodel.cpp" line="335"/>
         <source>No</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../windows/functionseditormodel.cpp" line="409"/>
+        <location filename="../windows/functionseditormodel.cpp" line="336"/>
         <source>Language:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../windows/functionseditormodel.cpp" line="410"/>
+        <location filename="../windows/functionseditormodel.cpp" line="337"/>
         <source>Registered in:</source>
         <translation type="unfinished"></translation>
     </message>
