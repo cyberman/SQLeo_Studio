@@ -90,7 +90,7 @@ jobs:
 
         steps:
             - name:
-              shell: msys2 {0}
+              shell: bash
               run: |
                 eho "env.PORTABLE_DIR: ${{ env.PORTABLE_DIR }})"
                 ABSOLUTE_PORTABLE_DIR=$(realpath -m ${{ env.PORTABLE_DIR }})
