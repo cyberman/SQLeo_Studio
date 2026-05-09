@@ -224,6 +224,7 @@ jobs:
                 cp output/portable/letos-${{ env.PACKAGE_VERSION }}.zip unsigned/
                 cd unsigned
                 7z x letos-${{ env.PACKAGE_VERSION }}.zip
+                # echo "PORTABLE_DIR_FOR_INSTALLER=$(pwd)" >> $GITHUB_ENV
                 echo "SIGNED_DIR=unsigned" >> $GITHUB_ENV
 
             - name: "[Code Signing] Prepare for code signing"
@@ -271,11 +272,12 @@ jobs:
                 ls -l
                 7z x letos-${{ env.PACKAGE_VERSION }}.zip
                 ls -l
-                echo "PORTABLE_DIR_FOR_INSTALLER=$(pwd)/Letos" >> $GITHUB_ENV
+                # echo "PORTABLE_DIR_FOR_INSTALLER=$(pwd)" >> $GITHUB_ENV
 
             - name: "[Assembling] Create installer package"
+              shell: msys2 {0}
               run: |
-                ISCC.exe -DMyPortableDir=${{ env.PORTABLE_DIR_FOR_INSTALLER }} -DMyArch=${{ matrix.OUTPUT_FILE_ARCH }} InnoSetupScript.iss
+                $ISCC -DMyPortableDir=${{ env.SIGNED_DIR }}/Letos -DMyArch=${{ matrix.OUTPUT_FILE_ARCH }} InnoSetupScript.iss
                 INSTALLER_FILE_NAME="Letos-${{ env.PACKAGE_VERSION }}-setup.exe"
                 echo "INSTALLER_FILE_NAME=$INSTALLER_FILE_NAME" >> $GITHUB_ENV
 
