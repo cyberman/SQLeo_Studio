@@ -156,169 +156,44 @@ jobs:
                     echo GXX_COMMAND="$CCACHE_COMMAND clang++.exe"
                 fi >> $GITHUB_ENV
 
-            - name: "[Prerequisites] Install SQLite3"
+            - name: "[Prerequisites] Install SQLite3 and extensions"
               shell: msys2 {0}
               run: |
                 SQLITE_DOT_VERSION=$($GH_SCRIPTS/convert_int_ver.sh $SQLITE_VERSION)
                 echo "SQLITE_DOT_VERSION=$SQLITE_DOT_VERSION" >> $GITHUB_ENV
-
-                cd ..
+                
                 SQLITE3_ZIP=sqlite3-windows-${{ matrix.SQLITE_ARCH }}-$SQLITE_VERSION.zip
-                curl -L https://github.com/pawelsalawa/sqlite3-letos/releases/download/v$SQLITE_DOT_VERSION/$SQLITE3_ZIP --output $SQLITE3_ZIP
                 
-                unzip $SQLITE3_ZIP sqlite3.dll sqlite3.h sqlite3ext.h -d sqlite
+                cd scripts/win32
+                ./compile_sqlite_and_ext.sh \
+                    https://github.com/pawelsalawa/sqlite3-letos/releases/download/v$SQLITE_DOT_VERSION/$SQLITE3_ZIP \
+                    https://github.com/pawelsalawa/sqlite3-letos/releases/download/v$SQLITE_DOT_VERSION/sqlite3-extensions-src-$SQLITE_VERSION.zip
+
+                #cd ..
+                #SQLITE3_ZIP=sqlite3-windows-${{ matrix.SQLITE_ARCH }}-$SQLITE_VERSION.zip
+                #curl -L https://github.com/pawelsalawa/sqlite3-letos/releases/download/v$SQLITE_DOT_VERSION/$SQLITE3_ZIP --output $SQLITE3_ZIP
                 
-                cd sqlite
-                gendef sqlite3.dll
-                dlltool -d sqlite3.def -l libsqlite3.dll.a
-                pwd
-                ls -l
-
-            - name: "[Prerequisites] Compile additional SQLite3 extensions"
-              shell: msys2 {0}
-              run: |
-                cd ..
-                mkdir ext
-                curl -L https://github.com/pawelsalawa/sqlite3-letos/releases/download/v$SQLITE_DOT_VERSION/sqlite3-extensions-src-$SQLITE_VERSION.zip --output sqlite3-extensions-src-$SQLITE_VERSION.zip
+                #unzip $SQLITE3_ZIP sqlite3.dll sqlite3.h sqlite3ext.h -d sqlite
                 
-                mkdir ext-src
-                unzip sqlite3-extensions-src-$SQLITE_VERSION.zip -d ext-src
-                cd ext-src
-                FLAGS="-shared -O2 -I../sqlite -L../sqlite -lsqlite3"
-                set -x
-                for f in compress sqlar; do
-                    $GCC_COMMAND misc/$f.c -Imisc $FLAGS -lz -o ../ext/$f.dll
-                done
-                
-                for f in csv decimal eval ieee754 percentile rot13 series uint uuid zorder; do
-                    $GCC_COMMAND misc/$f.c -Imisc $FLAGS -o ../ext/$f.dll
-                done
+                #cd sqlite
+                #gendef sqlite3.dll
+                #dlltool -d sqlite3.def -l libsqlite3.dll.a
+                #pwd
+                #ls -l
 
-                for f in icu; do
-                    $GCC_COMMAND icu/$f.c `pkg-config --libs --cflags icu-uc icu-io` $FLAGS -o ../ext/$f.dll
-                done
-
-                set +x
-                ls -l ../ext/
-
-            - name: "[Prerequisites] Prepare output dir"
-              shell: msys2 {0}
-              run: mkdir output output/build output/build-plugins
-
-            - name: "[Building] Compile Letos"
-              working-directory: output/build
+            - name: "[Building] Compile Letos and Plugins"
               shell: msys2 {0}
               run: |
                 set -x
-                cmake ../../Letos/ -G Ninja \
-                    -DCMAKE_BUILD_TYPE=Release \
-                    -DCMAKE_INSTALL_PREFIX=../Letos \
-                    -DWITH_PORTABLE=1 \
-                    -DWITH_UPDATER=1 \
-                    -DBUILD_TESTING=0 \
-                    -DCUSTOM_SQLITE3=$GITHUB_WORKSPACE/../sqlite
-                cmake --build . --verbose
-                cmake --install . --verbose
-
-            - name: "[Building] Compile Plugins"
-              working-directory: output/build-plugins
-              shell: msys2 {0}
-              run: |
-                set -x
-                cmake ../../Plugins/ -G Ninja \
-                    -DCMAKE_BUILD_TYPE=Release \
-                    -DCMAKE_INSTALL_PREFIX=../Letos \
-                    -DWITH_PORTABLE=1 \
-                    -DWITH_DYNAMIC_PYTHON=1 \
-                    -DWITH_ALL_PLUGINS=1 \
-                    -DCUSTOM_SQLITE3=$GITHUB_WORKSPACE/../sqlite
-                cmake --build . --verbose
-                cmake --install . --verbose
-
-            - name: "[Assembling] Copy SQLite extensions to output dir"
-              shell: msys2 {0}
-              run: |
-                cp -R ../ext output/Letos/
-
-            - name: "[Assembling] Prepare portable dir"
-              shell: msys2 {0}
-              working-directory: output
-              run: |
-                mkdir portable
-                cp -R Letos portable/
-
-            - name: "[Assembling] Clean-up portable dir"
-              shell: msys2 {0}
-              run: |
-                cd ${{ env.PORTABLE_DIR }}
-                rm -rf lib # it contains only *.a files
-                rm -f *.a
-                rm -f plugins/*.a
-                rm -f styles/*.a
-                echo "ABSOLUTE_PORTABLE_DIR=`pwd`" >> $GITHUB_ENV
-
-            - name: "[Assembling] Prepare portable distro (Qt)"
-              shell: msys2 {0}
-              run: |
-                cd ${ABSOLUTE_PORTABLE_DIR}
-
-                ${MINGW_PREFIX}/bin/windeployqt Letos.exe \
-                  --release \
-                  --no-translations \
-                  --no-system-d3d-compiler \
-                  -printsupport -xml -qml
-
-                rm Qt6Quick*.dll Qt6QmlMeta.dll Qt6QmlModels.dll Qt6QmlWorkerScript.dll
-                rm tls/qcertonlybackend.dll
-                rm -r qml qmltooling generic networkinformation
-
-            - name: "[Assembling] Prepare portable distro (Deps)"
-              shell: msys2 {0}
-              run: |
-                set -x
-                set -e
-                set -o pipefail
-
-                cd ../sqlite
-                cp *.dll "$ABSOLUTE_PORTABLE_DIR"
-
-                cd ${ABSOLUTE_PORTABLE_DIR}
-
-                # Copy dependencies of letos.exe
-                ntldd -R letos.exe | \
-                 sed 's/.*=> \(.*\) (0x.*/\1/' | \
-                 sed 's/\\/\//g' | grep ${MINGW_PREFIX} | \
-                 xargs -I {} cygpath -u {} | \
-                 xargs -I {} cp -u {} .
-
-                # Copy dependencies of letoscli.exe
-                ntldd letoscli.exe | \
-                 sed 's/.*=> \(.*\) (0x.*/\1/' | \
-                 sed 's/\\/\//g' | grep ${MINGW_PREFIX} | \
-                 xargs -I {} cygpath -u {} | \
-                 xargs -I {} cp -u {} .
-
-                # Copy dependencies of plugins
-                ntldd -R plugins/*.dll | \
-                  sed -n 's/.*=> \(.*\) (0x.*/\1/p' | \
-                  tr '\\' '/' | \
-                  awk -v pfx="${MINGW_PREFIX}" 'index($0, pfx)' | \
-                  xargs -r -I {} cygpath -u {} | \
-                  xargs -r -I {} cp -u {} .
-
-                # Copy dependencies of extensions
-                ntldd -R ext/*.dll | \
-                  sed -n 's/.*=> \(.*\) (0x.*/\1/p' | \
-                  tr '\\' '/' | \
-                  awk -v pfx="${MINGW_PREFIX}" 'index($0, pfx)' | \
-                  xargs -r -I {} cygpath -u {} | \
-                  xargs -r -I {} cp -u {} .
+                cd scripts/win32
+                ./compile.sh
+                echo "ABSOLUTE_PORTABLE_DIR=$(realpath -m ${{ env.PORTABLE_DIR }})" >> $GITHUB_ENV
 
             - name: "[Assembling] Prepare portable distro (Resources)"
               shell: msys2 {0}
               run: |
                 cp Letos/gui/img/letos.ico "$ABSOLUTE_PORTABLE_DIR"/appicon.ico
-                cp Letos/gui/img/letos.svg "${{ env.PORTABLE_DIR }}"/appicon.svg
+                cp Letos/gui/img/letos.svg "$ABSOLUTE_PORTABLE_DIR"/appicon.svg
 
             - name: "[Assembling] Determine Letos version"
               shell: msys2 {0}
