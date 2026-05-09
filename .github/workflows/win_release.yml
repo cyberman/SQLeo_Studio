@@ -89,14 +89,15 @@ jobs:
         runs-on: ${{ matrix.OS }}
 
         steps:
-            - name:
+            - name: "[Prerequisites] Define portable dir path"
               shell: bash
               run: |
-                echo "env.PORTABLE_DIR: ${{ env.PORTABLE_DIR }})"
                 ABSOLUTE_PORTABLE_DIR=$(realpath -m ${{ env.PORTABLE_DIR }})
-                echo "ABSOLUTE_PORTABLE_DIR: $ABSOLUTE_PORTABLE_DIR"
                 echo "ABSOLUTE_PORTABLE_DIR=$ABSOLUTE_PORTABLE_DIR" >> $GITHUB_ENV
-                exit 1
+
+            - name: "[Prerequisites] Install Inno Setup"
+              run: |
+                choco install innosetup -y
 
             - name: "[Prerequisites] Install MSYS2"
               uses: msys2/setup-msys2@v2
@@ -196,6 +197,8 @@ jobs:
                 set -x
                 cd scripts/win32
                 ./compile.sh
+
+                find .
 
             - name: "[Assembling] Prepare portable distro (Resources)"
               shell: msys2 {0}
