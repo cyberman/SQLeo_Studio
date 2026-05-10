@@ -294,19 +294,23 @@
         <translation>Codice di implementazione:</translation>
     </message>
     <message>
-        <location filename="../windows/collationseditor.ui" line="203"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Code executed when the collation is applied. It receives two arguments, &lt;span style=&quot; font-family:&apos;monospace&apos;;&quot;&gt;first&lt;/span&gt; and &lt;span style=&quot; font-family:&apos;monospace&apos;;&quot;&gt;second&lt;/span&gt; (named according to the scripting language conventions), representing the values to compare. The code should compare these values and return an integer indicating the result: negative if &lt;span style=&quot; font-family:&apos;monospace&apos;;&quot;&gt;first &amp;lt; second&lt;/span&gt;, zero if equal, and positive if &lt;span style=&quot; font-family:&apos;monospace&apos;;&quot;&gt;first &amp;gt; second&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Code executed when the collation is applied. It receives two arguments, &lt;span style=&quot; font-family:&apos;monospace&apos;;&quot;&gt;first&lt;/span&gt; and &lt;span style=&quot; font-family:&apos;monospace&apos;;&quot;&gt;second&lt;/span&gt; (named according to the scripting language conventions), representing the values to compare. The code should compare these values and return an integer indicating the result: negative if &lt;span style=&quot; font-family:&apos;monospace&apos;;&quot;&gt;first &amp;lt; second&lt;/span&gt;, zero if equal, and positive if &lt;span style=&quot; font-family:&apos;monospace&apos;;&quot;&gt;first &amp;gt; second&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="obsolete">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Code executed when the collation is applied. It receives two arguments, &lt;span style=&quot; font-family:&apos;monospace&apos;;&quot;&gt;first&lt;/span&gt; and &lt;span style=&quot; font-family:&apos;monospace&apos;;&quot;&gt;second&lt;/span&gt; (named according to the scripting language conventions), representing the values to compare. The code should compare these values and return an integer indicating the result: negative if &lt;span style=&quot; font-family:&apos;monospace&apos;;&quot;&gt;first &amp;lt; second&lt;/span&gt;, zero if equal, and positive if &lt;span style=&quot; font-family:&apos;monospace&apos;;&quot;&gt;first &amp;gt; second&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../windows/collationseditor.ui" line="232"/>
+        <location filename="../windows/collationseditor.ui" line="229"/>
         <source>Collation name:</source>
         <translation>Nome collation:</translation>
     </message>
     <message>
-        <location filename="../windows/collationseditor.ui" line="242"/>
+        <location filename="../windows/collationseditor.ui" line="239"/>
         <source>Collation type:</source>
         <translation type="unfinished">Collation type:</translation>
+    </message>
+    <message>
+        <location filename="../windows/collationseditor.ui" line="248"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Implements the comparison logic directly in Letos using a scripting language. Choose this type to create fully custom sorting and comparison rules without requiring external SQLite extensions.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../windows/collationseditor.ui" line="251"/>
@@ -315,11 +319,16 @@
     </message>
     <message>
         <location filename="../windows/collationseditor.ui" line="258"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Uses a collation implemented by a SQLite extension or external library. Choose this type when the comparison logic already exists outside of Letos, for example in ICU or another SQLite extension.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../windows/collationseditor.ui" line="261"/>
         <source>Extension-based</source>
         <translation type="unfinished">Extension-based</translation>
     </message>
     <message>
-        <location filename="../windows/collationseditor.ui" line="267"/>
+        <location filename="../windows/collationseditor.ui" line="270"/>
         <source>Implementation language:</source>
         <translation>Linguaggio di implementazione:</translation>
     </message>
@@ -364,39 +373,67 @@
         <translation>Modifica manuale delle collations</translation>
     </message>
     <message>
-        <location filename="../windows/collationseditor.cpp" line="323"/>
+        <location filename="../windows/collationseditor.cpp" line="322"/>
         <source>Enter a non-empty, unique name of the collation.</source>
         <translation>Inserisci un nome non vuoto e univoco della collation.</translation>
     </message>
     <message>
-        <location filename="../windows/collationseditor.cpp" line="333"/>
+        <location filename="../windows/collationseditor.cpp" line="332"/>
         <source>Pick the implementation language.</source>
         <translation>Scegli il linguaggio di implementazione.</translation>
     </message>
     <message>
-        <location filename="../windows/collationseditor.cpp" line="338"/>
+        <location filename="../windows/collationseditor.cpp" line="337"/>
         <source>Registration code</source>
         <translation type="unfinished">Registration code</translation>
     </message>
     <message>
-        <location filename="../windows/collationseditor.cpp" line="339"/>
+        <location filename="../windows/collationseditor.cpp" line="338"/>
         <source>Enter a non-empty registration code.</source>
         <translation type="unfinished">Enter a non-empty registration code.</translation>
     </message>
     <message>
-        <location filename="../windows/collationseditor.cpp" line="343"/>
+        <location filename="../windows/collationseditor.cpp" line="346"/>
         <source>Implementation code</source>
         <translation type="unfinished">Implementation code</translation>
     </message>
     <message>
-        <location filename="../windows/collationseditor.cpp" line="344"/>
+        <location filename="../windows/collationseditor.cpp" line="347"/>
         <source>Enter a non-empty implementation code.</source>
         <translation>Inserisci un codice di implementazione non vuoto.</translation>
     </message>
     <message>
-        <location filename="../windows/collationseditor.cpp" line="496"/>
+        <location filename="../windows/collationseditor.cpp" line="506"/>
         <source>Collations editor window has uncommitted modifications.</source>
         <translation>La finestra dell&apos;editor collations ha modifiche non registrate.</translation>
+    </message>
+</context>
+<context>
+    <name>CollationsEditorModel</name>
+    <message>
+        <location filename="../windows/collationseditormodel.cpp" line="219"/>
+        <source>all databases</source>
+        <translation type="unfinished">all databases</translation>
+    </message>
+    <message>
+        <location filename="../windows/collationseditormodel.cpp" line="224"/>
+        <source>Collation:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../windows/collationseditormodel.cpp" line="225"/>
+        <source>Type:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../windows/collationseditormodel.cpp" line="226"/>
+        <source>Language:</source>
+        <translation type="unfinished">Language:</translation>
+    </message>
+    <message>
+        <location filename="../windows/collationseditormodel.cpp" line="227"/>
+        <source>Registered in:</source>
+        <translation type="unfinished">Registered in:</translation>
     </message>
 </context>
 <context>
@@ -4224,42 +4261,42 @@ Inserisci un nuovo nome univoco o premi &apos;%1&apos; per interrompere l&apos;o
 <context>
     <name>FunctionsEditorModel</name>
     <message>
-        <location filename="../windows/functionseditormodel.cpp" line="328"/>
+        <location filename="../windows/functionseditormodel.cpp" line="261"/>
         <source>all databases</source>
         <translation type="unfinished">all databases</translation>
     </message>
     <message>
-        <location filename="../windows/functionseditormodel.cpp" line="333"/>
+        <location filename="../windows/functionseditormodel.cpp" line="266"/>
         <source>Function:</source>
         <translation type="unfinished">Function:</translation>
     </message>
     <message>
-        <location filename="../windows/functionseditormodel.cpp" line="334"/>
+        <location filename="../windows/functionseditormodel.cpp" line="267"/>
         <source>Type:</source>
         <translation type="unfinished">Type:</translation>
     </message>
     <message>
-        <location filename="../windows/functionseditormodel.cpp" line="335"/>
+        <location filename="../windows/functionseditormodel.cpp" line="268"/>
         <source>Deterministic:</source>
         <translation type="unfinished">Deterministic:</translation>
     </message>
     <message>
-        <location filename="../windows/functionseditormodel.cpp" line="335"/>
+        <location filename="../windows/functionseditormodel.cpp" line="268"/>
         <source>Yes</source>
         <translation type="unfinished">Yes</translation>
     </message>
     <message>
-        <location filename="../windows/functionseditormodel.cpp" line="335"/>
+        <location filename="../windows/functionseditormodel.cpp" line="268"/>
         <source>No</source>
         <translation type="unfinished">No</translation>
     </message>
     <message>
-        <location filename="../windows/functionseditormodel.cpp" line="336"/>
+        <location filename="../windows/functionseditormodel.cpp" line="269"/>
         <source>Language:</source>
         <translation type="unfinished">Language:</translation>
     </message>
     <message>
-        <location filename="../windows/functionseditormodel.cpp" line="337"/>
+        <location filename="../windows/functionseditormodel.cpp" line="270"/>
         <source>Registered in:</source>
         <translation type="unfinished">Registered in:</translation>
     </message>
@@ -7301,34 +7338,62 @@ Tale cancellazione sarà permanente. Sei sicuro di volerle cancellare?</translat
         <translation>Impossibile caricare l&apos;estensione: %1</translation>
     </message>
     <message>
-        <location filename="../windows/sqliteextensioneditor.cpp" line="399"/>
+        <location filename="../windows/sqliteextensioneditor.cpp" line="403"/>
         <source>Invalid initialization function name. Function name can contain only alpha-numeric characters and underscore.</source>
         <translation>Nome della funzione di inizializzazione non valido. Il nome della funzione può contenere solo caratteri alfanumerici e underscore.</translation>
     </message>
     <message>
-        <location filename="../windows/sqliteextensioneditor.cpp" line="468"/>
+        <location filename="../windows/sqliteextensioneditor.cpp" line="472"/>
         <source>Dynamic link libraries (*.dll);;All files (*)</source>
         <translation>Librerie di collegamento dinamico (*.dll);;Tutti i file (*)</translation>
     </message>
     <message>
-        <location filename="../windows/sqliteextensioneditor.cpp" line="470"/>
+        <location filename="../windows/sqliteextensioneditor.cpp" line="474"/>
         <source>Shared objects (*.so);;All files (*)</source>
         <translation>Oggetti condivisi (*.so);;Tutti i file (*)</translation>
     </message>
     <message>
-        <location filename="../windows/sqliteextensioneditor.cpp" line="472"/>
+        <location filename="../windows/sqliteextensioneditor.cpp" line="476"/>
         <source>Dynamic libraries (*.dylib);;All files (*)</source>
         <translation>Librerie dinamiche (*.dylib);;Tutti i file (*)</translation>
     </message>
     <message>
-        <location filename="../windows/sqliteextensioneditor.cpp" line="474"/>
+        <location filename="../windows/sqliteextensioneditor.cpp" line="478"/>
         <source>All files (*)</source>
         <translation>Tutti i file (*)</translation>
     </message>
     <message>
-        <location filename="../windows/sqliteextensioneditor.cpp" line="476"/>
+        <location filename="../windows/sqliteextensioneditor.cpp" line="480"/>
         <source>Open file</source>
         <translation>Apri file</translation>
+    </message>
+</context>
+<context>
+    <name>SqliteExtensionEditorModel</name>
+    <message>
+        <location filename="../windows/sqliteextensioneditormodel.cpp" line="160"/>
+        <source>all databases</source>
+        <translation type="unfinished">all databases</translation>
+    </message>
+    <message>
+        <location filename="../windows/sqliteextensioneditormodel.cpp" line="164"/>
+        <source>Extension:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../windows/sqliteextensioneditormodel.cpp" line="165"/>
+        <source>File:</source>
+        <translation type="unfinished">File:</translation>
+    </message>
+    <message>
+        <location filename="../windows/sqliteextensioneditormodel.cpp" line="166"/>
+        <source>Init function:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../windows/sqliteextensioneditormodel.cpp" line="167"/>
+        <source>Registered in:</source>
+        <translation type="unfinished">Registered in:</translation>
     </message>
 </context>
 <context>
