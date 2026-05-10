@@ -11,41 +11,35 @@ class GUI_API_EXPORT CollationsEditorModel : public QAbstractListModel
 {
         Q_OBJECT
     public:
-        using QAbstractItemModel::setData;
+        enum Role
+        {
+            CODE = 1000,
+            MODIFIED = 1001,
+            VALID = 1002,
+            TYPE = 1003,
+            NAME = 1004,
+            LANG = 1005,
+            DATABASES = 1006,
+            ALL_DATABASES = 1007,
+        };
 
         explicit CollationsEditorModel(QObject *parent = nullptr);
 
         void clearModified();
         bool isModified() const;
-        bool isModified(int row) const;
-        void setModified(int row, bool modified);
-        void setName(int row, const QString& name);
-        QString getName(int row) const;
-        void setType(int row, CollationManager::CollationType type);
-        CollationManager::CollationType getType(int row) const;
-        void setLang(int row, const QString& lang);
-        QString getLang(int row) const;
-        void setAllDatabases(int row, bool allDatabases);
-        bool getAllDatabases(int row) const;
-        void setCode(int row, const QString& code);
-        QString getCode(int row) const;
-        void setDatabases(int row, const QStringList& databases);
-        QStringList getDatabases(int row);
-        bool isValid(int row) const;
-        void setValid(int row, bool valid);
         bool isValid() const;
         void setData(const QList<CollationManager::CollationPtr>& collations);
         void addCollation(const CollationManager::CollationPtr& collation);
-        void deleteCollation(int row);
+        void deleteCollation(const QModelIndex& idx);
         QList<CollationManager::CollationPtr> getCollations() const;
         QStringList getCollationNames() const;
         void validateNames();
-        bool isAllowedName(int rowToSkip, const QString& nameToValidate);
-        bool isValidRowIndex(int row) const;
+        bool isAllowedName(const QModelIndex& idx, const QString& nameToValidate);
 
         int rowCount(const QModelIndex& parent = QModelIndex()) const override;
         int columnCount(const QModelIndex& parent = QModelIndex()) const override;
         QVariant data(const QModelIndex& index, int role) const override;
+        bool setData(const QModelIndex& index, const QVariant& value, int role) override;
 
     private:
         struct Collation
@@ -60,7 +54,6 @@ class GUI_API_EXPORT CollationsEditorModel : public QAbstractListModel
         };
 
         void init();
-        void emitDataChanged(int row);
 
         QList<Collation*> collationList;
 

@@ -662,7 +662,7 @@ MdiWindow* MainWindow::restoreWindowSession(const QVariant &windowSessions)
     MdiChild* mdiChild = reinterpret_cast<MdiChild*>(object);
     if (mdiChild->isInvalid())
     {
-        delete mdiChild;
+        mdiChild->deleteLater();
         return nullptr;
     }
 
@@ -671,7 +671,7 @@ MdiWindow* MainWindow::restoreWindowSession(const QVariant &windowSessions)
     if (!window->restoreSession(winSessionHash))
     {
         window->setCloseWithoutSessionSaving(true);
-        delete window;
+        window->deleteLater();
         return nullptr;
     }
 

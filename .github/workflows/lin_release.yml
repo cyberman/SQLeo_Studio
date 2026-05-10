@@ -129,7 +129,7 @@ jobs:
                 modules: 'qtimageformats'
 
             - name: Clone GH scripts
-              uses: actions/checkout@v3
+              uses: actions/checkout@v6
               with:
                 repository: pawelsalawa/gh-action-scripts
                 ref: main
@@ -145,7 +145,7 @@ jobs:
                 echo "DEBUG=${{ inputs.DEBUG }}" >> $GITHUB_ENV
 
             - name: Clone repo
-              uses: actions/checkout@v3
+              uses: actions/checkout@v6
               with:
                 ref: ${{ env.BRANCH_NAME }}
 
@@ -156,7 +156,7 @@ jobs:
                 echo "SQLITE_DOT_VERSION=$SQLITE_DOT_VERSION" >> $GITHUB_ENV
 
                 cd ..
-                curl -L https://github.com/pawelsalawa/sqlite3-sqls/releases/download/v$SQLITE_DOT_VERSION/sqlite3-extensions-src-$SQLITE_VERSION.zip --output sqlite3-extensions-src-$SQLITE_VERSION.zip
+                curl -L https://github.com/pawelsalawa/sqlite3-letos/releases/download/v$SQLITE_DOT_VERSION/sqlite3-extensions-src-$SQLITE_VERSION.zip --output sqlite3-extensions-src-$SQLITE_VERSION.zip
 
                 mkdir ext-src
                 unzip sqlite3-extensions-src-$SQLITE_VERSION.zip -d ext-src
@@ -177,7 +177,7 @@ jobs:
               run: |
                 cd ..
                 SQLITE3_ZIP=sqlite3-linux-${{ matrix.SQLITE_ARCH }}-$SQLITE_VERSION.zip
-                curl -L https://github.com/pawelsalawa/sqlite3-sqls/releases/download/v$SQLITE_DOT_VERSION/$SQLITE3_ZIP --output $SQLITE3_ZIP
+                curl -L https://github.com/pawelsalawa/sqlite3-letos/releases/download/v$SQLITE_DOT_VERSION/$SQLITE3_ZIP --output $SQLITE3_ZIP
 
                 sudo rm -f /usr/lib/libsqlite* /usr/local/lib/libsqlite* /usr/include/sqlite* /usr/local/include/sqlite* /usr/lib/${{ matrix.TARGET_ARCH }}-linux-gnu/libsqlite*
                 sudo unzip $SQLITE3_ZIP libsqlite3.so -d /usr/local/lib
@@ -414,13 +414,13 @@ jobs:
                 sha256sum output/portable/$APPIMAGENAME
 
             - name: Upload package artifact
-              uses: actions/upload-artifact@v4
+              uses: actions/upload-artifact@v7
               with:
                 name: letos-${{ env.PACKAGE_VERSION }}.tar.xz
                 path: output/portable/letos-${{ env.PACKAGE_VERSION }}.tar.xz
 
             - name: Upload AppImage artifact
-              uses: actions/upload-artifact@v4
+              uses: actions/upload-artifact@v7
               with:
                 name: ${{ env.APPIMAGENAME }}
                 path: output/portable/${{ env.APPIMAGENAME }}

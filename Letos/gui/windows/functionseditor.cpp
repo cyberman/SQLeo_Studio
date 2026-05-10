@@ -22,6 +22,7 @@
 #else
 #include <qsystemdetection.h>
 #endif
+#include <QScopedValueRollback>
 #include <QSyntaxHighlighter>
 
 // TODO handle plugin loading/unloading to update editor state
@@ -109,10 +110,10 @@ void FunctionsEditor::init()
 
     setFont(CFG_UI.Fonts.SqlEditor.get());
 
-    model = new FunctionsEditorModel(this);
-    functionFilterModel = new QSortFilterProxyModel(this);
-    functionFilterModel->setSourceModel(model);
-    ui->list->setModel(functionFilterModel);
+    dataModel = new FunctionsEditorModel(this);
+    viewModel = new QSortFilterProxyModel(this);
+    viewModel->setSourceModel(dataModel);
+    ui->list->setModel(viewModel);
     ui->list->horizontalHeader()->setMinimumSectionSize(20);
     ui->list->horizontalHeader()->setSectionResizeMode(0, QHeaderView::Stretch);
 
@@ -136,7 +137,7 @@ void FunctionsEditor::init()
     }
 
     new UserInputFilter(ui->functionFilterEdit, this, SLOT(applyFilter(QString)));
-    functionFilterModel->setFilterCaseSensitivity(Qt::CaseInsensitive);
+    viewModel->setFilterCaseSensitivity(Qt::CaseInsensitive);
 
     MAINWINDOW->installToolbarSizeWheelHandler(ui->toolBar);
 
@@ -167,7 +168,7 @@ void FunctionsEditor::init()
     connect(dbListModel, SIGNAL(dataChanged(QModelIndex,QModelIndex)), this, SLOT(updateModified()));
     connect(CFG_UI.Fonts.SqlEditor, SIGNAL(changed(QVariant)), this, SLOT(changeFont(QVariant)));
 
-    model->setData(FUNCTIONS->getAllScriptFunctions());
+    dataModel->setData(FUNCTIONS->getAllScriptFunctions());
     connect(FUNCTIONS, SIGNAL(functionListChanged()), this, SLOT(cfgFunctionListChanged()));
     ui->list->resizeColumnsToContents();
 
@@ -213,83 +214,88 @@ void FunctionsEditor::setupContextMenu()
     addFormatSqlToContextMenu(ui->finalCodeEdit, formatPredicateFn);
 }
 
-int FunctionsEditor::getCurrentFunctionRow() const
+QModelIndex FunctionsEditor::getCurrentFunctionIndex() const
 {
     QModelIndexList idxList = ui->list->selectionModel()->selectedIndexes();
     if (idxList.size() == 0)
-        return -1;
+        return QModelIndex();
 
-    return fnRowToSrc(idxList.first()).row();
+    return idxList.first();
 }
 
-void FunctionsEditor::functionDeselected(int srcRow)
+void FunctionsEditor::functionDeselected(const QModelIndex& idx)
 {
-    model->setName(srcRow, ui->nameEdit->text());
-    model->setUndefinedArgs(srcRow, ui->undefArgsCheck->isChecked());
+    QModelIndex srcIdx = viewModel->mapToSource(idx);
+
+    viewModel->setData(idx, ui->nameEdit->text(), FunctionsEditorModel::NAME);
+    viewModel->setData(idx, ui->undefArgsCheck->isChecked(), FunctionsEditorModel::UNDEF_ARGS);
     if (!ui->undefArgsCheck->isChecked())
-        model->setArguments(srcRow, getCurrentArgList());
+        viewModel->setData(idx, getCurrentArgList(), FunctionsEditorModel::ARGUMENTS);
 
-    model->setLang(srcRow, ui->langCombo->currentText());
-    model->setType(srcRow, getCurrentFunctionType());
-    model->setAllDatabases(srcRow, ui->allDatabasesRadio->isChecked());
-    model->setDeterministic(srcRow, ui->deterministicCheck->isChecked());
-    model->setModified(srcRow, currentModified);
+    viewModel->setData(idx, ui->langCombo->currentText(), FunctionsEditorModel::LANG);
+    viewModel->setData(idx, getCurrentFunctionType(), FunctionsEditorModel::TYPE);
+    viewModel->setData(idx, ui->allDatabasesRadio->isChecked(), FunctionsEditorModel::ALL_DATABASES);
+    viewModel->setData(idx, ui->deterministicCheck->isChecked(), FunctionsEditorModel::DETERMINISTIC);
+    viewModel->setData(idx, currentModified, FunctionsEditorModel::MODIFIED);
 
-    if (model->isAggregateWindow(srcRow))
+    if (dataModel->isAggregateWindow(srcIdx))
     {
-        model->setInitCode(srcRow, ui->initCodeEdit->toPlainText());
-        model->setStepCode(srcRow, ui->stepCodeEdit->toPlainText());
-        model->setInverseCode(srcRow, ui->inverseCodeEdit->toPlainText());
-        model->setFinalCode(srcRow, ui->finalCodeEdit->toPlainText());
+        viewModel->setData(idx, ui->initCodeEdit->toPlainText(), FunctionsEditorModel::INIT_CODE);
+        viewModel->setData(idx, ui->stepCodeEdit->toPlainText(), FunctionsEditorModel::STEP_CODE);
+        viewModel->setData(idx, ui->inverseCodeEdit->toPlainText(), FunctionsEditorModel::INVERSE_CODE);
+        viewModel->setData(idx, ui->finalCodeEdit->toPlainText(), FunctionsEditorModel::FINAL_CODE);
         // Do not clear "code" field in model, as it is shared for step code
     }
-    else if (model->isAggregate(srcRow))
+    else if (dataModel->isAggregate(srcIdx))
     {
-        model->setInitCode(srcRow, ui->initCodeEdit->toPlainText());
-        model->setStepCode(srcRow, ui->stepCodeEdit->toPlainText());
-        model->setFinalCode(srcRow, ui->finalCodeEdit->toPlainText());
-        model->setInverseCode(srcRow, QString());
+        viewModel->setData(idx, ui->initCodeEdit->toPlainText(), FunctionsEditorModel::INIT_CODE);
+        viewModel->setData(idx, ui->stepCodeEdit->toPlainText(), FunctionsEditorModel::STEP_CODE);
+        viewModel->setData(idx, QString(), FunctionsEditorModel::INVERSE_CODE);
+        viewModel->setData(idx, ui->finalCodeEdit->toPlainText(), FunctionsEditorModel::FINAL_CODE);
         // Do not clear "code" field in model, as it is shared for step code
     }
     else
     {
-        model->setCode(srcRow, ui->scalarCodeEdit->toPlainText());
-        model->setInitCode(srcRow, QString());
-        model->setInverseCode(srcRow, QString());
-        model->setFinalCode(srcRow, QString());
+        viewModel->setData(idx, ui->scalarCodeEdit->toPlainText(), FunctionsEditorModel::CODE);
+        viewModel->setData(idx, QString(), FunctionsEditorModel::INIT_CODE);
+        viewModel->setData(idx, QString(), FunctionsEditorModel::INVERSE_CODE);
+        viewModel->setData(idx, QString(), FunctionsEditorModel::FINAL_CODE);
     }
 
     if (ui->selDatabasesRadio->isChecked())
-        model->setDatabases(srcRow, getCurrentDatabases());
+        viewModel->setData(idx, getCurrentDatabases(), FunctionsEditorModel::DATABASES);
 
-    model->validateNames();
+    dataModel->validateNames();
 }
 
-void FunctionsEditor::functionSelected(int srcRow)
+void FunctionsEditor::functionSelected(const QModelIndex& idx)
 {
-    updatesForSelection = true;
-    ui->nameEdit->setText(model->getName(srcRow));
-    if (model->isAnyAggregate(srcRow))
+    QScopedValueRollback<bool> selectionGuard(updatesForSelection, true);
+
+    QModelIndex srcIdx = viewModel->mapToSource(idx);
+
+    ui->nameEdit->setText(idx.data(FunctionsEditorModel::NAME).toString());
+    if (dataModel->isAnyAggregate(srcIdx))
     {
-        ui->stepCodeEdit->setPlainText(model->getStepCode(srcRow));
+        ui->stepCodeEdit->setPlainText(idx.data(FunctionsEditorModel::STEP_CODE).toString());
         ui->scalarCodeEdit->clear();
     }
     else
     {
-        ui->scalarCodeEdit->setPlainText(model->getCode(srcRow));
+        ui->scalarCodeEdit->setPlainText(idx.data(FunctionsEditorModel::CODE).toString());
         ui->stepCodeEdit->clear();
     }
-    ui->initCodeEdit->setPlainText(model->getInitCode(srcRow));
-    ui->inverseCodeEdit->setPlainText(model->getInverseCode(srcRow));
-    ui->finalCodeEdit->setPlainText(model->getFinalCode(srcRow));
-    ui->undefArgsCheck->setChecked(model->getUndefinedArgs(srcRow));
-    ui->langCombo->setCurrentText(model->getLang(srcRow));
-    ui->deterministicCheck->setChecked(model->isDeterministic(srcRow));
+    ui->initCodeEdit->setPlainText(idx.data(FunctionsEditorModel::INIT_CODE).toString());
+    ui->inverseCodeEdit->setPlainText(idx.data(FunctionsEditorModel::INVERSE_CODE).toString());
+    ui->finalCodeEdit->setPlainText(idx.data(FunctionsEditorModel::FINAL_CODE).toString());
+    ui->undefArgsCheck->setChecked(idx.data(FunctionsEditorModel::UNDEF_ARGS).toBool());
+    ui->langCombo->setCurrentText(idx.data(FunctionsEditorModel::LANG).toString());
+    ui->deterministicCheck->setChecked(idx.data(FunctionsEditorModel::DETERMINISTIC).toBool());
 
     // Arguments
     ui->argsList->clear();
     QListWidgetItem* item = nullptr;
-    for (const QString& arg : model->getArguments(srcRow))
+    for (const QString& arg : idx.data(FunctionsEditorModel::ARGUMENTS).toStringList())
     {
         item = new QListWidgetItem(arg);
         item->setFlags(item->flags() | Qt::ItemIsEditable);
@@ -297,16 +303,16 @@ void FunctionsEditor::functionSelected(int srcRow)
     }
 
     // Databases
-    dbListModel->setDatabases(model->getDatabases(srcRow));
+    dbListModel->setDatabases(idx.data(FunctionsEditorModel::DATABASES).toStringList());
     ui->databasesList->expandAll();
 
-    if (model->getAllDatabases(srcRow))
+    if (idx.data(FunctionsEditorModel::ALL_DATABASES).toBool())
         ui->allDatabasesRadio->setChecked(true);
     else
         ui->selDatabasesRadio->setChecked(true);
 
     // Type
-    FunctionManager::ScriptFunction::Type type = model->getType(srcRow);
+    int type = idx.data(FunctionsEditorModel::TYPE).toInt();
     for (int i = 0; i < ui->typeCombo->count(); i++)
     {
         if (ui->typeCombo->itemData(i).toInt() == type)
@@ -316,8 +322,7 @@ void FunctionsEditor::functionSelected(int srcRow)
         }
     }
 
-    updatesForSelection = false;
-    currentModified = model->isModified(srcRow);
+    currentModified = idx.data(FunctionsEditorModel::MODIFIED).toBool();
 
     updateCurrentFunctionState();
 }
@@ -339,12 +344,12 @@ void FunctionsEditor::clearEdits()
     ui->deterministicCheck->setChecked(false);
 }
 
-void FunctionsEditor::selectFunction(int srcRow)
+void FunctionsEditor::selectFunction(const QModelIndex& idx)
 {
-    if (!model->isValidRowIndex(srcRow))
+    if (!idx.isValid())
         return;
 
-    ui->list->selectionModel()->setCurrentIndex(functionFilterModel->mapFromSource(model->index(srcRow)), QItemSelectionModel::Clear|QItemSelectionModel::SelectCurrent|QItemSelectionModel::Rows);
+    ui->list->selectionModel()->setCurrentIndex(idx, QItemSelectionModel::Clear|QItemSelectionModel::SelectCurrent|QItemSelectionModel::Rows);
 }
 
 void FunctionsEditor::setFont(const QFont& font)
@@ -354,11 +359,6 @@ void FunctionsEditor::setFont(const QFont& font)
     ui->stepCodeEdit->setFont(font);
     ui->inverseCodeEdit->setFont(font);
     ui->finalCodeEdit->setFont(font);
-}
-
-QModelIndex FunctionsEditor::fnRowToSrc(const QModelIndex &idx) const
-{
-    return functionFilterModel->mapToSource(idx);
 }
 
 QModelIndex FunctionsEditor::getSelectedArg() const
@@ -404,18 +404,19 @@ void FunctionsEditor::safeClearHighlighter(QSyntaxHighlighter*& highlighterPtr)
 
 void FunctionsEditor::commit()
 {
-    int srcRow = getCurrentFunctionRow();
-    if (model->isValidRowIndex(srcRow))
-        functionDeselected(srcRow);
+    QModelIndex idx = getCurrentFunctionIndex();
+    if (idx.isValid())
+        functionDeselected(idx);
 
-    QList<FunctionManager::ScriptFunction*> functions = model->generateFunctions();
+    QList<FunctionManager::ScriptFunction*> functions = dataModel->generateFunctions();
 
     FUNCTIONS->setScriptFunctions(functions);
-    model->clearModified();
+    dataModel->clearModified();
     currentModified = false;
 
-    if (model->isValidRowIndex(srcRow))
-        selectFunction(srcRow);
+    idx = viewModel->index(idx.row(), idx.column());
+    if (idx.isValid())
+        selectFunction(idx);
 
     updateState();
     ui->list->resizeColumnsToContents();
@@ -423,14 +424,15 @@ void FunctionsEditor::commit()
 
 void FunctionsEditor::rollback()
 {
-    int selectedBefore = getCurrentFunctionRow();
+    QModelIndex idx = getCurrentFunctionIndex();
 
-    model->setData(FUNCTIONS->getAllScriptFunctions());
+    dataModel->setData(FUNCTIONS->getAllScriptFunctions());
     currentModified = false;
     clearEdits();
 
-    if (model->isValidRowIndex(selectedBefore))
-        selectFunction(selectedBefore);
+    idx = viewModel->index(idx.row(), idx.column());
+    if (idx.isValid())
+        selectFunction(idx);
 
     updateState();
 }
@@ -441,24 +443,25 @@ void FunctionsEditor::newFunction()
         ui->langCombo->setCurrentIndex(0);
 
     FunctionManager::ScriptFunction* func = new FunctionManager::ScriptFunction();
-    func->name = generateUniqueName("function", model->getFunctionNames());
+    func->name = generateUniqueName("function", dataModel->getFunctionNames());
 
     if (ui->langCombo->currentIndex() > -1)
         func->lang = ui->langCombo->currentText();
 
-    model->addFunction(func);
+    dataModel->addFunction(func);
 
-    selectFunction(model->rowCount() - 1);
+    QModelIndex idx = viewModel->index(viewModel->rowCount() - 1, 0);
+    selectFunction(idx);
 }
 
 void FunctionsEditor::deleteFunction()
 {
-    int srcRow = getCurrentFunctionRow();
-    model->deleteFunction(srcRow);
+    QModelIndex idx = getCurrentFunctionIndex();
+    dataModel->deleteFunction(viewModel->mapToSource(idx));
 
-    srcRow = getCurrentFunctionRow();
-    if (model->isValidRowIndex(srcRow))
-        functionSelected(srcRow);
+    idx = getCurrentFunctionIndex();
+    if (idx.isValid())
+        functionSelected(idx);
     else
         clearEdits();
 
@@ -470,34 +473,35 @@ void FunctionsEditor::updateModified()
     if (updatesForSelection)
         return;
 
-    int row = getCurrentFunctionRow();
-    if (model->isValidRowIndex(row))
+    QModelIndex idx = getCurrentFunctionIndex();
+    if (idx.isValid())
     {
-        bool nameDiff = model->getName(row) != ui->nameEdit->text();
+        QModelIndex srcIdx = viewModel->mapToSource(idx);
 
+        bool nameDiff = idx.data(FunctionsEditorModel::NAME).toString() != ui->nameEdit->text();
         bool codeDiff = false;
         bool stepCodeDiff = false;
-        if (model->isAnyAggregate(row))
-            stepCodeDiff = model->getStepCode(row) != ui->stepCodeEdit->toPlainText();
+        if (dataModel->isAnyAggregate(srcIdx))
+            stepCodeDiff = idx.data(FunctionsEditorModel::STEP_CODE).toString() != ui->stepCodeEdit->toPlainText();
         else
-            codeDiff = model->getCode(row) != ui->scalarCodeEdit->toPlainText();
+            codeDiff = idx.data(FunctionsEditorModel::CODE).toString() != ui->scalarCodeEdit->toPlainText();
 
-        bool initCodeDiff = model->getInitCode(row) != ui->initCodeEdit->toPlainText();
-        bool inverseCodeDiff = model->getInverseCode(row) != ui->inverseCodeEdit->toPlainText();
-        bool finalCodeDiff = model->getFinalCode(row) != ui->finalCodeEdit->toPlainText();
-        bool langDiff = model->getLang(row) != ui->langCombo->currentText();
-        bool undefArgsDiff = model->getUndefinedArgs(row) != ui->undefArgsCheck->isChecked();
-        bool allDatabasesDiff = model->getAllDatabases(row) != ui->allDatabasesRadio->isChecked();
-        bool argDiff = getCurrentArgList() != model->getArguments(row);
-        bool dbDiff = toSet(getCurrentDatabases()) != toSet(model->getDatabases(row)); // QSet to ignore order
-        bool typeDiff = model->getType(row) != getCurrentFunctionType();
-        bool deterministicDiff = model->isDeterministic(row) != ui->deterministicCheck->isChecked();
+        bool initCodeDiff = idx.data(FunctionsEditorModel::INIT_CODE).toString() != ui->initCodeEdit->toPlainText();
+        bool inverseCodeDiff = idx.data(FunctionsEditorModel::INVERSE_CODE).toString() != ui->inverseCodeEdit->toPlainText();
+        bool finalCodeDiff = idx.data(FunctionsEditorModel::FINAL_CODE).toString() != ui->finalCodeEdit->toPlainText();
+        bool langDiff = idx.data(FunctionsEditorModel::LANG).toString() != ui->langCombo->currentText();
+        bool undefArgsDiff = idx.data(FunctionsEditorModel::UNDEF_ARGS).toBool() != ui->undefArgsCheck->isChecked();
+        bool allDatabasesDiff = idx.data(FunctionsEditorModel::ALL_DATABASES).toBool() != ui->allDatabasesRadio->isChecked();
+        bool argDiff = getCurrentArgList() != idx.data(FunctionsEditorModel::ARGUMENTS).toStringList();
+        bool dbDiff = toSet(getCurrentDatabases()) != toSet(idx.data(FunctionsEditorModel::DATABASES).toStringList()); // QSet to ignore order
+        bool typeDiff = idx.data(FunctionsEditorModel::TYPE).toInt() != getCurrentFunctionType();
+        bool deterministicDiff = idx.data(FunctionsEditorModel::DETERMINISTIC).toBool() != ui->deterministicCheck->isChecked();
 
         currentModified = (nameDiff || codeDiff || typeDiff || langDiff || undefArgsDiff || allDatabasesDiff || argDiff || dbDiff ||
                            initCodeDiff || finalCodeDiff || stepCodeDiff || inverseCodeDiff || deterministicDiff);
 
         if (langDiff)
-            model->setLang(row, ui->langCombo->currentText());
+            dataModel->setData(srcIdx, ui->langCombo->currentText(), FunctionsEditorModel::LANG);
     }
 
     updateCurrentFunctionState();
@@ -505,8 +509,8 @@ void FunctionsEditor::updateModified()
 
 void FunctionsEditor::updateState()
 {
-    bool modified = model->isModified() || currentModified;
-    bool valid = model->isValid();
+    bool modified = dataModel->isModified() || currentModified;
+    bool valid = dataModel->isValid();
 
     actionMap[COMMIT]->setEnabled(modified && valid);
     actionMap[ROLLBACK]->setEnabled(modified);
@@ -515,10 +519,9 @@ void FunctionsEditor::updateState()
 
 void FunctionsEditor::updateCurrentFunctionState()
 {
-    int srcRow = getCurrentFunctionRow();
-    bool validRow = model->isValidRowIndex(srcRow);
-    ui->rightWidget->setEnabled(validRow);
-    if (!validRow)
+    QModelIndex idx = getCurrentFunctionIndex();
+    ui->rightWidget->setEnabled(idx.isValid());
+    if (!idx.isValid())
     {
         setValidState(ui->langCombo, true);
         setValidState(ui->nameEdit, true);
@@ -528,10 +531,12 @@ void FunctionsEditor::updateCurrentFunctionState()
         return;
     }
 
+    QModelIndex srcIdx = viewModel->mapToSource(idx);
+
     QString name = ui->nameEdit->text();
     QStringList argList = getCurrentArgList();
     bool undefArgs = ui->undefArgsCheck->isChecked();
-    bool nameOk = model->isAllowedName(srcRow, name, argList, undefArgs) && !name.trimmed().isEmpty();
+    bool nameOk = dataModel->isAllowedName(srcIdx, name, argList, undefArgs) && !name.trimmed().isEmpty();
     setValidState(ui->nameEdit, nameOk, tr("Enter a unique, non-empty function name. Duplicate names are allowed if the number of input parameters differs."));
 
     bool langOk = ui->langCombo->currentIndex() >= 0;
@@ -597,7 +602,7 @@ void FunctionsEditor::updateCurrentFunctionState()
     }
 
     bool argsOk = updateArgsState();
-    model->setValid(srcRow, langOk && codeOk && stepCodeOk && finalCodeOk && nameOk && argsOk);
+    dataModel->setData(srcIdx, langOk && codeOk && stepCodeOk && finalCodeOk && nameOk && argsOk, FunctionsEditorModel::VALID);
     updateState();
 }
 
@@ -607,10 +612,10 @@ void FunctionsEditor::functionSelected(const QItemSelection& selected, const QIt
     int selCnt = selected.indexes().size();
 
     if (deselCnt > 0)
-        functionDeselected(fnRowToSrc(deselected.indexes().first()).row());
+        functionDeselected(deselected.indexes().first());
 
     if (selCnt > 0)
-        functionSelected(fnRowToSrc(selected.indexes().first()).row());
+        functionSelected(selected.indexes().first());
 
     if (deselCnt > 0 && selCnt == 0)
     {
@@ -741,12 +746,12 @@ void FunctionsEditor::applyFilter(const QString& value)
     // but for now I don't really know what is that.
     // I have tested simple Qt application with the same routine, but the underlying model was QStandardItemModel
     // and everything worked fine.
-    int srcRow = getCurrentFunctionRow();
+    QModelIndex idx = getCurrentFunctionIndex();
     ui->list->selectionModel()->clearSelection();
 
-    functionFilterModel->setFilterFixedString(value);
+    viewModel->setFilterFixedString(value);
 
-    selectFunction(srcRow);
+    selectFunction(idx);
 }
 
 void FunctionsEditor::help()
@@ -762,10 +767,10 @@ void FunctionsEditor::changeFont(const QVariant& font)
 
 void FunctionsEditor::cfgFunctionListChanged()
 {
-    if (model->isModified())
+    if (dataModel->isModified())
         return; // Don't update list if there are uncommitted changes, because it would be disruptive for user. Changes will be visible after commit or rollback.
 
-    model->setData(FUNCTIONS->getAllScriptFunctions());
+    dataModel->setData(FUNCTIONS->getAllScriptFunctions());
     updateCurrentFunctionState();
 }
 
@@ -787,7 +792,7 @@ QVariant FunctionsEditor::saveSession()
 
 bool FunctionsEditor::isUncommitted() const
 {
-    return model->isModified() || currentModified;
+    return dataModel->isModified() || currentModified;
 }
 
 QString FunctionsEditor::getQuitUncommittedConfirmMessage() const

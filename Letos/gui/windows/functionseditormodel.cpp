@@ -1,23 +1,8 @@
 #include "functionseditormodel.h"
-#include "common/strhash.h"
 #include "services/pluginmanager.h"
 #include "plugins/scriptingplugin.h"
-#include "icon.h"
 #include "iconmanager.h"
 #include <QDebug>
-
-#define SETTER(X, Y) \
-    if (!isValidRowIndex(row) || X == Y) \
-        return; \
-    \
-    X = Y; \
-    emitDataChanged(row);
-
-#define GETTER(X, Y) \
-    if (!isValidRowIndex(row)) \
-        return Y; \
-    \
-    return X;
 
 FunctionsEditorModel::FunctionsEditorModel(QObject *parent) :
     QAbstractListModel(parent)
@@ -50,16 +35,6 @@ bool FunctionsEditorModel::isModified() const
     return false;
 }
 
-bool FunctionsEditorModel::isModified(int row) const
-{
-    GETTER(functionList[row]->modified, false);
-}
-
-void FunctionsEditorModel::setModified(int row, bool modified)
-{
-    SETTER(functionList[row]->modified, modified);
-}
-
 bool FunctionsEditorModel::isValid() const
 {
     for (Function* func : functionList)
@@ -70,165 +45,25 @@ bool FunctionsEditorModel::isValid() const
     return true;
 }
 
-bool FunctionsEditorModel::isValid(int row) const
+bool FunctionsEditorModel::isAggregate(const QModelIndex& idx) const
 {
-    GETTER(functionList[row]->valid, false);
+    return data(idx, TYPE).toInt() == FunctionManager::ScriptFunction::AGGREGATE;
 }
 
-void FunctionsEditorModel::setValid(int row, bool valid)
+bool FunctionsEditorModel::isAggregateWindow(const QModelIndex& idx) const
 {
-    SETTER(functionList[row]->valid, valid);
+    return data(idx, TYPE).toInt() == FunctionManager::ScriptFunction::AGG_WINDOW;
 }
 
-void FunctionsEditorModel::setCode(int row, const QString& code)
+bool FunctionsEditorModel::isAnyAggregate(const QModelIndex& idx) const
 {
-    SETTER(functionList[row]->data.code, code);
+    int type = data(idx, TYPE).toInt();
+    return type == FunctionManager::ScriptFunction::AGGREGATE || type == FunctionManager::ScriptFunction::AGG_WINDOW;
 }
 
-QString FunctionsEditorModel::getCode(int row) const
+bool FunctionsEditorModel::isScalar(const QModelIndex& idx) const
 {
-    GETTER(functionList[row]->data.code, QString());
-}
-
-void FunctionsEditorModel::setFinalCode(int row, const QString& code)
-{
-    SETTER(functionList[row]->data.finalCode, code);
-}
-
-QString FunctionsEditorModel::getFinalCode(int row) const
-{
-    GETTER(functionList[row]->data.finalCode, QString());
-}
-
-void FunctionsEditorModel::setStepCode(int row, const QString& code)
-{
-    SETTER(functionList[row]->data.code, code);
-}
-
-QString FunctionsEditorModel::getStepCode(int row) const
-{
-    GETTER(functionList[row]->data.code, QString());
-}
-
-void FunctionsEditorModel::setInverseCode(int row, const QString& code)
-{
-    SETTER(functionList[row]->data.inverseCode, code);
-}
-
-QString FunctionsEditorModel::getInverseCode(int row) const
-{
-    GETTER(functionList[row]->data.inverseCode, QString());
-}
-
-void FunctionsEditorModel::setInitCode(int row, const QString& code)
-{
-    SETTER(functionList[row]->data.initCode, code);
-}
-
-QString FunctionsEditorModel::getInitCode(int row) const
-{
-    GETTER(functionList[row]->data.initCode, QString());
-}
-
-void FunctionsEditorModel::setName(int row, const QString& newName)
-{
-    SETTER(functionList[row]->data.name, newName);
-}
-
-QString FunctionsEditorModel::getName(int row) const
-{
-    GETTER(functionList[row]->data.name, QString());
-}
-
-void FunctionsEditorModel::setLang(int row, const QString& lang)
-{
-    SETTER(functionList[row]->data.lang, lang);
-}
-
-QString FunctionsEditorModel::getLang(int row) const
-{
-    GETTER(functionList[row]->data.lang, QString());
-}
-
-bool FunctionsEditorModel::getUndefinedArgs(int row) const
-{
-    GETTER(functionList[row]->data.undefinedArgs, true);
-}
-
-void FunctionsEditorModel::setUndefinedArgs(int row, bool value)
-{
-    SETTER(functionList[row]->data.undefinedArgs, value);
-}
-
-bool FunctionsEditorModel::getAllDatabases(int row) const
-{
-    GETTER(functionList[row]->data.allDatabases, true);
-}
-
-void FunctionsEditorModel::setAllDatabases(int row, bool value)
-{
-    SETTER(functionList[row]->data.allDatabases, value);
-}
-
-FunctionManager::ScriptFunction::Type FunctionsEditorModel::getType(int row) const
-{
-    GETTER(functionList[row]->data.type, FunctionManager::ScriptFunction::SCALAR);
-}
-
-void FunctionsEditorModel::setType(int row, FunctionManager::ScriptFunction::Type type)
-{
-    SETTER(functionList[row]->data.type, type);
-}
-
-bool FunctionsEditorModel::isAggregate(int row) const
-{
-    GETTER(functionList[row]->data.type == FunctionManager::ScriptFunction::AGGREGATE, false);
-}
-
-bool FunctionsEditorModel::isAggregateWindow(int row) const
-{
-    GETTER(functionList[row]->data.type == FunctionManager::ScriptFunction::AGG_WINDOW, false);
-}
-
-bool FunctionsEditorModel::isAnyAggregate(int row) const
-{
-    GETTER(functionList[row]->data.type == FunctionManager::ScriptFunction::AGG_WINDOW ||
-           functionList[row]->data.type == FunctionManager::ScriptFunction::AGGREGATE, false);
-}
-
-bool FunctionsEditorModel::isScalar(int row) const
-{
-    GETTER(functionList[row]->data.type == FunctionManager::ScriptFunction::SCALAR, false);
-}
-
-void FunctionsEditorModel::setDeterministic(int row, bool value)
-{
-    SETTER(functionList[row]->data.deterministic, value);
-}
-
-bool FunctionsEditorModel::isDeterministic(int row) const
-{
-    GETTER(functionList[row]->data.deterministic, false);
-}
-
-QStringList FunctionsEditorModel::getArguments(int row) const
-{
-    GETTER(functionList[row]->data.arguments, QStringList());
-}
-
-void FunctionsEditorModel::setArguments(int row, const QStringList& value)
-{
-    SETTER(functionList[row]->data.arguments, value);
-}
-
-QStringList FunctionsEditorModel::getDatabases(int row) const
-{
-    GETTER(functionList[row]->data.databases, QStringList());
-}
-
-void FunctionsEditorModel::setDatabases(int row, const QStringList& value)
-{
-    SETTER(functionList[row]->data.databases, value);
+    return data(idx, TYPE).toInt() == FunctionManager::ScriptFunction::SCALAR;
 }
 
 void FunctionsEditorModel::setData(const QList<FunctionManager::ScriptFunction*>& functions)
@@ -261,15 +96,15 @@ void FunctionsEditorModel::addFunction(FunctionManager::ScriptFunction* function
     endInsertRows();
 }
 
-void FunctionsEditorModel::deleteFunction(int row)
+void FunctionsEditorModel::deleteFunction(const QModelIndex& idx)
 {
-    if (!isValidRowIndex(row))
+    if (!idx.isValid())
         return;
 
-    beginRemoveRows(QModelIndex(), row, row);
+    beginRemoveRows(QModelIndex(), idx.row(), idx.row());
 
-    delete functionList[row];
-    functionList.removeAt(row);
+    delete functionList[idx.row()];
+    functionList.removeAt(idx.row());
 
     listModified = true;
 
@@ -314,7 +149,7 @@ void FunctionsEditorModel::validateNames()
         if (cntIt.value().size() > 1)
         {
             for (int cntRow : cntIt.value())
-                setValid(cntRow, false);
+                setData(index(cntRow), false, VALID);
         }
     }
 
@@ -326,10 +161,10 @@ void FunctionsEditorModel::validateNames()
     }
 }
 
-bool FunctionsEditorModel::isAllowedName(int rowToSkip, const QString& nameToValidate, const QStringList& argList, bool undefinedArgs)
+bool FunctionsEditorModel::isAllowedName(const QModelIndex& idx, const QString& nameToValidate, const QStringList& argList, bool undefinedArgs)
 {
     QList<UniqueFunctionName> names = getUniqueFunctionNames();
-    names.removeAt(rowToSkip);
+    names.removeAt(idx.row());
 
     UniqueFunctionName validatedName;
     validatedName.name = nameToValidate.toLower();
@@ -354,42 +189,68 @@ int FunctionsEditorModel::columnCount(const QModelIndex& parent) const
 
 QVariant FunctionsEditorModel::data(const QModelIndex& index, int role) const
 {
+    if (!index.isValid())
+        return {};
+
+    if (index.column() < 0 || index.column() > 1)
+        return {};
+
+    if (index.row() < 0 || index.row() >= functionList.size())
+        return {};
+
+    Function* fn = functionList[index.row()];
     switch (index.column())
     {
         case 0:
         {
-            if (!index.isValid() || !isValidRowIndex(index.row()))
+            switch (role)
             {
-                if (role == Qt::DecorationRole)
-                    return ICONS.FUNCTION_ERROR;
-
-                return QVariant();
+                case Qt::DisplayRole:
+                    return fn->data.toString();
+                case Qt::DecorationRole:
+                {
+                    if (fn->valid)
+                        return langToIcon.contains(fn->data.lang) ? langToIcon[fn->data.lang] : ICONS.LIST_ITEM_OTHER;
+                    else
+                        return ICONS.FUNCTION_ERROR;
+                }
+                case CODE:
+                    return fn->data.code;
+                case MODIFIED:
+                    return fn->modified;
+                case VALID:
+                    return fn->valid;
+                case TYPE:
+                    return fn->data.type;
+                case FINAL_CODE:
+                    return fn->data.finalCode;
+                case STEP_CODE:
+                    return fn->data.code;
+                case INVERSE_CODE:
+                    return fn->data.inverseCode;
+                case INIT_CODE:
+                    return fn->data.initCode;
+                case NAME:
+                    return fn->data.name;
+                case LANG:
+                    return fn->data.lang;
+                case DATABASES:
+                    return fn->data.databases;
+                case ALL_DATABASES:
+                    return fn->data.allDatabases;
+                case ARGUMENTS:
+                    return fn->data.arguments;
+                case UNDEF_ARGS:
+                    return fn->data.undefinedArgs;
+                case DETERMINISTIC:
+                    return fn->data.deterministic;
             }
-
-            if (role == Qt::DisplayRole)
-            {
-                Function* fn = functionList[index.row()];
-                return fn->data.toString();
-            }
-
-            if (role == Qt::DecorationRole && langToIcon.contains(functionList[index.row()]->data.lang))
-                return functionList[index.row()]->valid ? langToIcon[functionList[index.row()]->data.lang] : ICONS.FUNCTION_ERROR;
-
-            if (role == Qt::DecorationRole)
-                return ICONS.LIST_ITEM_OTHER;
-
             break;
         }
         case 1:
         {
-            if (!index.isValid() || !isValidRowIndex(index.row()))
-                return QVariant();
-
             if (role == Qt::DisplayRole)
-            {
-                auto fn = functionList[index.row()];
                 return fn->data.allDatabases ? "*" : QString::number(fn->data.databases.size());
-            }
 
             break;
         }
@@ -397,7 +258,6 @@ QVariant FunctionsEditorModel::data(const QModelIndex& index, int role) const
 
     if (role == Qt::ToolTipRole)
     {
-        auto fn = functionList[index.row()];
         QString dbPart = fn->data.allDatabases ? tr("all databases") : fn->data.databases.join(", ");
         QString typeStr = FunctionManager::FunctionBase::displayString(fn->data.type);
 
@@ -414,21 +274,77 @@ QVariant FunctionsEditorModel::data(const QModelIndex& index, int role) const
     return QVariant();
 }
 
+bool FunctionsEditorModel::setData(const QModelIndex& index, const QVariant& value, int role)
+{
+    if (!index.isValid())
+        return false;
+
+    if (index.column() != 0)
+        return false;
+
+    if (index.row() < 0 || index.row() >= functionList.size())
+        return false;
+
+    Function* fn = functionList[index.row()];
+    switch (role)
+    {
+        case CODE:
+            fn->data.code = value.toString();
+            break;
+        case MODIFIED:
+            fn->modified = value.toBool();
+            break;
+        case VALID:
+            fn->valid = value.toBool();
+            break;
+        case TYPE:
+            fn->data.type = static_cast<FunctionManager::ScriptFunction::Type>(value.toInt());
+            break;
+        case FINAL_CODE:
+            fn->data.finalCode = value.toString();
+            break;
+        case STEP_CODE:
+            fn->data.code = value.toString();
+            break;
+        case INVERSE_CODE:
+            fn->data.inverseCode = value.toString();
+            break;
+        case INIT_CODE:
+            fn->data.initCode = value.toString();
+            break;
+        case NAME:
+            fn->data.name = value.toString();
+            break;
+        case LANG:
+            fn->data.lang = value.toString();
+            break;
+        case DATABASES:
+            fn->data.databases = value.toStringList();
+            break;
+        case ALL_DATABASES:
+            fn->data.allDatabases = value.toBool();
+            break;
+        case ARGUMENTS:
+            fn->data.arguments = value.toStringList();
+            break;
+        case UNDEF_ARGS:
+            fn->data.undefinedArgs = value.toBool();
+            break;
+        case DETERMINISTIC:
+            fn->data.deterministic = value.toBool();
+            break;
+        defaut:
+            return true;
+    }
+
+    emit dataChanged(index, index);
+    return true;
+}
+
 void FunctionsEditorModel::init()
 {
     for (ScriptingPlugin*& plugin : PLUGINS->getLoadedPlugins<ScriptingPlugin>())
         langToIcon[plugin->getLanguage()] = QIcon(plugin->getIconPath());
-}
-
-bool FunctionsEditorModel::isValidRowIndex(int row) const
-{
-    return (row >= 0 && row < functionList.size());
-}
-
-void FunctionsEditorModel::emitDataChanged(int row)
-{
-    QModelIndex idx = index(row);
-    emit dataChanged(idx, idx);
 }
 
 QList<FunctionsEditorModel::UniqueFunctionName> FunctionsEditorModel::getUniqueFunctionNames() const

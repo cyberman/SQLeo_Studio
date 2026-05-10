@@ -90,10 +90,10 @@ void CollationsEditor::init()
 
     setFont(CFG_UI.Fonts.SqlEditor.get());
 
-    model = new CollationsEditorModel(this);
-    collationFilterModel = new QSortFilterProxyModel(this);
-    collationFilterModel->setSourceModel(model);
-    ui->collationList->setModel(collationFilterModel);
+    dataModel = new CollationsEditorModel(this);
+    viewModel = new QSortFilterProxyModel(this);
+    viewModel->setSourceModel(dataModel);
+    ui->collationList->setModel(viewModel);
     ui->collationList->horizontalHeader()->setMinimumSectionSize(20);
     ui->collationList->horizontalHeader()->setSectionResizeMode(0, QHeaderView::Stretch);
 
@@ -108,13 +108,13 @@ void CollationsEditor::init()
     ui->databaseList->setModel(dbListModel);
     ui->databaseList->expandAll();
 
-    model->setData(COLLATIONS->getAllCollations());
+    dataModel->setData(COLLATIONS->getAllCollations());
     ui->collationList->resizeColumnsToContents();
 
     MAINWINDOW->installToolbarSizeWheelHandler(ui->toolbar);
 
     new UserInputFilter(ui->collationFilterEdit, this, SLOT(applyFilter(QString)));
-    collationFilterModel->setFilterCaseSensitivity(Qt::CaseInsensitive);
+    viewModel->setFilterCaseSensitivity(Qt::CaseInsensitive);
 
     connect(ui->collationList->selectionModel(), SIGNAL(selectionChanged(QItemSelection,QItemSelection)), this, SLOT(collationSelected(QItemSelection,QItemSelection)));
     connect(ui->collationList->selectionModel(), SIGNAL(selectionChanged(QItemSelection,QItemSelection)), this, SLOT(updateState()));
@@ -140,18 +140,13 @@ void CollationsEditor::init()
     updateState();
 }
 
-int CollationsEditor::getCurrentCollationRow() const
+QModelIndex CollationsEditor::getCurrentCollationIdx() const
 {
     QModelIndexList idxList = ui->collationList->selectionModel()->selectedIndexes();
     if (idxList.size() == 0)
-        return -1;
+        return QModelIndex();
 
-    return collRowToSrc(idxList.first()).row();
-}
-
-QModelIndex CollationsEditor::collRowToSrc(const QModelIndex &idx) const
-{
-    return collationFilterModel->mapToSource(idx);
+    return idxList.first();
 }
 
 CollationManager::CollationType CollationsEditor::getCurrentType() const
@@ -160,42 +155,44 @@ CollationManager::CollationType CollationsEditor::getCurrentType() const
                                                 : CollationManager::CollationType::FUNCTION_BASED;
 }
 
-void CollationsEditor::collationDeselected(int srcRow)
+void CollationsEditor::collationDeselected(const QModelIndex& idx)
 {
-    model->setName(srcRow, ui->nameEdit->text());
-    model->setType(srcRow, getCurrentType());
-    model->setLang(srcRow, ui->langCombo->currentText());
-    model->setAllDatabases(srcRow, ui->allDatabasesRadio->isChecked());
-    model->setCode(srcRow, ui->codeEdit->toPlainText());
-    model->setModified(srcRow, currentModified);
+    viewModel->setData(idx, ui->nameEdit->text(), CollationsEditorModel::NAME);
+    viewModel->setData(idx, getCurrentType(), CollationsEditorModel::TYPE);
+    viewModel->setData(idx, ui->langCombo->currentText(), CollationsEditorModel::LANG);
+    viewModel->setData(idx, ui->allDatabasesRadio->isChecked(), CollationsEditorModel::ALL_DATABASES);
+    viewModel->setData(idx, ui->codeEdit->toPlainText(), CollationsEditorModel::CODE);
+    viewModel->setData(idx, currentModified, CollationsEditorModel::MODIFIED);
 
     if (ui->selectedDatabasesRadio->isChecked())
-        model->setDatabases(srcRow, getCurrentDatabases());
+        viewModel->setData(idx, getCurrentDatabases(), CollationsEditorModel::DATABASES);
 
-    model->validateNames();
+    dataModel->validateNames();
 }
 
-void CollationsEditor::collationSelected(int srcRow)
+void CollationsEditor::collationSelected(const QModelIndex& idx)
 {
     updatesForSelection = true;
-    ui->nameEdit->setText(model->getName(srcRow));
-    ui->codeEdit->setPlainText(model->getCode(srcRow));
-    ui->functionBasedRadio->setChecked(model->getType(srcRow) == CollationManager::CollationType::FUNCTION_BASED);
-    ui->extensionBasedRadio->setChecked(model->getType(srcRow) == CollationManager::CollationType::EXTENSION_BASED);
-    auto l = model->getLang(srcRow);
-    ui->langCombo->setCurrentText(l);
+
+    int type = idx.data(CollationsEditorModel::TYPE).toInt();
+
+    ui->nameEdit->setText(idx.data(CollationsEditorModel::NAME).toString());
+    ui->codeEdit->setPlainText(idx.data(CollationsEditorModel::CODE).toString());
+    ui->functionBasedRadio->setChecked(type == CollationManager::CollationType::FUNCTION_BASED);
+    ui->extensionBasedRadio->setChecked(type == CollationManager::CollationType::EXTENSION_BASED);
+    ui->langCombo->setCurrentText(idx.data(CollationsEditorModel::LANG).toString());
 
     // Databases
-    dbListModel->setDatabases(model->getDatabases(srcRow));
+    dbListModel->setDatabases(idx.data(CollationsEditorModel::DATABASES).toStringList());
     ui->databaseList->expandAll();
 
-    if (model->getAllDatabases(srcRow))
+    if (idx.data(CollationsEditorModel::ALL_DATABASES).toBool())
         ui->allDatabasesRadio->setChecked(true);
     else
         ui->selectedDatabasesRadio->setChecked(true);
 
     updatesForSelection = false;
-    currentModified = model->isModified(srcRow);
+    currentModified = idx.data(CollationsEditorModel::MODIFIED).toBool();
 
     updateCurrentCollationState();
 }
@@ -209,12 +206,12 @@ void CollationsEditor::clearEdits()
     ui->langCombo->setCurrentIndex(-1);
 }
 
-void CollationsEditor::selectCollation(int srcRow)
+void CollationsEditor::selectCollation(const QModelIndex& idx)
 {
-    if (!model->isValidRowIndex(srcRow))
+    if (!idx.isValid())
         return;
 
-    ui->collationList->selectionModel()->setCurrentIndex(collationFilterModel->mapFromSource(model->index(srcRow)), QItemSelectionModel::Clear|QItemSelectionModel::SelectCurrent|QItemSelectionModel::Rows);
+    ui->collationList->selectionModel()->setCurrentIndex(idx, QItemSelectionModel::Clear|QItemSelectionModel::SelectCurrent|QItemSelectionModel::Rows);
 }
 
 QStringList CollationsEditor::getCurrentDatabases() const
@@ -235,18 +232,19 @@ void CollationsEditor::help()
 
 void CollationsEditor::commit()
 {
-    int srcRow = getCurrentCollationRow();
-    if (model->isValidRowIndex(srcRow))
-        collationDeselected(srcRow);
+    QModelIndex idx = getCurrentCollationIdx();
+    if (idx.isValid())
+        collationDeselected(idx);
 
-    QList<CollationManager::CollationPtr> collations = model->getCollations();
+    QList<CollationManager::CollationPtr> collations = dataModel->getCollations();
 
     COLLATIONS->setCollations(collations);
-    model->clearModified();
+    dataModel->clearModified();
     currentModified = false;
 
-    if (model->isValidRowIndex(srcRow))
-        selectCollation(srcRow);
+    idx = viewModel->index(idx.row(), idx.column());
+    if (idx.isValid())
+        selectCollation(idx);
 
     updateState();
     ui->collationList->resizeColumnsToContents();
@@ -254,14 +252,15 @@ void CollationsEditor::commit()
 
 void CollationsEditor::rollback()
 {
-    int selectedBefore = getCurrentCollationRow();
+    QModelIndex idx = getCurrentCollationIdx();
 
-    model->setData(COLLATIONS->getAllCollations());
+    dataModel->setData(COLLATIONS->getAllCollations());
     currentModified = false;
     clearEdits();
 
-    if (model->isValidRowIndex(selectedBefore))
-        selectCollation(selectedBefore);
+    idx = viewModel->index(idx.row(), idx.column());
+    if (idx.isValid())
+        selectCollation(idx);
 
     updateState();
 }
@@ -272,33 +271,34 @@ void CollationsEditor::newCollation()
         ui->langCombo->setCurrentIndex(0);
 
     CollationManager::CollationPtr coll = CollationManager::CollationPtr::create();
-    coll->name = generateUniqueName("collation", model->getCollationNames());
+    coll->name = generateUniqueName("collation", dataModel->getCollationNames());
     coll->type = getCurrentType();
     if (ui->langCombo->currentIndex() > -1)
         coll->lang = ui->langCombo->currentText();
 
-    model->addCollation(coll);
+    dataModel->addCollation(coll);
 
-    selectCollation(model->rowCount() - 1);
+    QModelIndex idx = viewModel->index(viewModel->rowCount() - 1, 0);
+    selectCollation(idx);
 }
 
 void CollationsEditor::deleteCollation()
 {
-    int srcRow = getCurrentCollationRow();
-    model->deleteCollation(srcRow);
+    QModelIndex idx = getCurrentCollationIdx();
+    dataModel->deleteCollation(idx);
     clearEdits();
 
-    srcRow = getCurrentCollationRow();
-    if (model->isValidRowIndex(srcRow))
-        collationSelected(srcRow);
+    idx = getCurrentCollationIdx();
+    if (idx.isValid())
+        collationSelected(idx);
 
     updateState();
 }
 
 void CollationsEditor::updateState()
 {
-    bool modified = model->isModified() || currentModified;
-    bool valid = model->isValid();
+    bool modified = dataModel->isModified() || currentModified;
+    bool valid = dataModel->isValid();
 
     actionMap[COMMIT]->setEnabled(modified && valid);
     actionMap[ROLLBACK]->setEnabled(modified);
@@ -307,10 +307,9 @@ void CollationsEditor::updateState()
 
 void CollationsEditor::updateCurrentCollationState()
 {
-    int row = getCurrentCollationRow();
-    bool validRow = model->isValidRowIndex(row);
-    ui->rightWidget->setEnabled(validRow);
-    if (!validRow)
+    QModelIndex idx = getCurrentCollationIdx();
+    ui->rightWidget->setEnabled(idx.isValid());
+    if (!idx.isValid())
     {
         setValidState(ui->langCombo, true);
         setValidState(ui->nameEdit, true);
@@ -319,7 +318,7 @@ void CollationsEditor::updateCurrentCollationState()
     }
 
     QString name = ui->nameEdit->text();
-    bool nameOk = model->isAllowedName(row, name) && !name.trimmed().isEmpty();
+    bool nameOk = dataModel->isAllowedName(idx, name) && !name.trimmed().isEmpty();
     setValidState(ui->nameEdit, nameOk, tr("Enter a non-empty, unique name of the collation."));
 
     updateLangCombo();
@@ -337,11 +336,22 @@ void CollationsEditor::updateCurrentCollationState()
     {
         ui->codeGroup->setTitle(tr("Registration code"));
         setValidState(ui->codeEdit, codeOk, tr("Enter a non-empty registration code."));
+        ui->codeEdit->setToolTip(R"(<html><head/><body><p>
+            Code executed to register the collation in a database. It is SQL code that should contain a single statement that creates collation, for example:
+            <span style=" font-family:'monospace';">SELECT icu_load_collation('pl_PL', 'POLSKI');</span>
+            </p></body></html>)");
     }
     else
     {
         ui->codeGroup->setTitle(tr("Implementation code"));
         setValidState(ui->codeEdit, codeOk, tr("Enter a non-empty implementation code."));
+        ui->codeEdit->setToolTip(R"(<html><head/><body><p>
+            Code executed when the collation is applied. It receives two arguments, <span style=" font-family:'monospace';">first</span>
+            and <span style=" font-family:'monospace';">second</span> (named according to the scripting language conventions),
+            representing the values to compare. The code should compare these values and return an integer indicating the result:
+            negative if <span style=" font-family:'monospace';">first &lt; second</span>, zero if equal,
+            and positive if <span style=" font-family:'monospace';">first &gt; second</span>.
+            </p></body></html>)");
     }
 
     // Syntax highlighter
@@ -367,7 +377,7 @@ void CollationsEditor::updateCurrentCollationState()
 
         currentHighlighterLang = lang;
     }
-    model->setValid(row, langOk && codeOk && nameOk);
+    dataModel->setData(idx, langOk && codeOk && nameOk, CollationsEditorModel::VALID);
     updateState();
 }
 
@@ -377,10 +387,10 @@ void CollationsEditor::collationSelected(const QItemSelection& selected, const Q
     int selCnt = selected.indexes().size();
 
     if (deselCnt > 0)
-        collationDeselected(collRowToSrc(deselected.indexes().first()).row());
+        collationDeselected(deselected.indexes().first());
 
     if (selCnt > 0)
-        collationSelected(collRowToSrc(selected.indexes().first()).row());
+        collationSelected(selected.indexes().first());
 
     if (deselCnt > 0 && selCnt == 0)
     {
@@ -432,15 +442,15 @@ void CollationsEditor::updateModified()
     if (updatesForSelection)
         return;
 
-    int row = getCurrentCollationRow();
-    if (model->isValidRowIndex(row))
+    QModelIndex idx = getCurrentCollationIdx();
+    if (idx.isValid())
     {
-        bool nameDiff = model->getName(row) != ui->nameEdit->text();
-        bool codeDiff = model->getCode(row) != ui->codeEdit->toPlainText();
-        bool typeDiff = model->getType(row) != getCurrentType();
-        bool langDiff = model->getLang(row) != ui->langCombo->currentText();
-        bool allDatabasesDiff = model->getAllDatabases(row) != ui->allDatabasesRadio->isChecked();
-        bool dbDiff = toSet(getCurrentDatabases()) != toSet(model->getDatabases(row)); // QSet to ignore order
+        bool nameDiff = idx.data(CollationsEditorModel::NAME).toString() != ui->nameEdit->text();
+        bool codeDiff = idx.data(CollationsEditorModel::CODE).toString() != ui->codeEdit->toPlainText();
+        bool typeDiff = idx.data(CollationsEditorModel::TYPE).toInt() != getCurrentType();
+        bool langDiff = idx.data(CollationsEditorModel::LANG).toString() != ui->langCombo->currentText();
+        bool allDatabasesDiff = idx.data(CollationsEditorModel::ALL_DATABASES).toBool() != ui->allDatabasesRadio->isChecked();
+        bool dbDiff = toSet(getCurrentDatabases()) != toSet(idx.data(CollationsEditorModel::DATABASES).toStringList()); // QSet to ignore order
 
         currentModified = (nameDiff || codeDiff || typeDiff || langDiff || allDatabasesDiff || dbDiff);
     }
@@ -454,12 +464,12 @@ void CollationsEditor::applyFilter(const QString& value)
     // See FunctionsEditor::applyFilter() for details why we remember current selection and restore it at the end.
     //
 
-    int row = getCurrentCollationRow();
+    QModelIndex idx = getCurrentCollationIdx();
     ui->collationList->selectionModel()->clearSelection();
 
-    collationFilterModel->setFilterFixedString(value);
+    viewModel->setFilterFixedString(value);
 
-    selectCollation(row);
+    selectCollation(idx);
 }
 
 void CollationsEditor::changeFont(const QVariant& font)
@@ -469,10 +479,10 @@ void CollationsEditor::changeFont(const QVariant& font)
 
 void CollationsEditor::cfgCollationListChanged()
 {
-    if (model->isModified())
+    if (dataModel->isModified())
         return; // Don't update list if there are uncommitted changes, because it would be disruptive for user. Changes will be visible after commit or rollback.
 
-    model->setData(COLLATIONS->getAllCollations());
+    dataModel->setData(COLLATIONS->getAllCollations());
     updateCurrentCollationState();
 }
 
@@ -488,7 +498,7 @@ void CollationsEditor::exportCollations()
 
 bool CollationsEditor::isUncommitted() const
 {
-    return model->isModified() || currentModified;
+    return dataModel->isModified() || currentModified;
 }
 
 QString CollationsEditor::getQuitUncommittedConfirmMessage() const

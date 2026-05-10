@@ -13,25 +13,17 @@ on:
 
 jobs:
     build:
-        runs-on: ubuntu-22.04
+        runs-on: ubuntu-latest
 
         steps:
-            - name: Qt installation dir
-              id: qt-installation-dir
-              run: echo "DIR=$(readlink -f ${{ github.workspace }}/..)" >> $GITHUB_OUTPUT
-              
-            - name: Install Qt
-              uses: jurplel/install-qt-action@v4
-              with:
-                cache: true
-                version: ${{ env.QT_VERSION }}
-                host: 'linux'
-                dir: '${{ steps.qt-installation-dir.DIR }}'
-                py7zrversion: '==0.20.*'
-                extra: '--external 7z'
+            - name: Install Qt tools
+              run: |
+                sudo apt-get update
+                sudo apt-get install -y qt6-l10n-tools
+                echo "/usr/lib/qt6/bin" >> $GITHUB_PATH
 
             - name: Clone repo
-              uses: actions/checkout@v3
+              uses: actions/checkout@v6
               with:
                 ref: ${{ env.GITHUB_REF }}
 
@@ -57,6 +49,11 @@ jobs:
                 do
                     [ -d "$d"/translations ] || continue
                     lupdate "$d" -ts "$d"/translations/*.ts
+
+                    find "$d"/translations -name "*.ts" | while read f; do
+                        lconvert -sort-contexts -o "$f.tmp" "$f"
+                        mv "$f.tmp" "$f"
+                    done
                 done
 
             - name: Listing Git status

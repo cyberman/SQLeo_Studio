@@ -82,13 +82,12 @@ class GUI_API_EXPORT FunctionsEditor : public MdiChild
         void init();
         void initCodeTabs();
         void setupContextMenu();
-        int getCurrentFunctionRow() const;
-        void functionDeselected(int srcRow);
-        void functionSelected(int srcRow);
+        QModelIndex getCurrentFunctionIndex() const;
+        void functionDeselected(const QModelIndex& idx);
+        void functionSelected(const QModelIndex& idx);
         void clearEdits();
-        void selectFunction(int srcRow);
+        void selectFunction(const QModelIndex& idx);
         void setFont(const QFont& font);
-        QModelIndex fnRowToSrc(const QModelIndex& idx) const;
         QModelIndex getSelectedArg() const;
         QStringList getCurrentArgList() const;
         QStringList getCurrentDatabases() const;
@@ -96,8 +95,8 @@ class GUI_API_EXPORT FunctionsEditor : public MdiChild
         void safeClearHighlighter(QSyntaxHighlighter*& highlighterPtr);
 
         Ui::FunctionsEditor *ui = nullptr;
-        FunctionsEditorModel* model = nullptr;
-        QSortFilterProxyModel* functionFilterModel = nullptr;
+        FunctionsEditorModel* dataModel = nullptr;
+        QSortFilterProxyModel* viewModel = nullptr;
         bool currentModified = false;
         QHash<QString,ScriptingPlugin*> scriptingPlugins;
         QHash<QString,SyntaxHighlighterPlugin*> highlighterPlugins;
