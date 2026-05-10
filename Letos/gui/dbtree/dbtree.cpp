@@ -1503,6 +1503,10 @@ void DbTree::disconnectFromDb()
     QSet<Db*> dbs = toSet(getSelectedItems(DbTreeItem::Type::DB) | MAP(item, {return item->getDb();}));
     dbs << getSelectedDb();
 
+    // Before closing & deleting all items underneath,
+    // to be able to select it after refresh and keep user in the same place in tree
+    DbTreeItem* dbItem = ui->treeView->currentDbItem();
+
     for (Db* db : dbs | FILTER(db, {return db && db->isOpen();}))
     {
         if (!db)
@@ -1514,7 +1518,9 @@ void DbTree::disconnectFromDb()
         db->close();
     }
 
-    DbTreeItem* dbItem = ui->treeView->currentDbItem();
+    if (!dbItem)
+        return;
+
     ui->treeView->setCurrentIndex(dbItem->index());
 }
 

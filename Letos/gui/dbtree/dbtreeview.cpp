@@ -59,6 +59,9 @@ void DbTreeView::setCurrentItem(DbTreeItem* item)
 DbTreeItem* DbTreeView::currentDbItem()
 {
     DbTreeItem* item = currentItem();
+    if (!item)
+        return nullptr;
+
     if (item->getType() == DbTreeItem::Type::DB)
         return item;
 
