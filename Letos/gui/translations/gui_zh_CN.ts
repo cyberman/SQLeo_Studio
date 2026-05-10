@@ -294,19 +294,19 @@
       <translation>实现代码：</translation>
     </message>
     <message>
-      <location filename="../windows/collationseditor.ui" line="203"/>
-      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Code executed when the collation is applied. It receives two arguments, &lt;span style=&quot; font-family:&apos;monospace&apos;;&quot;&gt;first&lt;/span&gt; and &lt;span style=&quot; font-family:&apos;monospace&apos;;&quot;&gt;second&lt;/span&gt; (named according to the scripting language conventions), representing the values to compare. The code should compare these values and return an integer indicating the result: negative if &lt;span style=&quot; font-family:&apos;monospace&apos;;&quot;&gt;first &amp;lt; second&lt;/span&gt;, zero if equal, and positive if &lt;span style=&quot; font-family:&apos;monospace&apos;;&quot;&gt;first &amp;gt; second&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;在应用排序规则时执行的代码。它接收两个参数，&lt;span style=&quot; font-family:&apos;monospace&apos;;&quot;&gt;first&lt;/span&gt; 和&lt;span style=&quot; font-family:&apos;monospace&apos;;&quot;&gt;&lt;/span&gt; （根据脚本语言约定命名），分别代表要比较的值。代码应比较这些值并返回一个整数，表示结果：如果 &lt;span style=&quot; font-family:&apos;monospace&apos;;&quot;&gt;first &amp;lt; second&lt;/span&gt;, 相等，则返回负数；如果相等，则返回零；如果 &lt;span style=&quot; font-family:&apos;monospace&apos;;&quot;&gt;first &amp;gt; second 相等，则返回正数。&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-      <location filename="../windows/collationseditor.ui" line="232"/>
+      <location filename="../windows/collationseditor.ui" line="229"/>
       <source>Collation name:</source>
       <translation>字符序名称：</translation>
     </message>
     <message>
-      <location filename="../windows/collationseditor.ui" line="242"/>
+      <location filename="../windows/collationseditor.ui" line="239"/>
       <source>Collation type:</source>
       <translation>排序类型：</translation>
+    </message>
+    <message>
+      <location filename="../windows/collationseditor.ui" line="248"/>
+      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Implements the comparison logic directly in Letos using a scripting language. Choose this type to create fully custom sorting and comparison rules without requiring external SQLite extensions.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Implements the comparison logic directly in Letos using a scripting language. Choose this type to create fully custom sorting and comparison rules without requiring external SQLite extensions.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../windows/collationseditor.ui" line="251"/>
@@ -315,11 +315,16 @@
     </message>
     <message>
       <location filename="../windows/collationseditor.ui" line="258"/>
+      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Uses a collation implemented by a SQLite extension or external library. Choose this type when the comparison logic already exists outside of Letos, for example in ICU or another SQLite extension.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Uses a collation implemented by a SQLite extension or external library. Choose this type when the comparison logic already exists outside of Letos, for example in ICU or another SQLite extension.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+      <location filename="../windows/collationseditor.ui" line="261"/>
       <source>Extension-based</source>
       <translation>基于扩展</translation>
     </message>
     <message>
-      <location filename="../windows/collationseditor.ui" line="267"/>
+      <location filename="../windows/collationseditor.ui" line="270"/>
       <source>Implementation language:</source>
       <translation>实现语言：</translation>
     </message>
@@ -364,39 +369,67 @@
       <translation>手动编辑字符序</translation>
     </message>
     <message>
-      <location filename="../windows/collationseditor.cpp" line="323"/>
+      <location filename="../windows/collationseditor.cpp" line="322"/>
       <source>Enter a non-empty, unique name of the collation.</source>
       <translation>请为字符序输入一个非空且唯一的名称。</translation>
     </message>
     <message>
-      <location filename="../windows/collationseditor.cpp" line="333"/>
+      <location filename="../windows/collationseditor.cpp" line="332"/>
       <source>Pick the implementation language.</source>
       <translation>选择实现语言。</translation>
     </message>
     <message>
-      <location filename="../windows/collationseditor.cpp" line="338"/>
+      <location filename="../windows/collationseditor.cpp" line="337"/>
       <source>Registration code</source>
       <translation>注册代码</translation>
     </message>
     <message>
-      <location filename="../windows/collationseditor.cpp" line="339"/>
+      <location filename="../windows/collationseditor.cpp" line="338"/>
       <source>Enter a non-empty registration code.</source>
       <translation>输入非空的注册码。</translation>
     </message>
     <message>
-      <location filename="../windows/collationseditor.cpp" line="343"/>
+      <location filename="../windows/collationseditor.cpp" line="346"/>
       <source>Implementation code</source>
       <translation>实现代码</translation>
     </message>
     <message>
-      <location filename="../windows/collationseditor.cpp" line="344"/>
+      <location filename="../windows/collationseditor.cpp" line="347"/>
       <source>Enter a non-empty implementation code.</source>
       <translation>请输入非空的实现代码。</translation>
     </message>
     <message>
-      <location filename="../windows/collationseditor.cpp" line="496"/>
+      <location filename="../windows/collationseditor.cpp" line="506"/>
       <source>Collations editor window has uncommitted modifications.</source>
       <translation>字符序编辑器有未提交的修改。</translation>
+    </message>
+  </context>
+  <context>
+    <name>CollationsEditorModel</name>
+    <message>
+      <location filename="../windows/collationseditormodel.cpp" line="219"/>
+      <source>all databases</source>
+      <translation type="unfinished">all databases</translation>
+    </message>
+    <message>
+      <location filename="../windows/collationseditormodel.cpp" line="224"/>
+      <source>Collation:</source>
+      <translation type="unfinished">Collation:</translation>
+    </message>
+    <message>
+      <location filename="../windows/collationseditormodel.cpp" line="225"/>
+      <source>Type:</source>
+      <translation type="unfinished">Type:</translation>
+    </message>
+    <message>
+      <location filename="../windows/collationseditormodel.cpp" line="226"/>
+      <source>Language:</source>
+      <translation type="unfinished">Language:</translation>
+    </message>
+    <message>
+      <location filename="../windows/collationseditormodel.cpp" line="227"/>
+      <source>Registered in:</source>
+      <translation type="unfinished">Registered in:</translation>
     </message>
   </context>
   <context>
@@ -4123,100 +4156,100 @@ Please enter new, unique name, or press &apos;%1&apos; to abort the operation:</
       <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;根据当前聚合状态计算并返回聚合结果的代码。在窗口函数中，它可以多次执行以返回当前窗口值。在常规聚合函数中，它作为最终函数调用一次。参数值以与声明的函数参数同名的变量形式提供。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-      <location filename="../windows/functionseditor.cpp" line="61"/>
+      <location filename="../windows/functionseditor.cpp" line="62"/>
       <source>SQL functions editor</source>
       <translation>SQL 函数编辑器</translation>
     </message>
     <message>
-      <location filename="../windows/functionseditor.cpp" line="66"/>
+      <location filename="../windows/functionseditor.cpp" line="67"/>
       <source>Commit all function changes</source>
       <translation>提交所有对函数的更改</translation>
     </message>
     <message>
-      <location filename="../windows/functionseditor.cpp" line="67"/>
+      <location filename="../windows/functionseditor.cpp" line="68"/>
       <source>Rollback all function changes</source>
       <translation>回滚所有对函数的更改</translation>
     </message>
     <message>
-      <location filename="../windows/functionseditor.cpp" line="69"/>
+      <location filename="../windows/functionseditor.cpp" line="70"/>
       <source>Create new function</source>
       <translation>新建函数</translation>
     </message>
     <message>
-      <location filename="../windows/functionseditor.cpp" line="70"/>
+      <location filename="../windows/functionseditor.cpp" line="71"/>
       <source>Delete selected function</source>
       <translation>删除已选函数</translation>
     </message>
     <message>
-      <location filename="../windows/functionseditor.cpp" line="72"/>
+      <location filename="../windows/functionseditor.cpp" line="73"/>
       <source>Import functions from file</source>
       <translation>从文件中导入函数</translation>
     </message>
     <message>
-      <location filename="../windows/functionseditor.cpp" line="73"/>
+      <location filename="../windows/functionseditor.cpp" line="74"/>
       <source>Export functions to file</source>
       <translation>导出函数到文件</translation>
     </message>
     <message>
-      <location filename="../windows/functionseditor.cpp" line="74"/>
+      <location filename="../windows/functionseditor.cpp" line="75"/>
       <source>Custom SQL functions manual</source>
       <translation>自定义 SQL 函数手册</translation>
     </message>
     <message>
-      <location filename="../windows/functionseditor.cpp" line="77"/>
+      <location filename="../windows/functionseditor.cpp" line="78"/>
       <source>Add function argument</source>
       <translation>添加函数参数</translation>
     </message>
     <message>
-      <location filename="../windows/functionseditor.cpp" line="78"/>
+      <location filename="../windows/functionseditor.cpp" line="79"/>
       <source>Rename function argument</source>
       <translation>重命名函数参数</translation>
     </message>
     <message>
-      <location filename="../windows/functionseditor.cpp" line="79"/>
+      <location filename="../windows/functionseditor.cpp" line="80"/>
       <source>Delete function argument</source>
       <translation>删除函数参数</translation>
     </message>
     <message>
-      <location filename="../windows/functionseditor.cpp" line="81"/>
+      <location filename="../windows/functionseditor.cpp" line="82"/>
       <source>Move function argument up</source>
       <translation>上移函数参数</translation>
     </message>
     <message>
-      <location filename="../windows/functionseditor.cpp" line="82"/>
+      <location filename="../windows/functionseditor.cpp" line="83"/>
       <source>Move function argument down</source>
       <translation>下移函数参数</translation>
     </message>
     <message>
-      <location filename="../windows/functionseditor.cpp" line="535"/>
+      <location filename="../windows/functionseditor.cpp" line="540"/>
       <source>Enter a unique, non-empty function name. Duplicate names are allowed if the number of input parameters differs.</source>
       <translation>输入唯一的非空函数名称。如果输入参数的数量不同，则允许名称重复。</translation>
     </message>
     <message>
-      <location filename="../windows/functionseditor.cpp" line="546"/>
+      <location filename="../windows/functionseditor.cpp" line="551"/>
       <source>Pick the implementation language.</source>
       <translation>选择实现语言。</translation>
     </message>
     <message>
-      <location filename="../windows/functionseditor.cpp" line="564"/>
-      <location filename="../windows/functionseditor.cpp" line="574"/>
-      <location filename="../windows/functionseditor.cpp" line="575"/>
+      <location filename="../windows/functionseditor.cpp" line="569"/>
+      <location filename="../windows/functionseditor.cpp" line="579"/>
+      <location filename="../windows/functionseditor.cpp" line="580"/>
       <source>Enter a non-empty implementation code.</source>
       <translation>请输入非空的实现代码。</translation>
     </message>
     <message>
-      <location filename="../windows/functionseditor.cpp" line="624"/>
+      <location filename="../windows/functionseditor.cpp" line="629"/>
       <source>argument</source>
       <comment>new function argument name in function editor window</comment>
       <translation>参数</translation>
     </message>
     <message>
-      <location filename="../windows/functionseditor.cpp" line="728"/>
+      <location filename="../windows/functionseditor.cpp" line="733"/>
       <source>Function argument cannot be empty and it cannot have duplicated name.</source>
       <translation>函数参数不能为空且不能有重复的名称。</translation>
     </message>
     <message>
-      <location filename="../windows/functionseditor.cpp" line="795"/>
+      <location filename="../windows/functionseditor.cpp" line="800"/>
       <source>Functions editor window has uncommitted modifications.</source>
       <translation>函数编辑器窗口有未提交的更改。</translation>
     </message>
@@ -4224,42 +4257,42 @@ Please enter new, unique name, or press &apos;%1&apos; to abort the operation:</
   <context>
     <name>FunctionsEditorModel</name>
     <message>
-      <location filename="../windows/functionseditormodel.cpp" line="401"/>
+      <location filename="../windows/functionseditormodel.cpp" line="261"/>
       <source>all databases</source>
       <translation>所有数据库</translation>
     </message>
     <message>
-      <location filename="../windows/functionseditormodel.cpp" line="406"/>
+      <location filename="../windows/functionseditormodel.cpp" line="266"/>
       <source>Function:</source>
       <translation>函数：</translation>
     </message>
     <message>
-      <location filename="../windows/functionseditormodel.cpp" line="407"/>
+      <location filename="../windows/functionseditormodel.cpp" line="267"/>
       <source>Type:</source>
       <translation>类型：</translation>
     </message>
     <message>
-      <location filename="../windows/functionseditormodel.cpp" line="408"/>
+      <location filename="../windows/functionseditormodel.cpp" line="268"/>
       <source>Deterministic:</source>
       <translation>确定性：</translation>
     </message>
     <message>
-      <location filename="../windows/functionseditormodel.cpp" line="408"/>
+      <location filename="../windows/functionseditormodel.cpp" line="268"/>
       <source>Yes</source>
       <translation>是</translation>
     </message>
     <message>
-      <location filename="../windows/functionseditormodel.cpp" line="408"/>
+      <location filename="../windows/functionseditormodel.cpp" line="268"/>
       <source>No</source>
       <translation>否</translation>
     </message>
     <message>
-      <location filename="../windows/functionseditormodel.cpp" line="409"/>
+      <location filename="../windows/functionseditormodel.cpp" line="269"/>
       <source>Language:</source>
       <translation>语言：</translation>
     </message>
     <message>
-      <location filename="../windows/functionseditormodel.cpp" line="410"/>
+      <location filename="../windows/functionseditormodel.cpp" line="270"/>
       <source>Registered in:</source>
       <translation>注册于：</translation>
     </message>
@@ -7299,34 +7332,62 @@ Such deletion will be permanent. Are you sure you want to delete them?</source>
       <translation>无法加载扩展：%1</translation>
     </message>
     <message>
-      <location filename="../windows/sqliteextensioneditor.cpp" line="399"/>
+      <location filename="../windows/sqliteextensioneditor.cpp" line="403"/>
       <source>Invalid initialization function name. Function name can contain only alpha-numeric characters and underscore.</source>
       <translation>初始化函数名无效。函数名只能包含字母数字字符和下划线。</translation>
     </message>
     <message>
-      <location filename="../windows/sqliteextensioneditor.cpp" line="468"/>
+      <location filename="../windows/sqliteextensioneditor.cpp" line="472"/>
       <source>Dynamic link libraries (*.dll);;All files (*)</source>
       <translation>动态链接库 (*.dll);;所有文件 (*)</translation>
     </message>
     <message>
-      <location filename="../windows/sqliteextensioneditor.cpp" line="470"/>
+      <location filename="../windows/sqliteextensioneditor.cpp" line="474"/>
       <source>Shared objects (*.so);;All files (*)</source>
       <translation>共享库 (*.so);;All files (*)</translation>
     </message>
     <message>
-      <location filename="../windows/sqliteextensioneditor.cpp" line="472"/>
+      <location filename="../windows/sqliteextensioneditor.cpp" line="476"/>
       <source>Dynamic libraries (*.dylib);;All files (*)</source>
       <translation>动态库 (*.dylib);;所有文件 (*)</translation>
     </message>
     <message>
-      <location filename="../windows/sqliteextensioneditor.cpp" line="474"/>
+      <location filename="../windows/sqliteextensioneditor.cpp" line="478"/>
       <source>All files (*)</source>
       <translation>所有文件 (*)</translation>
     </message>
     <message>
-      <location filename="../windows/sqliteextensioneditor.cpp" line="476"/>
+      <location filename="../windows/sqliteextensioneditor.cpp" line="480"/>
       <source>Open file</source>
       <translation>打开文件</translation>
+    </message>
+  </context>
+  <context>
+    <name>SqliteExtensionEditorModel</name>
+    <message>
+      <location filename="../windows/sqliteextensioneditormodel.cpp" line="160"/>
+      <source>all databases</source>
+      <translation type="unfinished">all databases</translation>
+    </message>
+    <message>
+      <location filename="../windows/sqliteextensioneditormodel.cpp" line="164"/>
+      <source>Extension:</source>
+      <translation type="unfinished">Extension:</translation>
+    </message>
+    <message>
+      <location filename="../windows/sqliteextensioneditormodel.cpp" line="165"/>
+      <source>File:</source>
+      <translation type="unfinished">File:</translation>
+    </message>
+    <message>
+      <location filename="../windows/sqliteextensioneditormodel.cpp" line="166"/>
+      <source>Init function:</source>
+      <translation type="unfinished">Init function:</translation>
+    </message>
+    <message>
+      <location filename="../windows/sqliteextensioneditormodel.cpp" line="167"/>
+      <source>Registered in:</source>
+      <translation type="unfinished">Registered in:</translation>
     </message>
   </context>
   <context>
