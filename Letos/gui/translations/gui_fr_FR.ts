@@ -2663,7 +2663,7 @@ Browsing other pages will be possible after the row counting is done.</source>
         <translation>Base de données</translation>
     </message>
     <message>
-        <location filename="../dbtree/dbtree.cpp" line="2518"/>
+        <location filename="../dbtree/dbtree.cpp" line="2524"/>
         <source>Filter by name</source>
         <translation>Filtre par nom</translation>
     </message>
@@ -2914,7 +2914,7 @@ Browsing other pages will be possible after the row counting is done.</source>
     </message>
     <message>
         <location filename="../dbtree/dbtree.cpp" line="190"/>
-        <location filename="../dbtree/dbtree.cpp" line="1900"/>
+        <location filename="../dbtree/dbtree.cpp" line="1906"/>
         <source>Erase table data</source>
         <translation>Effacer les données de la table</translation>
     </message>
@@ -3015,95 +3015,95 @@ All objects from these groups will be moved to respective parent groups.</transl
         <translation>Supprimer la base de données</translation>
     </message>
     <message>
-        <location filename="../dbtree/dbtree.cpp" line="1526"/>
-        <location filename="../dbtree/dbtree.cpp" line="1731"/>
+        <location filename="../dbtree/dbtree.cpp" line="1532"/>
+        <location filename="../dbtree/dbtree.cpp" line="1737"/>
         <source>Cannot import, because no import plugin is loaded.</source>
         <translation>Import impossible, car aucun plugin d’import n’est chargé.</translation>
     </message>
     <message>
-        <location filename="../dbtree/dbtree.cpp" line="1546"/>
-        <location filename="../dbtree/dbtree.cpp" line="1706"/>
-        <location filename="../dbtree/dbtree.cpp" line="1775"/>
+        <location filename="../dbtree/dbtree.cpp" line="1552"/>
+        <location filename="../dbtree/dbtree.cpp" line="1712"/>
+        <location filename="../dbtree/dbtree.cpp" line="1781"/>
         <source>Cannot export, because no export plugin is loaded.</source>
         <translation>Export impossible, car aucun plugin d’import n’est chargé.</translation>
     </message>
     <message>
-        <location filename="../dbtree/dbtree.cpp" line="1821"/>
+        <location filename="../dbtree/dbtree.cpp" line="1827"/>
         <source>Vacuum (%1)</source>
         <translation>Vider (%1)</translation>
     </message>
     <message>
-        <location filename="../dbtree/dbtree.cpp" line="1835"/>
+        <location filename="../dbtree/dbtree.cpp" line="1841"/>
         <source>Integrity check (%1)</source>
         <translation>Contrôle d’intégrité (%1)</translation>
     </message>
     <message>
-        <location filename="../dbtree/dbtree.cpp" line="1871"/>
+        <location filename="../dbtree/dbtree.cpp" line="1877"/>
         <source>Reset autoincrement</source>
         <translation>Remise à zéro de l’auto-incrément</translation>
     </message>
     <message>
-        <location filename="../dbtree/dbtree.cpp" line="1871"/>
+        <location filename="../dbtree/dbtree.cpp" line="1877"/>
         <source>Are you sure you want to reset autoincrement value for table &apos;%1&apos;?</source>
         <translation>Êtes-vous certain de vouloir réinitialiser l’auto-incrémentation de la table « %1 » ?</translation>
     </message>
     <message>
-        <location filename="../dbtree/dbtree.cpp" line="1878"/>
+        <location filename="../dbtree/dbtree.cpp" line="1884"/>
         <source>An error occurred while trying to reset autoincrement value for table &apos;%1&apos;: %2</source>
         <translation>Une erreur est survenue pendant la réinitialisation de la valeur de l’auto-incrémentation de la table « %1 » : %2</translation>
     </message>
     <message>
-        <location filename="../dbtree/dbtree.cpp" line="1880"/>
+        <location filename="../dbtree/dbtree.cpp" line="1886"/>
         <source>Autoincrement value for table &apos;%1&apos; has been reset successfully.</source>
         <translation>La valeur d&apos;auto-incrémentation pour la table &apos;%1&apos; a été réinitialisée avec succès.</translation>
     </message>
     <message>
-        <location filename="../dbtree/dbtree.cpp" line="1900"/>
+        <location filename="../dbtree/dbtree.cpp" line="1906"/>
         <source>Are you sure you want to delete all data from table(s): %1?</source>
         <translation>Êtes-vous sûr de vouloir supprimer toutes les données de(s) table(s) : %1?</translation>
     </message>
     <message>
-        <location filename="../dbtree/dbtree.cpp" line="1912"/>
+        <location filename="../dbtree/dbtree.cpp" line="1918"/>
         <source>An error occurred while trying to delete data from table &apos;%1&apos;: %2</source>
         <translation>Une erreur est survenue lors de la suppression de données de la table &apos;%1&apos;: %2</translation>
     </message>
     <message>
-        <location filename="../dbtree/dbtree.cpp" line="1916"/>
+        <location filename="../dbtree/dbtree.cpp" line="1922"/>
         <source>All data has been deleted for table &apos;%1&apos;.</source>
         <translation>Toutes les données ont été supprimées pour la table &apos;%1&apos;.</translation>
     </message>
     <message>
-        <location filename="../dbtree/dbtree.cpp" line="2055"/>
+        <location filename="../dbtree/dbtree.cpp" line="2061"/>
         <source>Following objects will be deleted: %1.</source>
         <translation>Les objets suivant vont être supprimés : %1.</translation>
     </message>
     <message>
-        <location filename="../dbtree/dbtree.cpp" line="2058"/>
+        <location filename="../dbtree/dbtree.cpp" line="2064"/>
         <source>Following databases will be removed from list: %1.</source>
         <translation>Les bases de données suivantes seront enlevées de la liste : %1.</translation>
     </message>
     <message>
-        <location filename="../dbtree/dbtree.cpp" line="2061"/>
+        <location filename="../dbtree/dbtree.cpp" line="2067"/>
         <source>Remainig objects from deleted group will be moved in place where the group used to be.</source>
         <translation>Les objets restants du groupe supprimé seront déplacés où le groupe a eu l’habitude d’être.</translation>
     </message>
     <message>
-        <location filename="../dbtree/dbtree.cpp" line="2063"/>
+        <location filename="../dbtree/dbtree.cpp" line="2069"/>
         <source>%1&lt;br&gt;&lt;br&gt;Are you sure you want to continue?</source>
         <translation>%1&lt;br&gt;&lt;br&gt;Êtes-vous certain de vouloir continuer ?</translation>
     </message>
     <message>
-        <location filename="../dbtree/dbtree.cpp" line="2065"/>
+        <location filename="../dbtree/dbtree.cpp" line="2071"/>
         <source>Delete objects</source>
         <translation>Objets supprimés</translation>
     </message>
     <message>
-        <location filename="../dbtree/dbtree.cpp" line="2544"/>
+        <location filename="../dbtree/dbtree.cpp" line="2550"/>
         <source>&lt;html&gt;&lt;body&gt;&lt;p&gt;Connected.&lt;/p&gt;&lt;p&gt;Click here to disconnect, or middle-click on the database.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished">&lt;html&gt;&lt;body&gt;&lt;p&gt;Connected.&lt;/p&gt;&lt;p&gt;Click here to disconnect, or middle-click on the database.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../dbtree/dbtree.cpp" line="2552"/>
+        <location filename="../dbtree/dbtree.cpp" line="2558"/>
         <source>&lt;html&gt;&lt;body&gt;&lt;p&gt;Disconnected.&lt;/p&gt;&lt;p&gt;Click here to connect, or double-click on the database.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished">&lt;html&gt;&lt;body&gt;&lt;p&gt;Disconnected.&lt;/p&gt;&lt;p&gt;Click here to connect, or double-click on the database.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
