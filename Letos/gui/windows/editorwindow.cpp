@@ -423,7 +423,30 @@ void EditorWindow::createActions()
     actionMap[CURRENT_DB] = ui->toolBar->addWidget(dbCombo);
     ui->toolBar->addSeparator();
     createAction(EXEC_QUERY, ICONS.EXEC_QUERY, tr("Execute query"), this, SLOT(execQuery()), ui->toolBar, ui->sqlEdit);
-    createAction(EXPLAIN_QUERY, ICONS.EXPLAIN_QUERY, tr("Explain query"), this, SLOT(explainQuery()), ui->toolBar, ui->sqlEdit);
+
+    // Explain query & submenu
+    createAction(EXPLAIN_QUERY, tr("Explain query"), this, SLOT(explainQuery()), ui->toolBar, ui->sqlEdit);
+    createAction(EXPLAIN_MODE_EXPLAIN, ICONS.EXPLAIN_QUERY, "EXPLAIN", this, SLOT(setExplainMode()), this);
+    createAction(EXPLAIN_MODE_QUERY_PLAN, ICONS.EXPLAIN_QUERY_PLAN, "EXPLAIN QUERY PLAN", this, SLOT(setExplainMode()), this);
+    QActionGroup* explainModeGroup = new QActionGroup(ui->toolBar);
+    for (Action act : {EXPLAIN_MODE_EXPLAIN, EXPLAIN_MODE_QUERY_PLAN})
+    {
+        explainModeGroup->addAction(actionMap[act]);
+        actionMap[act]->setCheckable(true);
+        attachActionInMenu(EXPLAIN_QUERY, actionMap[act], ui->toolBar);
+    }
+    if (CFG_UI.General.SqlEditorExplainMode.get() == Cfg::QUERY_PLAN)
+    {
+        actionMap[EXPLAIN_MODE_QUERY_PLAN]->setChecked(true);
+        actionMap[EXPLAIN_QUERY]->setIcon(ICONS.EXPLAIN_QUERY_PLAN);
+    }
+    else
+    {
+        actionMap[EXPLAIN_MODE_EXPLAIN]->setChecked(true);
+        actionMap[EXPLAIN_QUERY]->setIcon(ICONS.EXPLAIN_QUERY);
+    }
+
+    // Rest of SQL editor toolbar
     ui->toolBar->addSeparator();
     ui->toolBar->addAction(ui->sqlEdit->getAction(SqlEditor::FORMAT_SQL));
     ui->toolBar->addSeparator();
@@ -510,7 +533,7 @@ void EditorWindow::updateShortcutTips()
     }
 }
 
-void EditorWindow::execQuery(bool explain, QueryExecMode querySelectionMode)
+void EditorWindow::execQuery(int explain, QueryExecMode querySelectionMode)
 {
     QString sql = getQueryToExecute(querySelectionMode);
     QHash<QString, QVariant> bindParams;
@@ -538,17 +561,31 @@ void EditorWindow::execQuery(bool explain, QueryExecMode querySelectionMode)
 
 void EditorWindow::execOneQuery()
 {
-    execQuery(false, SINGLE);
+    execQuery(-1, SINGLE);
 }
 
 void EditorWindow::execAllQueries()
 {
-    execQuery(false, ALL);
+    execQuery(-1, ALL);
 }
 
 void EditorWindow::explainQuery()
 {
-    execQuery(true);
+    execQuery(CFG_UI.General.SqlEditorExplainMode.get());
+}
+
+void EditorWindow::setExplainMode()
+{
+    if (actionMap[EXPLAIN_MODE_QUERY_PLAN]->isChecked())
+    {
+        CFG_UI.General.SqlEditorExplainMode.set(Cfg::QUERY_PLAN);
+        actionMap[EXPLAIN_QUERY]->setIcon(actionMap[EXPLAIN_MODE_QUERY_PLAN]->icon());
+    }
+    else
+    {
+        CFG_UI.General.SqlEditorExplainMode.set(Cfg::EXPLAIN);
+        actionMap[EXPLAIN_QUERY]->setIcon(actionMap[EXPLAIN_MODE_EXPLAIN]->icon());
+    }
 }
 
 bool EditorWindow::processBindParams(QString& sql, QHash<QString, QVariant>& queryParams)

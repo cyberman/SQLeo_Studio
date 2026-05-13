@@ -950,11 +950,10 @@ bool QueryExecutor::getExplainMode() const
     return explainMode;
 }
 
-void QueryExecutor::setExplainMode(bool value)
+void QueryExecutor::setExplainMode(int value)
 {
     explainMode = value;
 }
-
 
 void QueryExecutor::error(int code, const QString& text)
 {

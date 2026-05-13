@@ -90,6 +90,7 @@
 - CHANGE: #4688 Added metadata to Windows executables.
 - CHANGE: #2956 Export Dialog respects hotkeys for changing database in the dropdown, using the same hotkey as SQL Editor.
 - CHANGE: #4964 Import Dialog has now inverted order of pages - the imported file first and then the target table, for which the name is concluded from imported file name. Also filter for CSV import is now extended with tsv files.
+- CHANGE: #3522 EXPLAIN button in SQL Editor now has dropdown menu with selection between EXPLAIN and EXPLAIN QUERY PLAN modes.
 - CHANGE: #5612 With hotkeys being reset to defaults in version 4.0.0, the relevant notification message is now printed upon the reset.
 - CHANGE: #5634 Execute SQL From File dialog no whas a database selector and the action appears in all database list context menus + in the Tools menu of main menubar.
 - CHANGE: Windows x86 (32-bit) binaries will no longer by provided in official builds.

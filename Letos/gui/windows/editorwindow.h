@@ -57,6 +57,8 @@ class GUI_API_EXPORT EditorWindow : public MdiChild
             EXEC_ONE_QUERY,
             EXEC_ALL_QUERIES,
             EXPLAIN_QUERY,
+            EXPLAIN_MODE_EXPLAIN,
+            EXPLAIN_MODE_QUERY_PLAN,
             RESULTS_IN_TAB,
             RESULTS_BELOW,
             CURRENT_DB,
@@ -160,10 +162,11 @@ class GUI_API_EXPORT EditorWindow : public MdiChild
         bool settingSqlContents = false;
 
     private slots:
-        void execQuery(bool explain = false, EditorWindow::QueryExecMode querySelectionMode = EditorWindow::DEFAULT);
+        void execQuery(int explain = -1, EditorWindow::QueryExecMode querySelectionMode = EditorWindow::DEFAULT);
         void execOneQuery();
         void execAllQueries();
         void explainQuery();
+        void setExplainMode();
         void dbChanged();
         void executionSuccessful();
         void executionFailed(const QString& errorText);

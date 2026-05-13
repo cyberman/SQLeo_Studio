@@ -11,6 +11,15 @@
 #include <QSharedPointer>
 #include <QDateTime>
 
+namespace Cfg
+{
+    enum API_EXPORT ExplainQueryMode
+    {
+        EXPLAIN = 0,
+        QUERY_PLAN = 1
+    };
+};
+
 CFG_CATEGORIES(Core,
     CFG_CATEGORY(General,
         CFG_ENTRY(int,          SqlHistorySize,           10000)

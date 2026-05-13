@@ -1524,7 +1524,6 @@ void DbTree::disconnectFromDb()
     ui->treeView->setCurrentIndex(dbItem->index());
 }
 
-
 void DbTree::import()
 {
     if (!ImportManager::isAnyPluginAvailable())

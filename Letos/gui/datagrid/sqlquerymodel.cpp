@@ -66,9 +66,9 @@ void SqlQueryModel::setQuery(const QString &value)
     query = value;
 }
 
-void SqlQueryModel::setExplainMode(bool explain)
+void SqlQueryModel::setExplainMode(int explainMode)
 {
-    this->explain = explain;
+    this->explain = explainMode;
 }
 
 void SqlQueryModel::setParams(const QHash<QString, QVariant>& params)

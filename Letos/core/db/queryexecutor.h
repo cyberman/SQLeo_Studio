@@ -497,7 +497,7 @@ class API_EXPORT QueryExecutor : public QObject, public QRunnable
              * This is configuration parameter passed from QueryExecutor just before executing
              * the query. It can be defined by QueryExecutor::setExplainMode().
              */
-            bool explainMode = false;
+            int explainMode = -1;
 
             /**
              * @brief Defines if row counting should be skipped.
@@ -1099,15 +1099,15 @@ class API_EXPORT QueryExecutor : public QObject, public QRunnable
 
         /**
          * @brief Defines EXPLAIN mode for next query execution.
-         * @param value true to enable EXPLAIN mode, or false to disable it.
+         * @param value 0 to enable EXPLAIN mode, or -1 to disable it. Pass 2 for EXPLAIN QUERY PLAN.
          *
-         * EXPLAIN mode means simply that the EXPLAIN keyword will be prepended
+         * EXPLAIN mode means simply that the EXPLAIN (or EXPLAIN QUERY PLAN) keyword will be prepended
          * to the query, except when the query already started with the EXPLAIN keyword.
          *
          * Once the mode is changed, the exec() must be called
          * to receive "explain" results.
          */
-        void setExplainMode(bool value);
+        void setExplainMode(int value);
 
         /**
          * @brief Defines results preloading.
@@ -1383,7 +1383,7 @@ class API_EXPORT QueryExecutor : public QObject, public QRunnable
          *
          * See setExplainMode() for details.
          */
-        bool explainMode = false;
+        int explainMode = -1;
 
         /**
          * @brief Flag indicating that the row counting was disabled.
