@@ -1909,7 +1909,7 @@
       <location filename="../dialogs/configdialog.ui" line="2575"/>
       <location filename="../dialogs/configdialog.ui" line="2585"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Expressed in percentage of default size.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Expressed in percentage of default size.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head&gt;&lt;body&gt;&lt;p&gt;Ausgedrückt als Prozentsatz der Standardgröße.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/configdialog.ui" line="2578"/>
@@ -3096,7 +3096,7 @@ Alle Objekte dieser Gruppen werden in die jeweiligen Elterngruppen verschoben.</
     <message>
       <location filename="../dbtree/dbtree.cpp" line="2549"/>
       <source>&lt;html&gt;&lt;body&gt;&lt;p&gt;Connected.&lt;/p&gt;&lt;p&gt;Click here to disconnect, or middle-click on the database.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;body&gt;&lt;p&gt;Connected.&lt;/p&gt;&lt;p&gt;Click here to disconnect, or middle-click on the database.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;body&gt;&lt;p&gt;Verbunden.&lt;/p&gt;&lt;p&gt;Klicken Sie hier, um die Verbindung zu trennen, oder klicken Sie mit der mittleren Maustaste auf die Datenbank.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dbtree/dbtree.cpp" line="2557"/>
@@ -3464,17 +3464,17 @@ Bitte geben Sie einen neuen, eindeutigen Namen an oder drücken Sie %1, um den V
       <location filename="../windows/editorwindow.cpp" line="475"/>
       <source>Delete selected SQL history entries</source>
       <comment>sql editor</comment>
-      <translation type="unfinished">Delete selected SQL history entries</translation>
+      <translation>Ausgewählte SQL-Verlaufseinträge löschen</translation>
     </message>
     <message>
       <location filename="../windows/editorwindow.cpp" line="476"/>
       <source>Execute single query under cursor</source>
-      <translation type="unfinished">Execute single query under cursor</translation>
+      <translation>Einzelne Abfrage unter Cursor ausführen</translation>
     </message>
     <message>
       <location filename="../windows/editorwindow.cpp" line="477"/>
       <source>Execute all queries in editor</source>
-      <translation type="unfinished">Execute all queries in editor</translation>
+      <translation>Alle Abfragen im Editor ausführen</translation>
     </message>
     <message>
       <location filename="../windows/editorwindow.cpp" line="532"/>
@@ -3529,7 +3529,7 @@ Bitte geben Sie einen neuen, eindeutigen Namen an oder drücken Sie %1, um den V
     <message>
       <location filename="../windows/editorwindow.cpp" line="949"/>
       <source>Editor window &quot;%1&quot; has uncommitted data.</source>
-      <translation type="unfinished">Editor window &quot;%1&quot; has uncommitted data.</translation>
+      <translation>Editor-Fenster &quot;%1&quot; hat nicht übertragene Daten.</translation>
     </message>
   </context>
   <context>
@@ -3555,7 +3555,7 @@ Bitte geben Sie einen neuen, eindeutigen Namen an oder drücken Sie %1, um den V
     <message>
       <location filename="../dialogs/execfromfiledialog.ui" line="14"/>
       <source>Execute SQL from file</source>
-      <translation type="unfinished">Execute SQL from file</translation>
+      <translation>SQL aus Datei ausführen</translation>
     </message>
     <message>
       <location filename="../dialogs/execfromfiledialog.ui" line="23"/>
@@ -3590,42 +3590,42 @@ Bitte geben Sie einen neuen, eindeutigen Namen an oder drücken Sie %1, um den V
     <message>
       <location filename="../dialogs/execfromfiledialog.ui" line="81"/>
       <source>Skip failing SQL statements</source>
-      <translation type="unfinished">Skip failing SQL statements</translation>
+      <translation>Fehlende SQL-Anweisungen überspringen</translation>
     </message>
     <message>
       <location filename="../dialogs/execfromfiledialog.ui" line="88"/>
       <source>Exection mode</source>
-      <translation type="unfinished">Exection mode</translation>
+      <translation>Ausführungsmodus</translation>
     </message>
     <message>
       <location filename="../dialogs/execfromfiledialog.ui" line="94"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Any content that is not valid SQL will cause a statement to fail.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Any content that is not valid SQL will cause a statement to fail.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head&gt;&lt;body&gt;&lt;p&gt;Jeder Inhalt, der kein gültiges SQL ist, führt dazu, dass eine Anweisung fehlschlägt.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/execfromfiledialog.ui" line="104"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Allows dot commands (used by official SQLite CLI application) in the file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Allows dot commands (used by official SQLite CLI application) in the file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head&gt;&lt;body&gt;&lt;p&gt;Erlaubt Punktbefehle (die von der offiziellen SQLite-CLI-Anwendung verwendet werden) in der Datei.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/execfromfiledialog.ui" line="114"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Allows dot commands (used by official SQLite CLI application) in the file and even executes some of them (i.e. .print and .read). All other dot commands are ignored.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Allows dot commands (used by official SQLite CLI application) in the file and even executes some of them (i.e. .print and .read). All other dot commands are ignored.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head&gt;&lt;body&gt;&lt;p&gt;Erlaubt Punktbefehle (die von der offiziellen SQLite-CLI-Anwendung verwendet werden) in der Datei und führt sogar einige davon aus (z. B. .print und .read). Alle anderen Punktbefehle werden ignoriert.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/execfromfiledialog.ui" line="97"/>
       <source>Strict (only SQL content allowed)</source>
-      <translation type="unfinished">Strict (only SQL content allowed)</translation>
+      <translation>Strikt (nur SQL-Inhalt erlaubt)</translation>
     </message>
     <message>
       <location filename="../dialogs/execfromfiledialog.ui" line="107"/>
       <source>Permissive (dot commands ignored)</source>
-      <translation type="unfinished">Permissive (dot commands ignored)</translation>
+      <translation>Erlaubnis (Punkte Befehle ignoriert)</translation>
     </message>
     <message>
       <location filename="../dialogs/execfromfiledialog.ui" line="117"/>
       <source>Extended (dot commands executed)</source>
-      <translation type="unfinished">Extended (dot commands executed)</translation>
+      <translation>Erweiterte (Punktbefehle ausgeführt)</translation>
     </message>
     <message>
       <location filename="../dialogs/execfromfiledialog.cpp" line="148"/>
@@ -3635,22 +3635,22 @@ Bitte geben Sie einen neuen, eindeutigen Namen an oder drücken Sie %1, um den V
     <message>
       <location filename="../dialogs/execfromfiledialog.cpp" line="149"/>
       <source>Execute SQL file</source>
-      <translation type="unfinished">Execute SQL file</translation>
+      <translation>SQL-Datei ausführen</translation>
     </message>
     <message>
       <location filename="../dialogs/execfromfiledialog.cpp" line="164"/>
       <source>Please provide file to be executed.</source>
-      <translation type="unfinished">Please provide file to be executed.</translation>
+      <translation>Bitte geben Sie die auszuführende Datei an.</translation>
     </message>
     <message>
       <location filename="../dialogs/execfromfiledialog.cpp" line="173"/>
       <source>Provided file does not exist or cannot be read.</source>
-      <translation type="unfinished">Provided file does not exist or cannot be read.</translation>
+      <translation>Angegebene Datei existiert nicht oder kann nicht gelesen werden.</translation>
     </message>
     <message>
       <location filename="../dialogs/execfromfiledialog.cpp" line="185"/>
       <source>Select a database to execute the SQL file on.</source>
-      <translation type="unfinished">Select a database to execute the SQL file on.</translation>
+      <translation>Wählen Sie eine Datenbank aus, auf der die SQL-Datei ausgeführt werden soll.</translation>
     </message>
   </context>
   <context>
@@ -3678,7 +3678,7 @@ Bitte geben Sie einen neuen, eindeutigen Namen an oder drücken Sie %1, um den V
     <message>
       <location filename="../dialogs/exportdialog.ui" line="56"/>
       <source>A single view</source>
-      <translation type="unfinished">A single view</translation>
+      <translation>Eine einzelne Ansicht</translation>
     </message>
     <message>
       <location filename="../dialogs/exportdialog.ui" line="63"/>
@@ -3736,27 +3736,27 @@ Bitte geben Sie einen neuen, eindeutigen Namen an oder drücken Sie %1, um den V
     <message>
       <location filename="../dialogs/exportdialog.ui" line="199"/>
       <source>View to export</source>
-      <translation type="unfinished">View to export</translation>
+      <translation>Zum Exportieren anzeigen</translation>
     </message>
     <message>
       <location filename="../dialogs/exportdialog.ui" line="241"/>
       <source>View</source>
-      <translation type="unfinished">View</translation>
+      <translation>Ansicht</translation>
     </message>
     <message>
       <location filename="../dialogs/exportdialog.ui" line="267"/>
       <source>Export view data</source>
-      <translation type="unfinished">Export view data</translation>
+      <translation>Ansichtsdaten exportieren</translation>
     </message>
     <message>
       <location filename="../dialogs/exportdialog.ui" line="277"/>
       <source>Export view triggers</source>
-      <translation type="unfinished">Export view triggers</translation>
+      <translation>View Trigger exportieren</translation>
     </message>
     <message>
       <location filename="../dialogs/exportdialog.ui" line="299"/>
       <source>Note, that exporting view triggers may be unsupported by some output formats.</source>
-      <translation type="unfinished">Note, that exporting view triggers may be unsupported by some output formats.</translation>
+      <translation>Beachten Sie, dass das Exportieren von View Triggern von einigen Ausgabeformaten nicht unterstützt werden kann.</translation>
     </message>
     <message>
       <location filename="../dialogs/exportdialog.ui" line="313"/>
@@ -3766,7 +3766,7 @@ Bitte geben Sie einen neuen, eindeutigen Namen an oder drücken Sie %1, um den V
     <message>
       <location filename="../dialogs/exportdialog.ui" line="319"/>
       <source>Export indexes (tables only)</source>
-      <translation type="unfinished">Export indexes (tables only)</translation>
+      <translation>Indizes exportieren (nur Tabellen)</translation>
     </message>
     <message>
       <location filename="../dialogs/exportdialog.ui" line="333"/>
@@ -3781,7 +3781,7 @@ Bitte geben Sie einen neuen, eindeutigen Namen an oder drücken Sie %1, um den V
     <message>
       <location filename="../dialogs/exportdialog.ui" line="374"/>
       <source>Export data from views</source>
-      <translation type="unfinished">Export data from views</translation>
+      <translation>Daten aus Views exportieren</translation>
     </message>
     <message>
       <location filename="../dialogs/exportdialog.ui" line="326"/>
@@ -3791,7 +3791,7 @@ Bitte geben Sie einen neuen, eindeutigen Namen an oder drücken Sie %1, um den V
     <message>
       <location filename="../dialogs/exportdialog.ui" line="350"/>
       <source>Export triggers (tables and views)</source>
-      <translation type="unfinished">Export triggers (tables and views)</translation>
+      <translation>Trigger exportieren (Tabellen und Ansichten)</translation>
     </message>
     <message>
       <location filename="../dialogs/exportdialog.ui" line="360"/>
@@ -3870,7 +3870,7 @@ Bitte geben Sie einen neuen, eindeutigen Namen an oder drücken Sie %1, um den V
     <message>
       <location filename="../dialogs/exportdialog.cpp" line="222"/>
       <source>Select view to export.</source>
-      <translation type="unfinished">Select view to export.</translation>
+      <translation>Ansicht zum Exportieren auswählen.</translation>
     </message>
     <message>
       <location filename="../dialogs/exportdialog.cpp" line="247"/>
@@ -3923,12 +3923,12 @@ Bitte geben Sie einen neuen, eindeutigen Namen an oder drücken Sie %1, um den V
     <message>
       <location filename="../dialogs/fileexecerrorsdialog.ui" line="14"/>
       <source>Execution errors</source>
-      <translation type="unfinished">Execution errors</translation>
+      <translation>Ausführungsfehler</translation>
     </message>
     <message>
       <location filename="../dialogs/fileexecerrorsdialog.ui" line="26"/>
       <source>Following errors were encountered during execution of SQL statements from the file:</source>
-      <translation type="unfinished">Following errors were encountered during execution of SQL statements from the file:</translation>
+      <translation>Folgende Fehler sind bei der Ausführung von SQL-Anweisungen aus der Datei aufgetreten:</translation>
     </message>
     <message>
       <location filename="../dialogs/fileexecerrorsdialog.ui" line="49"/>
