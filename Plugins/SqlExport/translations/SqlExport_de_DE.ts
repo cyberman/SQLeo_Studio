@@ -31,11 +31,7 @@
     <message>
         <location filename="../sqlexport.cpp" line="284"/>
         <source>-- File generated with Letos v%1 on %2</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>-- File generated with SQLiteStudio v%1 on %2</source>
-        <translation type="vanished">-- Datei mit SQLiteStudio v%1 am %2 erstellt</translation>
+        <translation>-- Datei mit Letos v%1 am %2 erstellt</translation>
     </message>
     <message>
         <location filename="../sqlexport.cpp" line="288"/>

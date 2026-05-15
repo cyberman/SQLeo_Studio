@@ -41,12 +41,12 @@
     <message>
         <location filename="../dialogs/aboutdialog.ui" line="14"/>
         <source>About Letos and licenses</source>
-        <translation type="unfinished">About Letos and licenses</translation>
+        <translation>Über Letos und Lizenzen</translation>
     </message>
     <message>
         <location filename="../dialogs/aboutdialog.ui" line="30"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:11pt; font-weight:600;&quot;&gt;Letos v%1&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;Free, open-source, cross-platform SQLite database manager.&lt;br/&gt;&lt;a href=&quot;https://letos.org&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://letos.org&lt;/span&gt;&lt;/a&gt;&lt;br/&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;%2&lt;br/&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;Author and active maintainer:&lt;br/&gt;SalSoft (&lt;a href=&quot;https://salsoft.com.pl&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://salsoft.com.pl&lt;/span&gt;&lt;/a&gt;)&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:11pt; font-weight:600;&quot;&gt;Letos v%1&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;Free, open-source, cross-platform SQLite database manager.&lt;br/&gt;&lt;a href=&quot;https://letos.org&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://letos.org&lt;/span&gt;&lt;/a&gt;&lt;br/&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;%2&lt;br/&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;Author and active maintainer:&lt;br/&gt;SalSoft (&lt;a href=&quot;https://salsoft.com.pl&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://salsoft.com.pl&lt;/span&gt;&lt;/a&gt;)&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:11pt; font-weight:600;&quot;&gt;Letos v%1&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;Freier, Open-Source, plattformübergreifender SQLite-Datenbank-Manager.&lt;br/&gt;&lt;a href=&quot;https://letos.org&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://letos. rg&lt;/span&gt;&lt;/a&gt;&lt;br/&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;%2&lt;br/&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;Autor und aktiver Maintainer:&lt;br/&gt;SalSoft (&lt;a href=&quot;https://salsoft.com.pl&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://salsoft. om.pl&lt;/span&gt;&lt;/a&gt;)&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../dialogs/aboutdialog.ui" line="75"/>
@@ -192,12 +192,12 @@
     <message>
         <location filename="../windows/codesnippeteditor.cpp" line="85"/>
         <source>Import snippets from file</source>
-        <translation type="unfinished">Import snippets from file</translation>
+        <translation>Snippets aus Datei importieren</translation>
     </message>
     <message>
         <location filename="../windows/codesnippeteditor.cpp" line="86"/>
         <source>Export snippets to file</source>
-        <translation type="unfinished">Export snippets to file</translation>
+        <translation>Snippets in Datei exportieren</translation>
     </message>
     <message>
         <location filename="../windows/codesnippeteditor.cpp" line="87"/>
@@ -225,12 +225,12 @@
     <message>
         <location filename="../windows/codesnippeteditormodel.cpp" line="253"/>
         <source>Name:</source>
-        <translation type="unfinished">Name:</translation>
+        <translation>Name:</translation>
     </message>
     <message>
         <location filename="../windows/codesnippeteditormodel.cpp" line="254"/>
         <source>Hotkey:</source>
-        <translation type="unfinished">Hotkey:</translation>
+        <translation>Tastenkombination:</translation>
     </message>
 </context>
 <context>
@@ -238,12 +238,12 @@
     <message>
         <location filename="../codesnippetspanel.ui" line="17"/>
         <source>Code Snippets</source>
-        <translation type="unfinished">Code Snippets</translation>
+        <translation>Code-Snippets</translation>
     </message>
     <message>
         <location filename="../codesnippetspanel.ui" line="31"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Drag to the SQL editor to use the snippet.&lt;/p&gt;&lt;p&gt;Drop any code (or a text) here to add a new code snippet.&lt;/p&gt;&lt;p&gt;Double-click to edit the snippet.&lt;/p&gt;&lt;p&gt;Code snippets are also available in Code Assistant. Invoke it twice to show snippets.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Drag to the SQL editor to use the snippet.&lt;/p&gt;&lt;p&gt;Drop any code (or a text) here to add a new code snippet.&lt;/p&gt;&lt;p&gt;Double-click to edit the snippet.&lt;/p&gt;&lt;p&gt;Code snippets are also available in Code Assistant. Invoke it twice to show snippets.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ziehen Sie in den SQL-Editor, um das Snippet zu verwenden.&lt;/p&gt;&lt;p&gt;Lösche einen beliebigen Code (oder einen Text) hierher, um einen neuen Code-Snippet hinzuzufügen.&lt;/p&gt;&lt;p&gt;Doppelklick um das Snippet zu bearbeiten.&lt;/p&gt;&lt;p&gt;Code-Snippets sind auch im Code-Assistenten verfügbar. Zweimal aufrufen um Snippets anzuzeigen.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../codesnippetspanel.ui" line="57"/>
@@ -253,12 +253,12 @@
     <message>
         <location filename="../codesnippetspanel.cpp" line="69"/>
         <source>Add code snippet</source>
-        <translation type="unfinished">Add code snippet</translation>
+        <translation>Code-Snippet hinzufügen</translation>
     </message>
     <message>
         <location filename="../codesnippetspanel.cpp" line="69"/>
         <source>Enter a name for the new code snippet:</source>
-        <translation type="unfinished">Enter a name for the new code snippet:</translation>
+        <translation>Geben Sie einen Namen für das neue Code-Snippet ein:</translation>
     </message>
     <message>
         <location filename="../codesnippetspanel.cpp" line="97"/>
@@ -294,10 +294,6 @@
         <translation>Anweisungen:</translation>
     </message>
     <message>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Code executed when the collation is applied. It receives two arguments, &lt;span style=&quot; font-family:&apos;monospace&apos;;&quot;&gt;first&lt;/span&gt; and &lt;span style=&quot; font-family:&apos;monospace&apos;;&quot;&gt;second&lt;/span&gt; (named according to the scripting language conventions), representing the values to compare. The code should compare these values and return an integer indicating the result: negative if &lt;span style=&quot; font-family:&apos;monospace&apos;;&quot;&gt;first &amp;lt; second&lt;/span&gt;, zero if equal, and positive if &lt;span style=&quot; font-family:&apos;monospace&apos;;&quot;&gt;first &amp;gt; second&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="vanished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Code, der ausgeführt wird, wenn die Sortierreihenfolge angewendet wird. Er erhält zwei Argumente, &lt;span style=&quot; font-family:&apos;monospace&apos;;&quot;&gt;first&lt;/span&gt; und &lt;span style=&quot; font-family:&apos;monospace&apos;;&quot;&gt;second&lt;/span&gt; (benannt gemäß den Konventionen der Skriptsprache), die die zu vergleichenden Werte darstellen. Der Code sollte diese Werte vergleichen und eine Ganzzahl zurückgeben, die das Ergebnis angibt: negativ, wenn &lt;span style=&quot; font-family:&apos;monospace&apos;;&quot;&gt;first &amp;lt; second&lt;/span&gt;, null bei Gleichheit und positiv, wenn &lt;span style=&quot; font-family:&apos;monospace&apos;;&quot;&gt;first &amp;gt; second&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
         <location filename="../windows/collationseditor.ui" line="229"/>
         <source>Collation name:</source>
         <translation>Kollationsname:</translation>
@@ -310,7 +306,7 @@
     <message>
         <location filename="../windows/collationseditor.ui" line="248"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Implements the comparison logic directly in Letos using a scripting language. Choose this type to create fully custom sorting and comparison rules without requiring external SQLite extensions.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;implementiert die Vergleichslogik direkt in Letos in einer Skriptsprache. Wählen Sie diesen Typ, um vollständig benutzerdefinierte Sortierungs- und Vergleichsregeln ohne externe SQLite-Erweiterungen zu erstellen.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../windows/collationseditor.ui" line="251"/>
@@ -320,7 +316,7 @@
     <message>
         <location filename="../windows/collationseditor.ui" line="258"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Uses a collation implemented by a SQLite extension or external library. Choose this type when the comparison logic already exists outside of Letos, for example in ICU or another SQLite extension.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Verwendet eine von einer SQLite-Erweiterung oder einer externen Bibliothek implementierte Sortierfolge. Wählen Sie diesen Typ, wenn die Vergleichslogik bereits außerhalb von Letos existiert, zum Beispiel in der ICU oder einer anderen SQLite-Erweiterung.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../windows/collationseditor.ui" line="261"/>
@@ -360,12 +356,12 @@
     <message>
         <location filename="../windows/collationseditor.cpp" line="67"/>
         <source>Import collations from file</source>
-        <translation type="unfinished">Import collations from file</translation>
+        <translation>Sortierfolgen aus Datei importieren</translation>
     </message>
     <message>
         <location filename="../windows/collationseditor.cpp" line="68"/>
         <source>Export collations to file</source>
-        <translation type="unfinished">Export collations to file</translation>
+        <translation>Sortierfolgen in Datei exportieren</translation>
     </message>
     <message>
         <location filename="../windows/collationseditor.cpp" line="69"/>
@@ -413,22 +409,22 @@
     <message>
         <location filename="../windows/collationseditormodel.cpp" line="219"/>
         <source>all databases</source>
-        <translation type="unfinished">all databases</translation>
+        <translation>alle Datenbanken</translation>
     </message>
     <message>
         <location filename="../windows/collationseditormodel.cpp" line="224"/>
         <source>Collation:</source>
-        <translation type="unfinished"></translation>
+        <translation>Sortierung:</translation>
     </message>
     <message>
         <location filename="../windows/collationseditormodel.cpp" line="225"/>
         <source>Type:</source>
-        <translation type="unfinished">Typ:</translation>
+        <translation>Typ:</translation>
     </message>
     <message>
         <location filename="../windows/collationseditormodel.cpp" line="226"/>
         <source>Language:</source>
-        <translation type="unfinished">Language:</translation>
+        <translation>Sprache:</translation>
     </message>
     <message>
         <location filename="../windows/collationseditormodel.cpp" line="227"/>
@@ -795,13 +791,13 @@
         <location filename="../dialogs/columndialogconstraintsmodel.cpp" line="342"/>
         <source>Name</source>
         <comment>column dialog constraints</comment>
-        <translation type="unfinished">Name</translation>
+        <translation>Name</translation>
     </message>
     <message>
         <location filename="../dialogs/columndialogconstraintsmodel.cpp" line="344"/>
         <source>Details</source>
         <comment>column dialog constraints</comment>
-        <translation type="unfinished">Details</translation>
+        <translation>Details</translation>
     </message>
 </context>
 <context>
@@ -854,7 +850,7 @@
     <message>
         <location filename="../constraints/columnforeignkeypanel.cpp" line="56"/>
         <source>The referenced column should be a PRIMARY KEY or UNIQUE.</source>
-        <translation type="unfinished">The referenced column should be a PRIMARY KEY or UNIQUE.</translation>
+        <translation>Die Spalte sollte ein PRIMARY KEY oder UNIQUE sein.</translation>
     </message>
     <message>
         <location filename="../constraints/columnforeignkeypanel.cpp" line="162"/>
@@ -961,12 +957,12 @@
     <message>
         <location filename="../completer/completerwindow.cpp" line="95"/>
         <source>Press / to filter snippets</source>
-        <translation type="unfinished">Press / to filter snippets</translation>
+        <translation>Drücke / um Snippets zu filtern</translation>
     </message>
     <message>
         <location filename="../completer/completerwindow.cpp" line="95"/>
         <source>Press / to use hotkeys</source>
-        <translation type="unfinished">Press / to use hotkeys</translation>
+        <translation>Drücke / um Hotkeys zu verwenden</translation>
     </message>
     <message>
         <location filename="../completer/completerwindow.cpp" line="310"/>
@@ -984,19 +980,19 @@
         <location filename="../completer/completerwindow.cpp" line="314"/>
         <source>Index: %1</source>
         <comment>completer statusbar</comment>
-        <translation type="unfinished">Index: %1</translation>
+        <translation>Index: %1</translation>
     </message>
     <message>
         <location filename="../completer/completerwindow.cpp" line="316"/>
         <source>Trigger: %1</source>
         <comment>completer statusbar</comment>
-        <translation type="unfinished">Trigger: %1</translation>
+        <translation>Trigger: %1</translation>
     </message>
     <message>
         <location filename="../completer/completerwindow.cpp" line="318"/>
         <source>View: %1</source>
         <comment>completer statusbar</comment>
-        <translation type="unfinished">View: %1</translation>
+        <translation>Ansicht: %1</translation>
     </message>
     <message>
         <location filename="../completer/completerwindow.cpp" line="320"/>
@@ -1020,7 +1016,7 @@
         <location filename="../completer/completerwindow.cpp" line="336"/>
         <source>Operator: %1</source>
         <comment>completer statusbar</comment>
-        <translation type="unfinished">Operator: %1</translation>
+        <translation>Operator: %1</translation>
     </message>
     <message>
         <location filename="../completer/completerwindow.cpp" line="338"/>
@@ -1258,12 +1254,12 @@
     <message>
         <location filename="../dialogs/configdialog.ui" line="627"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;When user enters new value into column and the value is bigger than the current column width, the application will enlarge the column to fit the new value, but not wider than the limit defined in the option above.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;When user enters new value into column and the value is bigger than the current column width, the application will enlarge the column to fit the new value, but not wider than the limit defined in the option above.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Wenn der Benutzer einen neuen Wert in die Spalte eingibt und der Wert größer ist als die aktuelle Spaltenbreite, die Anwendung wird die Spalte vergrößern, um den neuen Wert einzufügen, aber nicht über das in der obigen Option definierte Limit hinausgehen.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../dialogs/configdialog.ui" line="630"/>
         <source>Enlarge column when entering value longer than current width</source>
-        <translation type="unfinished">Enlarge column when entering value longer than current width</translation>
+        <translation>Spalte vergrößern, wenn Wert länger als die aktuelle Breite eingegeben wird</translation>
     </message>
     <message>
         <location filename="../dialogs/configdialog.ui" line="646"/>
@@ -1278,7 +1274,7 @@
     <message>
         <location filename="../dialogs/configdialog.ui" line="556"/>
         <source>&lt;p&gt;When this is enabled and user holds mouse pointer over a cell in any data view (query results, a table data, a view data) a tooltip will appear with details about the cell - it includes details like column data type, constraints, ROWID and others.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;When this is enabled and user holds mouse pointer over a cell in any data view (query results, a table data, a view data) a tooltip will appear with details about the cell - it includes details like column data type, constraints, ROWID and others.&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;Wenn dies aktiviert ist und Benutzer den Mauszeiger über eine Zelle in jeder Datenansicht hält (Abfrageergebnisse, Tabellendaten, Ein Tooltip erscheint mit Details über die Zelle - er enthält Details wie Spaltendatentyp, Einschränkungen, ROWID und andere.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../dialogs/configdialog.ui" line="559"/>
@@ -1288,7 +1284,7 @@
     <message>
         <location filename="../dialogs/configdialog.ui" line="605"/>
         <source>&lt;p&gt;When editing a cell which used to have NULL value and entering empty string as new value, then this option determinates whether the new value should remain NULL (have this option enabled), or should it be overwritten with empty string value (have this option disabled).&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;When editing a cell which used to have NULL value and entering empty string as new value, then this option determinates whether the new value should remain NULL (have this option enabled), or should it be overwritten with empty string value (have this option disabled).&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;Wenn eine Zelle bearbeitet wird, die NULL-Wert hat und leere Zeichenkette als neuen Wert eingeben dann bestimmt diese Option, ob der neue Wert NULL bleiben soll (diese Option aktiviert), oder sollte mit einem leeren String-Wert überschrieben werden (diese Option deaktiviert).&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../dialogs/configdialog.ui" line="608"/>
@@ -1419,7 +1415,7 @@
     <message>
         <location filename="../dialogs/configdialog.ui" line="665"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;When the data is read into grid view columns width is automatically adjusted. This value limits the initial width for the adjustment, but user can still resize the column manually over this limit. This value is also used when enlarging column upon new, longer value entered by the user (see option below).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;When the data is read into grid view columns width is automatically adjusted. This value limits the initial width for the adjustment, but user can still resize the column manually over this limit. This value is also used when enlarging column upon new, longer value entered by the user (see option below).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Wenn die Daten im Gitter gelesen werden, wird die Breite der Spalten automatisch angepasst. Dieser Wert begrenzt die anfängliche Breite für die Anpassung, aber der Benutzer kann die Spalte trotzdem manuell über dieses Limit verkleinern. Dieser Wert wird auch beim Vergrößern der Spalte bei einem neuen, vom Benutzer eingegebenen längeren Wert verwendet (siehe Option unten).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../dialogs/configdialog.ui" line="668"/>
@@ -1429,7 +1425,7 @@
     <message>
         <location filename="../dialogs/configdialog.ui" line="675"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Initial width of data columns will be set to at least show complete name of the column in the header. This can still be overwritten by the initial limit of column width specified in pixels (the setting above).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Initial width of data columns will be set to at least show complete name of the column in the header. This can still be overwritten by the initial limit of column width specified in pixels (the setting above).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Initiale Breite der Datenspalten wird so eingestellt, dass mindestens der vollständige Name der Spalte im Kopfbereich angezeigt wird. Dies kann immer noch durch das anfängliche Limit der Spaltenbreite überschrieben werden (die Einstellung oben).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../dialogs/configdialog.ui" line="678"/>
@@ -1439,7 +1435,7 @@
     <message>
         <location filename="../dialogs/configdialog.ui" line="1266"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If enabled, lines longer than the editor width will be wrapped, so horizontal scrolling will not be needed.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If enabled, lines longer than the editor width will be wrapped, so horizontal scrolling will not be needed.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Wenn aktiviert, werden Zeilen mit einer Länge von mehr als der Editorbreite umgebrochen, so dass horizontales Scrollen nicht erforderlich ist.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../dialogs/configdialog.ui" line="1269"/>
@@ -1454,7 +1450,7 @@
     <message>
         <location filename="../dialogs/configdialog.ui" line="1087"/>
         <source>Updates</source>
-        <translation type="unfinished">Updates</translation>
+        <translation>Updates</translation>
     </message>
     <message>
         <location filename="../dialogs/configdialog.ui" line="1093"/>
@@ -1474,7 +1470,7 @@
     <message>
         <location filename="../dialogs/configdialog.ui" line="1122"/>
         <source>Allow multiple instances of the application at the same time</source>
-        <translation type="unfinished">Allow multiple instances of the application at the same time</translation>
+        <translation>Mehrere Instanzen der Anwendung gleichzeitig erlauben</translation>
     </message>
     <message>
         <location filename="../dialogs/configdialog.ui" line="1135"/>
@@ -1529,7 +1525,7 @@
     <message>
         <location filename="../dialogs/configdialog.ui" line="2110"/>
         <source>Current line background</source>
-        <translation type="unfinished">Current line background</translation>
+        <translation>Hintergrundfarbe der aktuellen Zeile</translation>
     </message>
     <message>
         <location filename="../dialogs/configdialog.ui" line="2189"/>
@@ -1539,7 +1535,7 @@
     <message>
         <location filename="../dialogs/configdialog.ui" line="2176"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can disable current query highlighting entirely on the General settings page.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can disable current query highlighting entirely on the General settings page.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Sie können die aktuelle Abfrage komplett auf der Seite Allgemeine Einstellungen deaktivieren.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../dialogs/configdialog.ui" line="219"/>
@@ -1564,12 +1560,12 @@
     <message>
         <location filename="../dialogs/configdialog.ui" line="293"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;By default, the database schema is accessed using the &lt;span style=&quot; font-family:&apos;Courier New&apos;;&quot;&gt;sqlite_schema&lt;/span&gt; table name.&lt;br/&gt;Older SQLite versions used the &lt;span style=&quot; font-family:&apos;Courier New&apos;;&quot;&gt;sqlite_master&lt;/span&gt; name, which is still supported as an alias.&lt;br/&gt;You can switch here to use the legacy name instead.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;By default, the database schema is accessed using the &lt;span style=&quot; font-family:&apos;Courier New&apos;;&quot;&gt;sqlite_schema&lt;/span&gt; table name.&lt;br/&gt;Older SQLite versions used the &lt;span style=&quot; font-family:&apos;Courier New&apos;;&quot;&gt;sqlite_master&lt;/span&gt; name, which is still supported as an alias.&lt;br/&gt;You can switch here to use the legacy name instead.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Standardmäßig wird auf das Datenbankschema mit dem Tabellennamen &lt;span style=&quot; font-family:&apos;Courier New&apos;;&quot;&gt;sqlite_schema&lt;/span&gt; zugegriffen.&lt;br/&gt;Ältere SQLite-Versionen verwendeten den &lt;span style=&quot; font-family:&apos;Courier New&apos;;&quot;&gt;sqlite_master&lt;/span&gt; Namen, der immer noch als Alias unterstützt wird.&lt;br/&gt;Sie können hier umschalten, um stattdessen den alten Namen zu verwenden.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../dialogs/configdialog.ui" line="296"/>
         <source>Prefer sqlite_master over sqlite_schema table name</source>
-        <translation type="unfinished">Prefer sqlite_master over sqlite_schema table name</translation>
+        <translation>sqlite_master gegenüber sqlite_schema Tabellenname bevorzugen</translation>
     </message>
     <message>
         <location filename="../dialogs/configdialog.ui" line="299"/>
@@ -1579,7 +1575,7 @@
     <message>
         <location filename="../dialogs/configdialog.ui" line="322"/>
         <source>Expand columns, indexes and triggers together with the table</source>
-        <translation type="unfinished">Expand columns, indexes and triggers together with the table</translation>
+        <translation>Spalten, Indizes und Trigger zusammen mit der Tabelle erweitern</translation>
     </message>
     <message>
         <location filename="../dialogs/configdialog.ui" line="325"/>
@@ -1589,12 +1585,12 @@
     <message>
         <location filename="../dialogs/configdialog.ui" line="363"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Shows data type next to the column when Columns node is expanded.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Shows data type next to the column when Columns node is expanded.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Zeigt den Datentyp neben der Spalte an, wenn der Spaltenknoten erweitert wird.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../dialogs/configdialog.ui" line="366"/>
         <source>Display column data types</source>
-        <translation type="unfinished">Display column data types</translation>
+        <translation>Spaltendatentypen anzeigen</translation>
     </message>
     <message>
         <location filename="../dialogs/configdialog.ui" line="369"/>
@@ -1604,12 +1600,12 @@
     <message>
         <location filename="../dialogs/configdialog.ui" line="376"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Shows number of columns, indexes and triggers next to each table name.&lt;/p&gt;&lt;p&gt;Requires loading full schema for all tables. For databases with hundreds or thousands of tables, this can significantly impact performance.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Shows number of columns, indexes and triggers next to each table name.&lt;/p&gt;&lt;p&gt;Requires loading full schema for all tables. For databases with hundreds or thousands of tables, this can significantly impact performance.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Zeigt die Anzahl der Spalten, Indizes und Trigger neben jedem Tabellennamen.&lt;/p&gt;&lt;p&gt;Erfordert das Laden eines vollständigen Schemas für alle Tabellen. Für Datenbanken mit Hunderten oder Tausenden von Tabellen kann dies die Leistung erheblich beeinträchtigen.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../dialogs/configdialog.ui" line="405"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;By default, system tables and indexes are hidden from the list.&lt;br/&gt;Enable this option to display internal SQLite objects, such as &lt;span style=&quot; font-family:&apos;Courier New&apos;;&quot;&gt;sqlite_schema&lt;/span&gt; and auto-generated indexes.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;By default, system tables and indexes are hidden from the list.&lt;br/&gt;Enable this option to display internal SQLite objects, such as &lt;span style=&quot; font-family:&apos;Courier New&apos;;&quot;&gt;sqlite_schema&lt;/span&gt; and auto-generated indexes.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Standardmäßig werden Systemtabellen und Indizes in der Liste versteckt.&lt;br/&gt;Aktivieren Sie diese Option, um interne SQLite-Objekte wie &lt;span style=&quot; font-family:&apos;Courier New&apos;;&quot;&gt;sqlite_schema&lt;/span&gt; und automatisch generierte Indizes anzuzeigen.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../dialogs/configdialog.ui" line="411"/>
@@ -1619,7 +1615,7 @@
     <message>
         <location filename="../dialogs/configdialog.ui" line="450"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;When enabled, database files will be added without showing the standard database dialog. If opening the database with default options fails (e.g. encrypted database or different driver required), the dialog will be shown so the options can be adjusted. When disabled, the dialog will always be shown.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;When enabled, database files will be added without showing the standard database dialog. If opening the database with default options fails (e.g. encrypted database or different driver required), the dialog will be shown so the options can be adjusted. When disabled, the dialog will always be shown.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Wenn aktiviert, werden Datenbankdateien ohne Anzeige des Standard-Datenbankdialogs hinzugefügt. Wenn das Öffnen der Datenbank mit Standardoptionen fehlgeschlagen ist (z. B. verschlüsselte Datenbank oder ein anderer Treiber benötigt), wird der Dialog angezeigt, so dass die Optionen angepasst werden können. Wenn deaktiviert, wird der Dialog immer angezeigt.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../dialogs/configdialog.ui" line="453"/>
@@ -1629,7 +1625,7 @@
     <message>
         <location filename="../dialogs/configdialog.ui" line="947"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Define which data editors are available for specific column types in &lt;span style=&quot; font-weight:700;&quot;&gt;Form View&lt;/span&gt; and the &lt;span style=&quot; font-weight:700;&quot;&gt;popup editor dialog&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Define which data editors are available for specific column types in &lt;span style=&quot; font-weight:700;&quot;&gt;Form View&lt;/span&gt; and the &lt;span style=&quot; font-weight:700;&quot;&gt;popup editor dialog&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Legen Sie fest, welche Datenbearbeiter für bestimmte Spaltentypen in &lt;span style=&quot; font-weight:700;&quot;&gt;Formularansicht&lt;/span&gt; und &lt;span style=&quot; font-weight:700;&quot;&gt;im Popup-Editor&lt;/span&gt;zur Verfügung stehen.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../dialogs/configdialog.ui" line="963"/>
@@ -1639,7 +1635,7 @@
     <message>
         <location filename="../dialogs/configdialog.ui" line="987"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can define which cell renderers are used for specific data types declared on table columns (case-insensitive). If no renderer is defined for a given type, the default renderer is used.&lt;/p&gt;&lt;p&gt;Optional plugins may provide additional renderers and set their own default mappings for data types, which you can still override here.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can define which cell renderers are used for specific data types declared on table columns (case-insensitive). If no renderer is defined for a given type, the default renderer is used.&lt;/p&gt;&lt;p&gt;Optional plugins may provide additional renderers and set their own default mappings for data types, which you can still override here.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Sie können festlegen, welche Zellendarsteller für bestimmte Datentypen verwendet werden, die in Tabellenspalten deklariert werden (Groß- und Kleinschreibung). Wenn kein Renderer für einen bestimmten Typ definiert ist, wird der Standard-Renderer verwendet.&lt;/p&gt;&lt;p&gt;Optionale Plugins können zusätzliche Renderer bereitstellen und eigene Standardzuordnungen für Datentypen festlegen, die Sie hier noch überschreiben können.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../dialogs/configdialog.ui" line="1006"/>
@@ -1654,37 +1650,37 @@
     <message>
         <location filename="../dialogs/configdialog.ui" line="1018"/>
         <source>Renderer</source>
-        <translation type="unfinished">Renderer</translation>
+        <translation>Renderer</translation>
     </message>
     <message>
         <location filename="../dialogs/configdialog.ui" line="1302"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;When multiple queries are present, executes only the query under the cursor.&lt;br/&gt;When disabled, all queries are executed.&lt;br/&gt;You can also execute selected queries or use shortcuts (%1 for single, %2 for all).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;When multiple queries are present, executes only the query under the cursor.&lt;br/&gt;When disabled, all queries are executed.&lt;br/&gt;You can also execute selected queries or use shortcuts (%1 for single, %2 for all).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Wenn mehrere Abfragen vorhanden sind, wird nur die Abfrage unter dem Cursor ausgeführt.&lt;br/&gt;Wenn deaktiviert, werden alle Abfragen ausgeführt.&lt;br/&gt;Sie können auch ausgewählte Abfragen ausführen oder Verknüpfungen verwenden (%1 für Single, %2 für alle).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../dialogs/configdialog.ui" line="1289"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlights the query under the cursor - the same query that will be executed when using &lt;span style=&quot; font-style:italic;&quot;&gt;Execute query&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlights the query under the cursor - the same query that will be executed when using &lt;span style=&quot; font-style:italic;&quot;&gt;Execute query&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Markiert die Abfrage unter dem Cursor - die gleiche Abfrage, die mit &lt;span style=&quot; font-style:italic;&quot;&gt;Abfrage ausführen&lt;/span&gt;ausgeführt wird.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../dialogs/configdialog.ui" line="523"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;When enabled, Letos automatically switches to scientific notation for very small real numbers (e.g. &lt;span style=&quot; font-style:italic;&quot;&gt;5.3e-21&lt;/span&gt;).&lt;br/&gt;Decimal notation is used for values whose magnitude allows a readable decimal representation.&lt;/p&gt;&lt;p&gt;When disabled, real numbers are always displayed using decimal notation, even if this results in very long fractional parts.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;When enabled, Letos automatically switches to scientific notation for very small real numbers (e.g. &lt;span style=&quot; font-style:italic;&quot;&gt;5.3e-21&lt;/span&gt;).&lt;br/&gt;Decimal notation is used for values whose magnitude allows a readable decimal representation.&lt;/p&gt;&lt;p&gt;When disabled, real numbers are always displayed using decimal notation, even if this results in very long fractional parts.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Wenn aktiviert, wechselt Letos automatisch auf wissenschaftliche Notation für sehr kleine reale Zahlen (z. . &lt;span style=&quot; font-style:italic;&quot;&gt;5.3e-21&lt;/span&gt;).&lt;br/&gt;Dezimalnotation wird für Werte verwendet, deren Größe eine lesbare Dezimaldarstellung erlaubt.&lt;/p&gt;&lt;p&gt;Wenn deaktiviert, werden echte Zahlen immer mit Dezimalton angezeigt, auch wenn dies zu sehr langen Bruchteilen führt.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../dialogs/configdialog.ui" line="592"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If query results contain dozens (or hundreds) of columns, it is more likely that it will exhaust free memory of your computer by loading several gigabytes of data at once. Letos may try to limit number of results displayed on one page in such cases to protect your computer. If you know that you don&apos;t work with big values in database, you can disable this limit and you will always see as many rows as defined per page.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If query results contain dozens (or hundreds) of columns, it is more likely that it will exhaust free memory of your computer by loading several gigabytes of data at once. Letos may try to limit number of results displayed on one page in such cases to protect your computer. If you know that you don&apos;t work with big values in database, you can disable this limit and you will always see as many rows as defined per page.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Wenn Abfrageergebnisse Dutzende (oder hunderte) Spalten enthalten, es ist wahrscheinlicher, dass es den freien Speicher Ihres Computers durch das Laden mehrerer Gigabyte von Daten auf einmal erschöpft. Letos können versuchen, die Anzahl der auf einer Seite angezeigten Ergebnisse in solchen Fällen zu begrenzen, um Ihren Computer zu schützen. Wenn Sie wissen, dass Sie&apos;t mit großen Werten in der Datenbank arbeiten, können Sie dieses Limit deaktivieren und Sie werden immer so viele Zeilen sehen, wie pro Seite definiert.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../dialogs/configdialog.ui" line="691"/>
         <source>Column header actions</source>
-        <translation type="unfinished">Column header actions</translation>
+        <translation>Spaltenkopf-Aktionen</translation>
     </message>
     <message>
         <location filename="../dialogs/configdialog.ui" line="697"/>
         <source>Single-click selects column data; double-click sorts by column</source>
-        <translation type="unfinished">Single-click selects column data; double-click sorts by column</translation>
+        <translation>Mit einem Klick werden die Spaltendaten ausgewählt; Doppelklick sortiert nach Spalte</translation>
     </message>
     <message>
         <location filename="../dialogs/configdialog.ui" line="700"/>
@@ -1695,27 +1691,27 @@
     <message>
         <location filename="../dialogs/configdialog.ui" line="710"/>
         <source>Single-click sorts by column; Alt+click selects column data</source>
-        <translation type="unfinished">Single-click sorts by column; Alt+click selects column data</translation>
+        <translation>Einzelklick sortiert nach Spalte; Alt+Klick wählt Spaltendaten</translation>
     </message>
     <message>
         <location filename="../dialogs/configdialog.ui" line="1141"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;When user manually closes the Status panel, this option makes sure that if any new message is printed in the Status panel it will be reopened. If it&apos;s disabled, then Status panel can only be open manually by the user from the &amp;quot;View&amp;quot; menu.&lt;/p&gt;&lt;p&gt;You can always hide the Status panel with the Esc key.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;When user manually closes the Status panel, this option makes sure that if any new message is printed in the Status panel it will be reopened. If it&apos;s disabled, then Status panel can only be open manually by the user from the &amp;quot;View&amp;quot; menu.&lt;/p&gt;&lt;p&gt;You can always hide the Status panel with the Esc key.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Wenn der Benutzer das Statusfenster manuell schließt, Diese Option stellt sicher, dass, wenn eine neue Nachricht in der Statusleiste ausgedruckt wird, sie wieder geöffnet wird. Wenn es&apos;s deaktiviert ist, kann das Statusfeld nur manuell vom Benutzer aus dem &amp;quot;Ansicht&amp;quot; Menü geöffnet werden.&lt;/p&gt;&lt;p&gt;Sie können das Statusfenster immer mit der Esc-Taste ausblenden.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../dialogs/configdialog.ui" line="1154"/>
         <source>Older status messages</source>
-        <translation type="unfinished">Older status messages</translation>
+        <translation>Ältere Statusnachrichten</translation>
     </message>
     <message>
         <location filename="../dialogs/configdialog.ui" line="1160"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Older status messages are kept unchanged.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Older status messages are kept unchanged.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ältere Statusmeldungen bleiben unverändert.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../dialogs/configdialog.ui" line="1163"/>
         <source>Keep messages</source>
-        <translation type="unfinished">Keep messages</translation>
+        <translation>Nachrichten behalten</translation>
     </message>
     <message>
         <location filename="../dialogs/configdialog.ui" line="1166"/>
@@ -1727,28 +1723,28 @@
     <message>
         <location filename="../dialogs/configdialog.ui" line="1176"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Older status messages remain visible, but are visually dimmed to make recent messages stand out.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Older status messages remain visible, but are visually dimmed to make recent messages stand out.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ältere Statusmeldungen bleiben sichtbar, werden aber visuell gedimmt, um aktuelle Nachrichten hervorheben zu lassen.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../dialogs/configdialog.ui" line="1179"/>
         <source>Dim older messages</source>
-        <translation type="unfinished">Dim older messages</translation>
+        <translation>Ältere Nachrichten dimmen</translation>
     </message>
     <message>
         <location filename="../dialogs/configdialog.ui" line="1192"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Older status messages are automatically removed from the status field.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Older status messages are automatically removed from the status field.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ältere Statusmeldungen werden automatisch aus dem Statusfeld entfernt.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../dialogs/configdialog.ui" line="1195"/>
         <source>Remove older messages</source>
-        <translation type="unfinished">Remove older messages</translation>
+        <translation>Ältere Nachrichten entfernen</translation>
     </message>
     <message>
         <location filename="../dialogs/configdialog.ui" line="1237"/>
         <location filename="../dialogs/configdialog.ui" line="1253"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specifies the maximum number of decimal places shown for query execution time. Up to 9 digits (nanoseconds) can be configured. Trailing zeros are automatically trimmed.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specifies the maximum number of decimal places shown for query execution time. Up to 9 digits (nanoseconds) can be configured. Trailing zeros are automatically trimmed.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Gibt die maximale Anzahl an Dezimalstellen für die Abfrageausführungszeit an. Bis zu 9 Ziffern (nanosekunden) können konfiguriert werden. Nachfolgende Nullen werden automatisch geschnitten.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../dialogs/configdialog.ui" line="1240"/>
@@ -1773,12 +1769,12 @@
     <message>
         <location filename="../dialogs/configdialog.ui" line="1337"/>
         <source>When enabled, invoking code completion in an empty editor shows code snippets first instead of syntax suggestions. Invoking code completion again switches to syntax suggestions (and vice versa).</source>
-        <translation type="unfinished">When enabled, invoking code completion in an empty editor shows code snippets first instead of syntax suggestions. Invoking code completion again switches to syntax suggestions (and vice versa).</translation>
+        <translation>Wenn aktiviert, zeigt das Aufrufen der Code-Vervollständigung in einem leeren Editor Code-Snippets zuerst statt Syntaxvorschläge an. Das Zurückrufen der Code-Vervollständigung wechselt zu Syntaxvorschlägen (und umgekehrt).</translation>
     </message>
     <message>
         <location filename="../dialogs/configdialog.ui" line="1340"/>
         <source>Prefer snippets in empty editor</source>
-        <translation type="unfinished">Prefer snippets in empty editor</translation>
+        <translation>Snippets in leerem Editor bevorzugen</translation>
     </message>
     <message>
         <location filename="../dialogs/configdialog.ui" line="1343"/>
@@ -1799,7 +1795,7 @@
         <location filename="../dialogs/configdialog.ui" line="1388"/>
         <location filename="../dialogs/configdialog.ui" line="1398"/>
         <source>&lt;p&gt;Maximum number of query parameters (:param, @param, $param, ?) stored in history. When you re-use parameter with the same name/position, Letos will pre-initialize it with most recent memorized value (you will still be able to change it). Value of 1000 should be sufficient.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;Maximum number of query parameters (:param, @param, $param, ?) stored in history. When you re-use parameter with the same name/position, Letos will pre-initialize it with most recent memorized value (you will still be able to change it). Value of 1000 should be sufficient.&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;Maximale Anzahl der Abfrageparameter (:param, @param, $param, ?) im Verlauf gespeichert. Wenn Sie Parameter mit dem gleichen Namen/der gleichen Position erneut verwenden, wird Letos ihn mit dem zuletzt gespeicherten Wert vorinitialisieren (Sie können ihn trotzdem ändern). Wert von 1000 sollte ausreichend sein.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../dialogs/configdialog.ui" line="1505"/>
@@ -1812,7 +1808,7 @@
         <location filename="../dialogs/configdialog.ui" line="2072"/>
         <location filename="../dialogs/configdialog.ui" line="2264"/>
         <source>B</source>
-        <translation type="unfinished">B</translation>
+        <translation>B</translation>
     </message>
     <message>
         <location filename="../dialogs/configdialog.ui" line="1530"/>
@@ -1825,7 +1821,7 @@
         <location filename="../dialogs/configdialog.ui" line="2097"/>
         <location filename="../dialogs/configdialog.ui" line="2289"/>
         <source>I</source>
-        <translation type="unfinished">I</translation>
+        <translation>I</translation>
     </message>
     <message>
         <location filename="../dialogs/configdialog.ui" line="1705"/>
@@ -1913,12 +1909,12 @@
         <location filename="../dialogs/configdialog.ui" line="2575"/>
         <location filename="../dialogs/configdialog.ui" line="2585"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Expressed in percentage of default size.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Expressed in percentage of default size.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head&gt;&lt;body&gt;&lt;p&gt;Ausgedrückt als Prozentsatz der Standardgröße.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../dialogs/configdialog.ui" line="2578"/>
         <source>Icon size</source>
-        <translation type="unfinished">Icon size</translation>
+        <translation>Symbolgröße</translation>
     </message>
     <message>
         <location filename="../dialogs/configdialog.ui" line="2588"/>
@@ -1958,7 +1954,7 @@
     <message>
         <location filename="../dialogs/configdialog.ui" line="3022"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Tip:&lt;/span&gt; In addition to the settings available here, font sizes can also be adjusted dynamically in most interface elements by holding &lt;span style=&quot; font-weight:700;&quot;&gt;Ctrl&lt;/span&gt; and scrolling the &lt;span style=&quot; font-weight:700;&quot;&gt;mouse wheel&lt;/span&gt; over the element whose font size you want to change.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Tip:&lt;/span&gt; In addition to the settings available here, font sizes can also be adjusted dynamically in most interface elements by holding &lt;span style=&quot; font-weight:700;&quot;&gt;Ctrl&lt;/span&gt; and scrolling the &lt;span style=&quot; font-weight:700;&quot;&gt;mouse wheel&lt;/span&gt; over the element whose font size you want to change.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Tipp:&lt;/span&gt; Zusätzlich zu den hier verfügbaren Einstellungen können Schriftgrößen in den meisten Oberflächenelementen auch dynamisch angepasst werden, indem Sie die &lt;span style=&quot; font-weight:700;&quot;&gt;Strg-Taste&lt;/span&gt; gedrückt halten und das &lt;span style=&quot; font-weight:700;&quot;&gt;Mausrad&lt;/span&gt; über das Element, dessen Schriftgröße Sie ändern möchten.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../dialogs/configdialog.ui" line="3038"/>
@@ -1988,7 +1984,7 @@
     <message>
         <location filename="../dialogs/configdialog.ui" line="1324"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If this option is enabled, the code assistant will be triggered in cases, when user types for example &lt;span style=&quot; font-weight:700;&quot;&gt;tableName.&lt;/span&gt; to propose columns of the table. If the option is disabled, user will have to hit the assistant hotkey explicitly.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If this option is enabled, the code assistant will be triggered in cases, when user types for example &lt;span style=&quot; font-weight:700;&quot;&gt;tableName.&lt;/span&gt; to propose columns of the table. If the option is disabled, user will have to hit the assistant hotkey explicitly.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Wenn diese Option aktiviert ist, der Code-Assistent wird in den Fällen ausgelöst, wenn Benutzertypen wie z. B. &lt;span style=&quot; font-weight:700;&quot;&gt;TableName verwendet werden.&lt;/span&gt; um Spalten der Tabelle vorzuschlagen. Wenn die Option deaktiviert ist, muss der Benutzer den Assistenten Hotkey explizit drücken.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../dialogs/configdialog.cpp" line="1033"/>
@@ -2006,7 +2002,7 @@
         <location filename="../dialogs/configdialog.cpp" line="1035"/>
         <source>Version:</source>
         <comment>plugin details</comment>
-        <translation type="unfinished">Version:</translation>
+        <translation>Version:</translation>
     </message>
     <message>
         <location filename="../dialogs/configdialog.cpp" line="1036"/>
@@ -2057,7 +2053,7 @@
     <message>
         <location filename="../dialogs/configdialog.cpp" line="1756"/>
         <source>Details</source>
-        <translation type="unfinished">Details</translation>
+        <translation>Details</translation>
     </message>
     <message>
         <location filename="../dialogs/configdialog.cpp" line="1770"/>
@@ -2231,13 +2227,13 @@
         <location filename="../windows/constrainttabmodel.cpp" line="156"/>
         <source>Details</source>
         <comment>table constraints</comment>
-        <translation type="unfinished">Details</translation>
+        <translation>Details</translation>
     </message>
     <message>
         <location filename="../windows/constrainttabmodel.cpp" line="158"/>
         <source>Name</source>
         <comment>table constraints</comment>
-        <translation type="unfinished">Name</translation>
+        <translation>Name</translation>
     </message>
 </context>
 <context>
@@ -2245,7 +2241,7 @@
     <message>
         <location filename="../dialogs/cssdebugdialog.ui" line="14"/>
         <source>Letos CSS console</source>
-        <translation type="unfinished">Letos CSS console</translation>
+        <translation>Letos CSS Konsole</translation>
     </message>
 </context>
 <context>
@@ -2330,12 +2326,12 @@
         <location filename="../dataview.cpp" line="527"/>
         <source>Rows available on current page: %1 - %2</source>
         <comment>data view</comment>
-        <translation type="unfinished">Rows available on current page: %1 - %2</translation>
+        <translation>Zeilen auf der aktuellen Seite verfügbar: %1 - %2</translation>
     </message>
     <message>
         <location filename="../dataview.cpp" line="804"/>
         <source>Sum: %1</source>
-        <translation type="unfinished">Sum: %1</translation>
+        <translation>Summe: %1</translation>
     </message>
     <message>
         <location filename="../dataview.cpp" line="956"/>
@@ -2369,12 +2365,12 @@
         <location filename="../dataview.cpp" line="54"/>
         <source>Sum of values in selected cells</source>
         <comment>data view</comment>
-        <translation type="unfinished">Sum of values in selected cells</translation>
+        <translation>Summe der Werte in ausgewählten Zellen</translation>
     </message>
     <message>
         <location filename="../dataview.cpp" line="104"/>
         <source>Row:</source>
-        <translation type="unfinished">Row:</translation>
+        <translation>Zeile: </translation>
     </message>
     <message>
         <location filename="../dataview.cpp" line="386"/>
@@ -2410,12 +2406,12 @@ Das Aufrufen anderer Seiten ist erst nach Abschluss der Zählung möglich.</tran
     <message>
         <location filename="../dataview.cpp" line="1294"/>
         <source>Filter</source>
-        <translation type="unfinished">Filter</translation>
+        <translation>Filter</translation>
     </message>
     <message>
         <location filename="../dataview.cpp" line="1297"/>
         <source>Hit Enter key or press &quot;Apply filter&quot; button on toolbar to apply new value.</source>
-        <translation type="unfinished">Hit Enter key or press &quot;Apply filter&quot; button on toolbar to apply new value.</translation>
+        <translation>Drücken Sie die Enter-Taste oder drücken Sie &quot;Filter&quot; auf der Symbolleiste anwenden, um neuen Wert anzuwenden.</translation>
     </message>
     <message>
         <location filename="../dataview.cpp" line="1329"/>
@@ -2494,7 +2490,7 @@ Das Aufrufen anderer Seiten ist erst nach Abschluss der Zählung möglich.</tran
         <location filename="../dialogs/dbdialog.ui" line="133"/>
         <source>&lt;p&gt;Enable this if you want the database to be stored in configuration file and restored every time Letos is started.&lt;/p&gt;</source>
         <extracomment>aasfd</extracomment>
-        <translation type="unfinished">&lt;p&gt;Enable this if you want the database to be stored in configuration file and restored every time Letos is started.&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;Aktivieren Sie dies, wenn Sie die Datenbank in der Konfigurationsdatei speichern und jedes Mal wiederherstellen möchten, wenn Letos gestartet wird.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../dialogs/dbdialog.ui" line="136"/>
@@ -2534,7 +2530,7 @@ Das Aufrufen anderer Seiten ist erst nach Abschluss der Zählung möglich.</tran
     <message>
         <location filename="../dialogs/dbdialog.cpp" line="585"/>
         <source>&lt;p&gt;Automatic name generation was disabled, because the name was edited manually. To restore automatic generation please erase contents of the name field.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;Automatic name generation was disabled, because the name was edited manually. To restore automatic generation please erase contents of the name field.&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;Automatische Namensgenerierung wurde deaktiviert, da der Name manuell bearbeitet wurde. Um die automatische Erzeugung wiederherzustellen, löschen Sie bitte den Inhalt des Namensfeldes.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../dialogs/dbdialog.cpp" line="594"/>
@@ -2544,7 +2540,7 @@ Das Aufrufen anderer Seiten ist erst nach Abschluss der Zählung möglich.</tran
     <message>
         <location filename="../dialogs/dbdialog.cpp" line="600"/>
         <source>You&apos;re using a relative file path, which will be resolved to &quot;%1&quot; according to the application&apos;s working directory. It&apos;s always better to use absolute file path to avoid unexpected database location.</source>
-        <translation type="unfinished">You&apos;re using a relative file path, which will be resolved to &quot;%1&quot; according to the application&apos;s working directory. It&apos;s always better to use absolute file path to avoid unexpected database location.</translation>
+        <translation>Sie verwenden einen relativen Dateipfad, der je nach Arbeitsverzeichnis der Anwendung zu &quot;%1&quot; aufgelöst wird. Es ist immer besser, einen absoluten Dateipfad zu verwenden, um unerwartete Datenbankpfade zu vermeiden.</translation>
     </message>
     <message>
         <location filename="../dialogs/dbdialog.cpp" line="610"/>
@@ -2967,7 +2963,7 @@ Das Aufrufen anderer Seiten ist erst nach Abschluss der Zählung möglich.</tran
     <message>
         <location filename="../dbtree/dbtree.cpp" line="447"/>
         <source>Generate query for view</source>
-        <translation type="unfinished">Generate query for view</translation>
+        <translation>Anfrage für Ansicht generieren</translation>
     </message>
     <message>
         <location filename="../dbtree/dbtree.cpp" line="1297"/>
@@ -2994,8 +2990,8 @@ Das Aufrufen anderer Seiten ist erst nach Abschluss der Zählung möglich.</tran
         <location filename="../dbtree/dbtree.cpp" line="1338"/>
         <source>Are you sure you want to delete groups: %1?
 All objects from these groups will be moved to respective parent groups.</source>
-        <translation type="unfinished">Are you sure you want to delete groups: %1?
-All objects from these groups will be moved to respective parent groups.</translation>
+        <translation>Sind Sie sicher, dass Sie Gruppen löschen wollen: %1?
+Alle Objekte dieser Gruppen werden in die jeweiligen Elterngruppen verschoben.</translation>
     </message>
     <message>
         <location filename="../dbtree/dbtree.cpp" line="1466"/>
@@ -3055,7 +3051,7 @@ All objects from these groups will be moved to respective parent groups.</transl
     <message>
         <location filename="../dbtree/dbtree.cpp" line="1885"/>
         <source>Autoincrement value for table &apos;%1&apos; has been reset successfully.</source>
-        <translation type="unfinished">Autoincrement value for table &apos;%1&apos; has been reset successfully.</translation>
+        <translation>Autoincrement-Wert für Tabelle &apos;%1&apos; wurde erfolgreich zurückgesetzt.</translation>
     </message>
     <message>
         <location filename="../dbtree/dbtree.cpp" line="1905"/>
@@ -3100,12 +3096,12 @@ All objects from these groups will be moved to respective parent groups.</transl
     <message>
         <location filename="../dbtree/dbtree.cpp" line="2549"/>
         <source>&lt;html&gt;&lt;body&gt;&lt;p&gt;Connected.&lt;/p&gt;&lt;p&gt;Click here to disconnect, or middle-click on the database.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;body&gt;&lt;p&gt;Connected.&lt;/p&gt;&lt;p&gt;Click here to disconnect, or middle-click on the database.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;body&gt;&lt;p&gt;Verbunden.&lt;/p&gt;&lt;p&gt;Klicken Sie hier, um die Verbindung zu trennen, oder klicken Sie mit der mittleren Maustaste auf die Datenbank.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../dbtree/dbtree.cpp" line="2557"/>
         <source>&lt;html&gt;&lt;body&gt;&lt;p&gt;Disconnected.&lt;/p&gt;&lt;p&gt;Click here to connect, or double-click on the database.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;body&gt;&lt;p&gt;Disconnected.&lt;/p&gt;&lt;p&gt;Click here to connect, or double-click on the database.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;body&gt;&lt;p&gt;Verbindung getrennt.&lt;/p&gt;&lt;p&gt;Klicken Sie hier, um sich zu verbinden oder doppelklicken Sie auf die Datenbank.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 <context>
@@ -3147,13 +3143,13 @@ All objects from these groups will be moved to respective parent groups.</transl
         <location filename="../dbtree/dbtreemodel.cpp" line="494"/>
         <source>URI:</source>
         <comment>dbtree tooltip</comment>
-        <translation type="unfinished">URI:</translation>
+        <translation>URI:</translation>
     </message>
     <message>
         <location filename="../dbtree/dbtreemodel.cpp" line="498"/>
         <source>Format:</source>
         <comment>dbtree tooltip</comment>
-        <translation type="unfinished">Format:</translation>
+        <translation>Format:</translation>
     </message>
     <message>
         <location filename="../dbtree/dbtreemodel.cpp" line="501"/>
@@ -3242,7 +3238,7 @@ All objects from these groups will be moved to respective parent groups.</transl
     <message>
         <location filename="../dbtree/dbtreemodel.cpp" line="1408"/>
         <source>Could not add dropped database file &apos;%1&apos; automatically. Manual setup is necessary.</source>
-        <translation type="unfinished">Could not add dropped database file &apos;%1&apos; automatically. Manual setup is necessary.</translation>
+        <translation>Konnte die abgelegte Datenbankdatei &apos;%1&apos; nicht automatisch hinzufügen. Manuelle Einrichtung ist notwendig.</translation>
     </message>
     <message>
         <location filename="../dbtree/dbtreemodel.cpp" line="1487"/>
@@ -3335,12 +3331,12 @@ Bitte geben Sie einen neuen, eindeutigen Namen an oder drücken Sie %1, um den V
     <message>
         <location filename="../dialogs/ddlpreviewdialog.ui" line="49"/>
         <source>Opens the DDL in the SQL Editor without executing it.</source>
-        <translation type="unfinished">Opens the DDL in the SQL Editor without executing it.</translation>
+        <translation>Öffnet die DDL im SQL-Editor, ohne sie auszuführen.</translation>
     </message>
     <message>
         <location filename="../dialogs/ddlpreviewdialog.ui" line="52"/>
         <source>Open in editor</source>
-        <translation type="unfinished">Open in editor</translation>
+        <translation>Im Editor öffnen</translation>
     </message>
 </context>
 <context>
@@ -3348,7 +3344,7 @@ Bitte geben Sie einen neuen, eindeutigen Namen an oder drücken Sie %1, um den V
     <message>
         <location filename="../debugconsole.ui" line="14"/>
         <source>Letos Debug Console</source>
-        <translation type="unfinished">Letos Debug Console</translation>
+        <translation>Letos Debug Konsole</translation>
     </message>
 </context>
 <context>
@@ -3432,7 +3428,7 @@ Bitte geben Sie einen neuen, eindeutigen Namen an oder drücken Sie %1, um den V
         <location filename="../windows/editorwindow.cpp" line="467"/>
         <source>Export execution history</source>
         <comment>sql editor</comment>
-        <translation type="unfinished">Export execution history</translation>
+        <translation>Ausführungsverlauf exportieren</translation>
     </message>
     <message>
         <location filename="../windows/editorwindow.cpp" line="470"/>
@@ -3462,23 +3458,23 @@ Bitte geben Sie einen neuen, eindeutigen Namen an oder drücken Sie %1, um den V
         <location filename="../windows/editorwindow.cpp" line="474"/>
         <source>Export selected SQL history entries</source>
         <comment>sql editor</comment>
-        <translation type="unfinished">Export selected SQL history entries</translation>
+        <translation>Ausgewählte SQL-Verlaufseinträge exportieren</translation>
     </message>
     <message>
         <location filename="../windows/editorwindow.cpp" line="475"/>
         <source>Delete selected SQL history entries</source>
         <comment>sql editor</comment>
-        <translation type="unfinished">Delete selected SQL history entries</translation>
+        <translation>Ausgewählte SQL-Verlaufseinträge löschen</translation>
     </message>
     <message>
         <location filename="../windows/editorwindow.cpp" line="476"/>
         <source>Execute single query under cursor</source>
-        <translation type="unfinished">Execute single query under cursor</translation>
+        <translation>Einzelne Abfrage unter Cursor ausführen</translation>
     </message>
     <message>
         <location filename="../windows/editorwindow.cpp" line="477"/>
         <source>Execute all queries in editor</source>
-        <translation type="unfinished">Execute all queries in editor</translation>
+        <translation>Alle Abfragen im Editor ausführen</translation>
     </message>
     <message>
         <location filename="../windows/editorwindow.cpp" line="532"/>
@@ -3533,7 +3529,7 @@ Bitte geben Sie einen neuen, eindeutigen Namen an oder drücken Sie %1, um den V
     <message>
         <location filename="../windows/editorwindow.cpp" line="949"/>
         <source>Editor window &quot;%1&quot; has uncommitted data.</source>
-        <translation type="unfinished">Editor window &quot;%1&quot; has uncommitted data.</translation>
+        <translation>Editor-Fenster &quot;%1&quot; hat nicht übertragene Daten.</translation>
     </message>
 </context>
 <context>
@@ -3559,7 +3555,7 @@ Bitte geben Sie einen neuen, eindeutigen Namen an oder drücken Sie %1, um den V
     <message>
         <location filename="../dialogs/execfromfiledialog.ui" line="14"/>
         <source>Execute SQL from file</source>
-        <translation type="unfinished">Execute SQL from file</translation>
+        <translation>SQL aus Datei ausführen</translation>
     </message>
     <message>
         <location filename="../dialogs/execfromfiledialog.ui" line="23"/>
@@ -3594,42 +3590,42 @@ Bitte geben Sie einen neuen, eindeutigen Namen an oder drücken Sie %1, um den V
     <message>
         <location filename="../dialogs/execfromfiledialog.ui" line="81"/>
         <source>Skip failing SQL statements</source>
-        <translation type="unfinished">Skip failing SQL statements</translation>
+        <translation>Fehlende SQL-Anweisungen überspringen</translation>
     </message>
     <message>
         <location filename="../dialogs/execfromfiledialog.ui" line="88"/>
         <source>Exection mode</source>
-        <translation type="unfinished">Exection mode</translation>
+        <translation>Ausführungsmodus</translation>
     </message>
     <message>
         <location filename="../dialogs/execfromfiledialog.ui" line="94"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Any content that is not valid SQL will cause a statement to fail.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Any content that is not valid SQL will cause a statement to fail.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head&gt;&lt;body&gt;&lt;p&gt;Jeder Inhalt, der kein gültiges SQL ist, führt dazu, dass eine Anweisung fehlschlägt.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../dialogs/execfromfiledialog.ui" line="104"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Allows dot commands (used by official SQLite CLI application) in the file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Allows dot commands (used by official SQLite CLI application) in the file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head&gt;&lt;body&gt;&lt;p&gt;Erlaubt Punktbefehle (die von der offiziellen SQLite-CLI-Anwendung verwendet werden) in der Datei.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../dialogs/execfromfiledialog.ui" line="114"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Allows dot commands (used by official SQLite CLI application) in the file and even executes some of them (i.e. .print and .read). All other dot commands are ignored.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Allows dot commands (used by official SQLite CLI application) in the file and even executes some of them (i.e. .print and .read). All other dot commands are ignored.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head&gt;&lt;body&gt;&lt;p&gt;Erlaubt Punktbefehle (die von der offiziellen SQLite-CLI-Anwendung verwendet werden) in der Datei und führt sogar einige davon aus (z. B. .print und .read). Alle anderen Punktbefehle werden ignoriert.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../dialogs/execfromfiledialog.ui" line="97"/>
         <source>Strict (only SQL content allowed)</source>
-        <translation type="unfinished">Strict (only SQL content allowed)</translation>
+        <translation>Strikt (nur SQL-Inhalt erlaubt)</translation>
     </message>
     <message>
         <location filename="../dialogs/execfromfiledialog.ui" line="107"/>
         <source>Permissive (dot commands ignored)</source>
-        <translation type="unfinished">Permissive (dot commands ignored)</translation>
+        <translation>Erlaubnis (Punkte Befehle ignoriert)</translation>
     </message>
     <message>
         <location filename="../dialogs/execfromfiledialog.ui" line="117"/>
         <source>Extended (dot commands executed)</source>
-        <translation type="unfinished">Extended (dot commands executed)</translation>
+        <translation>Erweiterte (Punktbefehle ausgeführt)</translation>
     </message>
     <message>
         <location filename="../dialogs/execfromfiledialog.cpp" line="148"/>
@@ -3639,22 +3635,22 @@ Bitte geben Sie einen neuen, eindeutigen Namen an oder drücken Sie %1, um den V
     <message>
         <location filename="../dialogs/execfromfiledialog.cpp" line="149"/>
         <source>Execute SQL file</source>
-        <translation type="unfinished">Execute SQL file</translation>
+        <translation>SQL-Datei ausführen</translation>
     </message>
     <message>
         <location filename="../dialogs/execfromfiledialog.cpp" line="164"/>
         <source>Please provide file to be executed.</source>
-        <translation type="unfinished">Please provide file to be executed.</translation>
+        <translation>Bitte geben Sie die auszuführende Datei an.</translation>
     </message>
     <message>
         <location filename="../dialogs/execfromfiledialog.cpp" line="173"/>
         <source>Provided file does not exist or cannot be read.</source>
-        <translation type="unfinished">Provided file does not exist or cannot be read.</translation>
+        <translation>Angegebene Datei existiert nicht oder kann nicht gelesen werden.</translation>
     </message>
     <message>
         <location filename="../dialogs/execfromfiledialog.cpp" line="185"/>
         <source>Select a database to execute the SQL file on.</source>
-        <translation type="unfinished">Select a database to execute the SQL file on.</translation>
+        <translation>Wählen Sie eine Datenbank aus, auf der die SQL-Datei ausgeführt werden soll.</translation>
     </message>
 </context>
 <context>
@@ -3682,7 +3678,7 @@ Bitte geben Sie einen neuen, eindeutigen Namen an oder drücken Sie %1, um den V
     <message>
         <location filename="../dialogs/exportdialog.ui" line="56"/>
         <source>A single view</source>
-        <translation type="unfinished">A single view</translation>
+        <translation>Eine einzelne Ansicht</translation>
     </message>
     <message>
         <location filename="../dialogs/exportdialog.ui" line="63"/>
@@ -3740,27 +3736,27 @@ Bitte geben Sie einen neuen, eindeutigen Namen an oder drücken Sie %1, um den V
     <message>
         <location filename="../dialogs/exportdialog.ui" line="199"/>
         <source>View to export</source>
-        <translation type="unfinished">View to export</translation>
+        <translation>Zum Exportieren anzeigen</translation>
     </message>
     <message>
         <location filename="../dialogs/exportdialog.ui" line="241"/>
         <source>View</source>
-        <translation type="unfinished">View</translation>
+        <translation>Ansicht</translation>
     </message>
     <message>
         <location filename="../dialogs/exportdialog.ui" line="267"/>
         <source>Export view data</source>
-        <translation type="unfinished">Export view data</translation>
+        <translation>Ansichtsdaten exportieren</translation>
     </message>
     <message>
         <location filename="../dialogs/exportdialog.ui" line="277"/>
         <source>Export view triggers</source>
-        <translation type="unfinished">Export view triggers</translation>
+        <translation>View Trigger exportieren</translation>
     </message>
     <message>
         <location filename="../dialogs/exportdialog.ui" line="299"/>
         <source>Note, that exporting view triggers may be unsupported by some output formats.</source>
-        <translation type="unfinished">Note, that exporting view triggers may be unsupported by some output formats.</translation>
+        <translation>Beachten Sie, dass das Exportieren von View Triggern von einigen Ausgabeformaten nicht unterstützt werden kann.</translation>
     </message>
     <message>
         <location filename="../dialogs/exportdialog.ui" line="313"/>
@@ -3770,7 +3766,7 @@ Bitte geben Sie einen neuen, eindeutigen Namen an oder drücken Sie %1, um den V
     <message>
         <location filename="../dialogs/exportdialog.ui" line="319"/>
         <source>Export indexes (tables only)</source>
-        <translation type="unfinished">Export indexes (tables only)</translation>
+        <translation>Indizes exportieren (nur Tabellen)</translation>
     </message>
     <message>
         <location filename="../dialogs/exportdialog.ui" line="333"/>
@@ -3785,7 +3781,7 @@ Bitte geben Sie einen neuen, eindeutigen Namen an oder drücken Sie %1, um den V
     <message>
         <location filename="../dialogs/exportdialog.ui" line="374"/>
         <source>Export data from views</source>
-        <translation type="unfinished">Export data from views</translation>
+        <translation>Daten aus Views exportieren</translation>
     </message>
     <message>
         <location filename="../dialogs/exportdialog.ui" line="326"/>
@@ -3795,7 +3791,7 @@ Bitte geben Sie einen neuen, eindeutigen Namen an oder drücken Sie %1, um den V
     <message>
         <location filename="../dialogs/exportdialog.ui" line="350"/>
         <source>Export triggers (tables and views)</source>
-        <translation type="unfinished">Export triggers (tables and views)</translation>
+        <translation>Trigger exportieren (Tabellen und Ansichten)</translation>
     </message>
     <message>
         <location filename="../dialogs/exportdialog.ui" line="360"/>
@@ -3874,7 +3870,7 @@ Bitte geben Sie einen neuen, eindeutigen Namen an oder drücken Sie %1, um den V
     <message>
         <location filename="../dialogs/exportdialog.cpp" line="222"/>
         <source>Select view to export.</source>
-        <translation type="unfinished">Select view to export.</translation>
+        <translation>Ansicht zum Exportieren auswählen.</translation>
     </message>
     <message>
         <location filename="../dialogs/exportdialog.cpp" line="247"/>
@@ -3927,12 +3923,12 @@ Bitte geben Sie einen neuen, eindeutigen Namen an oder drücken Sie %1, um den V
     <message>
         <location filename="../dialogs/fileexecerrorsdialog.ui" line="14"/>
         <source>Execution errors</source>
-        <translation type="unfinished">Execution errors</translation>
+        <translation>Ausführungsfehler</translation>
     </message>
     <message>
         <location filename="../dialogs/fileexecerrorsdialog.ui" line="26"/>
         <source>Following errors were encountered during execution of SQL statements from the file:</source>
-        <translation type="unfinished">Following errors were encountered during execution of SQL statements from the file:</translation>
+        <translation>Folgende Fehler sind bei der Ausführung von SQL-Anweisungen aus der Datei aufgetreten:</translation>
     </message>
     <message>
         <location filename="../dialogs/fileexecerrorsdialog.ui" line="49"/>
@@ -7376,17 +7372,17 @@ Such deletion will be permanent. Are you sure you want to delete them?</translat
     <message>
         <location filename="../windows/sqliteextensioneditormodel.cpp" line="164"/>
         <source>Extension:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Extension:</translation>
     </message>
     <message>
         <location filename="../windows/sqliteextensioneditormodel.cpp" line="165"/>
         <source>File:</source>
-        <translation type="unfinished">Datei:</translation>
+        <translation>Datei:</translation>
     </message>
     <message>
         <location filename="../windows/sqliteextensioneditormodel.cpp" line="166"/>
         <source>Init function:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Init function:</translation>
     </message>
     <message>
         <location filename="../windows/sqliteextensioneditormodel.cpp" line="167"/>

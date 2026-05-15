@@ -4,13 +4,9 @@
 <context>
     <name>PdfExport</name>
     <message>
-        <source>SQLiteStudio v%1</source>
-        <translation type="vanished">SQLiteStudio v%1</translation>
-    </message>
-    <message>
         <location filename="../pdfexport.cpp" line="66"/>
         <source>SQL query results</source>
-        <translation>SQL Abfragenergebnis</translation>
+        <translation>SQL-Abfrageergebnisse</translation>
     </message>
     <message>
         <location filename="../pdfexport.cpp" line="205"/>
@@ -26,7 +22,7 @@
     <message>
         <location filename="../pdfexport.cpp" line="33"/>
         <source>Letos v%1</source>
-        <translation type="unfinished"></translation>
+        <translation>Letos v%1</translation>
     </message>
     <message>
         <location filename="../pdfexport.cpp" line="104"/>
@@ -166,17 +162,13 @@
     <message>
         <location filename="../pdfexport.cpp" line="710"/>
         <source>Document generated with Letos v%1</source>
-        <translation type="unfinished"></translation>
+        <translation>Dokument erstellt mit Letos v%1</translation>
     </message>
     <message>
         <location filename="../pdfexport.cpp" line="69"/>
         <location filename="../pdfexport.cpp" line="335"/>
         <source>Query:</source>
         <translation>Abfrage:</translation>
-    </message>
-    <message>
-        <source>Document generated with SQLiteStudio v%1</source>
-        <translation type="vanished">Dokument mit SQLiteStudio v%1 generiert</translation>
     </message>
 </context>
 <context>

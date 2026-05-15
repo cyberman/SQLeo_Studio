@@ -21,7 +21,7 @@
     <message>
         <location filename="../changes/erdchangeregistrydialog.ui" line="143"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Shows the changes as they will be committed. Redundant or mutually cancelling steps are merged or removed from the list.&lt;br/&gt;When disabled, all individual undo and redo steps are shown.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Shows the changes as they will be committed. Redundant or mutually cancelling steps are merged or removed from the list.&lt;br/&gt;When disabled, all individual undo and redo steps are shown.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Zeigt die Änderungen so an, wie sie übernommen werden. Überflüssige oder sich gegenseitig aufhebende Schritte werden zusammengefasst oder aus der Liste entfernt.&lt;br/&gt;Wenn diese Option deaktiviert ist, werden alle einzelnen Rückgängig- und Wiederherstellungsschritte angezeigt.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../changes/erdchangeregistrydialog.ui" line="146"/>
@@ -31,12 +31,12 @@
     <message>
         <location filename="../changes/erdchangeregistrydialog.ui" line="153"/>
         <source>&lt;html&gt;&lt;body&gt;Shows changes that do not modify the database schema, but only affect the diagram (for example, table position changes). &lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;body&gt;Shows changes that do not modify the database schema, but only affect the diagram (for example, table position changes). &lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;body&gt;Zeigt Änderungen an, die das Datenbankschema nicht verändern, sondern sich nur auf das Diagramm auswirken (z. B. Änderungen der Tabellenposition). &lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../changes/erdchangeregistrydialog.ui" line="156"/>
         <source>Show non-schema changes</source>
-        <translation type="unfinished">Show non-schema changes</translation>
+        <translation>Änderungen anzeigen, die nicht das Schema betreffen</translation>
     </message>
     <message>
         <location filename="../changes/erdchangeregistrydialog.cpp" line="58"/>
@@ -60,7 +60,7 @@
     <message>
         <location filename="../erdconfig.ui" line="40"/>
         <source>Setting this value too high may cause the application to slow down or become unresponsive when opening the ERD editor.</source>
-        <translation type="unfinished">Setting this value too high may cause the application to slow down or become unresponsive when opening the ERD editor.</translation>
+        <translation>Wird dieser Wert zu hoch eingestellt, kann dies dazu führen, dass die Anwendung beim Öffnen des ERD-Editors langsamer wird oder nicht mehr reagiert.</translation>
     </message>
     <message>
         <location filename="../erdconfig.ui" line="49"/>
@@ -70,12 +70,12 @@
     <message>
         <location filename="../erdconfig.ui" line="56"/>
         <source>Starts panning as soon as the Space key is pressed, without requiring a mouse button press.</source>
-        <translation type="unfinished">Starts panning as soon as the Space key is pressed, without requiring a mouse button press.</translation>
+        <translation>Die Schwenkbewegung beginnt, sobald die Leertaste gedrückt wird, ohne dass ein Mausklick erforderlich ist.</translation>
     </message>
     <message>
         <location filename="../erdconfig.ui" line="59"/>
         <source>Pan view with Space only</source>
-        <translation type="unfinished">Pan view with Space only</translation>
+        <translation>Ansicht nur mit Leertaste</translation>
     </message>
     <message>
         <location filename="../erdconfig.ui" line="62"/>
@@ -98,22 +98,22 @@
     <message>
         <location filename="../panel/erdconnectionpanel.ui" line="83"/>
         <source>Composite relation (multiple columns)</source>
-        <translation type="unfinished">Composite relation (multiple columns)</translation>
+        <translation>Zusammengesetzte Relation (mehrere Spalten)</translation>
     </message>
     <message>
         <location filename="../panel/erdconnectionpanel.ui" line="137"/>
         <source>Referencing (child) table:</source>
-        <translation type="unfinished">Referencing (child) table:</translation>
+        <translation>Verweis auf eine (untergeordnete) Tabelle:</translation>
     </message>
     <message>
         <location filename="../panel/erdconnectionpanel.ui" line="156"/>
         <source>Referencing (child) column:</source>
-        <translation type="unfinished">Referencing (child) column:</translation>
+        <translation>Verweis auf eine (untergeordnete) Spalte:</translation>
     </message>
     <message>
         <location filename="../panel/erdconnectionpanel.cpp" line="51"/>
         <source>ERD side panel for relation between tables &quot;%1&quot; and &quot;%2&quot; has uncommitted modifications.</source>
-        <translation type="unfinished">ERD side panel for relation between tables &quot;%1&quot; and &quot;%2&quot; has uncommitted modifications.</translation>
+        <translation>Der ERD-Seitenbereich für die Beziehung zwischen Tabellen &quot;%1&quot; und &quot;%2&quot; enthält nicht gespeicherte Änderungen.</translation>
     </message>
     <message>
         <location filename="../panel/erdconnectionpanel.cpp" line="57"/>
@@ -130,17 +130,17 @@
     <message>
         <location filename="../panel/erdconnectionpanel.cpp" line="240"/>
         <source>Modify relationship between &quot;%1&quot; and &quot;%2&quot;.</source>
-        <translation type="unfinished">Modify relationship between &quot;%1&quot; and &quot;%2&quot;.</translation>
+        <translation>Beziehung zwischen &quot;%1&quot; und &quot;%2&quot; ändern.</translation>
     </message>
     <message>
         <location filename="../panel/erdconnectionpanel.cpp" line="242"/>
         <source>Modify relationship between &quot;%1&quot; and &quot;%2&quot; - change target to &quot;%3&quot;.</source>
-        <translation type="unfinished">Modify relationship between &quot;%1&quot; and &quot;%2&quot; - change target to &quot;%3&quot;.</translation>
+        <translation>Ändere die Beziehung zwischen &quot;%1&quot; und &quot;%2&quot; - ändere das Ziel auf &quot;%3&quot;.</translation>
     </message>
     <message>
         <location filename="../panel/erdconnectionpanel.cpp" line="252"/>
         <source>Failed to execute DDL required for relation modification. Details: %1</source>
-        <translation type="unfinished">Failed to execute DDL required for relation modification. Details: %1</translation>
+        <translation>DDL konnte nicht ausgeführt werden, um Relationsänderungen vorzunehmen. Details: %1</translation>
     </message>
 </context>
 <context>
@@ -168,19 +168,19 @@
         <location filename="../scene/erdscene.cpp" line="547"/>
         <source>Failed to execute the undo DDL. Details: %1</source>
         <comment>ERD editor</comment>
-        <translation type="unfinished">Failed to execute the undo DDL. Details: %1</translation>
+        <translation>Die Rückgängigmachung der DDL konnte nicht ausgeführt werden. Details: %1</translation>
     </message>
     <message>
         <location filename="../scene/erdscene.cpp" line="569"/>
         <source>Failed to execute the redo DDL. Details: %1</source>
         <comment>ERD editor</comment>
-        <translation type="unfinished">Failed to execute the redo DDL. Details: %1</translation>
+        <translation>Die Ausführung der Redo-DDL ist fehlgeschlagen. Details: %1</translation>
     </message>
     <message>
         <location filename="../scene/erdscene.cpp" line="596"/>
         <source>Failed to execute DDL required for table deletion. Details: %1</source>
         <comment>ERD editor</comment>
-        <translation type="unfinished">Failed to execute DDL required for table deletion. Details: %1</translation>
+        <translation>Die für das Löschen der Tabelle erforderliche DDL konnte nicht ausgeführt werden. Details: %1</translation>
     </message>
     <message>
         <location filename="../scene/erdscene.cpp" line="607"/>
@@ -195,17 +195,17 @@
     <message>
         <location filename="../scene/erdscene.cpp" line="824"/>
         <source>Arrange entities</source>
-        <translation type="unfinished">Arrange entities</translation>
+        <translation>Objekte anordnen</translation>
     </message>
     <message>
         <location filename="../scene/erdscene.cpp" line="825"/>
         <source>Are you sure you want to automatically arrange the entities on the diagram? This action will overwrite the current layout, and any manual adjustments will be lost.</source>
-        <translation type="unfinished">Are you sure you want to automatically arrange the entities on the diagram? This action will overwrite the current layout, and any manual adjustments will be lost.</translation>
+        <translation>Möchten Sie die Elemente im Diagramm wirklich automatisch anordnen? Diese Aktion überschreibt das aktuelle Layout und alle manuellen Anpassungen gehen verloren.</translation>
     </message>
     <message>
         <location filename="../scene/erdscene.cpp" line="845"/>
         <source>Change color of table &quot;%1&quot; to %2.</source>
-        <translation type="unfinished">Change color of table &quot;%1&quot; to %2.</translation>
+        <translation>Ändern Sie die Farbe der Tabelle &quot;%1&quot; auf %2.</translation>
     </message>
     <message>
         <location filename="../scene/erdscene.cpp" line="851"/>
@@ -235,7 +235,7 @@
     <message>
         <location filename="../panel/erdtablewindow.cpp" line="49"/>
         <source>ERD side panel for table &quot;%1&quot; has uncommitted modifications.</source>
-        <translation type="unfinished">ERD side panel for table &quot;%1&quot; has uncommitted modifications.</translation>
+        <translation>Die ERD-Seitenansicht für die Tabelle &quot;%1&quot; enthält noch nicht übernommene Änderungen.</translation>
     </message>
     <message>
         <location filename="../panel/erdtablewindow.cpp" line="106"/>
@@ -253,7 +253,7 @@
         <location filename="../panel/erdtablewindow.cpp" line="109"/>
         <source>Some of the changes you made cannot be applied because they contain errors.&lt;br&gt;&lt;br&gt;&lt;b&gt;Errors:&lt;/b&gt;&lt;br&gt;&lt;code&gt;%1&lt;/code&gt;&lt;br&gt;&lt;br&gt;You can &lt;b&gt;return to editing&lt;/b&gt; and fix the problems, or &lt;b&gt;discard your changes&lt;/b&gt; and restore the previous state of the table.</source>
         <comment>ERD editor</comment>
-        <translation type="unfinished">Some of the changes you made cannot be applied because they contain errors.&lt;br&gt;&lt;br&gt;&lt;b&gt;Errors:&lt;/b&gt;&lt;br&gt;&lt;code&gt;%1&lt;/code&gt;&lt;br&gt;&lt;br&gt;You can &lt;b&gt;return to editing&lt;/b&gt; and fix the problems, or &lt;b&gt;discard your changes&lt;/b&gt; and restore the previous state of the table.</translation>
+        <translation>Einige der von dir vorgenommenen Änderungen können nicht übernommen werden, da sie Fehler enthalten.&lt;br&gt;&lt;br&gt;&lt;b&gt;Fehler:&lt;/b&gt;&lt;br&gt;&lt;code&gt;%1&lt;/code&gt;&lt;br&gt;&lt;br&gt; Sie können &lt;b&gt;zur Bearbeitung zurückkehren&lt;/b&gt; und das Problem beheben</translation>
     </message>
     <message>
         <location filename="../panel/erdtablewindow.cpp" line="118"/>
@@ -296,7 +296,7 @@
     <message>
         <location filename="../erdwindow.ui" line="114"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;- Hold the Spacebar and drag with the mouse to pan the diagram freely without selecting any items.&lt;/p&gt;&lt;p&gt;- Use the mouse wheel to zoom in and out.&lt;/p&gt;&lt;p&gt;- Deselect the table (or click Commit in the side panel toolbar) to apply the side panel changes to the diagram.&lt;/p&gt;&lt;p&gt;- Press Esc (or click Rollback in the side panel toolbar) to discard the side panel changes.&lt;/p&gt;&lt;p&gt;- Double-Click on a table name or column to edit the name inline.&lt;/p&gt;&lt;p&gt;- Shift-Double-Click on a column to edit column details (datatype, constraints).&lt;/p&gt;&lt;p&gt;- To create a foreign key between table, click the middle mouse button on the table columns you want to connect.&lt;/p&gt;&lt;p&gt;- &lt;span style=&quot; font-weight:700;&quot;&gt;All diagram changes remain pending until you explicitly commit or roll them back&lt;/span&gt; using the toolbar buttons in the top-left corner of the diagram.&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/pawelsalawa/letos/wiki/ERD-plugin-manual#usage&quot;&gt;&lt;span style=&quot; font-weight:700; text-decoration: underline; color:#058800;&quot;&gt;Learn more (click to open online help page)&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;- Hold the Spacebar and drag with the mouse to pan the diagram freely without selecting any items.&lt;/p&gt;&lt;p&gt;- Use the mouse wheel to zoom in and out.&lt;/p&gt;&lt;p&gt;- Deselect the table (or click Commit in the side panel toolbar) to apply the side panel changes to the diagram.&lt;/p&gt;&lt;p&gt;- Press Esc (or click Rollback in the side panel toolbar) to discard the side panel changes.&lt;/p&gt;&lt;p&gt;- Double-Click on a table name or column to edit the name inline.&lt;/p&gt;&lt;p&gt;- Shift-Double-Click on a column to edit column details (datatype, constraints).&lt;/p&gt;&lt;p&gt;- To create a foreign key between table, click the middle mouse button on the table columns you want to connect.&lt;/p&gt;&lt;p&gt;- &lt;span style=&quot; font-weight:700;&quot;&gt;All diagram changes remain pending until you explicitly commit or roll them back&lt;/span&gt; using the toolbar buttons in the top-left corner of the diagram.&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/pawelsalawa/letos/wiki/ERD-plugin-manual#usage&quot;&gt;&lt;span style=&quot; font-weight:700; text-decoration: underline; color:#058800;&quot;&gt;Learn more (click to open online help page)&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;- Halten Sie die Leertaste gedrückt und ziehen Sie mit der Maus, um das Diagramm frei zu verschieben, ohne Elemente auszuwählen.&lt;/p&gt;&lt;p&gt;- Verwenden Sie das Mausrad, um hinein- und herauszuzoomen.&lt;/p&gt;&lt;p&gt; - Heben Sie die Auswahl der Tabelle auf (oder klicken Sie in der Symbolleiste des Seitenbereichs auf „Übernehmen“), um die Änderungen im Seitenbereich auf das Diagramm anzuwenden.&lt;/p&gt;&lt;p&gt;- Drücken Sie die Esc-Taste (oder klicken Sie in der Symbolleiste des Seitenbereichs auf „Zurücksetzen“), um die Änderungen im Seitenbereich zu verwerfen.&lt;/p&gt;&lt;p&gt; - Doppelklicken Sie auf einen Tabellennamen oder eine Spalte, um den Namen inline zu bearbeiten.&lt;/p&gt;&lt;p&gt;- Drücken Sie die Umschalttaste und doppelklicken Sie auf eine Spalte, um Spaltendetails (Datentyp, Einschränkungen) zu bearbeiten.&lt;/p&gt;&lt;p&gt; - Um eine Fremdschlüsselbeziehung zwischen Tabellen zu erstellen, klicken Sie mit der mittleren Maustaste auf die Tabellenspalten, die Sie verbinden möchten.&lt;/p&gt;&lt;p&gt;- &lt;span style=&quot; font-weight:700;&quot;&gt;Alle Änderungen am Diagramm bleiben so lange in der Warteschlange, bis Sie sie explizit übernehmen oder rückgängig machen&lt;/span&gt; mit den Schaltflächen in der Symbolleiste oben links im Diagramm.&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/pawelsalawa/letos/wiki/ERD-plugin-manual#usage&quot;&gt;&lt;span style=&quot; font-weight:700; text-decoration: underline; color:#058800;&quot;&gt;Weitere Informationen (zum Öffnen der Online-Hilfeseite anklicken)&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../erdwindow.cpp" line="165"/>
@@ -315,7 +315,7 @@
         <location filename="../erdwindow.cpp" line="649"/>
         <source>Reload schema</source>
         <comment>ERD editor</comment>
-        <translation type="unfinished">Reload schema</translation>
+        <translation>Schema neu laden</translation>
     </message>
     <message>
         <location filename="../erdwindow.cpp" line="169"/>
@@ -361,7 +361,7 @@
         <location filename="../erdwindow.cpp" line="312"/>
         <source>Items that don’t match the filter will be dimmed.</source>
         <comment>ERD editor</comment>
-        <translation type="unfinished">Items that don’t match the filter will be dimmed.</translation>
+        <translation>Gegenstände, die nicht mit dem Filter übereinstimmen, werden verdunkelt.</translation>
     </message>
     <message>
         <location filename="../erdwindow.cpp" line="448"/>
@@ -391,17 +391,17 @@
         <location filename="../erdwindow.cpp" line="586"/>
         <source>Failed to apply changes to the database. Details: %1</source>
         <comment>ERD editor</comment>
-        <translation type="unfinished">Failed to apply changes to the database. Details: %1</translation>
+        <translation>Fehler beim Anwenden der Änderungen auf die Datenbank. Details: %1</translation>
     </message>
     <message>
         <location filename="../erdwindow.cpp" line="650"/>
         <source>This action will discard all your pending changes and reload the diagram from the current database schema. The undo/redo history will be cleared. Do you want to proceed?</source>
-        <translation type="unfinished">This action will discard all your pending changes and reload the diagram from the current database schema. The undo/redo history will be cleared. Do you want to proceed?</translation>
+        <translation>Dadurch werden alle Ihre ausstehenden Änderungen verworfen und das Diagramm wird anhand des aktuellen Datenbankschemas neu geladen. Der Rückgängig-/Wiederherstellungsverlauf wird gelöscht. Möchten Sie fortfahren?</translation>
     </message>
     <message>
         <location filename="../erdwindow.cpp" line="833"/>
         <source>ERD window &quot;%1&quot; has uncommitted changes.</source>
-        <translation type="unfinished">ERD window &quot;%1&quot; has uncommitted changes.</translation>
+        <translation>Das ERD-Fenster &quot;%1&quot; enthält nicht gespeicherte Änderungen.</translation>
     </message>
     <message>
         <location filename="../erdwindow.cpp" line="1145"/>
@@ -417,7 +417,7 @@
         <location filename="../erdwindow.cpp" line="181"/>
         <source>The number of changes pending for commit. Click to see details.</source>
         <comment>ERD editor</comment>
-        <translation type="unfinished">The number of changes pending for commit. Click to see details.</translation>
+        <translation>Die Anzahl der zum Commit anstehenden Änderungen. Klicken Sie hier, um Details anzuzeigen.</translation>
     </message>
     <message>
         <location filename="../erdwindow.cpp" line="190"/>
@@ -435,13 +435,13 @@
         <location filename="../erdwindow.cpp" line="198"/>
         <source>Auto-arrange (local forces)</source>
         <comment>ERD editor</comment>
-        <translation type="unfinished">Auto-arrange (local forces)</translation>
+        <translation>Automatische Anordnung (lokal orientiert)</translation>
     </message>
     <message>
         <location filename="../erdwindow.cpp" line="199"/>
         <source>Auto-arrange (global balance)</source>
         <comment>ERD editor</comment>
-        <translation type="unfinished">Auto-arrange (global balance)</translation>
+        <translation>Automatische Anordnung (global ausgewogen)</translation>
     </message>
     <message>
         <location filename="../erdwindow.cpp" line="213"/>
@@ -465,7 +465,7 @@
         <location filename="../erdwindow.cpp" line="243"/>
         <source>Use square line</source>
         <comment>ERD editor</comment>
-        <translation type="unfinished">Use square line</translation>
+        <translation>Quadratlinie verwenden</translation>
     </message>
     <message>
         <location filename="../erdwindow.cpp" line="254"/>
@@ -497,7 +497,7 @@
     <message>
         <location filename="../changes/erdeffectivechangemerger.cpp" line="31"/>
         <source>Failed to create in-memory databases required for change compacting.</source>
-        <translation type="unfinished">Failed to create in-memory databases required for change compacting.</translation>
+        <translation>Fehler beim Erstellen von Datenbanken im Speicher, die für die Änderung der Kompaktheit erforderlich sind.</translation>
     </message>
     <message>
         <location filename="../changes/erdeffectivechangemerger.cpp" line="399"/>
@@ -508,17 +508,17 @@
     <message>
         <location filename="../scene/erdconnection.cpp" line="149"/>
         <source>Could not commit changes for finalized ERD connection.</source>
-        <translation type="unfinished">Could not commit changes for finalized ERD connection.</translation>
+        <translation>Änderungen für fertige ERD-Verbindung konnten nicht übertragen werden.</translation>
     </message>
     <message>
         <location filename="../scene/erdconnection.cpp" line="155"/>
         <source>Update relationship from &quot;%1&quot;-&quot;%2&quot; to &quot;%1&quot;-&quot;%3&quot;.</source>
-        <translation type="unfinished">Update relationship from &quot;%1&quot;-&quot;%2&quot; to &quot;%1&quot;-&quot;%3&quot;.</translation>
+        <translation>Beziehung von &quot;%1&quot;-&quot;%2&quot; auf &quot;%1&quot;-&quot;%3&quot; aktualisieren.</translation>
     </message>
     <message>
         <location filename="../scene/erdconnection.cpp" line="157"/>
         <source>Create relationship between &quot;%1&quot; and &quot;%2&quot;.</source>
-        <translation type="unfinished">Create relationship between &quot;%1&quot; and &quot;%2&quot;.</translation>
+        <translation>Beziehung zwischen &quot;%1&quot; und &quot;%2&quot; erstellen.</translation>
     </message>
     <message>
         <location filename="../changes/erdchangemoveentity.cpp" line="28"/>

@@ -57,7 +57,7 @@
         <location filename="../db/chainexecutor.cpp" line="180"/>
         <source>Could not commit a database transaction. Details: %1</source>
         <comment>chain executor</comment>
-        <translation>Die Datenbanktransaktion kann nicht &apos;committet&apos; werden. Details: %1</translation>
+        <translation>Eine Datenbanktransaktion konnte nicht übertragen werden. Details: %1</translation>
     </message>
 </context>
 <context>
@@ -80,7 +80,7 @@
     <message>
         <location filename="../completionhelper.cpp" line="178"/>
         <source>New index name</source>
-        <translation>Neuer Indizename</translation>
+        <translation>Neuer Indexname</translation>
     </message>
     <message>
         <location filename="../completionhelper.cpp" line="181"/>
@@ -90,7 +90,7 @@
     <message>
         <location filename="../completionhelper.cpp" line="184"/>
         <source>New trigger name</source>
-        <translation>Neuer Triggername</translation>
+        <translation>Neuer Trigger-Name</translation>
     </message>
     <message>
         <location filename="../completionhelper.cpp" line="187"/>
@@ -141,7 +141,7 @@
     <message>
         <location filename="../completionhelper.cpp" line="285"/>
         <source>BLOB literal</source>
-        <translation type="unfinished">BLOB literal</translation>
+        <translation>BLOB-Literal</translation>
     </message>
     <message>
         <location filename="../completionhelper.cpp" line="445"/>
@@ -159,27 +159,27 @@
     <message>
         <location filename="../services/impl/configimpl.cpp" line="592"/>
         <source>Cannot export config to file %1: %2</source>
-        <translation type="unfinished">Cannot export config to file %1: %2</translation>
+        <translation>Kann Konfiguration nicht in Datei %1 exportieren: %2</translation>
     </message>
     <message>
         <location filename="../services/impl/configimpl.cpp" line="597"/>
         <source>Config exported successfully to %1</source>
-        <translation type="unfinished">Config exported successfully to %1</translation>
+        <translation>Konfiguration erfolgreich nach %1 exportiert</translation>
     </message>
     <message>
         <location filename="../services/impl/configimpl.cpp" line="629"/>
         <source>Cannot import config from file %1: %2</source>
-        <translation type="unfinished">Cannot import config from file %1: %2</translation>
+        <translation>Konfiguration kann nicht aus Datei %1 importiert werden: %2</translation>
     </message>
     <message>
         <location filename="../services/impl/configimpl.cpp" line="648"/>
         <source>Config imported successfully from %1</source>
-        <translation type="unfinished">Config imported successfully from %1</translation>
+        <translation>Konfiguration erfolgreich von %1 importiert</translation>
     </message>
     <message>
         <location filename="../services/impl/configimpl.cpp" line="659"/>
         <source>Cannot read file %1: %2</source>
-        <translation type="unfinished">Cannot read file %1: %2</translation>
+        <translation>Kann Datei %1 nicht lesen: %2</translation>
     </message>
     <message>
         <location filename="../services/impl/configimpl.cpp" line="1001"/>
@@ -194,7 +194,7 @@
     <message>
         <location filename="../services/impl/configimpl.cpp" line="1366"/>
         <source>Configured hotkeys have been reset to their default settings following the update to version 4.0.0, where many shortcuts were revised to align with modern IDE standards.</source>
-        <translation type="unfinished">Configured hotkeys have been reset to their default settings following the update to version 4.0.0, where many shortcuts were revised to align with modern IDE standards.</translation>
+        <translation>Nach dem Update auf Version 4.0.0 wurden die konfigurierten Tastenkombinationen auf ihre Standardeinstellungen zurückgesetzt, da viele Tastenkombinationen überarbeitet wurden, um sie an moderne IDE-Standards anzupassen.</translation>
     </message>
 </context>
 <context>
@@ -266,7 +266,7 @@
     <message>
         <location filename="../dbobjectorganizer.cpp" line="507"/>
         <source>Database %1 could not be attached to database %2, so the data of table %3 will be copied with Letos as a mediator. This method can be slow for huge tables, so please be patient.</source>
-        <translation type="unfinished">Database %1 could not be attached to database %2, so the data of table %3 will be copied with Letos as a mediator. This method can be slow for huge tables, so please be patient.</translation>
+        <translation>Datenbank %1 konnte nicht mit Datenbank %2 verbunden werden, daher werden die Daten der Tabelle %3 durch Letos kopiert. Diese Methode kann bei großen Tabellen sehr lange dauern, bitte haben Sie Geduld.</translation>
     </message>
     <message>
         <location filename="../dbobjectorganizer.cpp" line="531"/>
@@ -425,17 +425,17 @@ Tabellen, Indizes, Trigger und Views die in Datenbank %3 kopiert wurden, werden 
     <message>
         <location filename="../services/functionmanager.cpp" line="37"/>
         <source>Scalar</source>
-        <translation type="unfinished">Scalar</translation>
+        <translation>Skalar (auch bekannt als &quot;Bereich&quot;)</translation>
     </message>
     <message>
         <location filename="../services/functionmanager.cpp" line="39"/>
         <source>Aggregate</source>
-        <translation type="unfinished">Aggregate</translation>
+        <translation>Gesamt</translation>
     </message>
     <message>
         <location filename="../services/functionmanager.cpp" line="41"/>
         <source>Window</source>
-        <translation type="unfinished">Window</translation>
+        <translation>Fenster</translation>
     </message>
 </context>
 <context>
@@ -453,7 +453,7 @@ Tabellen, Indizes, Trigger und Views die in Datenbank %3 kopiert wurden, werden 
     <message>
         <location filename="../services/impl/functionmanagerimpl.cpp" line="401"/>
         <source>No such function registered in Letos: %1(%2)</source>
-        <translation type="unfinished">No such function registered in Letos: %1(%2)</translation>
+        <translation>Diese Funktion ist in Letos nicht verfügbar: %1(%2)</translation>
     </message>
     <message>
         <location filename="../services/impl/functionmanagerimpl.cpp" line="407"/>
@@ -859,27 +859,27 @@ Tabellen, Indizes, Trigger und Views die in Datenbank %3 kopiert wurden, werden 
     <message>
         <location filename="../common/utils.cpp" line="79"/>
         <source>SQLite database or SQL file</source>
-        <translation type="unfinished">SQLite database or SQL file</translation>
+        <translation>SQLite-Datenbank oder SQL-Datei</translation>
     </message>
     <message>
         <location filename="../common/utils.cpp" line="81"/>
         <source>SQL files</source>
-        <translation type="unfinished">SQL files</translation>
+        <translation>SQL-Dateien</translation>
     </message>
     <message>
         <location filename="../common/utils.cpp" line="82"/>
         <source>CSV files</source>
-        <translation type="unfinished">CSV files</translation>
+        <translation>CSV-Dateien</translation>
     </message>
     <message>
         <location filename="../common/utils.cpp" line="83"/>
         <source>Text files</source>
-        <translation type="unfinished">Text files</translation>
+        <translation>Textdateien</translation>
     </message>
     <message>
         <location filename="../common/utils.cpp" line="84"/>
         <source>All files</source>
-        <translation type="unfinished">All files</translation>
+        <translation>Alle Dateien</translation>
     </message>
     <message>
         <location filename="../common/utils.cpp" line="968"/>
@@ -1091,17 +1091,17 @@ The view will remain as it is.</source>
     <message>
         <location filename="../viewmodifier.cpp" line="80"/>
         <source>Letos was unable to resolve columns returned by the new view, therefore it won&apos;t be able to tell which triggers might fail during the recreation process.</source>
-        <translation type="unfinished">Letos was unable to resolve columns returned by the new view, therefore it won&apos;t be able to tell which triggers might fail during the recreation process.</translation>
+        <translation>Letos konnte die von der neuen Ansicht zurückgegebenen Spalten nicht auflösen. Daher kann es nicht feststellen, welche Trigger während des Wiederherstellungsvorgangs möglicherweise fehlschlagen werden.</translation>
     </message>
     <message>
         <location filename="../services/collationmanager.h" line="48"/>
         <source>Function-based</source>
-        <translation type="unfinished"></translation>
+        <translation>Funktionsbasiert</translation>
     </message>
     <message>
         <location filename="../services/collationmanager.h" line="50"/>
         <source>Extension-based</source>
-        <translation type="unfinished"></translation>
+        <translation>Erweiterungsbasiert</translation>
     </message>
 </context>
 <context>
@@ -1131,7 +1131,7 @@ The view will remain as it is.</source>
     <message>
         <location filename="../db/queryexecutor.cpp" line="610"/>
         <source>Letos was unable to extract metadata from the query. Results won&apos;t be editable.</source>
-        <translation type="unfinished">Letos was unable to extract metadata from the query. Results won&apos;t be editable.</translation>
+        <translation>Letos konnte keine Metadaten aus der Abfrage extrahieren. Die Ergebnisse können nicht bearbeitet werden.</translation>
     </message>
 </context>
 <context>
@@ -1223,7 +1223,7 @@ The view will remain as it is.</source>
         <location filename="../sqlhistorymodel.cpp" line="40"/>
         <source>SQL</source>
         <comment>sql history header</comment>
-        <translation type="unfinished">SQL</translation>
+        <translation>SQL</translation>
     </message>
 </context>
 <context>
