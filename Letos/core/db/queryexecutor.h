@@ -1522,7 +1522,19 @@ class API_EXPORT QueryExecutor : public QObject, public QRunnable
 
         bool forceSimpleMode = false;
         ChainExecutor* simpleExecutor = nullptr;
+
+        /**
+         * @brief Clone of the db used for rows counting query
+         *
+         * #5135 Counting rows in enormous tables (which can take very long time) no longer blocks the application.
+         */
         Db* countingDb = nullptr;
+
+        /**
+         * @brief Attaches created in the countingDb
+         *
+         * This is to track attaches and have them in sync with the db's attaches.
+         */
         QStringList countingAttaches;
 
     signals:

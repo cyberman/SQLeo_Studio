@@ -979,7 +979,7 @@ void QueryExecutor::setDb(Db* value)
         safe_delete(countingDb);
     }
 
-    if (db)
+    if (db) // #5135 Counting rows in enormous tables (which can take very long time) no longer blocks the application.
         countingDb = db->clone();
 }
 
