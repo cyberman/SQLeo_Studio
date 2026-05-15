@@ -3,7 +3,7 @@
 
 <svg
    id="svg2"
-   sodipodi:docname="explain_query.svg"
+   sodipodi:docname="explain_query_plan.svg"
    inkscape:export-filename="C:\Documents and Settings\mm81002\Desktop\Flowchart.svg.png"
    viewBox="0 0 330 330"
    sodipodi:version="0.32"
@@ -48,18 +48,18 @@
          inkscape:collect="always" />
     </filter>
     <linearGradient
-       inkscape:collect="always"
+       id="linearGradient3378"
+       y2="352.39001"
        xlink:href="#linearGradient3134"
-       id="linearGradient857"
        gradientUnits="userSpaceOnUse"
-       x1="202.53999"
-       y1="265.39001"
        x2="202.53999"
-       y2="352.39001" />
+       y1="265.39001"
+       x1="202.53999"
+       inkscape:collect="always" />
     <linearGradient
        inkscape:collect="always"
        xlink:href="#linearGradient3134"
-       id="linearGradient2969"
+       id="linearGradient857"
        gradientUnits="userSpaceOnUse"
        x1="202.53999"
        y1="265.39001"
@@ -80,8 +80,8 @@
      height="705px"
      borderopacity="1.0"
      inkscape:current-layer="g877"
-     inkscape:cx="269.47606"
-     inkscape:cy="120.23781"
+     inkscape:cx="320.96"
+     inkscape:cy="255.79046"
      inkscape:window-y="29"
      inkscape:window-x="1046"
      inkscape:window-width="950"
@@ -96,8 +96,8 @@
      id="g877"
      transform="matrix(1.0689309,0,0,1.0689309,-5.916499,-2.8767788)">
     <rect
-       x="144.57153"
-       y="113.77872"
+       x="144.57121"
+       y="113.77895"
        inkscape:export-xdpi="72"
        width="39.950001"
        height="28.219"
@@ -110,11 +110,11 @@
        inkscape:export-filename="Z:\MMU_Development\Assets\images\PNG\flowchart-graphic.png"
        sodipodi:nodetypes="cccccccc"
        inkscape:export-ydpi="72"
-       d="m 145.90724,228.64106 h 36.8559 v 24.21121 h 31.41241 l -49.13095,37.72005 -50.12991,-37.72005 h 30.99255 z"
+       d="m 145.9069,228.64128 h 36.8559 v 24.21121 h 31.41241 l -49.13095,37.72005 -50.12991,-37.72005 h 30.99255 z"
        style="fill:#ff0000;stroke:#ffffff;stroke-width:2.74678;stroke-linejoin:round"
        id="rect3404" />
     <g
-       transform="translate(-38.423504,-123.95129)"
+       transform="translate(-38.423847,-123.95107)"
        inkscape:export-filename="Z:\MMU_Development\Assets\images\PNG\flowchart-graphic.png"
        inkscape:export-xdpi="72"
        inkscape:export-ydpi="72"
@@ -133,11 +133,11 @@
          width="150.50999"
          height="86.873001"
          ry="15.152"
-         style="fill:url(#linearGradient2969);stroke:#ffffff;stroke-width:3;stroke-linejoin:round"
+         style="fill:url(#linearGradient3378);stroke:#ffffff;stroke-width:3;stroke-linejoin:round"
          id="rect3400" />
     </g>
     <g
-       transform="translate(-38.423504,-238.04129)"
+       transform="translate(-38.423847,-238.04107)"
        inkscape:export-filename="Z:\MMU_Development\Assets\images\PNG\flowchart-graphic.png"
        inkscape:export-xdpi="72"
        inkscape:export-ydpi="72"
@@ -161,26 +161,26 @@
     </g>
     <text
        xml:space="preserve"
-       style="font-weight:bold;font-size:99.7882px;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono Bold';opacity:0.450095;fill:#000000;fill-opacity:1;stroke-width:2.12923;stroke-linecap:round;stroke-linejoin:round"
-       x="133.20573"
-       y="105.74664"
+       style="font-weight:bold;font-size:87.3147px;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono Bold';opacity:0.450095;fill:#000000;fill-opacity:1;stroke-width:2.12923;stroke-linecap:round;stroke-linejoin:round"
+       x="138.50845"
+       y="96.408798"
        id="text3037"><tspan
          sodipodi:role="line"
          id="tspan3035"
-         style="font-size:99.7882px;fill:#000000;fill-opacity:1;stroke-width:2.12923"
-         x="133.20573"
-         y="105.74664">E</tspan></text>
+         style="font-size:87.3147px;fill:#000000;fill-opacity:1;stroke-width:2.12923"
+         x="138.50845"
+         y="96.408798">Q</tspan></text>
     <text
        xml:space="preserve"
-       style="font-weight:bold;font-size:99.7882px;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono Bold';opacity:0.450334;fill:#000000;fill-opacity:1;stroke-width:2.12923;stroke-linecap:round;stroke-linejoin:round"
-       x="134.90826"
-       y="220.01019"
-       id="text3037-6"><tspan
+       style="font-weight:bold;font-size:99.7882px;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono Bold';opacity:0.450095;fill:#000000;fill-opacity:1;stroke-width:2.12923;stroke-linecap:round;stroke-linejoin:round"
+       x="133.66605"
+       y="221.00946"
+       id="text3037-5"><tspan
          sodipodi:role="line"
-         id="tspan3035-1"
+         id="tspan3035-5"
          style="font-size:99.7882px;fill:#000000;fill-opacity:1;stroke-width:2.12923"
-         x="134.90826"
-         y="220.01019">X</tspan></text>
+         x="133.66605"
+         y="221.00946">P</tspan></text>
   </g>
   <metadata
      id="metadata31">

@@ -950,11 +950,10 @@ bool QueryExecutor::getExplainMode() const
     return explainMode;
 }
 
-void QueryExecutor::setExplainMode(bool value)
+void QueryExecutor::setExplainMode(int value)
 {
     explainMode = value;
 }
-
 
 void QueryExecutor::error(int code, const QString& text)
 {
@@ -980,7 +979,7 @@ void QueryExecutor::setDb(Db* value)
         safe_delete(countingDb);
     }
 
-    if (db)
+    if (db) // #5135 Counting rows in enormous tables (which can take very long time) no longer blocks the application.
         countingDb = db->clone();
 }
 

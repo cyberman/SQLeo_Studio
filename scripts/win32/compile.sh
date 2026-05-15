@@ -106,7 +106,7 @@ if [[ -d "$TOP_DIR/../ext" ]]; then
 fi
 
 #########################################################################
-echo "AAssemble portable distribution"
+echo "Assemble portable distribution"
 
 windeployqt6 Letos.exe \
   --release \

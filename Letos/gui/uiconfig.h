@@ -3,6 +3,7 @@
 
 #include "gui_global.h"
 #include "config_builder.h"
+#include "services/config.h"
 #include <QFont>
 #include <QHash>
 #include <QColor>
@@ -51,15 +52,15 @@ namespace Cfg
     typedef QHash<QString,QByteArray> SplitterStates;
     enum InsertRowPlacement
     {
-        BEFORE_CURRENT,
-        AFTER_CURRENT,
-        AT_THE_END
+        BEFORE_CURRENT = 0,
+        AFTER_CURRENT = 1,
+        AT_THE_END = 2
     };
     enum GUI_API_EXPORT StatusFieldFadingMode
     {
-        NO_FADE,
-        GRAY_OUT,
-        ERASE
+        NO_FADE = 0,
+        GRAY_OUT = 1,
+        ERASE = 2
     };
 }
 
@@ -136,6 +137,7 @@ CFG_UI_CATEGORIES(Ui,
     CFG_CATEGORY(General,
         CFG_ENTRY(QString,                 DataViewTabs,                QString())
         CFG_ENTRY(QString,                 SqlEditorTabs,               QString())
+        CFG_ENTRY(int,                     SqlEditorExplainMode,        Cfg::EXPLAIN)
         CFG_ENTRY(QString,                 SqlEditorDbListOrder,        "LikeDbTree")
         CFG_ENTRY(bool,                    SqlEditorWrapWords,          false)
         CFG_ENTRY(bool,                    SqlEditorCurrQueryHighlight, true)

@@ -49,6 +49,7 @@
 - ADDED: #4225 Foreign Key constraint configuration dialogs now warns about using foreign column that is neither PRIMARY KEY nor UNIQUE.
 - ADDED: #5085 Added 'Cut' entry to context menu of data Grid View.
 - ADDED: #4709 Added option in configuration to sort data by single-click on a header. Ehnanced data header tooltips to include this information there.
+- CHANGE: #5441 Project has been renamed to Letos. Together with the name, also domain/homepage has changed to letos.org.
 - CHANGE: #4553 Application has moved to Qt 6 (dropping Qt 5 support). This solves several technical issues (for example accented characters on MacOS, better UI scaling for high DPI displays, better dark theme support and more).
 - CHANGE: #5102 All raster icons are replaced with vector icons (SVG). This makes them scalable and work well with high DPI displays.
 - CHANGE: #4271 Value Editor (and Form View) got small visual lifting to be more convenient to use (bigger column labels, etc).
@@ -89,6 +90,7 @@
 - CHANGE: #4688 Added metadata to Windows executables.
 - CHANGE: #2956 Export Dialog respects hotkeys for changing database in the dropdown, using the same hotkey as SQL Editor.
 - CHANGE: #4964 Import Dialog has now inverted order of pages - the imported file first and then the target table, for which the name is concluded from imported file name. Also filter for CSV import is now extended with tsv files.
+- CHANGE: #3522 EXPLAIN button in SQL Editor now has dropdown menu with selection between EXPLAIN and EXPLAIN QUERY PLAN modes.
 - CHANGE: #5612 With hotkeys being reset to defaults in version 4.0.0, the relevant notification message is now printed upon the reset.
 - CHANGE: #5634 Execute SQL From File dialog no whas a database selector and the action appears in all database list context menus + in the Tools menu of main menubar.
 - CHANGE: Windows x86 (32-bit) binaries will no longer by provided in official builds.

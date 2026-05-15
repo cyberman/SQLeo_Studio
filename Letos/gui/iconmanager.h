@@ -125,6 +125,7 @@ class GUI_API_EXPORT IconManager : public QObject
             DEF_ICON(EXEC_QUERY,                        "exec_query")
             DEF_ICON(EXEC_SQL_FROM_FILE,                "execute_sql_from_file")
             DEF_ICON(EXPLAIN_QUERY,                     "explain_query")
+            DEF_ICON(EXPLAIN_QUERY_PLAN,                "explain_query_plan")
             DEF_ICON(EXPORT,                            "export")
             DEF_ICON(EXPORT_FILE_BROWSE,                "export_file_browse")
             DEF_ICON(EXPORT_SQL_HISTORY,                "export_sql_history")

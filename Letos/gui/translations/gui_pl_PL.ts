@@ -2663,7 +2663,7 @@ Przeglądanie pozostałych stron będzie możliwe kiedy liczenie wierszy zostani
         <translation>Bazy danych</translation>
     </message>
     <message>
-        <location filename="../dbtree/dbtree.cpp" line="2518"/>
+        <location filename="../dbtree/dbtree.cpp" line="2523"/>
         <source>Filter by name</source>
         <translation>Filtruj po nazwie</translation>
     </message>
@@ -2914,7 +2914,7 @@ Przeglądanie pozostałych stron będzie możliwe kiedy liczenie wierszy zostani
     </message>
     <message>
         <location filename="../dbtree/dbtree.cpp" line="190"/>
-        <location filename="../dbtree/dbtree.cpp" line="1900"/>
+        <location filename="../dbtree/dbtree.cpp" line="1905"/>
         <source>Erase table data</source>
         <translation>Wymaż dane tabeli</translation>
     </message>
@@ -3015,95 +3015,95 @@ All objects from these groups will be moved to respective parent groups.</transl
         <translation>Wycofaj bazę</translation>
     </message>
     <message>
-        <location filename="../dbtree/dbtree.cpp" line="1526"/>
-        <location filename="../dbtree/dbtree.cpp" line="1731"/>
+        <location filename="../dbtree/dbtree.cpp" line="1531"/>
+        <location filename="../dbtree/dbtree.cpp" line="1736"/>
         <source>Cannot import, because no import plugin is loaded.</source>
         <translation>Nie można zaimportować, ponieważ żadna wtyczka importu nie została załadowana.</translation>
     </message>
     <message>
-        <location filename="../dbtree/dbtree.cpp" line="1546"/>
-        <location filename="../dbtree/dbtree.cpp" line="1706"/>
-        <location filename="../dbtree/dbtree.cpp" line="1775"/>
+        <location filename="../dbtree/dbtree.cpp" line="1551"/>
+        <location filename="../dbtree/dbtree.cpp" line="1711"/>
+        <location filename="../dbtree/dbtree.cpp" line="1780"/>
         <source>Cannot export, because no export plugin is loaded.</source>
         <translation>Nie można wyeksportować, ponieważ żadna wtyczka eksportu nie została załadowana.</translation>
     </message>
     <message>
-        <location filename="../dbtree/dbtree.cpp" line="1821"/>
+        <location filename="../dbtree/dbtree.cpp" line="1826"/>
         <source>Vacuum (%1)</source>
         <translation>Odkurz (%1)</translation>
     </message>
     <message>
-        <location filename="../dbtree/dbtree.cpp" line="1835"/>
+        <location filename="../dbtree/dbtree.cpp" line="1840"/>
         <source>Integrity check (%1)</source>
         <translation>Sprawdzanie spójności (%1)</translation>
     </message>
     <message>
-        <location filename="../dbtree/dbtree.cpp" line="1871"/>
+        <location filename="../dbtree/dbtree.cpp" line="1876"/>
         <source>Reset autoincrement</source>
         <translation>Wyzeruj autoinkrementację</translation>
     </message>
     <message>
-        <location filename="../dbtree/dbtree.cpp" line="1871"/>
+        <location filename="../dbtree/dbtree.cpp" line="1876"/>
         <source>Are you sure you want to reset autoincrement value for table &apos;%1&apos;?</source>
         <translation>Czy na pewno chcesz wyzerować wartość autoinkrementacji dla tabeli &apos;%1&apos;?</translation>
     </message>
     <message>
-        <location filename="../dbtree/dbtree.cpp" line="1878"/>
+        <location filename="../dbtree/dbtree.cpp" line="1883"/>
         <source>An error occurred while trying to reset autoincrement value for table &apos;%1&apos;: %2</source>
         <translation>Wystąpił błąd podczas próby wyzerowania wartości autoinkrementacji dla tabeli &apos;%1&apos;: %2</translation>
     </message>
     <message>
-        <location filename="../dbtree/dbtree.cpp" line="1880"/>
+        <location filename="../dbtree/dbtree.cpp" line="1885"/>
         <source>Autoincrement value for table &apos;%1&apos; has been reset successfully.</source>
         <translation>Wartość automatycznej inkrementacji dla tabeli &apos;%1&apos; została zresetowana.</translation>
     </message>
     <message>
-        <location filename="../dbtree/dbtree.cpp" line="1900"/>
+        <location filename="../dbtree/dbtree.cpp" line="1905"/>
         <source>Are you sure you want to delete all data from table(s): %1?</source>
         <translation>Czy na pewno chcesz usunąć wszystkie dane z tabel(i): %1?</translation>
     </message>
     <message>
-        <location filename="../dbtree/dbtree.cpp" line="1912"/>
+        <location filename="../dbtree/dbtree.cpp" line="1917"/>
         <source>An error occurred while trying to delete data from table &apos;%1&apos;: %2</source>
         <translation>Wystąpił błąd podczas próby usunięcia danych z tabeli &apos;%1&apos;: %2</translation>
     </message>
     <message>
-        <location filename="../dbtree/dbtree.cpp" line="1916"/>
+        <location filename="../dbtree/dbtree.cpp" line="1921"/>
         <source>All data has been deleted for table &apos;%1&apos;.</source>
         <translation>Wszystkie dane z tabeli &apos;%1&apos; zostały usunięte.</translation>
     </message>
     <message>
-        <location filename="../dbtree/dbtree.cpp" line="2055"/>
+        <location filename="../dbtree/dbtree.cpp" line="2060"/>
         <source>Following objects will be deleted: %1.</source>
         <translation>Następujące obiekty zostaną usunięte: %1</translation>
     </message>
     <message>
-        <location filename="../dbtree/dbtree.cpp" line="2058"/>
+        <location filename="../dbtree/dbtree.cpp" line="2063"/>
         <source>Following databases will be removed from list: %1.</source>
         <translation>Następujące bazy danych zostaną usunięte z listy: %1</translation>
     </message>
     <message>
-        <location filename="../dbtree/dbtree.cpp" line="2061"/>
+        <location filename="../dbtree/dbtree.cpp" line="2066"/>
         <source>Remainig objects from deleted group will be moved in place where the group used to be.</source>
         <translation>Pozostałe obiekty z usuniętej grupy będą przeniesione w miejsce, gdzie dotychczas była ta grupa.</translation>
     </message>
     <message>
-        <location filename="../dbtree/dbtree.cpp" line="2063"/>
+        <location filename="../dbtree/dbtree.cpp" line="2068"/>
         <source>%1&lt;br&gt;&lt;br&gt;Are you sure you want to continue?</source>
         <translation>%1&lt;br&gt;&lt;br&gt;Czy na pewno chcesz kontynuować?</translation>
     </message>
     <message>
-        <location filename="../dbtree/dbtree.cpp" line="2065"/>
+        <location filename="../dbtree/dbtree.cpp" line="2070"/>
         <source>Delete objects</source>
         <translation>Usuń obiekty</translation>
     </message>
     <message>
-        <location filename="../dbtree/dbtree.cpp" line="2544"/>
+        <location filename="../dbtree/dbtree.cpp" line="2549"/>
         <source>&lt;html&gt;&lt;body&gt;&lt;p&gt;Connected.&lt;/p&gt;&lt;p&gt;Click here to disconnect, or middle-click on the database.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished">&lt;html&gt;&lt;body&gt;&lt;p&gt;Connected.&lt;/p&gt;&lt;p&gt;Click here to disconnect, or middle-click on the database.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../dbtree/dbtree.cpp" line="2552"/>
+        <location filename="../dbtree/dbtree.cpp" line="2557"/>
         <source>&lt;html&gt;&lt;body&gt;&lt;p&gt;Disconnected.&lt;/p&gt;&lt;p&gt;Click here to connect, or double-click on the database.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished">&lt;html&gt;&lt;body&gt;&lt;p&gt;Disconnected.&lt;/p&gt;&lt;p&gt;Click here to connect, or double-click on the database.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
@@ -3397,142 +3397,142 @@ Proszę podać nową, unikalną nazwę, lub nacisnąć &apos;%1&apos;, aby przer
         <translation>Wykonaj zapytanie</translation>
     </message>
     <message>
-        <location filename="../windows/editorwindow.cpp" line="426"/>
+        <location filename="../windows/editorwindow.cpp" line="428"/>
         <source>Explain query</source>
         <translation>Wytłumacz zapytanie</translation>
     </message>
     <message>
-        <location filename="../windows/editorwindow.cpp" line="443"/>
+        <location filename="../windows/editorwindow.cpp" line="466"/>
         <source>Clear execution history</source>
         <comment>sql editor</comment>
         <translation>Wymaż historię zapytań</translation>
     </message>
     <message>
-        <location filename="../windows/editorwindow.cpp" line="455"/>
+        <location filename="../windows/editorwindow.cpp" line="478"/>
         <source>Export results</source>
         <comment>sql editor</comment>
         <translation>Wyeksportuj wyniki</translation>
     </message>
     <message>
-        <location filename="../windows/editorwindow.cpp" line="437"/>
+        <location filename="../windows/editorwindow.cpp" line="460"/>
         <source>Create view from query</source>
         <comment>sql editor</comment>
         <translation>Utwórz widok z zapytania</translation>
     </message>
     <message>
-        <location filename="../windows/editorwindow.cpp" line="439"/>
+        <location filename="../windows/editorwindow.cpp" line="462"/>
         <source>Previous database</source>
         <translation>Poprzednia baza danych</translation>
     </message>
     <message>
-        <location filename="../windows/editorwindow.cpp" line="440"/>
+        <location filename="../windows/editorwindow.cpp" line="463"/>
         <source>Next database</source>
         <translation>Następna baza danych</translation>
     </message>
     <message>
-        <location filename="../windows/editorwindow.cpp" line="444"/>
+        <location filename="../windows/editorwindow.cpp" line="467"/>
         <source>Export execution history</source>
         <comment>sql editor</comment>
         <translation type="unfinished">Export execution history</translation>
     </message>
     <message>
-        <location filename="../windows/editorwindow.cpp" line="447"/>
+        <location filename="../windows/editorwindow.cpp" line="470"/>
         <source>Show next tab</source>
         <comment>sql editor</comment>
         <translation>Pokaż następną kartę</translation>
     </message>
     <message>
-        <location filename="../windows/editorwindow.cpp" line="448"/>
+        <location filename="../windows/editorwindow.cpp" line="471"/>
         <source>Show previous tab</source>
         <comment>sql editor</comment>
         <translation>Pokaż poprzednią kartę</translation>
     </message>
     <message>
-        <location filename="../windows/editorwindow.cpp" line="449"/>
+        <location filename="../windows/editorwindow.cpp" line="472"/>
         <source>Focus results below</source>
         <comment>sql editor</comment>
         <translation>Aktywuj wyniki poniżej</translation>
     </message>
     <message>
-        <location filename="../windows/editorwindow.cpp" line="450"/>
+        <location filename="../windows/editorwindow.cpp" line="473"/>
         <source>Focus SQL editor above</source>
         <comment>sql editor</comment>
         <translation>Aktywuj edytor SQL powyżej</translation>
     </message>
     <message>
-        <location filename="../windows/editorwindow.cpp" line="451"/>
+        <location filename="../windows/editorwindow.cpp" line="474"/>
         <source>Export selected SQL history entries</source>
         <comment>sql editor</comment>
         <translation type="unfinished">Export selected SQL history entries</translation>
     </message>
     <message>
-        <location filename="../windows/editorwindow.cpp" line="452"/>
+        <location filename="../windows/editorwindow.cpp" line="475"/>
         <source>Delete selected SQL history entries</source>
         <comment>sql editor</comment>
         <translation>Usuń wybrane wpisy z historii SQL</translation>
     </message>
     <message>
-        <location filename="../windows/editorwindow.cpp" line="453"/>
+        <location filename="../windows/editorwindow.cpp" line="476"/>
         <source>Execute single query under cursor</source>
         <translation>Wykonaj pojedyncze zapytanie pod kursorem</translation>
     </message>
     <message>
-        <location filename="../windows/editorwindow.cpp" line="454"/>
+        <location filename="../windows/editorwindow.cpp" line="477"/>
         <source>Execute all queries in editor</source>
         <translation>Wykonaj wszystkie zapytania w edytorze</translation>
     </message>
     <message>
-        <location filename="../windows/editorwindow.cpp" line="509"/>
+        <location filename="../windows/editorwindow.cpp" line="532"/>
         <source>Active database (%1/%2)</source>
         <translation>Aktywna baza danych (%1/%2)</translation>
     </message>
     <message>
-        <location filename="../windows/editorwindow.cpp" line="616"/>
+        <location filename="../windows/editorwindow.cpp" line="653"/>
         <source>Save to file</source>
         <translation>Zapisz do pliku</translation>
     </message>
     <message>
-        <location filename="../windows/editorwindow.cpp" line="627"/>
+        <location filename="../windows/editorwindow.cpp" line="664"/>
         <source>Could not open file &apos;%1&apos; for writing: %2</source>
         <translation>Nie udało się otworzyć pliku &apos;%1&apos; do zapisu: %2</translation>
     </message>
     <message>
-        <location filename="../windows/editorwindow.cpp" line="647"/>
+        <location filename="../windows/editorwindow.cpp" line="684"/>
         <source>Saved SQL contents to file: %1</source>
         <translation>Zapisano zawartość SQL do pliku: %1</translation>
     </message>
     <message>
-        <location filename="../windows/editorwindow.cpp" line="670"/>
+        <location filename="../windows/editorwindow.cpp" line="707"/>
         <source>Query finished in %1 second(s). Rows affected: %2</source>
         <translation>Zapytanie ukończone w %1 sekund(y). Liczba przetworzonych wierszy: %2</translation>
     </message>
     <message>
-        <location filename="../windows/editorwindow.cpp" line="674"/>
+        <location filename="../windows/editorwindow.cpp" line="711"/>
         <source>Query finished in %1 second(s).</source>
         <translation>Zapytanie ukończone w %1 sekund(y).</translation>
     </message>
     <message>
-        <location filename="../windows/editorwindow.cpp" line="803"/>
+        <location filename="../windows/editorwindow.cpp" line="840"/>
         <source>Clear execution history</source>
         <translation>Wymaż historię zapytań</translation>
     </message>
     <message>
-        <location filename="../windows/editorwindow.cpp" line="803"/>
+        <location filename="../windows/editorwindow.cpp" line="840"/>
         <source>Are you sure you want to erase the entire SQL execution history? This cannot be undone.</source>
         <translation>Czy na pewno chcesz wymazać całą historię zapytań SQL? Tego nie można odwrócić.</translation>
     </message>
     <message>
-        <location filename="../windows/editorwindow.cpp" line="841"/>
+        <location filename="../windows/editorwindow.cpp" line="878"/>
         <source>Cannot export, because no export plugin is loaded.</source>
         <translation>Nie można wyeksportować, ponieważ żadna wtyczka eksportu nie została załadowana.</translation>
     </message>
     <message>
-        <location filename="../windows/editorwindow.cpp" line="862"/>
+        <location filename="../windows/editorwindow.cpp" line="899"/>
         <source>No database selected in the SQL editor. Cannot create a view for unknown database.</source>
         <translation>Nie wybrano bazdy danych w edytorze SQL. Nie można utworzyć widoku dla nieznanej bazy.</translation>
     </message>
     <message>
-        <location filename="../windows/editorwindow.cpp" line="912"/>
+        <location filename="../windows/editorwindow.cpp" line="949"/>
         <source>Editor window &quot;%1&quot; has uncommitted data.</source>
         <translation>Okno edytora &quot;%1&quot; ma niezatwierdzone dane.</translation>
     </message>
@@ -6058,7 +6058,7 @@ Proszę podać nową, unikalną nazwę, lub nacisnąć &apos;%1&apos;, aby przer
         <translation>Zmniejsz rozmiar czcionki</translation>
     </message>
     <message>
-        <location filename="../windows/editorwindow.cpp" line="618"/>
+        <location filename="../windows/editorwindow.cpp" line="655"/>
         <source>All files</source>
         <translation>Wszystkie pliki</translation>
     </message>
@@ -6073,7 +6073,7 @@ Proszę podać nową, unikalną nazwę, lub nacisnąć &apos;%1&apos;, aby przer
         <translation type="unfinished">Select new database file</translation>
     </message>
     <message>
-        <location filename="../windows/editorwindow.cpp" line="617"/>
+        <location filename="../windows/editorwindow.cpp" line="654"/>
         <source>SQL files</source>
         <translation type="unfinished">SQL files</translation>
     </message>

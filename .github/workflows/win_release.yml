@@ -173,13 +173,10 @@ jobs:
               shell: msys2 {0}
               run: |
                 SQLITE_DOT_VERSION=$($GH_SCRIPTS/convert_int_ver.sh $SQLITE_VERSION)
-                echo "SQLITE_DOT_VERSION=$SQLITE_DOT_VERSION" >> $GITHUB_ENV
-                
-                SQLITE3_ZIP=sqlite3-windows-${{ matrix.SQLITE_ARCH }}-$SQLITE_VERSION.zip
                 
                 cd scripts/win32
                 ./compile_sqlite_and_ext.sh \
-                    https://github.com/pawelsalawa/sqlite3-letos/releases/download/v$SQLITE_DOT_VERSION/$SQLITE3_ZIP \
+                    https://github.com/pawelsalawa/sqlite3-letos/releases/download/v$SQLITE_DOT_VERSION/sqlite3-windows-${{ matrix.SQLITE_ARCH }}-$SQLITE_VERSION.zip \
                     https://github.com/pawelsalawa/sqlite3-letos/releases/download/v$SQLITE_DOT_VERSION/sqlite3-extensions-src-$SQLITE_VERSION.zip
 
             - name: "[Building] Compile Letos and Plugins"
